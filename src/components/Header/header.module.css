@@ -15,15 +15,13 @@
   margin-inline: auto;
 }
 
-.logo {
+.header > a {
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .img {
   height: calc(var(--header-size) * 0.8);
+  transition: transform 200ms ease-out;
 }
 
 .items {
@@ -31,9 +29,19 @@
   gap: 2rem;
 }
 
+.items a {
+  font-size: 1.125rem;
+}
+
 .item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.125rem;
+  color: var(--gray-900);
+  transition: transform 200ms ease-out;
+}
+
+.item:hover {
+  color: var(--gray-600);
+  transform: scale(1.02);
 }

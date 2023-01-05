@@ -1,4 +1,3 @@
-import SchoolIcon from "@mui/icons-material/School";
 import MailLockIcon from "@mui/icons-material/MailLock";
 import PhonelinkLockIcon from "@mui/icons-material/PhonelinkLock";
 import RateReviewIcon from "@mui/icons-material/RateReview";
@@ -8,7 +7,7 @@ export default function Header() {
   return (
     <header className={classes.main}>
       <div className={classes.header}>
-        <a className={classes.logo} href="/">
+        <a className={classes.item} href="/">
           <img className={classes.img} src="/assets/lpi.png" alt="Logo" />{" "}
           Polytechnic
         </a>

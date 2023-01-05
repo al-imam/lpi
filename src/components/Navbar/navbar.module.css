@@ -13,6 +13,11 @@ a {
   text-decoration: none;
 }
 
+.navbarNav a {
+  font-family: var(--ff-m);
+  font-weight: var(--fw-500);
+}
+
 .navbar {
   height: var(--nav-size);
   background-color: var(--gray-900);
@@ -69,7 +74,7 @@ a {
 }
 
 .dropdownMenu li {
-  color: var(--gray-900);
+  color: var(--gray-700);
   font-size: 1.125rem;
   padding: 0.35rem;
   border-radius: 0.25rem;

@@ -1,0 +1,39 @@
+:root {
+  --header-size: 4rem;
+}
+
+.main {
+  background-color: var(--gray-200);
+}
+
+.header {
+  height: var(--header-size);
+  max-width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.img {
+  height: calc(var(--header-size) * 0.8);
+}
+
+.items {
+  display: flex;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+}

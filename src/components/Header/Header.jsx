@@ -8,7 +8,7 @@ export default function Header() {
     <header className={classes.main}>
       <div className={classes.header}>
         <a className={classes.item} href="/">
-          <img className={classes.img} src="/assets/lpi.png" alt="Logo" />{" "}
+          <img className={classes.img} src="/assets/lpi.png" alt="Logo" />
           Polytechnic
         </a>
         <ul className={classes.items}>

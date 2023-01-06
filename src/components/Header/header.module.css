@@ -4,6 +4,7 @@
 
 .main {
   background-color: var(--gray-200);
+  padding-inline: 2rem;
 }
 
 .header {

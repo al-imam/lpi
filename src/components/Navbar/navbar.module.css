@@ -47,10 +47,6 @@ a {
   align-items: center;
   column-gap: 0.5rem;
   cursor: pointer;
-}
-
-.dropdownToggler > button {
-  cursor: pointer;
   outline: none;
   border: none;
   padding-block: 0.5rem;
@@ -136,9 +132,10 @@ a {
     right: 0;
     transform: translateX(40rem);
     height: auto;
-    transition: transform 200ms ease-out;
-    min-height: 100vh;
+    min-height: 30rem;
     box-shadow: 0 0 2rem 2px var(--gray-500);
+    transition: transform 200ms ease-out;
+    border-radius: 0 0 0 1rem;
   }
 
   .open {
@@ -152,9 +149,10 @@ a {
 
   .navItem {
     display: block;
-    max-height: 3rem;
     position: relative;
     overflow: hidden;
+    max-height: 2.5rem;
+    min-height: 2.5rem;
     transition: max-height 300ms ease-out;
     padding-block: 0.32rem;
     padding-left: 2rem;
@@ -179,6 +177,7 @@ a {
     width: auto;
     box-shadow: none;
     border-radius: 0;
+    margin-block: 0.5rem;
   }
 
   .dropdownMenu li {
@@ -192,6 +191,16 @@ a {
   .navItem:focus-within {
     max-height: 20rem;
     background-color: var(--gray-800);
+  }
+
+  .navItem:has(.dropdownMenu):focus-within {
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  .navItem li:focus-within {
+    background-color: var(--primary);
+    color: var(--gray-800);
   }
 
   .navItem:focus-within svg {

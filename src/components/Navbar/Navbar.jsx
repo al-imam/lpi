@@ -10,10 +10,9 @@ function Navbar({ open }) {
         </li>
 
         <li className={classes.navItem}>
-          <p className={classes.dropdownToggler}>
-            <button>Department</button>
-            <ExpandMoreIcon />
-          </p>
+          <button className={classes.dropdownToggler}>
+            Department <ExpandMoreIcon />
+          </button>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Computer Technology</a>
@@ -34,10 +33,9 @@ function Navbar({ open }) {
         </li>
 
         <li className={classes.navItem}>
-          <p className={classes.dropdownToggler}>
-            <button>Syllabus</button>
-            <ExpandMoreIcon />
-          </p>
+          <button className={classes.dropdownToggler}>
+            Syllabus <ExpandMoreIcon />
+          </button>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Computer Engineering Syllabus</a>
@@ -55,10 +53,9 @@ function Navbar({ open }) {
         </li>
 
         <li className={classes.navItem}>
-          <p className={classes.dropdownToggler}>
-            <button>Facilities</button>
-            <ExpandMoreIcon />
-          </p>
+          <button className={classes.dropdownToggler}>
+            Facilities <ExpandMoreIcon />
+          </button>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Modern Lab</a>
@@ -76,10 +73,10 @@ function Navbar({ open }) {
         </li>
 
         <li className={classes.navItem}>
-          <p className={classes.dropdownToggler}>
-            <button>LPI Clubs</button>
+          <button className={classes.dropdownToggler}>
+            LPI Clubs
             <ExpandMoreIcon />
-          </p>
+          </button>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Robotic Club</a>

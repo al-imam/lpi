@@ -47,19 +47,10 @@
   transition: transform 200ms ease-out;
 }
 
+.item:focus-visible,
 .item:hover {
   color: var(--gray-600);
   transform: scale(1.02);
-}
-
-.item:focus-visible {
-  color: var(--gray-600);
-  box-shadow: 0 2px 0 var(--gray-600);
-}
-
-.item:focus-visible:has(img) {
-  text-decoration: underline;
-  box-shadow: none;
 }
 
 .toggler {

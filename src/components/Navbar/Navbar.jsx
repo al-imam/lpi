@@ -3,7 +3,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Navbar({ open }) {
   return (
-    <nav className={`${classes.navbar} ${open ? classes.open : classes.close}`}>
+    <nav className={`${classes.navbar} ${open ? classes.open : ""}`}>
       <ul className={classes.navbarNav}>
         <li className={classes.navItem + " " + classes.active}>
           <a href="#">Home</a>

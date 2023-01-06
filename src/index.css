@@ -35,4 +35,5 @@
 
 body {
   background-color: whitesmoke;
+  overflow-x: hidden;
 }

@@ -61,3 +61,44 @@
   text-decoration: underline;
   box-shadow: none;
 }
+
+.toggler {
+  display: none;
+}
+
+@media only screen and (max-width: 1080px) {
+  .toggler {
+    display: block;
+  }
+  .toggler {
+    border: none;
+    background: white;
+    width: 2.3rem;
+    height: 1.8rem;
+    border-radius: 0.25rem;
+    box-shadow: 1px 1px 3px var(--gray-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 200ms ease-out;
+  }
+
+  .toggler > svg {
+    transform: rotateY(180deg);
+    transition: transform 200ms ease;
+  }
+
+  .toggler:focus-visible {
+    outline: 2px solid var(--gray-900);
+    outline-offset: 1px;
+    filter: brightness(1.2);
+  }
+
+  .toggler:hover {
+    filter: brightness(1.2);
+  }
+
+  .open svg {
+    transform: rotateY(0);
+  }
+}

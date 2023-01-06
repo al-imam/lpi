@@ -1,13 +1,7 @@
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
+import Head from "./components/Head";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Navbar />
-    </>
-  );
+  return <Head />;
 }
 
 export default App;

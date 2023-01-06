@@ -1,9 +1,11 @@
 import MailLockIcon from "@mui/icons-material/MailLock";
 import PhonelinkLockIcon from "@mui/icons-material/PhonelinkLock";
 import RateReviewIcon from "@mui/icons-material/RateReview";
+import SortIcon from "@mui/icons-material/Sort";
+import { grey } from "@mui/material/colors";
 import classes from "./header.module.css";
 
-export default function Header() {
+export default function Header({ setOpen, open }) {
   return (
     <header className={classes.main}>
       <div className={classes.header}>
@@ -28,6 +30,12 @@ export default function Header() {
             </a>
           </li>
         </ul>
+        <button
+          className={`${classes.toggler} ${open ? classes.open : ""}`}
+          onClick={() => setOpen((p) => !p)}
+        >
+          <SortIcon fontSize="medium" sx={{ color: grey[900] }} />
+        </button>
       </div>
     </header>
   );

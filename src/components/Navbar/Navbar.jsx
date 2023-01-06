@@ -1,17 +1,19 @@
 import classes from "./navbar.module.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-function Navbar() {
+function Navbar({ open }) {
   return (
-    <nav className={classes.navbar}>
+    <nav className={`${classes.navbar} ${open ? classes.open : classes.close}`}>
       <ul className={classes.navbarNav}>
         <li className={classes.navItem + " " + classes.active}>
           <a href="#">Home</a>
         </li>
 
         <li className={classes.navItem}>
-          <button>Department</button>
-          <ExpandMoreIcon />
+          <p className={classes.dropdownToggler}>
+            <button>Department</button>
+            <ExpandMoreIcon />
+          </p>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Computer Technology</a>
@@ -32,8 +34,10 @@ function Navbar() {
         </li>
 
         <li className={classes.navItem}>
-          <button href="#">Syllabus</button>
-          <ExpandMoreIcon />
+          <p className={classes.dropdownToggler}>
+            <button>Syllabus</button>
+            <ExpandMoreIcon />
+          </p>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Computer Engineering Syllabus</a>
@@ -51,8 +55,10 @@ function Navbar() {
         </li>
 
         <li className={classes.navItem}>
-          <button>Facilities</button>
-          <ExpandMoreIcon />
+          <p className={classes.dropdownToggler}>
+            <button>Facilities</button>
+            <ExpandMoreIcon />
+          </p>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Modern Lab</a>
@@ -70,8 +76,10 @@ function Navbar() {
         </li>
 
         <li className={classes.navItem}>
-          <button>LPI Clubs</button>
-          <ExpandMoreIcon />
+          <p className={classes.dropdownToggler}>
+            <button>LPI Clubs</button>
+            <ExpandMoreIcon />
+          </p>
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Robotic Club</a>

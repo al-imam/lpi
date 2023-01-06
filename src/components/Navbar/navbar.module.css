@@ -11,9 +11,10 @@ a {
   text-decoration: none;
 }
 
-.navbarNav a {
+.navbarNav a,
+.navbarNav button,
+.navbarNav li {
   font-family: var(--ff-m);
-  font-weight: var(--fw-500);
 }
 
 .navbar {
@@ -209,5 +210,14 @@ a {
   .navItem:focus-within .dropdownMenu {
     opacity: 1;
     pointer-events: auto;
+  }
+}
+
+@media only screen and (max-width: 37rem) {
+  .navItem,
+  .dropdownToggler,
+  .navItem li,
+  .dropdownMenu {
+    font-size: 1.015rem;
   }
 }

@@ -24,18 +24,18 @@ export default function Header({ setOpen, open }) {
               <PhonelinkLockIcon /> +88-01881-614926
             </a>
           </li>
-          <li>
+          <li className={classes.b}>
             <a href="/complain" className={classes.item}>
               <RateReviewIcon /> Complain
             </a>
           </li>
+          <button
+            className={`${classes.toggler} ${open ? classes.open : ""}`}
+            onClick={() => setOpen((p) => !p)}
+          >
+            <SortIcon fontSize="medium" sx={{ color: grey[900] }} />
+          </button>
         </ul>
-        <button
-          className={`${classes.toggler} ${open ? classes.open : ""}`}
-          onClick={() => setOpen((p) => !p)}
-        >
-          <SortIcon fontSize="medium" sx={{ color: grey[900] }} />
-        </button>
       </div>
     </header>
   );

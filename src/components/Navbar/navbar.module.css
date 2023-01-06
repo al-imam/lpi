@@ -37,10 +37,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 0.5rem;
   color: var(--gray-50);
   padding-inline: 1rem;
   font-size: 1.125rem;
-  transition: box-shadow 300ms ease, background-color 300ms ease;
+  transition: box-shadow 300ms ease-out, background-color 300ms ease-out;
+}
+
+.navItem > svg {
+  transition: transform 300ms ease-out;
 }
 
 .navItem.active {
@@ -50,6 +55,10 @@ a {
 
 .navItem:hover {
   color: var(--primary);
+}
+
+.navItem:hover > svg {
+  transform: rotateZ(180deg);
 }
 
 .dropdownMenu {

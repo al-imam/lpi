@@ -1,4 +1,5 @@
 import classes from "./navbar.module.css";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Navbar() {
   return (
@@ -10,6 +11,7 @@ function Navbar() {
 
         <li className={classes.navItem}>
           <a href="#">Department</a>
+          <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Computer Technology</a>
@@ -31,6 +33,7 @@ function Navbar() {
 
         <li className={classes.navItem}>
           <a href="#">Syllabus</a>
+          <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Computer Engineering Syllabus</a>
@@ -49,6 +52,7 @@ function Navbar() {
 
         <li className={classes.navItem}>
           <a href="#">Facilities</a>
+          <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Modern Lab</a>
@@ -67,6 +71,7 @@ function Navbar() {
 
         <li className={classes.navItem}>
           <a href="#">LPI Clubs</a>
+          <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>
               <a href="#">Robotic Club</a>

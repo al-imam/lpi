@@ -58,6 +58,14 @@
 }
 
 @media only screen and (max-width: 1080px) {
+  .items li {
+    display: none;
+  }
+
+  .items li:last-child {
+    display: flex;
+  }
+
   .toggler {
     display: block;
   }

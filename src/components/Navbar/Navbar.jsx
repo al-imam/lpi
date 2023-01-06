@@ -10,7 +10,7 @@ function Navbar() {
         </li>
 
         <li className={classes.navItem}>
-          <a href="#">Department</a>
+          <button>Department</button>
           <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>
@@ -32,7 +32,7 @@ function Navbar() {
         </li>
 
         <li className={classes.navItem}>
-          <a href="#">Syllabus</a>
+          <button href="#">Syllabus</button>
           <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>
@@ -51,7 +51,7 @@ function Navbar() {
         </li>
 
         <li className={classes.navItem}>
-          <a href="#">Facilities</a>
+          <button>Facilities</button>
           <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>
@@ -70,7 +70,7 @@ function Navbar() {
         </li>
 
         <li className={classes.navItem}>
-          <a href="#">LPI Clubs</a>
+          <button>LPI Clubs</button>
           <ExpandMoreIcon />
           <ul className={classes.dropdownMenu}>
             <li>

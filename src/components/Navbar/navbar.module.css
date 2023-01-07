@@ -61,7 +61,7 @@ a {
 }
 
 .navItem:has(> :global.active) {
-  box-shadow: var(--primary) inset 0 -3px 0;
+  box-shadow: var(--primary) inset 0 -5px 0;
 }
 
 .navItem:hover {
@@ -162,14 +162,14 @@ a {
     overflow: hidden;
     max-height: 2.5rem;
     min-height: 2.5rem;
-    transition: max-height 300ms ease-out, background-color 200ms ease-out;
+    transition: max-height 300ms ease-out, background-color 200ms ease-out,
+      box-shadow 300ms ease-out;
     padding-block: 0.32rem;
     padding-left: 2rem;
   }
 
-  .navItem.active {
-    box-shadow: none;
-    color: var(--primary);
+  .navItem:has(> :global.active) {
+    box-shadow: var(--primary) inset 5px 0 0;
   }
 
   .dropdownToggler {
@@ -187,6 +187,10 @@ a {
     box-shadow: none;
     border-radius: 0;
     margin-block: 0.5rem;
+  }
+
+  .dropdownMenu li:has(:global .active) {
+    color: var(--gray-900);
   }
 
   .dropdownMenu li {

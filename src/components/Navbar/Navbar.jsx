@@ -1,5 +1,5 @@
 import classes from "./navbar.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Navbar({ open }) {
@@ -16,27 +16,29 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <Link to="department/computer-technology">
+              <NavLink to="department/computer-technology">
                 Computer Technology
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="department/electrical-technology">
+              <NavLink to="department/electrical-technology">
                 Electrical Technology
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="department/civil-technology">Civil Technology</Link>
+              <NavLink to="department/civil-technology">
+                Civil Technology
+              </NavLink>
             </li>
             <li>
-              <Link to="department/electronics-technology">
+              <NavLink to="department/electronics-technology">
                 Electronics Technology
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="department/architecture-technology">
+              <NavLink to="department/architecture-technology">
                 Architecture Technology
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </li>
@@ -47,20 +49,22 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <Link to="syllabus/computer">Computer Engineering Syllabus</Link>
+              <NavLink to="syllabus/computer">
+                Computer Engineering Syllabus
+              </NavLink>
             </li>
             <li>
-              <Link to="syllabus/civil">Civil Engineering Syllabus</Link>
+              <NavLink to="syllabus/civil">Civil Engineering Syllabus</NavLink>
             </li>
             <li>
-              <Link to="syllabus/electrical">
+              <NavLink to="syllabus/electrical">
                 Electrical Engineering Syllabus
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="syllabus/architecture">
+              <NavLink to="syllabus/architecture">
                 Architecture Engineering Syllabus
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </li>
@@ -71,16 +75,16 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <Link to="facilities/modern-lab">Modern Lab</Link>
+              <NavLink to="facilities/modern-lab">Modern Lab</NavLink>
             </li>
             <li>
-              <Link to="facilities/open-library">Open Library</Link>
+              <NavLink to="facilities/open-library">Open Library</NavLink>
             </li>
             <li>
-              <Link to="facilities/duet-admission">DUET Admission</Link>
+              <NavLink to="facilities/duet-admission">DUET Admission</NavLink>
             </li>
             <li>
-              <Link to="facilities/free-internet">Free Internet</Link>
+              <NavLink to="facilities/free-internet">Free Internet</NavLink>
             </li>
           </ul>
         </li>
@@ -92,13 +96,13 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <Link to="clubs/robotic">Robotic Club</Link>
+              <NavLink to="clubs/robotic">Robotic Club</NavLink>
             </li>
             <li>
-              <Link to="clubs/programming">LPI Programming Club</Link>
+              <NavLink to="clubs/programming">LPI Programming Club</NavLink>
             </li>
             <li>
-              <Link to="clubs/debating">LPDS Debating Club</Link>
+              <NavLink to="clubs/debating">LPDS Debating Club</NavLink>
             </li>
           </ul>
         </li>

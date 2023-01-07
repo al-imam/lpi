@@ -60,7 +60,7 @@ a {
   transition: transform 300ms ease-out;
 }
 
-.navItem:has(:global .active) {
+.navItem:has(> :global.active) {
   box-shadow: var(--primary) inset 0 -3px 0;
 }
 
@@ -103,6 +103,14 @@ a {
 
 .dropdownMenu li:hover {
   background-color: var(--primary);
+}
+
+.dropdownMenu li:has(:global .active) {
+  background-color: var(--primary);
+}
+
+.navItem:has(.dropdownMenu):has(:global .active) {
+  color: var(--primary);
 }
 
 @media only screen and (min-width: 1080px) {

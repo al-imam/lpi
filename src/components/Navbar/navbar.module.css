@@ -15,6 +15,7 @@ a {
 .navbarNav button,
 .navbarNav li {
   font-family: var(--ff-m);
+  user-select: none;
 }
 
 .navbar {

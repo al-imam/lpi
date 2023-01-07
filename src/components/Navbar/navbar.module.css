@@ -11,11 +11,10 @@ a {
   text-decoration: none;
 }
 
-.navbarNav a,
-.navbarNav button,
-.navbarNav li {
+.navbarNav :is(a, li, button, img) {
   font-family: var(--ff-m);
   user-select: none;
+  -webkit-user-drag: none;
 }
 
 .navbar {

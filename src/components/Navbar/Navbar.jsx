@@ -1,4 +1,5 @@
 import classes from "./navbar.module.css";
+import { Link } from "react-router-dom";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Navbar({ open }) {
@@ -6,7 +7,7 @@ function Navbar({ open }) {
     <nav className={`${classes.navbar} ${open ? classes.open : ""}`}>
       <ul className={classes.navbarNav}>
         <li className={classes.navItem + " " + classes.active}>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
 
         <li className={classes.navItem}>
@@ -15,19 +16,27 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <a href="#">Computer Technology</a>
+              <Link to="department/computer-technology">
+                Computer Technology
+              </Link>
             </li>
             <li>
-              <a href="#">Electrical Technology</a>
+              <Link to="department/electrical-technology">
+                Electrical Technology
+              </Link>
             </li>
             <li>
-              <a href="#">Civil Technology</a>
+              <Link to="department/civil-technology">Civil Technology</Link>
             </li>
             <li>
-              <a href="#">Electronics Technology</a>
+              <Link to="department/electronics-technology">
+                Electronics Technology
+              </Link>
             </li>
             <li>
-              <a href="#">Architecture Technology</a>
+              <Link to="department/architecture-technology">
+                Architecture Technology
+              </Link>
             </li>
           </ul>
         </li>
@@ -38,16 +47,20 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <a href="#">Computer Engineering Syllabus</a>
+              <Link to="syllabus/computer">Computer Engineering Syllabus</Link>
             </li>
             <li>
-              <a href="#">Civil Engineering Syllabus</a>
+              <Link to="syllabus/civil">Civil Engineering Syllabus</Link>
             </li>
             <li>
-              <a href="#">Electrical Engineering Syllabus</a>
+              <Link to="syllabus/electrical">
+                Electrical Engineering Syllabus
+              </Link>
             </li>
             <li>
-              <a href="#">Architecture Engineering Syllabus</a>
+              <Link to="syllabus/architecture">
+                Architecture Engineering Syllabus
+              </Link>
             </li>
           </ul>
         </li>
@@ -58,16 +71,16 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <a href="#">Modern Lab</a>
+              <Link to="facilities/modern-lab">Modern Lab</Link>
             </li>
             <li>
-              <a href="#">Open Library</a>
+              <Link to="facilities/open-library">Open Library</Link>
             </li>
             <li>
-              <a href="#">DUET Admission</a>
+              <Link to="facilities/duet-admission">DUET Admission</Link>
             </li>
             <li>
-              <a href="#">Free Internet</a>
+              <Link to="facilities/free-internet">Free Internet</Link>
             </li>
           </ul>
         </li>
@@ -79,19 +92,19 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <a href="#">Robotic Club</a>
+              <Link to="clubs/robotic">Robotic Club</Link>
             </li>
             <li>
-              <a href="#">LPI programming club</a>
+              <Link to="clubs/programming">LPI Programming Club</Link>
             </li>
             <li>
-              <a href="#">LPDS Debating Club</a>
+              <Link to="clubs/debating">LPDS Debating Club</Link>
             </li>
           </ul>
         </li>
 
         <li className={classes.navItem}>
-          <a href="#">About us</a>
+          <Link to="about">About us</Link>
         </li>
       </ul>
     </nav>

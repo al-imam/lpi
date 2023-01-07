@@ -1,5 +1,5 @@
 import classes from "./navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Navbar({ open }) {
@@ -7,7 +7,7 @@ function Navbar({ open }) {
     <nav className={`${classes.navbar} ${open ? classes.open : ""}`}>
       <ul className={classes.navbarNav}>
         <li className={classes.navItem + " " + classes.active}>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
 
         <li className={classes.navItem}>
@@ -104,7 +104,7 @@ function Navbar({ open }) {
         </li>
 
         <li className={classes.navItem}>
-          <Link to="about">About us</Link>
+          <NavLink to="about">About us</NavLink>
         </li>
       </ul>
     </nav>

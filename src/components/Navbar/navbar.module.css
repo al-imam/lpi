@@ -154,7 +154,7 @@ a {
     overflow: hidden;
     max-height: 2.5rem;
     min-height: 2.5rem;
-    transition: max-height 300ms ease-out;
+    transition: max-height 300ms ease-out, background-color 200ms ease-out;
     padding-block: 0.32rem;
     padding-left: 2rem;
   }

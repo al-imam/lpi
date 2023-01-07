@@ -164,8 +164,8 @@ a {
     min-height: 2.5rem;
     transition: max-height 300ms ease-out, background-color 200ms ease-out,
       box-shadow 300ms ease-out;
-    padding-block: 0.32rem;
     padding-left: 2rem;
+    padding-top: 0.535rem;
   }
 
   .navItem:has(> :global.active) {

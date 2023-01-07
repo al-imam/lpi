@@ -7,6 +7,10 @@
   padding-inline: 2rem;
 }
 
+.header :is(a, img) {
+  user-select: none;
+}
+
 .header {
   height: var(--header-size);
   max-width: 70rem;

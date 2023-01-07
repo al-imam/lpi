@@ -60,7 +60,7 @@ a {
   transition: transform 300ms ease-out;
 }
 
-.navItem.active {
+.navItem:has(:global .active) {
   box-shadow: var(--primary) inset 0 -3px 0;
 }
 

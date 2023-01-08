@@ -1,5 +1,6 @@
 import classes from "./home.module.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
@@ -19,9 +20,9 @@ function Home() {
             established in 2006. It is located near Lakshmipur Stadium
             baishmara. It is under BTEB. It contains about 5,000 students.
           </p>
-          <a className={classes.action} href="/about">
+          <NavLink className={classes.action} to="/about">
             Learn more <ArrowForwardIcon />
-          </a>
+          </NavLink>
         </div>
       </div>
     </main>

@@ -1,11 +1,12 @@
 .main {
   position: relative;
+  padding-inline: 2rem;
 }
 
 .heroContainer {
   max-width: 70rem;
   margin-inline: auto;
-  height: 700px;
+  height: 44rem;
   display: flex;
   align-items: center;
 }

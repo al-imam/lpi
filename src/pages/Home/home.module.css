@@ -1,0 +1,18 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundImg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 700px;
+  width: 100%;
+  filter: brightness(0.5);
+  object-fit: cover;
+}

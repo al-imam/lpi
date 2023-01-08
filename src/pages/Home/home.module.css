@@ -18,15 +18,23 @@
   object-fit: cover;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: min(700px, 80%);
+  margin-inline: auto;
+  row-gap: 1rem;
+}
+
 .heading {
   font-family: var(--ff-m);
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--gray-50);
 }
 
 .subtitle {
-  font-family: var(--ff-r);
+  font-family: var(--ff-m);
   font-size: 1.125rem;
-  color: var(--gray-300);
-  width: 60ch;
+  color: var(--gray-200);
+  line-height: 1.6;
 }

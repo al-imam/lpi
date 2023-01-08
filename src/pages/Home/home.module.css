@@ -17,6 +17,12 @@
   filter: blur(3px);
   filter: brightness(0.4);
   object-fit: cover;
+  transition: transform 300ms ease-out, filter 300ms ease-out;
+}
+
+.heroContainer:hover > .backgroundImg {
+  transform: scale(1.01);
+  filter: blur(10px), brightness(0.4);
 }
 
 .hero {

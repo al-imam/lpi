@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400;700&display=swap");
 
 *,
 *::after,
@@ -24,7 +24,7 @@
 
   --ff-m: "Montserrat";
   --fw-700: 700;
-  --ff-r: "Roboto";
+  --ff-os: "Open Sans";
   --fw-500: 500;
   --fw-400: 400;
 }

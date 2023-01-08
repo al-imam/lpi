@@ -1,10 +1,12 @@
-.heroContainer {
+.main {
   position: relative;
-  width: 100%;
+}
+
+.heroContainer {
+  max-width: 70rem;
+  margin-inline: auto;
   height: 700px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -17,31 +19,58 @@
   filter: blur(3px);
   filter: brightness(0.4);
   object-fit: cover;
-  transition: transform 300ms ease-out, filter 300ms ease-out;
+  transition: transform 300ms ease-out, filter 300ms linear;
 }
 
 .heroContainer:hover > .backgroundImg {
-  transform: scale(1.01);
-  filter: blur(10px), brightness(0.4);
+  transform: scale(1.005);
+  filter: brightness(0.3);
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  width: min(700px, 80%);
-  margin-inline: auto;
   row-gap: 1rem;
 }
 
 .heading {
   font-family: var(--ff-m);
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--gray-50);
+  line-height: 1.1;
 }
 
 .subtitle {
-  font-family: var(--ff-m);
+  width: 70ch;
+  font-family: var(--ff-os);
   font-size: 1.125rem;
   color: var(--gray-200);
   line-height: 1.6;
+}
+
+.action {
+  text-decoration: none;
+  font-family: var(--ff-m);
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: 1px solid var(--primary);
+  color: var(--primary);
+  width: max-content;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.action > svg {
+  transition: transform 200ms ease-out;
+}
+
+.action:hover {
+  filter: saturate(1.2);
+}
+
+.action:hover > svg {
+  transform: translateX(0.25rem);
 }

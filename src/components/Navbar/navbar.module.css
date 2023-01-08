@@ -149,6 +149,7 @@ a {
     box-shadow: 0 0 2rem 2px var(--gray-500);
     transition: transform 200ms ease-out;
     border-radius: 0 0 0 1rem;
+    z-index: 1;
   }
 
   .open {

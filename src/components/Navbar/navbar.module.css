@@ -159,6 +159,10 @@ a {
     transform: translateX(0);
   }
 
+  :has(.open) :global .main {
+    filter: opacity(0.8);
+  }
+
   .navbarNav {
     flex-direction: column;
     padding-block: 1rem;

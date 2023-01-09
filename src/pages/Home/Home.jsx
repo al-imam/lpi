@@ -6,7 +6,7 @@ import Card from "../../components/Card/Card";
 
 function Home() {
   return (
-    <main className={classes.main}>
+    <main className={classes.main + " main"}>
       <img
         className={classes.backgroundImg}
         src="/assets/collage.jpg"

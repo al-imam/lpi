@@ -1,6 +1,10 @@
 .main {
   position: relative;
   padding-inline: 2rem;
+  padding-bottom: 2rem;
+  flex-direction: column;
+  display: flex;
+  row-gap: 5rem;
 }
 
 .heroContainer {
@@ -73,4 +77,26 @@
 
 .action:hover > svg {
   transform: translateX(0.25rem);
+}
+
+.ourDepartment {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.departmentTitle {
+  font-size: var(--h2);
+  font-family: var(--ff-os);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-block: 3rem;
+  color: var(--gray-900);
+  gap: 2rem;
 }

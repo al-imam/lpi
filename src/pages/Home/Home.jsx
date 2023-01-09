@@ -21,14 +21,39 @@ function Home() {
           </NavLink>
         </div>
       </section>
-      <section>
-        <h2>Our department</h2>
-        <div>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+      <section className={classes.ourDepartment}>
+        <h2 className={classes.departmentTitle}>Our departments</h2>
+        <div className={classes.cardsContainer}>
+          <Card
+            title="Computer science and technology"
+            src="/assets/collage.jpg"
+            subtitle="Faculty of CST"
+          />
+          <Card
+            title="Computer science and technology"
+            src="/assets/collage.jpg"
+            subtitle="Faculty of CST"
+          />
+          <Card
+            title="Computer science and technology"
+            src="/assets/collage.jpg"
+            subtitle="Faculty of CST"
+          />
+          <Card
+            title="Computer science and technology"
+            src="/assets/collage.jpg"
+            subtitle="Faculty of CST"
+          />
+          <Card
+            title="Computer science and technology"
+            src="/assets/collage.jpg"
+            subtitle="Faculty of CST"
+          />
+          <Card
+            title="Computer science and technology"
+            src="/assets/collage.jpg"
+            subtitle="Faculty of CST"
+          />
         </div>
       </section>
     </main>

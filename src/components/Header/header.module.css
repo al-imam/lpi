@@ -5,6 +5,9 @@
 .main {
   background-color: var(--gray-200);
   padding-inline: 2rem;
+  z-index: 199;
+  top: 0;
+  position: sticky;
 }
 
 .header :is(a, img) {

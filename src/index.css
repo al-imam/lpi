@@ -10,6 +10,9 @@
 
 :root {
   --primary: #99ff99;
+  --white: white;
+
+  --max-width: 70rem;
 
   --gray-50: #fafafa;
   --gray-100: #f5f5f5;
@@ -23,10 +26,11 @@
   --gray-900: #171717;
 
   --ff-m: "Montserrat";
-  --fw-700: 700;
   --ff-os: "Open Sans";
+  --fw-700: 700;
   --fw-500: 500;
   --fw-400: 400;
+  --fw-300: 300;
 
   --h1: 3.052rem;
   --h2: 2.441rem;
@@ -41,6 +45,6 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #f3f4f6;
   overflow-x: hidden;
 }

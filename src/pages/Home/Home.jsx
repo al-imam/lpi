@@ -2,6 +2,7 @@ import classes from "./home.module.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { NavLink } from "react-router-dom";
 import data from "./data";
+import Card from "../../components/Card/Card";
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
         src="/assets/collage.jpg"
         alt="collage"
       />
-      <div className={classes.heroContainer}>
+      <section className={classes.heroContainer}>
         <div className={classes.hero}>
           <h1 className={classes.heading}>{data.title}</h1>
           <p className={classes.subtitle}>{data.subtitle}</p>
@@ -19,7 +20,17 @@ function Home() {
             {data.action} <ArrowForwardIcon />
           </NavLink>
         </div>
-      </div>
+      </section>
+      <section>
+        <h2>Our department</h2>
+        <div>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </section>
     </main>
   );
 }

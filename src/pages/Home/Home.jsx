@@ -24,36 +24,14 @@ function Home() {
       <section className={classes.ourDepartment}>
         <h2 className={classes.departmentTitle}>Our departments</h2>
         <div className={classes.cardsContainer}>
-          <Card
-            title="Computer science and technology"
-            src="/assets/collage.jpg"
-            subtitle="Faculty of CST"
-          />
-          <Card
-            title="Computer science and technology"
-            src="/assets/collage.jpg"
-            subtitle="Faculty of CST"
-          />
-          <Card
-            title="Computer science and technology"
-            src="/assets/collage.jpg"
-            subtitle="Faculty of CST"
-          />
-          <Card
-            title="Computer science and technology"
-            src="/assets/collage.jpg"
-            subtitle="Faculty of CST"
-          />
-          <Card
-            title="Computer science and technology"
-            src="/assets/collage.jpg"
-            subtitle="Faculty of CST"
-          />
-          <Card
-            title="Computer science and technology"
-            src="/assets/collage.jpg"
-            subtitle="Faculty of CST"
-          />
+          {data.cards.map((card, index) => (
+            <Card
+              key={card.title + index}
+              title={card.title}
+              src={card.src}
+              subtitle={card.subtitle}
+            />
+          ))}
         </div>
       </section>
     </main>

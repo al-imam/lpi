@@ -1,17 +1,13 @@
 import classes from "./card.module.css";
 
-function Card() {
+function Card({ title, subtitle, src }) {
   return (
     <div className={classes.card}>
-      <img
-        className={classes.cardImg}
-        src="/assets/collage.jpg"
-        alt="department picture"
-      />
+      <img className={classes.cardImg} src={src} alt="department picture" />
       <div className={classes.cardInfo}>
-        <h4 className={classes.cardTitle}>Computer science and technology</h4>
+        <h4 className={classes.cardTitle}>{title}</h4>
         <div class={classes.cardDetails}>
-          <a href="#">Faculty of CST</a>
+          <a href="#">{subtitle}</a>
           <span>4 years</span>
         </div>
       </div>

@@ -69,9 +69,9 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <p>
-          Copyright © 2018, All Right Reserved
-          <a href="https://github.com/al-imam/"> Al-Imam</a>
+        <p className={classes.footerCopyRight}>
+          Copyright © 2023, All Right Reserved
+          <a href="https://github.com/al-imam/">Al-Imam</a>
         </p>
       </div>
     </footer>

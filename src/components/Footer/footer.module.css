@@ -66,3 +66,23 @@
   font-weight: var(--fw-400);
   color: var(--gray-50);
 }
+
+.footerCopyRight {
+  background-color: var(--gray-800);
+  color: var(--gray-300);
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--h6);
+  font-family: var(--ff-os);
+  font-weight: var(--fw-400);
+  height: 4rem;
+  box-shadow: 0 0 0 100vmax var(--gray-800);
+  clip-path: inset(0 -100vmax);
+}
+
+.footerCopyRight a {
+  color: var(--primary);
+  text-decoration: underline;
+}

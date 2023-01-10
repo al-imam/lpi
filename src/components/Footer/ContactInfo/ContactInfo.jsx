@@ -6,8 +6,8 @@ import classes from "./contactInfo.module.css";
 
 function ContactInfo() {
   return (
-    <div>
-      <div className={classes.footerContact}>
+    <div className={classes.footerContact}>
+      <div className={classes.contact}>
         <LocationOnIcon />
         <div className={classes.contactInfo}>
           <h4 className={classes.infoHeading}>Find us</h4>
@@ -16,7 +16,7 @@ function ContactInfo() {
           </address>
         </div>
       </div>
-      <div className={classes.footerContact}>
+      <div className={classes.contact}>
         <PhonelinkLockIcon />
         <div className={classes.contactInfo}>
           <h4 className={classes.infoHeading}>Call us</h4>
@@ -25,7 +25,7 @@ function ContactInfo() {
           </a>
         </div>
       </div>
-      <div className={classes.footerContact}>
+      <div className={classes.contact}>
         <MailLockIcon />
         <div className={classes.contactInfo}>
           <h4 className={classes.infoHeading}>Mail us</h4>

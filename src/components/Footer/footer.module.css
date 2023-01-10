@@ -40,6 +40,8 @@
 
 .logoImage img {
   width: 100%;
+  margin-bottom: -1rem;
+  margin-left: -0.75rem;
 }
 
 .footerSocial {

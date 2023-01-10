@@ -6,6 +6,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkIcon from "@mui/icons-material/Link";
 
 import classes from "./footer.module.css";
+import logo from "/assets/logo_.svg";
 
 function Footer() {
   return (
@@ -39,7 +40,7 @@ function Footer() {
         </div>
         <div className={classes.footerLogo}>
           <a href="/" className={classes.logoImage}>
-            <img src="/assets/lpi.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </a>
           <p className={classes.logoDescription}>
             The Lakshmipur Polytechnic Institute in Lakshmipur, Bangladesh, was

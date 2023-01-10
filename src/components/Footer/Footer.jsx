@@ -44,27 +44,27 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
-          <h3>
+        <div className={classes.footerLinks}>
+          <h4 className={classes.linksHeading}>
             Useful Links <LinkIcon />
-          </h3>
-          <ul>
-            <li>
+          </h4>
+          <ul className={classes.linkItems}>
+            <li className={classes.linkItem}>
               <a href="#">Home</a>
             </li>
-            <li>
+            <li className={classes.linkItem}>
               <a href="#">About</a>
             </li>
-            <li>
+            <li className={classes.linkItem}>
               <a href="#">Complain</a>
             </li>
-            <li>
+            <li className={classes.linkItem}>
               <a href="#">Departments</a>
             </li>
-            <li>
+            <li className={classes.linkItem}>
               <a href="#">Contact</a>
             </li>
-            <li>
+            <li className={classes.linkItem}>
               <a href="#">LPI Clubs</a>
             </li>
           </ul>

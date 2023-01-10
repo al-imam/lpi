@@ -48,3 +48,21 @@
   font-weight: var(--fw-400);
   color: var(--gray-50);
 }
+
+.linksHeading {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: var(--h4);
+  font-family: var(--ff-m);
+  font-weight: var(--fw-500);
+  color: var(--gray-50);
+}
+
+.linkItems {
+  padding-left: 1rem;
+  font-size: var(--h6);
+  font-family: var(--ff-os);
+  font-weight: var(--fw-400);
+  color: var(--gray-50);
+}

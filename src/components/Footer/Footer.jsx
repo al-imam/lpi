@@ -21,21 +21,21 @@ function Footer() {
             established in 2006. It is located near Lakshmipur Stadium baishmara
           </p>
         </div>
-        <div className="footer-social-icon">
-          <h4>Follow us</h4>
-          <ul>
+        <div className={classes.footerSocial}>
+          <h4 className={classes.socialHeading}>Follow us</h4>
+          <ul className={classes.socialItems}>
             <li>
-              <a href="#">
+              <a href="#" className={classes.socialItem}>
                 <GitHubIcon /> github
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className={classes.socialItem}>
                 <LinkedInIcon /> linkedin
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className={classes.socialItem}>
                 <FacebookIcon /> facebook
               </a>
             </li>

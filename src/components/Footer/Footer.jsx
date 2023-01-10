@@ -26,17 +26,20 @@ function Footer() {
           <ul className={classes.socialItems}>
             <li>
               <a href="#" className={classes.socialItem}>
-                <GitHubIcon /> github
+                <GitHubIcon />
+                Github
               </a>
             </li>
             <li>
               <a href="#" className={classes.socialItem}>
-                <LinkedInIcon /> linkedin
+                <LinkedInIcon />
+                Linkedin
               </a>
             </li>
             <li>
               <a href="#" className={classes.socialItem}>
-                <FacebookIcon /> facebook
+                <FacebookIcon />
+                Facebook
               </a>
             </li>
           </ul>

@@ -45,7 +45,7 @@ function Footer() {
           </ul>
         </div>
         <div className={classes.footerLinks}>
-          <h4 className={classes.linksHeading}>
+          <h4 className={classes.linkHeading}>
             Useful Links <LinkIcon />
           </h4>
           <ul className={classes.linkItems}>

@@ -23,18 +23,25 @@ function Footer() {
               </address>
             </div>
           </div>
-          <div>
+          <div className={classes.footerContact}>
             <PhonelinkLockIcon />
-            <div>
-              <h4>Call us</h4>
-              <a href="tel:+8801881614926">+8801881614926</a>
+            <div className={classes.contactInfo}>
+              <h4 className={classes.infoHeading}>Call us</h4>
+              <a className={classes.infoDescription} href="tel:+8801881614926">
+                +8801881614926
+              </a>
             </div>
           </div>
-          <div>
+          <div className={classes.footerContact}>
             <MailLockIcon />
-            <div className="cta-text">
-              <h4>Mail us</h4>
-              <a href="mailto:alimam01828@gmail.com">alimam01828@gmail.com</a>
+            <div className={classes.contactInfo}>
+              <h4 className={classes.infoHeading}>Mail us</h4>
+              <a
+                className={classes.infoDescription}
+                href="mailto:alimam01828@gmail.com"
+              >
+                alimam01828@gmail.com
+              </a>
             </div>
           </div>
         </div>

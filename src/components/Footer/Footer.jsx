@@ -9,24 +9,24 @@ import LinkIcon from "@mui/icons-material/Link";
 
 function Footer() {
   return (
-    <footer className="footer-section">
+    <footer className="footerSection">
       <div className="container">
-        <div className="footer-cta pt-5 pb-5">
-          <div className="col-xl-4 col-md-4 mb-30">
+        <div>
+          <div>
             <LocationOnIcon />
             <div className="cta-text">
               <h4>Find us</h4>
               <span>132554 Laharkandi, Lakshmipur, Chittagong</span>
             </div>
           </div>
-          <div className="single-cta">
+          <div>
             <PhonelinkLockIcon />
-            <div className="cta-text">
+            <div>
               <h4>Call us</h4>
               <a href="tel:+8801881614926">+8801881614926</a>
             </div>
           </div>
-          <div className="single-cta">
+          <div>
             <MailLockIcon />
             <div className="cta-text">
               <h4>Mail us</h4>

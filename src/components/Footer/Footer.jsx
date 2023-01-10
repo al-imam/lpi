@@ -14,11 +14,13 @@ function Footer() {
     <footer className={classes.footerSection}>
       <div className={classes.container}>
         <div>
-          <div>
+          <div className={classes.footerContact}>
             <LocationOnIcon />
-            <div className="cta-text">
-              <h4>Find us</h4>
-              <span>132554 Laharkandi, Lakshmipur, Chittagong</span>
+            <div className={classes.contactInfo}>
+              <h4 className={classes.infoHeading}>Find us</h4>
+              <address className={classes.infoDescription}>
+                132554 Laharkandi, Lakshmipur, Chittagong
+              </address>
             </div>
           </div>
           <div>

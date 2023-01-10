@@ -10,13 +10,13 @@ function Head() {
     if (open) {
       setOpen(false);
     }
-    console.log("im called");
-  }, []);
+    console.log("im called", open);
+  }, [open]);
 
   const ref = useOutsideClick(onClick);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} style={{ position: "sticky", zIndex: 200, top: 0 }}>
       <Header setOpen={setOpen} open={open} />
       <Navbar open={open} />
     </div>

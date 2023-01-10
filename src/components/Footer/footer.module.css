@@ -11,14 +11,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
+  column-gap: 1rem;
 }
 
 .footerContact svg {
   color: var(--primary);
 }
 
-.contactInfo :is(.infoHeading, .infoDescription) {
+.contactInfo :where(.infoHeading, .infoDescription) {
   color: var(--gray-50);
 }
 

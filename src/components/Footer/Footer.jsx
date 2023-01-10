@@ -22,16 +22,24 @@ function Footer() {
           </p>
         </div>
         <div className="footer-social-icon">
-          <h3>Follow us</h3>
-          <a href="#">
-            <GitHubIcon />
-          </a>
-          <a href="#">
-            <LinkedInIcon />
-          </a>
-          <a href="#">
-            <FacebookIcon />
-          </a>
+          <h4>Follow us</h4>
+          <ul>
+            <li>
+              <a href="#">
+                <GitHubIcon /> github
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <LinkedInIcon /> linkedin
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FacebookIcon /> facebook
+              </a>
+            </li>
+          </ul>
         </div>
         <div>
           <h3>

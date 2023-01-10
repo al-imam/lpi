@@ -1,10 +1,13 @@
 .footerSection {
   background-color: var(--gray-900);
+  padding-inline: 2rem;
 }
 
 .container {
   max-width: 70rem;
   margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 :where(.socialItems, .logoDescription, .linkItem, .footerCopyRight) {
@@ -24,6 +27,7 @@
 .footerLogo {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .logoImage {
@@ -34,28 +38,41 @@
   width: 100%;
 }
 
+.footerSocial {
+  padding-block: 3rem;
+}
+
+.socialHeading {
+  padding-block: 1rem;
+}
+
 .socialItems {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  column-gap: 2rem;
 }
 
 .socialItem {
   display: flex;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 0.5rem;
 }
 
 .linkHeading {
   display: flex;
   align-items: center;
-  column-gap: 0.5rem;
+  padding-block: 1rem;
+  column-gap: 1rem;
 }
 
 .linkItems {
-  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
 }
 
 .footerCopyRight {
+  grid-column: 1 / -1;
   background-color: var(--gray-800);
   color: var(--gray-300);
   display: flex;

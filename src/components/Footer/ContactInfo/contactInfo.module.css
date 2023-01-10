@@ -32,3 +32,8 @@
   font-weight: var(--fw-400);
   font-style: normal;
 }
+
+.infoDescription:not(address):hover,
+.infoDescription:focus-visible {
+  color: var(--primary);
+}

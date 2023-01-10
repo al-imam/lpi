@@ -34,6 +34,10 @@
   width: 8rem;
 }
 
+.logoImage:focus-visible {
+  filter: brightness(1.5);
+}
+
 .logoImage img {
   width: 100%;
 }
@@ -71,6 +75,10 @@
   row-gap: 0.5rem;
 }
 
+.linkItem {
+  width: max-content;
+}
+
 .footerCopyRight {
   grid-column: 1 / -1;
   background-color: var(--gray-800);
@@ -86,5 +94,23 @@
 
 .footerCopyRight a {
   color: var(--primary);
+}
+
+.socialItem:focus-visible,
+.socialItem:hover {
+  color: var(--primary);
+  transform: scale(1.02);
+  transition: transform 200ms ease-out;
+}
+
+.linkItem a:focus-visible,
+.linkItem:hover {
   text-decoration: underline;
+  color: var(--primary);
+}
+
+.footerCopyRight a:focus-visible,
+.footerCopyRight a:hover {
+  text-decoration: underline;
+  filter: brightness(1.2);
 }

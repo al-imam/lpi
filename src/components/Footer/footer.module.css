@@ -6,3 +6,23 @@
   max-width: 70rem;
   margin-inline: auto;
 }
+
+.footerLogo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoImage {
+  width: 8rem;
+}
+
+.logoImage img {
+  width: 100%;
+}
+
+.logoDescription {
+  color: var(--gray-50);
+  font-family: var(--ff-os);
+  font-weight: var(--fw-400);
+  font-size: var(--h6);
+}

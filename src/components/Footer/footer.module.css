@@ -6,31 +6,3 @@
   max-width: 70rem;
   margin-inline: auto;
 }
-
-.footerContact {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 1rem;
-}
-
-.footerContact svg {
-  color: var(--primary);
-}
-
-.contactInfo :where(.infoHeading, .infoDescription) {
-  color: var(--gray-50);
-}
-
-.infoHeading {
-  font-size: var(--h5);
-  font-family: var(--ff-m);
-  font-weight: var(--fw-500);
-}
-
-.infoDescription {
-  font-size: var(--h6);
-  font-family: var(--ff-os);
-  font-weight: var(--fw-400);
-  font-style: normal;
-}

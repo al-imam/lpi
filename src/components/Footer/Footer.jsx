@@ -7,10 +7,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkIcon from "@mui/icons-material/Link";
 
+import classes from "./footer.module.css";
+
 function Footer() {
   return (
-    <footer className="footerSection">
-      <div className="container">
+    <footer className={classes.footerSection}>
+      <div className={classes.container}>
         <div>
           <div>
             <LocationOnIcon />

@@ -1,0 +1,8 @@
+.footerSection {
+  background-color: var(--gray-900);
+}
+
+.container {
+  max-width: 70rem;
+  margin-inline: auto;
+}

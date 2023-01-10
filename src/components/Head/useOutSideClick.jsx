@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useRef } from "react";
 
-const useOutsideClick = (onClick) => {
+const useOutsideClick = (onClick, open) => {
   const ref = useRef(null);
 
   const handleClick = useCallback(

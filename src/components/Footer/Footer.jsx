@@ -54,7 +54,10 @@ function Footer() {
           <h4 className={classes.socialHeading}>Follow us</h4>
           <ul className={classes.socialItems}>
             <li>
-              <a href="#" className={classes.socialItem}>
+              <a
+                href="https://github.com/al-imam"
+                className={classes.socialItem}
+              >
                 <GitHubIcon />
                 Github
               </a>

@@ -24,7 +24,7 @@ function Footer() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className={classes.linkItem}>
-              <a href="#">About</a>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li className={classes.linkItem}>
               <a href="#">Complain</a>

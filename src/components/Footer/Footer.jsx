@@ -8,6 +8,8 @@ import LinkIcon from "@mui/icons-material/Link";
 import classes from "./footer.module.css";
 import logo from "/assets/logo_.svg";
 
+import { NavLink } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className={classes.footerSection}>
@@ -19,7 +21,7 @@ function Footer() {
           </h4>
           <ul className={classes.linkItems}>
             <li className={classes.linkItem}>
-              <a href="#">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li className={classes.linkItem}>
               <a href="#">About</a>

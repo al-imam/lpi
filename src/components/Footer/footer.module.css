@@ -32,10 +32,13 @@
 
 .logoImage {
   width: 8rem;
+  transition: filter 200ms ease-out, transform 200ms ease-out;
 }
 
+.logoImage:hover,
 .logoImage:focus-visible {
-  filter: brightness(1.5);
+  filter: grayscale(0.5);
+  transform: scale(1.02);
 }
 
 .logoImage img {

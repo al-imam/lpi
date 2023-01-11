@@ -40,8 +40,7 @@
 
 .logoImage img {
   width: 100%;
-  margin-bottom: -1rem;
-  margin-left: -0.75rem;
+  filter: brightness(1.5);
 }
 
 .footerSocial {

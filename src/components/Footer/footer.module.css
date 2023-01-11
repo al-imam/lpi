@@ -46,6 +46,20 @@
   filter: brightness(1.5);
 }
 
+@media only screen and (max-width: 58.5rem) {
+  .footerLogo {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-bottom: 3rem;
+  }
+
+  .logoDescription {
+    max-width: 65ch;
+  }
+}
+
 .footerSocial {
   padding-block: 3rem;
 }

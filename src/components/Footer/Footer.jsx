@@ -41,9 +41,9 @@ function Footer() {
           </ul>
         </div>
         <div className={classes.footerLogo}>
-          <a href="/" className={classes.logoImage}>
+          <NavLink to="/" className={classes.logoImage}>
             <img src={logo} alt="logo" />
-          </a>
+          </NavLink>
           <p className={classes.logoDescription}>
             The Lakshmipur Polytechnic Institute in Lakshmipur, Bangladesh, was
             established in 2006. It is located near Lakshmipur Stadium baishmara

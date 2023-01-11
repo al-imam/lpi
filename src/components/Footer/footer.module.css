@@ -108,6 +108,12 @@
   width: max-content;
 }
 
+@media only screen and (max-width: 58.5rem) {
+  .footerLinks {
+    padding-bottom: 3rem;
+  }
+}
+
 .footerCopyRight {
   grid-column: 1 / -1;
   background-color: var(--gray-800);

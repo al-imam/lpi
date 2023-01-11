@@ -80,6 +80,17 @@
   column-gap: 0.5rem;
 }
 
+@media only screen and (max-width: 58.5rem) {
+  .footerSocial {
+    padding-block: 0;
+  }
+
+  .socialItems {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+}
+
 .linkHeading {
   display: flex;
   align-items: center;

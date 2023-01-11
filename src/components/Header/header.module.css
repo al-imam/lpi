@@ -58,7 +58,7 @@
 .item:focus-visible,
 .item:hover {
   color: var(--gray-800);
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .toggler {

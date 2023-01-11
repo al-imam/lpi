@@ -63,7 +63,10 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="#" className={classes.socialItem}>
+              <a
+                href="https://www.linkedin.com/in/alimam"
+                className={classes.socialItem}
+              >
                 <LinkedInIcon />
                 Linkedin
               </a>

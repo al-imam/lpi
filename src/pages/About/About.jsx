@@ -1,10 +1,10 @@
 import classes from "./about.module.css";
-
+import Map from "../../components/Map/Map";
 function About() {
   return (
-    <div className={classes.main}>
-      <h1 className={classes.heading}>Hello From about</h1>
-    </div>
+    <main className={classes.main}>
+      <Map />
+    </main>
   );
 }
 

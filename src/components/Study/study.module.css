@@ -28,6 +28,21 @@
   }
 }
 
+@media only screen and (max-width: 65rem) {
+  .section {
+    max-width: var(--max-width-xsm);
+  }
+
+  .studyContainer {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+  }
+}
+
 .info {
   display: flex;
   flex-direction: column;

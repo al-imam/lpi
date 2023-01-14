@@ -1,11 +1,15 @@
-.studyContainer {
+.section {
   --bg: white;
+  box-shadow: 0 0 0 100vmax var(--bg);
+  clip-path: inset(0 -100vmax);
+  max-width: var(--max-width);
+}
+
+.studyContainer {
+  padding-block: 5rem;
   display: flex;
   background-color: var(--bg);
   gap: 2rem;
-  padding-block: 5rem;
-  box-shadow: 0 0 0 100vmax var(--bg);
-  clip-path: inset(0 -100vmax);
 }
 
 .image {

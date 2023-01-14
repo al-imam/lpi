@@ -1,5 +1,5 @@
 .heroContainer {
-  max-width: 70rem;
+  width: var(--max-width);
   height: 44rem;
   margin-inline: auto;
   display: flex;
@@ -9,8 +9,14 @@
 .hero {
   display: flex;
   flex-direction: column;
-  max-width: var(--max-width);
+  width: 100%;
   row-gap: 1rem;
+}
+
+@media only screen and (max-width: 75rem) {
+  .heroContainer {
+    width: var(--max-width-sm);
+  }
 }
 
 .heading {
@@ -21,7 +27,7 @@
 
 .subtitle {
   font-family: var(--ff-os);
-  font-size: var(--h5);
+  font-size: var(--h6);
   color: var(--gray-100);
   line-height: 1.6;
   width: 80ch;

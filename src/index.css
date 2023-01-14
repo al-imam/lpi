@@ -10,6 +10,7 @@
 
 :root {
   --primary: #99ff99;
+  --hover: hsl(120, 77%, 67%);
   --white: white;
 
   --max-width: 70rem;

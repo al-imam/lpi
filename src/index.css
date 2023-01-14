@@ -15,6 +15,7 @@
 
   --max-width: 70rem;
   --max-width-sm: 59rem;
+  --max-width-xsm: 44rem;
 
   --gray-50: #fafafa;
   --gray-100: #f5f5f5;
@@ -40,6 +41,9 @@
   --h4: 1.563rem;
   --h5: 1.25rem;
   --h6: 1rem;
+
+  --break-large: 75rem;
+  --break-medium: 62rem;
 }
 
 :focus-visible {

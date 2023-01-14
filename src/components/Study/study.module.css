@@ -1,8 +1,11 @@
 .studyContainer {
+  --bg: white;
   display: flex;
-  background-color: white;
+  background-color: var(--bg);
   gap: 2rem;
-  padding-block: 4rem;
+  padding-block: 5rem;
+  box-shadow: 0 0 0 100vmax var(--bg);
+  clip-path: inset(0 -100vmax);
 }
 
 .image {

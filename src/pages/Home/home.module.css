@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  padding-inline: 2rem;
+  padding-inline: var(--gap-inline);
 }
 
 .backgroundImg {

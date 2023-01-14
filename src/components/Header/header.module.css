@@ -4,7 +4,7 @@
 
 .main {
   background-color: var(--gray-200);
-  padding-inline: 2rem;
+  padding-inline: var(--gap-inline);
   z-index: 199;
   top: 0;
   position: sticky;

@@ -1,6 +1,6 @@
 .footerSection {
   background-color: var(--gray-900);
-  padding-inline: 2rem;
+  padding-inline: var(--gap-inline);
 }
 
 .container {

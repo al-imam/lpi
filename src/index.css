@@ -12,6 +12,7 @@
   --primary: #99ff99;
   --hover: hsl(120, 77%, 67%);
   --white: white;
+  --gap-inline: 2rem;
 
   --max-width: 70rem;
   --max-width-sm: 59rem;

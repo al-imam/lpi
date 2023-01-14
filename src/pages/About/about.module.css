@@ -1,5 +1,5 @@
 .main {
-  padding-inline: 2rem;
+  padding-inline: var(--gap-inline);
 }
 
 .heading {

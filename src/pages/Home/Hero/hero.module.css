@@ -5,3 +5,24 @@
   display: flex;
   align-items: center;
 }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width);
+  row-gap: 1rem;
+}
+
+.heading {
+  font-family: var(--ff-m);
+  font-size: var(--h1);
+  color: var(--gray-50);
+}
+
+.subtitle {
+  font-family: var(--ff-os);
+  font-size: var(--h5);
+  color: var(--gray-100);
+  line-height: 1.6;
+  width: 80ch;
+}

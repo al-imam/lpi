@@ -22,10 +22,10 @@ function Home() {
           </NavLink>
         </div>
       </section>
-      <section>
-        <Study></Study>
+      <section className={classes.section}>
+        <Study />
       </section>
-      <section className={classes.ourDepartment}>
+      <section className={classes.section}>
         <h2 className={classes.departmentTitle}>Our departments</h2>
         <div className={classes.cardsContainer}>
           {data.cards.map((card, index) => (

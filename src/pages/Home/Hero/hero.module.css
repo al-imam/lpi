@@ -30,7 +30,7 @@
   font-size: var(--h6);
   font-weight: var(--fw-400);
   color: var(--gray-50);
-  line-height: 1.6;
+  line-height: var(--p-line);
   width: 80ch;
 }
 

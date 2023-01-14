@@ -36,6 +36,10 @@
   color: var(--gray-50);
 }
 
+.logoDescription {
+  line-height: var(--p-line);
+}
+
 .footerLogo {
   display: flex;
   flex-direction: column;

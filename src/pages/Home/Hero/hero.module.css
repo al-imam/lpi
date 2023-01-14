@@ -1,0 +1,7 @@
+.heroContainer {
+  max-width: 70rem;
+  height: 44rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+}

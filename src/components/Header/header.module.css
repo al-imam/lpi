@@ -4,7 +4,7 @@
 
 .main {
   background-color: var(--gray-200);
-  padding-inline: 2rem;
+  padding-inline: var(--gap-inline);
   z-index: 199;
   top: 0;
   position: sticky;
@@ -17,11 +17,23 @@
 
 .header {
   height: var(--header-size);
-  max-width: 70rem;
+  max-width: var(--max-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-inline: auto;
+}
+
+@media only screen and (max-width: 75rem) {
+  .header {
+    max-width: var(--max-width-sm);
+  }
+}
+
+@media only screen and (max-width: 65rem) {
+  .header {
+    max-width: var(--max-width-xsm);
+  }
 }
 
 .header > a {
@@ -65,7 +77,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 67.5rem) {
   .items li {
     display: none;
   }

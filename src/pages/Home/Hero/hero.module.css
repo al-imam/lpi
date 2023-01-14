@@ -1,0 +1,78 @@
+.heroContainer {
+  width: var(--max-width);
+  height: 44rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 1rem;
+}
+
+@media only screen and (max-width: 75rem) {
+  .heroContainer {
+    width: var(--max-width-sm);
+  }
+}
+
+.heading {
+  font-family: var(--ff-m);
+  font-size: var(--h1);
+  color: var(--gray-50);
+}
+
+.subtitle {
+  font-family: var(--ff-m);
+  font-size: var(--h6);
+  font-weight: var(--fw-400);
+  color: var(--gray-50);
+  line-height: var(--p-line);
+  width: 80ch;
+}
+
+.action {
+  text-decoration: none;
+  font-family: var(--ff-m);
+  font-size: var(--h6);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: 1px solid var(--primary);
+  color: var(--primary);
+  width: max-content;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.action > svg {
+  transition: transform 200ms ease-out;
+}
+
+.action:hover {
+  filter: saturate(1.2);
+}
+
+.action:hover > svg {
+  transform: translateX(0.25rem);
+}
+
+@media only screen and (max-width: 65rem) {
+  .heroContainer {
+    width: var(--max-width-xsm);
+  }
+
+  .subtitle {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 49rem) {
+  .heroContainer {
+    width: auto;
+  }
+}

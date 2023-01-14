@@ -1,5 +1,5 @@
 .card {
-  --radius: 0.5rem;
+  --radius: 0.2rem;
   background-color: var(--white);
   border-radius: var(--radius);
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
@@ -23,30 +23,6 @@
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
-@media only screen and (max-width: 74rem) {
-  .cardImgContainer {
-    height: 12rem;
-  }
-}
-
-@media only screen and (max-width: 64rem) {
-  .cardImgContainer {
-    height: 14rem;
-  }
-}
-
-@media only screen and (max-width: 48rem) {
-  .cardImgContainer {
-    height: 16rem;
-  }
-}
-
-@media only screen and (max-width: 24rem) {
-  .cardImgContainer {
-    height: 12rem;
-  }
-}
-
 .cardImg {
   width: 100%;
   height: 100%;
@@ -55,14 +31,17 @@
 }
 
 .cardInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
   padding: 0.5rem 1rem 1rem;
 }
 
 .cardTitle {
   font-size: var(--h5);
-  font-family: var(--ff-os);
+  font-family: var(--ff-m);
   font-weight: var(--fw-400);
-  color: var(--gray-900);
+  color: var(--gray-600);
 }
 
 .cardDetails {
@@ -73,6 +52,18 @@
 }
 
 .cardDetails :is(a, span) {
+  font-family: var(--ff-m);
+  font-weight: var(--fw-400);
   font-size: var(--h6);
-  color: var(--gray-600);
+  color: var(--gray-400);
+}
+
+@media only screen and (max-width: 49rem) {
+  .cardImgContainer {
+    height: auto;
+  }
+
+  .cardImg {
+    aspect-ratio: 16/8;
+  }
 }

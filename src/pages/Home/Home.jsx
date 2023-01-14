@@ -3,6 +3,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { NavLink } from "react-router-dom";
 import data from "./data";
 import Card from "../../components/Card/Card";
+import Study from "../../components/Study/Study";
 
 function Home() {
   return (
@@ -20,6 +21,9 @@ function Home() {
             {data.action} <ArrowForwardIcon />
           </NavLink>
         </div>
+      </section>
+      <section>
+        <Study></Study>
       </section>
       <section className={classes.ourDepartment}>
         <h2 className={classes.departmentTitle}>Our departments</h2>

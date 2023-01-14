@@ -19,3 +19,5 @@ function Study() {
     </div>
   );
 }
+
+export default Study;

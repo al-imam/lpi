@@ -30,6 +30,12 @@
   }
 }
 
+@media only screen and (max-width: 65rem) {
+  .header {
+    max-width: var(--max-width-xsm);
+  }
+}
+
 .header > a {
   font-size: 1.5rem;
   color: var(--gray-700);

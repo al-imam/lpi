@@ -17,11 +17,17 @@
 
 .header {
   height: var(--header-size);
-  max-width: 70rem;
+  max-width: var(--max-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-inline: auto;
+}
+
+@media only screen and (max-width: 75rem) {
+  .header {
+    max-width: var(--max-width-sm);
+  }
 }
 
 .header > a {
@@ -65,7 +71,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 67.5rem) {
   .items li {
     display: none;
   }

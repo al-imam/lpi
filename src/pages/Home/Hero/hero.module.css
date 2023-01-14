@@ -26,3 +26,30 @@
   line-height: 1.6;
   width: 80ch;
 }
+
+.action {
+  text-decoration: none;
+  font-family: var(--ff-m);
+  font-size: var(--h6);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: 1px solid var(--primary);
+  color: var(--primary);
+  width: max-content;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.action > svg {
+  transition: transform 200ms ease-out;
+}
+
+.action:hover {
+  filter: saturate(1.2);
+}
+
+.action:hover > svg {
+  transform: translateX(0.25rem);
+}

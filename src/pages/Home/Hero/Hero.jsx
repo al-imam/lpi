@@ -1,15 +1,16 @@
 import classes from "./hero.module.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { NavLink } from "react-router-dom";
+import data from "./data";
 
-function Hero({ title, subtitle, action }) {
+function Hero() {
   return (
     <section className={classes.heroContainer}>
       <div className={classes.hero}>
-        <h1 className={classes.heading}>{title}</h1>
-        <p className={classes.subtitle}>{subtitle}</p>
+        <h1 className={classes.heading}>{data.title}</h1>
+        <p className={classes.subtitle}>{data.subtitle}</p>
         <NavLink className={classes.action} to="/about">
-          {action} <ArrowForwardIcon />
+          {data.action} <ArrowForwardIcon />
         </NavLink>
       </div>
     </section>

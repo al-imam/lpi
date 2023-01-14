@@ -18,7 +18,11 @@
   transition: width 200ms ease-in;
 }
 
-@media only screen and (max-width: 65.5rem) {
+@media only screen and (max-width: 75rem) {
+  .section {
+    max-width: var(--max-width-sm);
+  }
+
   .image {
     width: 25rem;
   }

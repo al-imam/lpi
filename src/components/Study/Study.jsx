@@ -1,3 +1,5 @@
+import classes from "./study.module.css";
+
 function Study() {
   return (
     <div>

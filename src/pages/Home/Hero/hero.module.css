@@ -28,7 +28,7 @@
 .subtitle {
   font-family: var(--ff-os);
   font-size: var(--h6);
-  color: var(--gray-100);
+  color: var(--gray-50);
   line-height: 1.6;
   width: 80ch;
 }
@@ -58,4 +58,20 @@
 
 .action:hover > svg {
   transform: translateX(0.25rem);
+}
+
+@media only screen and (max-width: 65rem) {
+  .heroContainer {
+    width: var(--max-width-xsm);
+  }
+
+  .subtitle {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 49rem) {
+  .heroContainer {
+    width: auto;
+  }
 }

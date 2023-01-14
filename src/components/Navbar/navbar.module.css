@@ -20,6 +20,9 @@ a {
 .navbar {
   height: var(--nav-size);
   background-color: var(--gray-900);
+  position: sticky;
+  top: var(--nav-size);
+  z-index: 2000;
 }
 
 .navbarNav {
@@ -82,7 +85,7 @@ a {
   transition: opacity 200ms ease-out, transform 200ms ease-out,
     box-shadow 100ms ease-out;
   width: max-content;
-  z-index: 2;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   row-gap: 0.25rem;
@@ -122,7 +125,7 @@ a {
   }
 
   .navItem:focus-within > .dropdownMenu {
-    z-index: 0;
+    z-index: 15;
   }
 
   .navItem:hover svg,
@@ -149,10 +152,15 @@ a {
     box-shadow: 0 0 2rem 2px var(--gray-500);
     transition: transform 200ms ease-out;
     border-radius: 0 0 0 1rem;
+    z-index: 1;
   }
 
   .open {
     transform: translateX(0);
+  }
+
+  :has(.open) :global .main {
+    filter: opacity(0.8);
   }
 
   .navbarNav {

@@ -5,13 +5,14 @@ import SortIcon from "@mui/icons-material/Sort";
 import { grey } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 import classes from "./header.module.css";
+import logo from "/assets/logo.svg";
 
 export default function Header({ setOpen, open }) {
   return (
     <header className={classes.main}>
       <div className={classes.header}>
         <Link className={classes.item} to="/">
-          <img className={classes.img} src="/assets/lpi.png" alt="Logo" />
+          <img className={classes.img} src={logo} alt="Logo" />
           Polytechnic
         </Link>
         <ul className={classes.items}>

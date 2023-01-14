@@ -16,11 +16,6 @@
   transition: transform 300ms ease-out, filter 300ms linear;
 }
 
-.section {
-  max-width: var(--max-width);
-  margin-inline: auto;
-}
-
 .departmentTitle {
   font-size: var(--h2);
   font-family: var(--ff-os);

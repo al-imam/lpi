@@ -2,3 +2,13 @@
   max-width: var(--max-width);
   margin-inline: auto;
 }
+
+.departmentTitle {
+  font-size: var(--h2);
+  font-family: var(--ff-os);
+  color: var(--gray-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}

@@ -16,15 +16,6 @@
   transition: transform 300ms ease-out, filter 300ms linear;
 }
 
-.departmentTitle {
-  font-size: var(--h2);
-  font-family: var(--ff-os);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-}
-
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

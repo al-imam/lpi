@@ -1,4 +1,5 @@
 import classes from "./study.module.css";
+import { NavLink } from "react-router-dom";
 
 function Study() {
   return (
@@ -16,7 +17,7 @@ function Study() {
           there isn't anything embarrassing hidden in the middle of text amr
           songr balga ami toami valo lasi ciri din akr dali
         </p>
-        <a>Learn Now</a>
+        <NavLink to="/about">Learn Now</NavLink>
       </div>
     </div>
   );

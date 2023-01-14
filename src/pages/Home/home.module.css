@@ -16,15 +16,6 @@
   transition: transform 300ms ease-out, filter 300ms linear;
 }
 
-.cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-block: 3rem;
-  color: var(--gray-900);
-  justify-content: space-between;
-  gap: 2rem;
-}
-
 @media only screen and (max-width: 64rem) {
   .cardsContainer {
     grid-template-columns: repeat(2, 1fr);

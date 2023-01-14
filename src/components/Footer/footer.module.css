@@ -10,6 +10,12 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+@media only screen and (max-width: 75rem) {
+  .container {
+    max-width: var(--max-width-sm);
+  }
+}
+
 :where(.socialItems, .logoDescription, .linkItem, .footerCopyRight) {
   color: var(--gray-50);
   font-family: var(--ff-os);

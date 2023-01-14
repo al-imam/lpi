@@ -5,7 +5,7 @@
   grid-column: 1 / -1;
 }
 
-@media only screen and (max-width: 58.5rem) {
+@media only screen and (max-width: 65rem) {
   .footerContact {
     flex-direction: column;
     row-gap: 1rem;

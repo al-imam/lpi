@@ -11,6 +11,13 @@
 .image {
   object-fit: cover;
   width: 30rem;
+  transition: width 200ms ease-in;
+}
+
+@media only screen and (max-width: 65.5rem) {
+  .image {
+    width: 25rem;
+  }
 }
 
 .info {

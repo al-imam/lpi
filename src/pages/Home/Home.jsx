@@ -15,9 +15,7 @@ function Home() {
 
       <Hero title={data.title} subtitle={data.subtitle} action={data.action} />
 
-      <section className={classes.section}>
-        <Study />
-      </section>
+      <Study />
       <section className={classes.section}>
         <h2 className={classes.departmentTitle}>Our departments</h2>
         <div className={classes.cardsContainer}>

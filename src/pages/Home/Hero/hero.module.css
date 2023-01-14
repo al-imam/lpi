@@ -26,8 +26,9 @@
 }
 
 .subtitle {
-  font-family: var(--ff-os);
+  font-family: var(--ff-m);
   font-size: var(--h6);
+  font-weight: var(--fw-400);
   color: var(--gray-50);
   line-height: 1.6;
   width: 80ch;

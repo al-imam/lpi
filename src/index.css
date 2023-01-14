@@ -54,3 +54,9 @@
 body {
   background-color: #f3f4f6;
 }
+
+@media only screen and (max-width: 34rem) {
+  :root {
+    --gap-inline: 1rem;
+  }
+}

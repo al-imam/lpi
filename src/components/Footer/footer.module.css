@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: 70rem;
+  max-width: var(--max-width);
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

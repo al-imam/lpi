@@ -4,9 +4,7 @@ import { NavLink } from "react-router-dom";
 function Study() {
   return (
     <div className={classes.studyContainer}>
-      <div className={classes.image}>
-        <img src="assets/collage.jpg" alt="collage" />
-      </div>
+      <img className={classes.image} src="assets/collage.jpg" alt="collage" />
       <div className={classes.info}>
         <h3 className={classes.title}>About LPI</h3>
         <p className={classes.subtitle}>

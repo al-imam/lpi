@@ -13,6 +13,12 @@
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 75rem) {
+  .container {
+    max-width: var(--max-width-sm);
+  }
+}
+
 .group {
   display: flex;
   flex-direction: column;
@@ -23,4 +29,28 @@
   font-size: var(--h3);
   font-weight: var(--fw-700);
   color: var(--gray-50);
+}
+
+@media only screen and (max-width: 65rem) {
+  .container {
+    max-width: var(--max-width-xsm);
+  }
+
+  .group {
+    font-size: var(--h4);
+  }
+}
+
+@media only screen and (max-width: 49rem) {
+  .group {
+    font-size: var(--h5);
+  }
+}
+
+@media only screen and (max-width: 38rem) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+  }
 }

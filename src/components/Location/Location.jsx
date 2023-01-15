@@ -3,7 +3,7 @@ import classes from "./location.module.css";
 function Location() {
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes.flex}>
         <span>Home</span>
       </div>
     </div>

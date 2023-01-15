@@ -5,11 +5,13 @@
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
+  isolation: isolate;
 }
 
 .container::before {
   content: "";
   position: absolute;
+  z-index: -1;
   inset: 0;
   background-color: #ff000034;
   backdrop-filter: blur(0.25rem);

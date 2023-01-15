@@ -8,6 +8,7 @@
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding-top: 3rem;
 }
 
 @media only screen and (max-width: 75rem) {

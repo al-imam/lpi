@@ -7,7 +7,7 @@
 }
 
 .studyContainer {
-  padding-block: 5rem;
+  padding-block: 6rem;
   display: flex;
   background-color: var(--bg);
   gap: 2rem;

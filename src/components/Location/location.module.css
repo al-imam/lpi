@@ -1,0 +1,7 @@
+.container {
+  padding-block: 5rem;
+  background-image: url("/public/assets/BestBooks.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

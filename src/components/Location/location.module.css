@@ -16,3 +16,10 @@
   background-color: #ff000034;
   backdrop-filter: blur(0.25rem);
 }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}

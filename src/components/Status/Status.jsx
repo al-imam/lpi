@@ -1,6 +1,8 @@
+import classes from "./status.module.css";
+
 function Status() {
   return (
-    <div>
+    <section className={classes.status}>
       <div>
         <span>35</span>
         <span>Teacher</span>
@@ -17,7 +19,7 @@ function Status() {
         <span>5</span>
         <span>Department</span>
       </div>
-    </div>
+    </section>
   );
 }
 

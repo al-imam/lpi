@@ -1,5 +1,7 @@
+import classes from "./location.module.css";
+
 function Location() {
-  return <div>Shittier</div>;
+  return <div className={classes.container}>Shittier</div>;
 }
 
 export default Location;

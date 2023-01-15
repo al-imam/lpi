@@ -5,15 +5,15 @@ function Status() {
     <section className={classes.status}>
       <div className={classes.container}>
         <div className={classes.group}>
-          <span>35</span>
+          <span>35 +</span>
           <span>Teacher</span>
         </div>
         <div className={classes.group}>
-          <span>12</span>
+          <span>12 +</span>
           <span>Instructor</span>
         </div>
         <div className={classes.group}>
-          <span>4000</span>
+          <span>4000 +</span>
           <span>Student</span>
         </div>
         <div className={classes.group}>

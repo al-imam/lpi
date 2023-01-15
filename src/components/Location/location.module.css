@@ -29,6 +29,16 @@
   text-transform: uppercase;
 }
 
+.flex > a:hover {
+  color: var(--primary);
+}
+
+.flex :is(a, svg, span) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .flex svg {
   height: 100%;
 }

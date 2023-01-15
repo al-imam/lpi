@@ -1,7 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import { useCallback, useState } from "react";
-import useOutsideClick from "./useOutSideClick";
+import useOutsideClick from "../../hooks/useOutSideClick";
 
 function Head() {
   const [open, setOpen] = useState(false);

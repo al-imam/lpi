@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import classes from "./gallery.module.css";
+import useOutsideClick from "../../hooks/useOutSideClick";
 
 function Gallery({ pictures }) {
   return (
@@ -16,8 +17,21 @@ export default Gallery;
 function Picture({ url }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const onClick = useCallback(() => {
+    if (open) {
+      setIsOpen(false);
+    }
+    console.log("im called", open);
+  }, [open]);
+
+  const ref = useOutsideClick(onClick);
+
   return (
-    <div className={isOpen ? classes.open : ""} onClick={() => setIsOpen(true)}>
+    <div
+      ref={ref}
+      className={isOpen ? classes.open : ""}
+      onClick={() => setIsOpen(true)}
+    >
       <img src={url} />
     </div>
   );

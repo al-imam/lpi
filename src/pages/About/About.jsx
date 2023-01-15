@@ -3,6 +3,7 @@ import Location from "../../components/Location/Location";
 import Study from "../../components/Study/Study";
 import Status from "../../components/Status/Status";
 import Gallery from "../../components/Gallery/Gallery";
+import pictures from "./data";
 
 function About() {
   return (
@@ -12,7 +13,7 @@ function About() {
         <Study />
       </main>
       <Status />
-      <Gallery />
+      <Gallery pictures={pictures} />
     </div>
   );
 }

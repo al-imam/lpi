@@ -1,12 +1,14 @@
 import classes from "./about.module.css";
-import Map from "../../components/Map/Map";
 import Location from "../../components/Location/Location";
+import Study from "../../components/Study/Study";
 
 function About() {
   return (
     <div className={classes.aboutContainer}>
-      <Location />
-      {/* <main className={classes.main}><Map /></main> */}
+      <Location current="About" />
+      <main className={classes.main}>
+        <Study />
+      </main>
     </div>
   );
 }

@@ -4,4 +4,13 @@
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ff000034;
+  backdrop-filter: blur(0.25rem);
 }

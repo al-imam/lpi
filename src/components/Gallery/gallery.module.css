@@ -1,5 +1,21 @@
+.container {
+  padding-inline: var(--gap-inline);
+}
+
+.gallery {
+  position: relative;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+body :has(.open) :not(.open) {
+  pointer-events: none;
+}
+
 .open {
+  pointer-events: auto;
   position: absolute;
   inset: 0;
-  background-color: red;
+  margin: 6rem;
+  background-color: rgba(104, 229, 133, 0.24);
 }

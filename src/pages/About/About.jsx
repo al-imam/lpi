@@ -3,17 +3,17 @@ import Location from "../../components/Location/Location";
 import Study from "../../components/Study/Study";
 import Status from "../../components/Status/Status";
 import Gallery from "../../components/Gallery/Gallery";
-import pictures from "./data";
+import data from "./data";
 
 function About() {
   return (
     <div className={classes.aboutContainer}>
       <Location current="About" />
       <main className={classes.main}>
-        <Study />
+        <Study subtitle={data.about} />
       </main>
       <Status />
-      <Gallery pictures={pictures} heading="Image Gallery" />
+      <Gallery pictures={data.gallery} heading="Image Gallery" />
     </div>
   );
 }

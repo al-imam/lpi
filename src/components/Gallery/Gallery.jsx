@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import classes from "./gallery.module.css";
 import useOutsideClick from "../../hooks/useOutSideClick";
+import FullscreenOutlinedIcon from "@mui/icons-material/FullscreenOutlined";
 
 function Gallery({ pictures }) {
   return (
@@ -35,6 +36,9 @@ function Picture({ url }) {
       onClick={() => setIsOpen(true)}
     >
       <img className={classes.img} src={url} />
+      <div className={classes.svg}>
+        <FullscreenOutlinedIcon fontSize="inherit" />
+      </div>
     </div>
   );
 }

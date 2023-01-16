@@ -3,14 +3,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+
+  --soft: #74a4ff;
+  --hard: var(--primary);
 }
 
 .loadContainer {
   position: relative;
   display: inline-block;
-  width: 130px;
-  height: 130px;
+  width: 20rem;
+  height: 20rem;
   overflow: hidden;
   letter-spacing: normal;
   display: flex;
@@ -22,7 +24,7 @@
 .lineSpinner {
   width: 10px;
   height: 30px;
-  background: #74a4ff;
+  background: var(--soft);
   position: relative;
   animation: lineSpinner 1s ease-in-out infinite;
   animation-delay: 0.4s;
@@ -35,7 +37,7 @@
   position: absolute;
   width: 10px;
   height: 30px;
-  background: #74a4ff;
+  background: var(--soft);
   animation: lineSpinner 1s ease-in-out infinite;
 }
 .lineSpinner:before {
@@ -50,11 +52,11 @@
 @keyframes lineSpinner {
   0%,
   100% {
-    background-color: #74a4ff;
-    box-shadow: 0 0 0 #74a4ff, 0 0 0 #74a4ff;
+    background-color: var(--soft);
+    box-shadow: 0 0 0 var(--soft), 0 0 0 var(--soft);
   }
   50% {
-    background-color: var(--primary);
-    box-shadow: 0 -15px 0 var(--primary), 0 15px 0 var(--primary);
+    background-color: var(--hard);
+    box-shadow: 0 -15px 0 var(--hard), 0 15px 0 var(--hard);
   }
 }

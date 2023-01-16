@@ -1,5 +1,5 @@
 export default {
   title: "Welcome to Lakshmipur Polytechnic",
-  subtitle: `The Lakshmipur Polytechnic Institute in Lakshmipur, Bangladesh, was established in 2006. It is located near Lakshmipur Stadium baishmara. It is under BTEB. It contains about 5,000 students.`,
+  subtitle: `Lakshmipur Polytechnic Institute is a government polytechnic institute located in Lakshmipur, Bangladesh. It was established in 2006. This institute conducts 4 years Diploma in Engineering course under Bangladesh Technical Education Board.`,
   action: "Learn more",
 };

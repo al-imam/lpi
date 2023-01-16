@@ -32,7 +32,7 @@ function Picture({ url }) {
       className={`${classes.imgContainer} ${isOpen ? classes.open : ""}`}
       onClick={() => setIsOpen(true)}
     >
-      <img src={url} />
+      <img className={classes.img} src={url} />
     </div>
   );
 }

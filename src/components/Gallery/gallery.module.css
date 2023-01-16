@@ -6,10 +6,23 @@
   position: relative;
   max-width: var(--max-width);
   margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
 body :has(.open) :not(.open) {
   pointer-events: none;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.imgContainer.open {
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  z-index: 10000;
 }
 
 .open {

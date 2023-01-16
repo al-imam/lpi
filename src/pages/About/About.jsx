@@ -10,7 +10,7 @@ const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
 
 function About() {
   return (
-    <div className={classes.aboutContainer}>
+    <div className={classes.aboutContainer + " main"}>
       <Location current="About" />
       <main className={classes.main}>
         <Study subtitle={data.about} />

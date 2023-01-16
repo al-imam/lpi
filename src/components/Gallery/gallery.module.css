@@ -74,6 +74,8 @@ body :has(.open) :not(.open) {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
+  transform: scale(1.01);
+  transform-origin: center center;
   transition: transform 300ms ease-out;
 }
 

@@ -9,8 +9,8 @@ function Gallery({ pictures, heading }) {
       <div className={classes.wrapper}>
         <h2 className={classes.heading}>{heading}</h2>
         <div className={classes.gallery}>
-          {pictures.map(({ url }, index) => (
-            <Picture show={index} key={url + Math.random()} url={url} />
+          {pictures.map(({ url }) => (
+            <Picture key={url} url={url} />
           ))}
         </div>
       </div>

@@ -4,11 +4,13 @@ import useOutsideClick from "../../hooks/useOutSideClick";
 
 function Gallery({ pictures }) {
   return (
-    <div className={classes.gallery}>
-      {pictures.map(({ url }, index) => (
-        <Picture show={index} key={url + Math.random()} url={url} />
-      ))}
-    </div>
+    <section className={classes.container}>
+      <div className={classes.gallery}>
+        {pictures.map(({ url }, index) => (
+          <Picture show={index} key={url + Math.random()} url={url} />
+        ))}
+      </div>
+    </section>
   );
 }
 

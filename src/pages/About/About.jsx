@@ -3,7 +3,7 @@ import classes from "./about.module.css";
 import Location from "../../components/Location/Location";
 import Study from "../../components/Study/Study";
 import Status from "../../components/Status/Status";
-// import Gallery from "../../components/Gallery/Gallery";
+import Loader from "../../components/Loader/Loader";
 import data from "./data";
 
 const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
@@ -16,7 +16,7 @@ function About() {
         <Study subtitle={data.about} />
       </main>
       <Status />
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<Loader />}>
         <Gallery pictures={data.gallery} heading="Image Gallery" />
       </Suspense>
     </div>

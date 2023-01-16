@@ -9,6 +9,12 @@
   margin-inline: auto;
 }
 
+@media only screen and (max-width: 75rem) {
+  .wrapper {
+    max-width: var(--max-width-sm);
+  }
+}
+
 .heading {
   font-size: var(--h2);
   font-family: var(--ff-m);
@@ -23,6 +29,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+}
+
+@media only screen and (max-width: 65rem) {
+  .wrapper {
+    max-width: var(--max-width-xsm);
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 35rem) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 body :has(.open) :not(.open) {

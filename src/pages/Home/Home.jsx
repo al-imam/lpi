@@ -2,6 +2,7 @@ import Departments from "../../components/Departments/Departments";
 import classes from "./home.module.css";
 import Study from "../../components/Study/Study";
 import Hero from "./Hero/Hero";
+import data from "./data";
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
         alt="collage"
       />
       <Hero />
-      <Study />
+      <Study subtitle={data.about} link={true} />
       <Departments />
     </main>
   );

@@ -23,6 +23,8 @@
   font-family: var(--ff-m);
   font-size: var(--h1);
   color: var(--gray-50);
+  filter: drop-shadow(0 0 60px black);
+  max-width: 25ch;
 }
 
 .subtitle {
@@ -31,7 +33,8 @@
   font-weight: var(--fw-400);
   color: var(--gray-50);
   line-height: var(--p-line);
-  width: 80ch;
+  width: 70ch;
+  filter: drop-shadow(0 0 25px black);
 }
 
 .action {

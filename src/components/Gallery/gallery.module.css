@@ -3,10 +3,23 @@
   padding-block: 6rem;
 }
 
-.gallery {
+.wrapper {
   position: relative;
   max-width: var(--max-width);
   margin-inline: auto;
+}
+
+.heading {
+  font-size: var(--h2);
+  font-family: var(--ff-m);
+  font-weight: var(--fw-400);
+  color: var(--gray-800);
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
@@ -38,6 +51,7 @@ body :has(.open) :not(.open) {
 .img {
   min-width: 100%;
   min-height: 100%;
+  object-fit: cover;
   transition: transform 300ms ease-out;
 }
 

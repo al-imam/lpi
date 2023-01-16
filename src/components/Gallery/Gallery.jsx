@@ -3,13 +3,16 @@ import classes from "./gallery.module.css";
 import useOutsideClick from "../../hooks/useOutSideClick";
 import FullscreenOutlinedIcon from "@mui/icons-material/FullscreenOutlined";
 
-function Gallery({ pictures }) {
+function Gallery({ pictures, heading }) {
   return (
     <section className={classes.container}>
-      <div className={classes.gallery}>
-        {pictures.map(({ url }, index) => (
-          <Picture show={index} key={url + Math.random()} url={url} />
-        ))}
+      <div className={classes.wrapper}>
+        <h2 className={classes.heading}>{heading}</h2>
+        <div className={classes.gallery}>
+          {pictures.map(({ url }, index) => (
+            <Picture show={index} key={url + Math.random()} url={url} />
+          ))}
+        </div>
       </div>
     </section>
   );

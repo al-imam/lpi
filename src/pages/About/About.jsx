@@ -13,7 +13,7 @@ function About() {
         <Study />
       </main>
       <Status />
-      <Gallery pictures={pictures} />
+      <Gallery pictures={pictures} heading="Image Gallery" />
     </div>
   );
 }

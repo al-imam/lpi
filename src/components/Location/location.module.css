@@ -8,6 +8,12 @@
   isolation: isolate;
 }
 
+@media only screen and (max-width: 50rem) {
+  .container {
+    padding-block: 3rem;
+  }
+}
+
 .container::before {
   content: "";
   position: absolute;

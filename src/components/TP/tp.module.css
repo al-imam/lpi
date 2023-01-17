@@ -1,14 +1,20 @@
 .section {
+  padding-inline: var(--gap-inline);
+}
+
+.container {
+  padding-block: 6rem;
   max-width: var(--max-width);
   margin-inline: auto;
 }
 
-.container {
-  display: grid;
-  grid-template: auto / auto 20rem;
-  column-gap: 2rem;
+.heading {
+  display: flex;
+  gap: 2rem;
 }
 
-.container:first-child {
-  grid-row: 1 / 2;
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

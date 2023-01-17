@@ -1,8 +1,8 @@
-import classes from "./departments.module.css";
+import classes from "./department.module.css";
 import Card from "../Card/Card";
 import departments from "./data";
 
-function Departments() {
+function Department() {
   return (
     <section className={classes.section}>
       <h2 className={classes.departmentTitle}>OUR DEPARTMENTS</h2>
@@ -20,4 +20,4 @@ function Departments() {
   );
 }
 
-export default Departments;
+export default Department;

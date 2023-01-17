@@ -9,6 +9,7 @@ function Department() {
       <div className={classes.cardsContainer}>
         {departments.map((card, index) => (
           <Card
+            path={card.path}
             key={card.title + index}
             title={card.title}
             src={card.src}

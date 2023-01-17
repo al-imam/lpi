@@ -22,27 +22,27 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <NavLink to="department/computer-technology">
+              <NavLink to="departments/computer-technology">
                 Computer Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="department/electrical-technology">
+              <NavLink to="departments/electrical-technology">
                 Electrical Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="department/civil-technology">
+              <NavLink to="departments/civil-technology">
                 Civil Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="department/electronics-technology">
+              <NavLink to="departments/electronics-technology">
                 Electronics Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="department/architecture-technology">
+              <NavLink to="departments/architecture-technology">
                 Architecture Technology
               </NavLink>
             </li>

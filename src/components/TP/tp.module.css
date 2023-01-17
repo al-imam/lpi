@@ -5,6 +5,10 @@
 
 .container {
   display: grid;
-  grid-template-columns: auto 20rem;
+  grid-template: auto / auto 20rem;
   column-gap: 2rem;
+}
+
+.container:first-child {
+  grid-row: 1 / 2;
 }

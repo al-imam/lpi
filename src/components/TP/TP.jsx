@@ -11,6 +11,7 @@ function TP() {
           name="computer technology"
         />
         <Teacher />
+        <Teacher />
       </div>
     </div>
   );

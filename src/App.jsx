@@ -22,6 +22,23 @@ function App() {
           }
         />
         <Route path="/departments" element={<Departments />} />
+        <Route
+          path="/departments/computer-technology"
+          element={<h1>computer</h1>}
+        />
+        <Route path="/departments/civil-technology" element={<h1>civil</h1>} />
+        <Route
+          path="/departments/electrical-technology"
+          element={<h1>Electrical</h1>}
+        />
+        <Route
+          path="/departments/architecture-technology"
+          element={<h1>Architecture</h1>}
+        />
+        <Route
+          path="/departments/electronics-technology"
+          element={<h1>Electronics</h1>}
+        />
         <Route path="/complain" element={<h1>complain</h1>} />
       </Routes>
       <Footer />

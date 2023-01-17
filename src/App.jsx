@@ -4,6 +4,7 @@ import Head from "./components/Head/Head";
 import Footer from "./components/Footer/Footer";
 const About = lazy(() => import("./pages/About/About"));
 import Home from "./pages/Home/Home";
+import Departments from "./pages/Departments/Departments";
 import Loader from "./components/Loader/Loader";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             </Suspense>
           }
         />
+        <Route path="/departments" element={<Departments />} />
         <Route path="/complain" element={<h1>complain</h1>} />
       </Routes>
       <Footer />

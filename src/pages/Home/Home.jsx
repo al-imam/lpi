@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 
-import Departments from "../../components/Departments/Departments";
+import Department from "../../components/Department/Department";
 import classes from "./home.module.css";
 import Study from "../../components/Study/Study";
 import Hero from "./Hero/Hero";
@@ -19,7 +19,7 @@ function Home() {
       />
       <Hero />
       <Study subtitle={data.about} link={true} />
-      <Departments />
+      <Department />
       <Suspense fallback={<Loader />}>
         <Gallery pictures={data.gallery} heading="Image Gallery" />
       </Suspense>

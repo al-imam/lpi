@@ -1,0 +1,26 @@
+.section {
+  padding-inline: var(--gap-inline);
+  padding-block: 6rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.container > h2 {
+  color: var(--gray-700);
+  font-family: var(--ff-m);
+  text-transform: uppercase;
+  font-weight: var(--fw-400);
+  font-size: var(--h2);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.teachers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}

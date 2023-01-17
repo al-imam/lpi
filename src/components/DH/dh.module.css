@@ -1,12 +1,25 @@
 .section {
-  max-width: var(--max-width);
-  margin-inline: auto;
+  padding-inline: var(--gap-inline);
+  padding-block: 6rem;
 }
 
 .studyContainer {
   display: flex;
   flex-direction: column;
   background-color: var(--bg);
+  gap: 2rem;
+}
+
+.heading {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 

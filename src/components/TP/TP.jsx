@@ -1,24 +1,14 @@
 import DH from "../DH/DH";
-import classes from "./tp.module.css";
-import Teacher from "../Teacher/Teacher";
 import Location from "../Location/Location";
+import Teachers from "../Teachers/Teachers";
 
 function TP({ description, name }) {
   return (
-    <>
+    <main className="main">
       <Location current="departments" subRoute="computer" />
-      <div className={classes.section}>
-        <div className={classes.container}>
-          <div className={classes.heading}>
-            <DH description={description} name={name} />
-            <div className={classes.group}>
-              <Teacher />
-              <Teacher />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+      <DH description={description} name={name} />
+      <Teachers />
+    </main>
   );
 }
 

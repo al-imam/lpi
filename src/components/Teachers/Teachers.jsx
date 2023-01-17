@@ -13,8 +13,6 @@ function Teachers() {
           <Teacher />
           <Teacher />
           <Teacher />
-          <Teacher />
-          <Teacher />
         </div>
       </div>
     </section>

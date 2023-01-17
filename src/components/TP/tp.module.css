@@ -1,0 +1,10 @@
+.section {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 20rem;
+  column-gap: 2rem;
+}

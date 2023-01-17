@@ -1,8 +1,13 @@
+import { lazy, Suspense } from "react";
+
 import Departments from "../../components/Departments/Departments";
 import classes from "./home.module.css";
 import Study from "../../components/Study/Study";
 import Hero from "./Hero/Hero";
 import data from "./data";
+import Loader from "../../components/Loader/Loader";
+
+const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
 
 function Home() {
   return (
@@ -15,6 +20,9 @@ function Home() {
       <Hero />
       <Study subtitle={data.about} link={true} />
       <Departments />
+      <Suspense fallback={<Loader />}>
+        <Gallery pictures={data.gallery} heading="Image Gallery" />
+      </Suspense>
     </main>
   );
 }

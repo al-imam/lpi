@@ -8,6 +8,12 @@
   margin-inline: auto;
 }
 
+.teachers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
 @media only screen and (max-width: 75rem) {
   .container {
     max-width: var(--max-width-sm);
@@ -30,9 +36,34 @@
   padding-bottom: 3rem;
 }
 
-.teachers {
+.card {
+  position: relative;
+  isolation: isolate;
+}
+
+.card img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  top: 70%;
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 0.7) 30%, rgb(0 0 0 / 0));
+}
+
+.info {
+  position: absolute;
+  inset: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  color: white;
 }

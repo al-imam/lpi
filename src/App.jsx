@@ -8,6 +8,7 @@ import Loader from "./components/Loader/Loader";
 import Computer from "./pages/Departments/Computer/Computer";
 import Civil from "./pages/Departments/Civil/Civil";
 import Electrical from "./pages/Departments/Electrical/Electrical";
+import Electronics from "./pages/Departments/Electronics/Electronics";
 const About = lazy(() => import("./pages/About/About"));
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
         />
         <Route
           path="/departments/electronics-technology"
-          element={<h1>Electronics</h1>}
+          element={<Electronics />}
         />
         <Route path="/complain" element={<h1>complain</h1>} />
       </Routes>

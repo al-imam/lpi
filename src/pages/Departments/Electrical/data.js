@@ -16,8 +16,8 @@ export default {
     },
     secondShift: {
       src: "/sir/kakon.JPG",
-      name: "Kakon Chandra Das",
-      address: "Maijdee, Noakhali",
+      name: "Unkown Head",
+      address: "Unkown, Unkown",
       facebook: "https://www.facebook.com/kakan.das2",
       linkedin: "#",
     },

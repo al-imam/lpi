@@ -12,7 +12,7 @@ function Teachers({ teacher }) {
             <Card
               name={t.name}
               key={i}
-              address={t.address}
+              address={t.title}
               facebook={t.facebook}
               linkedin={t.linkedin}
               src={t.src}
@@ -33,7 +33,12 @@ function Card({
 }) {
   return (
     <div className={classes.card}>
-      <img style={{ maxWidth: "100%" }} src={src} alt="" />
+      <img
+        style={{ maxWidth: "100%" }}
+        src={src}
+        alt=""
+        onError={(evt) => (evt.target.src = "/sir/fallback.jpg")}
+      />
       <div className={classes.info}>
         <p>
           <h4>{name}</h4>

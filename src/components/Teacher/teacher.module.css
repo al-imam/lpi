@@ -28,6 +28,34 @@
   border-radius: 100vmax;
 }
 
+@media only screen and (max-width: 46rem) and (min-width: 39rem) {
+  .card {
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+    padding-top: 2rem;
+    align-items: center;
+  }
+
+  .image {
+    width: 8rem;
+  }
+
+  .info {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 39rem) {
+  .card {
+    width: 100%;
+  }
+
+  .image {
+    width: 60%;
+  }
+}
+
 .heading h4 {
   font-size: var(--h5);
   font-weight: var(--fw-400);

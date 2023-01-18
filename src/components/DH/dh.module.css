@@ -31,9 +31,30 @@
 }
 
 @media only screen and (max-width: 75rem) {
+  .heading {
+    max-width: var(--max-width-sm);
+  }
 }
 
 @media only screen and (max-width: 65rem) {
+  .heading {
+    max-width: var(--max-width-xsm);
+    flex-direction: column;
+  }
+
+  .group {
+    padding-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 46rem) {
+  .group {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .info {

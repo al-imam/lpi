@@ -14,18 +14,6 @@
   gap: 2rem;
 }
 
-@media only screen and (max-width: 75rem) {
-  .container {
-    max-width: var(--max-width-sm);
-  }
-}
-
-@media only screen and (max-width: 65rem) {
-  .container {
-    max-width: var(--max-width-xsm);
-  }
-}
-
 .container > h2 {
   color: var(--gray-700);
   font-family: var(--ff-m);
@@ -92,4 +80,26 @@
 .icons svg {
   font-size: var(--h4);
   border-radius: 20rem;
+}
+
+@media only screen and (max-width: 75rem) {
+  .container {
+    max-width: var(--max-width-sm);
+  }
+}
+
+@media only screen and (max-width: 65rem) {
+  .container {
+    max-width: var(--max-width-xsm);
+  }
+
+  .teachers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 39rem) {
+  .teachers {
+    grid-template-columns: 1fr;
+  }
 }

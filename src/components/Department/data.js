@@ -2,7 +2,7 @@ export default [
   {
     title: "Computer technology",
     path: "/departments/computer-technology",
-    src: "/assets/collage.jpg",
+    src: "/assets/computer/main.jpg",
     subtitle: "Faculty of CST",
   },
   {

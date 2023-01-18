@@ -6,17 +6,33 @@
   margin-inline: auto;
 }
 
-.studyContainer {
+.container {
   padding-block: 6rem;
   display: flex;
   background-color: var(--bg);
   gap: 2rem;
 }
 
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
 .image {
   object-fit: cover;
+}
+
+.row .image {
   width: 30rem;
-  transition: width 200ms ease-in;
+}
+
+.column .image {
+  width: 100%;
+  object-position: bottom;
+  aspect-ratio: 16 / 7;
 }
 
 @media only screen and (max-width: 75rem) {
@@ -24,7 +40,7 @@
     max-width: var(--max-width-sm);
   }
 
-  .image {
+  .row .image {
     width: 25rem;
   }
 }
@@ -34,13 +50,23 @@
     max-width: var(--max-width-xsm);
   }
 
-  .studyContainer {
+  .row {
     flex-direction: column;
   }
 
-  .image {
+  .column .image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .row .image {
     width: 100%;
     aspect-ratio: 16 / 8;
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .row .image {
+    aspect-ratio: auto;
   }
 }
 

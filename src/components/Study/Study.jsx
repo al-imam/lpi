@@ -1,10 +1,10 @@
 import classes from "./study.module.css";
 import { NavLink } from "react-router-dom";
 
-function Study({ subtitle, link }) {
+function Study({ subtitle, link, direction = "row" }) {
   return (
     <section className={classes.section}>
-      <div className={classes.studyContainer}>
+      <div className={classes.container + " " + classes[direction]}>
         <img
           className={classes.image}
           src="/assets/collage.jpg"

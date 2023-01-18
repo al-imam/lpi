@@ -13,7 +13,7 @@ function About() {
     <div className={classes.aboutContainer + " main"}>
       <Location current="About" />
       <main className={classes.main}>
-        <Study subtitle={data.about} />
+        <Study subtitle={data.about} direction="column" />
       </main>
       <Status />
       <Suspense fallback={<Loader />}>

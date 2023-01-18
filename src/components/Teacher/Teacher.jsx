@@ -7,7 +7,12 @@ function Teacher({ info }) {
   return (
     <div className={classes.card}>
       <div className={classes.heading}>
-        <img src={info.src} alt="sir" className={classes.image} />
+        <img
+          src={info.src}
+          alt="sir"
+          className={classes.image}
+          onError={(evt) => (evt.target.src = "/sir/fallback.jpg")}
+        />
         <div>
           <h4>{info.name}</h4>
           <span>Department Head</span>

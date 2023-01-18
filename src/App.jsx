@@ -7,6 +7,7 @@ import Departments from "./pages/Departments/Departments";
 import Loader from "./components/Loader/Loader";
 import Computer from "./pages/Departments/Computer/Computer";
 import Civil from "./pages/Departments/Civil/Civil";
+import Electrical from "./pages/Departments/Electrical/Electrical";
 const About = lazy(() => import("./pages/About/About"));
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
         <Route path="/departments/civil-technology" element={<Civil />} />
         <Route
           path="/departments/electrical-technology"
-          element={<h1>Electrical</h1>}
+          element={<Electrical />}
         />
         <Route
           path="/departments/architecture-technology"

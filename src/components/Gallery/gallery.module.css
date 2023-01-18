@@ -9,12 +9,6 @@
   margin-inline: auto;
 }
 
-@media only screen and (max-width: 75rem) {
-  .wrapper {
-    max-width: var(--max-width-sm);
-  }
-}
-
 .heading {
   font-size: var(--h2);
   font-family: var(--ff-m);
@@ -29,22 +23,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-}
-
-@media only screen and (max-width: 65rem) {
-  .wrapper {
-    max-width: var(--max-width-xsm);
-  }
-
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (max-width: 35rem) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
 }
 
 body :has(.open) :not(.open) {
@@ -94,7 +72,7 @@ svg {
   pointer-events: auto;
   position: fixed;
   inset: 0;
-  width: clamp(15rem, 80vw, 65rem);
+  width: calc(var(--max-width) - 8rem);
   height: min-content;
   margin-inline: auto;
   top: 50%;
@@ -124,4 +102,43 @@ svg {
 
 .imgContainer:not(.open):hover::after {
   box-shadow: inset 0 0 10rem 5rem rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (max-width: 75rem) {
+  .wrapper {
+    max-width: var(--max-width-sm);
+  }
+  .open {
+    width: calc(var(--max-width-sm) - 6rem);
+  }
+}
+
+@media only screen and (max-width: 65rem) {
+  .wrapper {
+    max-width: var(--max-width-xsm);
+  }
+
+  .open {
+    width: calc(var(--max-width-xsm) - 4rem);
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 45rem) {
+  .open {
+    width: calc(100vw - 2rem);
+  }
+}
+
+@media only screen and (max-width: 35rem) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .open {
+    max-width: 95vw;
+  }
 }

@@ -2,12 +2,12 @@ import DH from "../DH/DH";
 import Location from "../Location/Location";
 import Teachers from "../Teachers/Teachers";
 
-function TP({ description, name }) {
+function TP({ heading, teacher }) {
   return (
     <main className="main">
-      <Location current="departments" subRoute="computer" />
-      <DH description={description} name={name} />
-      <Teachers />
+      <Location current="departments" subRoute={heading.subpath} />
+      <DH data={heading} />
+      <Teachers teacher={teacher} />
     </main>
   );
 }

@@ -2,7 +2,7 @@ import TP from "../../../components/TP/TP";
 import data from "./data";
 
 function Computer() {
-  return <TP description={data.description} name={data.name} />;
+  return <TP heading={data.heading} teacher={data.teacher} />;
 }
 
 export default Computer;

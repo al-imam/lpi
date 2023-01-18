@@ -3,24 +3,24 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-function Teacher() {
+function Teacher({ info }) {
   return (
     <div className={classes.card}>
       <div className={classes.heading}>
-        <img src="/sir/sir.JPG" alt="sir" className={classes.image} />
+        <img src={info.src} alt="sir" className={classes.image} />
         <div>
-          <h4>Khaled shudon</h4>
+          <h4>{info.name}</h4>
           <span>Department Head</span>
         </div>
       </div>
       <div className={classes.info}>
         <a href="#" className={classes.address}>
-          <LocationOnIcon /> Lakshmipur
+          <LocationOnIcon /> {info.address}
         </a>
-        <a href="#" className={classes.address}>
+        <a href={info.facebook} className={classes.address}>
           <FacebookIcon /> Facebook
         </a>
-        <a href="#" className={classes.address}>
+        <a href={info.linkedin} className={classes.address}>
           <LinkedInIcon /> Linkedin
         </a>
       </div>

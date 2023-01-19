@@ -10,6 +10,7 @@ import Civil from "./pages/Departments/Civil/Civil";
 import Electrical from "./pages/Departments/Electrical/Electrical";
 import Electronics from "./pages/Departments/Electronics/Electronics";
 import Architectural from "./pages/Departments/Architectural/Architectural";
+import Contact from "./pages/Contact/Contact";
 const About = lazy(() => import("./pages/About/About"));
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
           path="/departments/electronics-technology"
           element={<Electronics />}
         />
-        <Route path="/complain" element={<h1>complain</h1>} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>

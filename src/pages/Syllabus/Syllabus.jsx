@@ -10,7 +10,12 @@ function Syllabus({ department }) {
   };
 
   return (
-    <main>
+    <main className={classes.main}>
+      <p className={classes.p}>
+        <strong>Note!</strong>
+        if your browser don't support pdf rendering or you don't have pdf reader
+        then you need to download the file!
+      </p>
       <section className={classes.wrapper}>
         <div className={classes.selectContainer}>
           <p>Select Semester</p>

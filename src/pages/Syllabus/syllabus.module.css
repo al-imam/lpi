@@ -1,7 +1,26 @@
+.main {
+  padding-inline: var(--gap-inline);
+}
+
 .wrapper {
   max-width: var(--max-width);
   margin-inline: auto;
   padding-block: 2rem;
+  --light: hsla(237, 100%, 69%, 0.2);
+  --dark: hsl(226, 100%, 75%);
+}
+
+.p {
+  font-family: var(--ff-m);
+  font-size: var(--h6);
+  max-width: var(--max-width);
+  margin-inline: auto;
+  margin-top: 0.5rem;
+}
+
+.p strong {
+  padding-right: 0.3rem;
+  color: crimson;
 }
 
 .selectContainer {
@@ -18,10 +37,6 @@
   font-size: var(--h5);
   font-weight: var(--fw-500);
   width: max-content;
-}
-
-.selectContainer:hover .arrow {
-  color: black;
 }
 
 .arrow {
@@ -59,8 +74,8 @@ select {
 
 select:focus-visible,
 select:focus-within {
-  box-shadow: 0 0 0 3px rgba(48, 86, 255, 0.2);
-  outline: 1px solid rgba(48, 86, 255, 1);
+  box-shadow: 0 0 0 5px var(--light);
+  outline: 1px solid var(--dark);
 }
 
 select:hover {
@@ -84,4 +99,22 @@ select::-ms-expand {
 .iframe {
   width: 100%;
   height: 40rem;
+}
+
+@media only screen and (max-width: 75rem) {
+  .wrapper,
+  .p {
+    max-width: var(--max-width-sm);
+  }
+}
+
+@media only screen and (max-width: 65rem) {
+  .wrapper,
+  .p {
+    max-width: var(--max-width-xsm);
+  }
+
+  select {
+    width: 10rem;
+  }
 }

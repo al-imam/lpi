@@ -25,7 +25,7 @@ function Teacher({ info }) {
         <a href={info.facebook} className={classes.address}>
           <FacebookIcon /> Facebook
         </a>
-        <a href={info.linkedin} className={classes.address}>
+        <a href={info.gmail} className={classes.address}>
           <LinkedInIcon /> Linkedin
         </a>
       </div>

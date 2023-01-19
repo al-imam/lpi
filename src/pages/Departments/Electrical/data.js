@@ -12,14 +12,14 @@ export default {
       name: "Reaz Haider Pavel",
       address: "Comilla Sadar, Comilla",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
-      linkedin: "#",
+      gmail: "#",
     },
     secondShift: {
       src: "/sir/kakon.JPG",
       name: "Unkown Head",
       address: "Unkown, Unkown",
       facebook: "https://www.facebook.com/kakan.das2",
-      linkedin: "#",
+      gmail: "#",
     },
   },
 
@@ -29,21 +29,21 @@ export default {
       title: "Craft Instructor",
       src: "/sir/marjan.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Samsul Hoque",
       title: "Craft Instructor",
       src: "/sir/Samsul.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Mijanur Rahman",
       title: "Craft Instructor",
       src: "/sir/Mijanur.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
 
     {
@@ -51,14 +51,14 @@ export default {
       title: "Craft Instructor",
       src: "/sir/Sazzad.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Md Mohsin Hossain",
       title: "Craft Instructor",
       src: "/sir/mohsin.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
 
     {
@@ -66,14 +66,14 @@ export default {
       title: "Craft Instructor",
       src: "/sir/nahidul.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Joyonto Acharg Oshim",
       title: "Craft Instructor",
       src: "/sir/joyonto.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
   ],
 };

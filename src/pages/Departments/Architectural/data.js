@@ -12,14 +12,14 @@ export default {
       name: "Md.Alomgir Hossain",
       address: "Lakshmipur,Lakshmipur sadar ",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
-      linkedin: "#",
+      gmail: "#",
     },
     secondShift: {
       src: "/sir/nasir-sir.JPG",
       name: "Taposh Candra Pul",
       address: "Chandraganj,Lakshmipur",
       facebook: "https://www.facebook.com/kakan.das2",
-      linkedin: "#",
+      gmail: "#",
     },
   },
 
@@ -29,14 +29,14 @@ export default {
       title: "Junior Instructor",
       src: "/sir/obaida.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Md Murad Hosen",
       title: "Junior Instructor",
       src: "/sir/murad.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
 
     {
@@ -44,14 +44,14 @@ export default {
       title: "Craft Instructor",
       src: "/sir/nur.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Mijanur Rahman",
       title: "Craft Instructor",
       src: "/sir/mijanur.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
 
     {
@@ -59,21 +59,21 @@ export default {
       title: "Craft Instructor",
       src: "/sir/alamgir.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Md Imran Hossain",
       title: "Craft Instructor",
       src: "/sir/imran.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Md Mohsin",
       title: "Craft Instructor",
       src: "/sir/mohsin.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
   ],
 };

@@ -13,14 +13,14 @@ export default {
       name: "Md Sobhan",
       address: "Gopalganj,Tongipara ",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
-      linkedin: "#",
+      gmail: "#",
     },
     secondShift: {
       src: "/sir/nasir-sir.JPG",
       name: "Kakon Chandra Das",
       address: "Maijdee,Noakhali",
       facebook: "https://www.facebook.com/kakan.das2",
-      linkedin: "#",
+      gmail: "#",
     },
   },
 
@@ -30,21 +30,21 @@ export default {
       title: "Junior Instructor",
       src: "/sir/yousuf.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Tapos Chandra Paul",
       title: "Junior Instructor",
       src: "/sir/Tapos.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Md Nezam Uddin",
       title: "Teacher Guest",
       src: "/sir/Mijanur.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
 
     {
@@ -52,14 +52,14 @@ export default {
       title: "Craft Instructor",
       src: "/sir/Tashpia.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
     {
       name: "Mijanur Rahman",
       title: "Craft Instructor",
       src: "/sir/mijanur.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
 
     {
@@ -67,7 +67,7 @@ export default {
       title: "Craft Instructor",
       src: "/sir/Sazzad.JPG",
       facebook: "#",
-      linkedin: "#",
+      gmail: "#",
     },
   ],
 };

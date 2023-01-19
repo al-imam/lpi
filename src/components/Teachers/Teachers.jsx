@@ -14,7 +14,7 @@ function Teachers({ teacher }) {
               key={i}
               address={t.title}
               facebook={t.facebook}
-              linkedin={t.linkedin}
+              gmail={t.gmail}
               src={t.src}
             />
           ))}
@@ -26,7 +26,7 @@ function Teachers({ teacher }) {
 
 function Card({
   facebook = "#",
-  linkedin = "#",
+  gmail = "#",
   name,
   address,
   src = "/sir/maruf-sir.JPG",
@@ -48,7 +48,7 @@ function Card({
           <a href={facebook}>
             <FacebookIcon />
           </a>
-          <a href={linkedin}>
+          <a href={gmail}>
             <LinkedInIcon />
           </a>
         </p>

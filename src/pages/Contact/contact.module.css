@@ -1,0 +1,90 @@
+.wrapper {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  font-family: var(--ff-m);
+  font-weight: var(--fw-500);
+  padding-block: 6rem;
+  display: flex;
+  gap: 2rem;
+
+  --light: hsla(237, 100%, 69%, 0.2);
+  --dark: hsl(226, 100%, 75%);
+}
+
+@media only screen and (max-width: 75rem) {
+  .wrapper {
+    max-width: var(--max-width-sm);
+  }
+}
+
+@media only screen and (max-width: 65rem) {
+  .wrapper {
+    max-width: var(--max-width-xsm);
+  }
+}
+
+@media only screen and (max-width: 47rem) {
+  .wrapper {
+    flex-direction: column;
+    padding-inline: var(--gap-inline);
+  }
+}
+
+.title,
+.form {
+  flex: 1;
+}
+
+.title {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.title h4 {
+  font-size: var(--h4);
+  color: var(--gray-800);
+  font-weight: var(--fw-400);
+}
+
+.title p {
+  color: var(--gray-700);
+  font-size: var(--h6);
+  line-height: var(--p-line);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--h6);
+  gap: 1rem;
+  flex: 1;
+}
+
+.input {
+  width: 100%;
+  font-family: var(--ff-m);
+  font-size: var(--h6);
+  color: var(--gray-900);
+  background-color: var(--white);
+  padding: 1rem;
+  border: none;
+  outline: 1px solid var(--gray-200);
+  border-radius: 0.25rem;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 5px var(--light);
+  outline: 1px solid var(--dark);
+}
+
+.input::placeholder {
+  color: var(--gray-400);
+}
+
+.submit-button {
+  font-weight: var(--fw-700);
+  color: var(--gray-900);
+  background-color: var(--primary);
+  outline: none;
+}

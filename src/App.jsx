@@ -12,6 +12,7 @@ import Electronics from "./pages/Departments/Electronics/Electronics";
 import Architectural from "./pages/Departments/Architectural/Architectural";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./util/ScrollToTop";
+import Syllabus from "./pages/Syllabus/Syllabus";
 const About = lazy(() => import("./pages/About/About"));
 
 function App() {
@@ -45,6 +46,26 @@ function App() {
           element={<Electronics />}
         />
         <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/syllabus/computer"
+          element={<Syllabus department="computer" />}
+        />
+        <Route
+          path="/syllabus/civil"
+          element={<Syllabus department="civil" />}
+        />
+        <Route
+          path="/syllabus/electrical"
+          element={<Syllabus department="electrical" />}
+        />
+        <Route
+          path="/syllabus/architecture"
+          element={<Syllabus department="architecture" />}
+        />
+        <Route
+          path="/syllabus/electronics"
+          element={<Syllabus department="electronics" />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

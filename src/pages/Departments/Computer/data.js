@@ -14,7 +14,7 @@ export default {
       gmail: "khaledhossain7896@gmail.com",
     },
     secondShift: {
-      src: "/sir/maruf-sir.JPG",
+      src: "/Computer/sir/maruf-sir.JPG",
       name: "Maruf Hossain",
       address: "Chandraganj,Lakshmipur Sadar",
       facebook: "",
@@ -46,7 +46,7 @@ export default {
     },
     {
       name: "Tonima Akter",
-      title: " Teacher(Part Time)",
+      title: "Teacher Guest",
       src: "/sir/Tonima-sir.JPG",
       facebook: "#",
       gmail: "tomnimaakter245@gmail.com",
@@ -61,7 +61,7 @@ export default {
     {
       name: "Yeasin Arafat",
       title: "Craft Instructor",
-      src: "/sir/Yeasin.JPG",
+      src: "/Computer/sir/instructor.JPG",
       facebook: "#",
       gmail: "#",
     },

@@ -16,33 +16,33 @@ function Navbar({ open }) {
         <li className={classes.navItem}>
           <button
             className={classes.dropdownToggler}
-            onClick={() => navigate("departments")}
+            onClick={() => navigate("/departments")}
           >
             Department <ExpandMoreIcon />
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <NavLink to="departments/computer-technology">
+              <NavLink to="/departments/computer-technology">
                 Computer Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="departments/electrical-technology">
+              <NavLink to="/departments/electrical-technology">
                 Electrical Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="departments/civil-technology">
+              <NavLink to="/departments/civil-technology">
                 Civil Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="departments/electronics-technology">
+              <NavLink to="/departments/electronics-technology">
                 Electronics Technology
               </NavLink>
             </li>
             <li>
-              <NavLink to="departments/architecture-technology">
+              <NavLink to="/departments/architecture-technology">
                 Architecture Technology
               </NavLink>
             </li>
@@ -55,21 +55,21 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <NavLink to="syllabus/computer">Computer Syllabus</NavLink>
+              <NavLink to="/syllabus/computer">Computer Syllabus</NavLink>
             </li>
             <li>
-              <NavLink to="syllabus/civil">Civil Syllabus</NavLink>
+              <NavLink to="/syllabus/civil">Civil Syllabus</NavLink>
             </li>
             <li>
-              <NavLink to="syllabus/electrical">Electrical Syllabus</NavLink>
+              <NavLink to="/syllabus/electrical">Electrical Syllabus</NavLink>
             </li>
             <li>
-              <NavLink to="syllabus/architecture">
+              <NavLink to="/syllabus/architecture">
                 Architecture Syllabus
               </NavLink>
             </li>
             <li>
-              <NavLink to="syllabus/electrical">Electronics Syllabus</NavLink>
+              <NavLink to="/syllabus/electrical">Electronics Syllabus</NavLink>
             </li>
           </ul>
         </li>
@@ -80,13 +80,13 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <NavLink to="facilities/modern-lab">Modern Lab</NavLink>
+              <NavLink to="/facilities/modern-lab">Modern Lab</NavLink>
             </li>
             <li>
-              <NavLink to="facilities/open-library">Open Library</NavLink>
+              <NavLink to="/facilities/open-library">Open Library</NavLink>
             </li>
             <li>
-              <NavLink to="facilities/duet-admission">DUET Admission</NavLink>
+              <NavLink to="/facilities/duet-admission">DUET Admission</NavLink>
             </li>
           </ul>
         </li>
@@ -114,7 +114,7 @@ function Navbar({ open }) {
         </li>
 
         <li className={classes.navItem}>
-          <NavLink to="about">About Us</NavLink>
+          <NavLink to="/about">About Us</NavLink>
         </li>
       </ul>
     </nav>

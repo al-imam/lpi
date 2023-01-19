@@ -40,10 +40,10 @@ function Card({
         onError={(evt) => (evt.target.src = "/sir/fallback.jpg")}
       />
       <div className={classes.info}>
-        <p>
+        <div>
           <h4>{name}</h4>
           <span>{address}</span>
-        </p>
+        </div>
         <p className={classes.icons}>
           <a href={facebook}>
             <FacebookIcon />

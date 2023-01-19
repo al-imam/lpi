@@ -3,6 +3,7 @@
   margin-inline: auto;
   font-family: var(--ff-m);
   font-weight: var(--fw-500);
+  padding-inline: var(--gap-inline);
   padding-block: 6rem;
   display: flex;
   gap: 2rem;
@@ -26,7 +27,6 @@
 @media only screen and (max-width: 47rem) {
   .wrapper {
     flex-direction: column;
-    padding-inline: var(--gap-inline);
   }
 }
 

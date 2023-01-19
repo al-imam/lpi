@@ -3,7 +3,7 @@ import PhonelinkLockIcon from "@mui/icons-material/PhonelinkLock";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import SortIcon from "@mui/icons-material/Sort";
 import { grey } from "@mui/material/colors";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
 
@@ -11,10 +11,10 @@ export default function Header({ setOpen, open }) {
   return (
     <header className={classes.main}>
       <div className={classes.header}>
-        <Link className={classes.item} to="/">
+        <NavLink className={classes.item} to="/">
           <img className={classes.img} src={logo} alt="Logo" />
           Polytechnic
-        </Link>
+        </NavLink>
         <ul className={classes.items}>
           <li>
             <a href="mailto:alimam01828@gmail.com" className={classes.item}>
@@ -27,9 +27,9 @@ export default function Header({ setOpen, open }) {
             </a>
           </li>
           <li className={classes.b}>
-            <Link to="/complain" className={classes.item}>
+            <NavLink to="/contact" className={classes.item}>
               <RateReviewIcon /> Complain
-            </Link>
+            </NavLink>
           </li>
           <button
             className={`${classes.toggler} ${open ? classes.open : ""}`}

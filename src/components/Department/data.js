@@ -2,31 +2,31 @@ export default [
   {
     title: "Computer technology",
     path: "/departments/computer-technology",
-    src: "/assets/computer/main.jpg",
+    src: "/Computer/main.jpg",
     subtitle: "Faculty of CST",
   },
   {
     title: "Civil technology",
     path: "/departments/civil-technology",
-    src: "/assets/collage.jpg",
+    src: "/Civil/main.JPG",
     subtitle: "Faculty of CET",
   },
   {
     title: "Electrical technology",
     path: "/departments/electrical-technology",
-    src: "/assets/collage.jpg",
+    src: "/Electrical/main.JPG",
     subtitle: "Faculty of ET",
   },
   {
     title: "Architecture technology",
     path: "/departments/architecture-technology",
-    src: "/assets/collage.jpg",
+    src: "/AIDT/main.JPG",
     subtitle: "Faculty of ARC",
   },
   {
     title: "Electronics technology",
     path: "/departments/electronics-technology",
-    src: "/assets/collage.jpg",
+    src: "/Electronics/main.JPG",
     subtitle: "Faculty of EET",
   },
 ];

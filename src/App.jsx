@@ -11,12 +11,14 @@ import Electrical from "./pages/Departments/Electrical/Electrical";
 import Electronics from "./pages/Departments/Electronics/Electronics";
 import Architectural from "./pages/Departments/Architectural/Architectural";
 import Contact from "./pages/Contact/Contact";
+import ScrollToTop from "./util/ScrollToTop";
 const About = lazy(() => import("./pages/About/About"));
 
 function App() {
   return (
     <BrowserRouter>
       <Head />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

@@ -69,7 +69,7 @@ function Navbar({ open }) {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/syllabus/electrical">Electronics Syllabus</NavLink>
+              <NavLink to="/syllabus/electronics">Electronics Syllabus</NavLink>
             </li>
           </ul>
         </li>

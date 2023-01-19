@@ -88,3 +88,8 @@
   background-color: var(--primary);
   outline: none;
 }
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: var(--hover);
+}

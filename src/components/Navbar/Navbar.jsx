@@ -55,22 +55,21 @@ function Navbar({ open }) {
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
-              <NavLink to="syllabus/computer">
-                Computer Engineering Syllabus
-              </NavLink>
+              <NavLink to="syllabus/computer">Computer Syllabus</NavLink>
             </li>
             <li>
-              <NavLink to="syllabus/civil">Civil Engineering Syllabus</NavLink>
+              <NavLink to="syllabus/civil">Civil Syllabus</NavLink>
             </li>
             <li>
-              <NavLink to="syllabus/electrical">
-                Electrical Engineering Syllabus
-              </NavLink>
+              <NavLink to="syllabus/electrical">Electrical Syllabus</NavLink>
             </li>
             <li>
               <NavLink to="syllabus/architecture">
-                Architecture Engineering Syllabus
+                Architecture Syllabus
               </NavLink>
+            </li>
+            <li>
+              <NavLink to="syllabus/electrical">Electronics Syllabus</NavLink>
             </li>
           </ul>
         </li>
@@ -88,9 +87,6 @@ function Navbar({ open }) {
             </li>
             <li>
               <NavLink to="facilities/duet-admission">DUET Admission</NavLink>
-            </li>
-            <li>
-              <NavLink to="facilities/free-internet">Free Internet</NavLink>
             </li>
           </ul>
         </li>

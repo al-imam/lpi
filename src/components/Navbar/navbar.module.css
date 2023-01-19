@@ -148,6 +148,7 @@ a {
     right: 0;
     transform: translateX(40rem);
     height: auto;
+    min-width: 30rem;
     min-height: 30rem;
     box-shadow: 0 0 2rem 2px var(--gray-500);
     transition: transform 200ms ease-out;
@@ -248,5 +249,9 @@ a {
   .navItem li,
   .dropdownMenu {
     font-size: 1.015rem;
+  }
+
+  .navbar {
+    min-width: auto;
   }
 }

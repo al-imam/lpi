@@ -17,12 +17,12 @@ function Main() {
               </div>
               <div className={classes.social}>
                 <address className={classes.location}>
-                  <LocationOnIcon /> comilla, comilla sadar
+                  <LocationOnIcon /> comilla sadar, comilla
                 </address>
-                <a href="#" className={classes.address}>
+                <a href="#">
                   <FacebookIcon /> Facebook
                 </a>
-                <a href="#" className={classes.address}>
+                <a href="mailto:">
                   <MailLockIcon /> Mail
                 </a>
               </div>
@@ -34,17 +34,17 @@ function Main() {
             <img src="/public/Non-tech/sir/atik-sir.JPG" />
             <div className={classes.info}>
               <div className={classes.heading}>
-                <h4>Mohammad Alauddin</h4>
+                <h4>Atiqure Rahman</h4>
                 <span className={classes.title}>Principal</span>
               </div>
               <div className={classes.social}>
                 <address className={classes.location}>
-                  <LocationOnIcon /> comilla, comilla sadar
+                  <LocationOnIcon /> Lakshmipur sadar, Lakshmipur
                 </address>
-                <a href="#" className={classes.address}>
+                <a href="#">
                   <FacebookIcon /> Facebook
                 </a>
-                <a href="#" className={classes.address}>
+                <a href="mailto:">
                   <MailLockIcon /> Mail
                 </a>
               </div>

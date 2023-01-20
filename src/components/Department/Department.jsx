@@ -4,18 +4,20 @@ import departments from "./data";
 
 function Department() {
   return (
-    <section className={classes.section}>
-      <h2 className={classes.departmentTitle}>OUR DEPARTMENTS</h2>
-      <div className={classes.cardsContainer}>
-        {departments.map((card, index) => (
-          <Card
-            path={card.path}
-            key={card.title + index}
-            title={card.title}
-            src={card.src}
-            subtitle={card.subtitle}
-          />
-        ))}
+    <section className={classes.q}>
+      <div className={classes.section}>
+        <h2 className={classes.departmentTitle}>OUR DEPARTMENTS</h2>
+        <div className={classes.cardsContainer}>
+          {departments.map((card, index) => (
+            <Card
+              path={card.path}
+              key={card.title + index}
+              title={card.title}
+              src={card.src}
+              subtitle={card.subtitle}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

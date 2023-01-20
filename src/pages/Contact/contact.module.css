@@ -1,9 +1,13 @@
+.q {
+  padding-inline: var(--gap-inline);
+}
+
 .wrapper {
   max-width: var(--max-width);
   margin-inline: auto;
   font-family: var(--ff-m);
   font-weight: var(--fw-500);
-  padding-inline: var(--gap-inline);
+
   padding-block: 6rem;
   display: flex;
   gap: 2rem;

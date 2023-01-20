@@ -1,7 +1,10 @@
+.section {
+  padding-inline: var(--gap-inline);
+}
+
 .main {
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-inline: var(--gap-inline);
   --bg: rgb(81, 107, 255);
 }
 

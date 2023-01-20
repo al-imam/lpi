@@ -1,6 +1,9 @@
+.q {
+  padding-inline: var(--gap-inline);
+}
+
 .section {
   max-width: var(--max-width);
-  padding-inline: var(--gap-inline);
   margin-inline: auto;
 }
 

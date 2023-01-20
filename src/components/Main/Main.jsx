@@ -31,7 +31,7 @@ function Main() {
         </div>
         <div className={classes.card}>
           <div className={classes.cardContainer}>
-            <img src="/Non-tech/sir/principal-sir.jpg" />
+            <img src="/public/Non-tech/sir/atik-sir.JPG" />
             <div className={classes.info}>
               <div className={classes.heading}>
                 <h4>Mohammad Alauddin</h4>

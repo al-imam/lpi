@@ -1,6 +1,6 @@
 import classes from "./teacher.module.css";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 
 function Teachers({ teacher }) {
   return (
@@ -48,8 +48,8 @@ function Card({
           <a href={facebook}>
             <FacebookIcon />
           </a>
-          <a href={gmail}>
-            <LinkedInIcon />
+          <a href={`mailto:${gmail}`}>
+            <EmailIcon />
           </a>
         </p>
       </div>

@@ -9,14 +9,14 @@ export default {
     firstShift: {
       src: "/Computer/sir/khaled-sir.JPG",
       name: "Khaled Hossain",
-      address: "Chandraganj,Lakshmipur Sadar",
+      address: "Chandraganj, Lakshmipur",
       facebook: "https://www.facebook.com/khaled.sudon",
       gmail: "khaledhossain7896@gmail.com",
     },
     secondShift: {
       src: "/Computer/sir/maruf-sir.JPG",
       name: "Maruf Hossain",
-      address: "Chandraganj,Lakshmipur Sadar",
+      address: "Chandraganj, Lakshmipur",
       facebook: "",
       gmail: "nipu.maruf@gamil.com",
     },
@@ -24,21 +24,21 @@ export default {
 
   teacher: [
     {
-      name: "Md Saifuzzaman",
+      name: "Saifuzzaman",
       title: "Instructor",
       src: "/Computer/sir/s-jamal-sir.JPG",
       facebook: "https://www.facebook.com/saifuz.zaman.3597",
       gmail: "saifuzzaman456@gmail.com",
     },
     {
-      name: "Md.Tohidul Islam",
+      name: "Tohidul Islam",
       title: "Junior Instructor",
       src: "/Computer/sir/twhid-sir.JPG",
       facebook: "https://www.facebook.com/touhidul.islam.1806253",
       gmail: "rony.touhidul@gmail.com",
     },
     {
-      name: "Md.Shahriar Islam",
+      name: "Shahriar Islam",
       title: "Junior Instructor",
       src: "/Computer/sir/sahriar-sir.jpeg",
       facebook: "#",
@@ -52,7 +52,7 @@ export default {
       gmail: "tomnimaakter245@gmail.com",
     },
     {
-      name: "Md.Jamal Hossen",
+      name: "Jamal Hossen",
       title: "Craft Instructor",
       src: "/Computer/sir/jamal-sir.JPG",
       facebook: "#",
@@ -74,14 +74,14 @@ export default {
     },
 
     {
-      name: "Md.Ryful Islam",
+      name: "Ryful Islam",
       title: "Craft Instructor",
       src: "/sir/Ryful.JPG",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Md.Amran Hossain",
+      name: "Amran Hossain",
       title: "Craft Instructor",
       src: "/sir/Amran.JPG",
       facebook: "#",

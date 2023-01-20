@@ -11,14 +11,14 @@ export default {
     firstShift: {
       src: "/Civil/sir/sazzadul-sir.JPG",
       name: "Sazzadul Hasan",
-      address: "Raipur, Raipur Lakshmipur ",
+      address: "Lakshmipur, Raipur",
       facebook: "https://www.facebook.com/profile.php?id=100009483072562",
       gmail: "#",
     },
     secondShift: {
       src: "/Civil/sir/nasir-sir.JPG",
-      name: "Md.Nasir Uddin",
-      address: "Feni,Feni Sadar",
+      name: "Nasir Uddin",
+      address: "Feni Sadar, Feni",
       facebook: "https://www.facebook.com/profile.php?id=100002424941884",
       gmail: "#",
     },
@@ -34,28 +34,28 @@ export default {
     },
     {
       name: "Md.Musleh Uddin",
-      title: "Teacher(Guest)",
+      title: "Teacher Guest",
       src: "/sir/musleh-sir.JPG",
       facebook: "",
       gmail: "#",
     },
 
     {
-      name: "Md.Mehraj Uddin",
+      name: "Mehraj Uddin",
       title: "Craft Instructor",
       src: "/sir/mehraj-sir.JPG",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Md.Mehadi Hasan",
+      name: "Mehadi Hasan",
       title: "Craft Instructor",
       src: "/sir/mehadi.JPG",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Md.Shamim Hossain",
+      name: "Shamim Hossain",
       title: "Craft Instructor",
       src: "/sir/shamim.JPG",
       facebook: "#",
@@ -78,7 +78,7 @@ export default {
     },
 
     {
-      name: "Md.Roki Hossain",
+      name: "Roki Hossain",
       title: "Craft Instructor",
       src: "/sir/Roki.JPG",
       facebook: "#",
@@ -114,7 +114,7 @@ export default {
     },
     {
       name: "Puja rani das",
-      title: "Teacher(Guest)",
+      title: "Teacher Guest",
       src: "/sir/Nilupa.JPG",
       facebook: "#",
       gmail: "#",

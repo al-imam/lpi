@@ -16,7 +16,7 @@ export default {
     secondShift: {
       src: "/sir/nasir-sir.JPG",
       name: "Kakon Chandra Das",
-      address: "Maijdee,Noakhali",
+      address: "Noakhali, Maijdee",
       facebook: "https://www.facebook.com/kakan.das2",
       gmail: "#",
     },
@@ -46,28 +46,28 @@ export default {
     },
 
     {
-      name: "Md.Sazzad Hossain Rifat",
+      name: "Sazzad Hossain",
       title: "Craft Instructor",
       src: "/sir/Sazzad.JPG",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Md.Mohsin Hossain",
+      name: "Mohsin Hossain",
       title: "Craft Instructor",
       src: "/sir/mohsin.JPG",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Md.Nahidul Houqe",
+      name: "Nahidul Houqe",
       title: "Craft Instructor",
       src: "/sir/nahidul.JPG",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Joyonto Acharg Oshim",
+      name: "Joyonto Acharg",
       title: "Craft Instructor",
       src: "/sir/joyonto.JPG",
       facebook: "#",

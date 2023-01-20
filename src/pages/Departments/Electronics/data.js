@@ -8,7 +8,7 @@ export default {
     subpath: "Electronics",
     firstShift: {
       src: "/Electronics/sir/sobhan-sir.jpg",
-      name: "Md.Sobhan",
+      name: "Md Sobhan",
       address: "Gopalganj,Tongipara ",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
       gmail: "#",
@@ -31,7 +31,7 @@ export default {
       gmail: "#",
     },
     {
-      name: "Md.Yousuf Hasan",
+      name: "Yousuf Hasan",
       title: "Junior Instructor",
       src: "/sir/yousuf.JPG",
       facebook: "#",
@@ -45,7 +45,7 @@ export default {
       gmail: "#",
     },
     {
-      name: "Md.Nezam Uddin",
+      name: "Nezam Uddin",
       title: "Teacher(GUEST)",
       src: "/sir/Mijanur.JPG",
       facebook: "#",
@@ -66,7 +66,7 @@ export default {
       gmail: "#",
     },
     {
-      name: "Md.Sazzad Hosain Rifat",
+      name: "Sazzad Hosain",
       title: "Craft Instructor",
       src: "/Electronics/sir/rifat-sir.JPG",
       facebook: "#",

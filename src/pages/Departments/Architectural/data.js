@@ -9,15 +9,15 @@ export default {
     subpath: "architecture",
     firstShift: {
       src: "/sir/pavel.jpg",
-      name: "Md.Alomgir Hossain",
-      address: "Lakshmipur,Lakshmipur sadar ",
+      name: "Alomgir Hossain",
+      address: "Lakshmipur sadar, Lakshmipur",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
       gmail: "#",
     },
     secondShift: {
       src: "/sir/nasir-sir.JPG",
       name: "Taposh Candra Pul",
-      address: "Chandraganj,Lakshmipur",
+      address: "Chandraganj, Lakshmipur",
       facebook: "https://www.facebook.com/kakan.das2",
       gmail: "#",
     },
@@ -25,14 +25,14 @@ export default {
 
   teacher: [
     {
-      name: "Md.Abu Obaida",
+      name: "Abu Obaida",
       title: "Junior Instructor",
       src: "/AIDT/sir/obayda-sir.jpg",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Md.Murad Hosen",
+      name: "Murad Hosen",
       title: "Junior Instructor",
       src: "/sir/murad.JPG",
       facebook: "#",
@@ -40,7 +40,7 @@ export default {
     },
 
     {
-      name: "Mohammad Nur Alam",
+      name: "Nur Alam",
       title: "Craft Instructor",
       src: "/sir/nur.JPG",
       facebook: "#",
@@ -62,14 +62,14 @@ export default {
       gmail: "#",
     },
     {
-      name: "Md.Imran Hossain",
+      name: "Imran Hossain",
       title: "Craft Instructor",
       src: "/AIDT/sir/imran-sir.JPG",
       facebook: "#",
       gmail: "#",
     },
     {
-      name: "Md.Mohsin",
+      name: "Md Mohsin",
       title: "Craft Instructor",
       src: "/sir/mohsin.JPG",
       facebook: "#",

@@ -14,7 +14,7 @@ function DH({ data }) {
         </div>
         <div className={classes.group}>
           <Teacher info={data.firstShift} />
-          <Teacher info={data.secondShift} />
+          {data.secondShift && <Teacher info={data.secondShift} />}
         </div>
       </div>
     </section>

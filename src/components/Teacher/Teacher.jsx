@@ -1,6 +1,6 @@
 import classes from "./teacher.module.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailLockIcon from "@mui/icons-material/MailLock";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
 function Teacher({ info }) {
@@ -15,7 +15,7 @@ function Teacher({ info }) {
         />
         <div>
           <h4>{info.name}</h4>
-          <span>Department Head</span>
+          <span>{info.head ? info.head : "Department Head"}</span>
         </div>
       </div>
       <div className={classes.info}>
@@ -25,8 +25,8 @@ function Teacher({ info }) {
         <a href={info.facebook} className={classes.address}>
           <FacebookIcon /> Facebook
         </a>
-        <a href={info.gmail} className={classes.address}>
-          <LinkedInIcon /> Linkedin
+        <a href={`mailto:${info.gmail}`} className={classes.address}>
+          <MailLockIcon /> Mail
         </a>
       </div>
     </div>

@@ -6,6 +6,7 @@ import Study from "../../components/Study/Study";
 import Hero from "./Hero/Hero";
 import data from "./data";
 import Loader from "../../components/Loader/Loader";
+import Main from "../../components/Main/Main";
 
 const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
 
@@ -19,6 +20,7 @@ function Home() {
           alt="collage"
         />
         <Hero />
+        <Main />
         <Study subtitle={data.about} link={true} />
         <Department />
       </main>

@@ -10,10 +10,6 @@ function Card({ title, subtitle, src, path }) {
         </div>
         <div className={classes.cardInfo}>
           <h4 className={classes.cardTitle}>{title}</h4>
-          <div className={classes.cardDetails}>
-            <p>{subtitle}</p>
-            <span>4 years</span>
-          </div>
         </div>
       </NavLink>
     </div>

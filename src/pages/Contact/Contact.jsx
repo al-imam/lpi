@@ -1,9 +1,10 @@
 import classes from "./contact.module.css";
 import Map from "../../components/Map/Map";
+import Subscribe from "../../components/Subscribe/Subscribe";
 
 function Contact() {
   return (
-    <main>
+    <main className={classes.s}>
       <Map />
       <section className={classes.q}>
         <div className={classes.wrapper}>
@@ -62,6 +63,7 @@ function Contact() {
           </form>
         </div>
       </section>
+      <Subscribe />
     </main>
   );
 }

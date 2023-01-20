@@ -1,3 +1,7 @@
+.s {
+  margin-bottom: 4rem;
+}
+
 .q {
   padding-inline: var(--gap-inline);
 }

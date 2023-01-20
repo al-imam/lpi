@@ -1,6 +1,5 @@
 .main {
   position: relative;
-  padding-inline: var(--gap-inline);
   --height: 44rem;
 }
 

@@ -12,22 +12,20 @@ const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
 
 function Home() {
   return (
-    <>
-      <main className={classes.main + " main"}>
-        <img
-          className={classes.backgroundImg}
-          src="/assets/main.jpg"
-          alt="collage"
-        />
-        <Hero />
-        <Main />
-        <Study subtitle={data.about} link={true} />
-        <Department />
-      </main>
+    <main className={classes.main}>
+      <img
+        className={classes.backgroundImg}
+        src="/assets/main.jpg"
+        alt="collage"
+      />
+      <Hero />
+      <Main />
+      <Study subtitle={data.about} link={true} />
+      <Department />
       <Suspense fallback={<Loader />}>
         <Gallery pictures={data.gallery} heading="Image Gallery" />
       </Suspense>
-    </>
+    </main>
   );
 }
 

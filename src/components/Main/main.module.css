@@ -1,10 +1,7 @@
 .main {
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-block: 6rem;
-  background-color: var(--primary);
-  box-shadow: 0 0 0 100vmax var(--primary);
-  clip-path: inset(0 -100vmax);
+  padding-inline: var(--gap-inline);
   --bg: rgb(81, 107, 255);
 }
 
@@ -15,6 +12,11 @@
 }
 
 .content {
+  --primary: #d6ffd6;
+  padding-block: 6rem;
+  background-color: var(--primary);
+  box-shadow: 0 0 0 100vmax var(--primary);
+  clip-path: inset(0 -100vmax);
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -26,6 +28,8 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  border-radius: 0.15rem;
+  box-shadow: 0 0 2rem -0.5rem hsla(0, 0%, 0%, 0.239);
 }
 
 .card::after {

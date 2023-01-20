@@ -1,12 +1,13 @@
 .section {
-  --bg: white;
-  box-shadow: 0 0 0 100vmax var(--bg);
-  clip-path: inset(0 -100vmax);
   max-width: var(--max-width);
+  padding-inline: var(--gap-inline);
   margin-inline: auto;
 }
 
 .container {
+  --bg: white;
+  box-shadow: 0 0 0 100vmax var(--bg);
+  clip-path: inset(0 -100vmax);
   padding-block: 6rem;
   display: flex;
   background-color: var(--bg);

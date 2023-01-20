@@ -2,6 +2,7 @@
   width: var(--max-width);
   height: var(--height);
   margin-inline: auto;
+  padding-inline: var(--gap-inline);
   display: flex;
   align-items: center;
 }

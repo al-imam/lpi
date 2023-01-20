@@ -2,6 +2,7 @@
   max-width: var(--max-width);
   margin-inline: auto;
   padding-block: 5rem;
+  padding-inline: var(--gap-inline);
 }
 
 .departmentTitle {

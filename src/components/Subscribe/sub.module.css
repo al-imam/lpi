@@ -75,3 +75,21 @@
   cursor: pointer;
   background-color: var(--hover);
 }
+
+.error,
+.success {
+  padding: 0.5rem 1rem;
+  font-family: var(--ff-m);
+  font-size: var(--h6);
+  font-weight: var(--fw-500);
+  color: var(--gray-900);
+  border-radius: 0.25rem;
+}
+
+.success {
+  background-color: rgba(162, 255, 162, 0.6);
+}
+
+.error {
+  background-color: rgba(255, 90, 90, 0.4);
+}

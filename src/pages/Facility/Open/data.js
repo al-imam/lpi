@@ -5,7 +5,7 @@ export default {
     name: "Open library",
     subpath: "Library",
     firstShift: {
-      src: "/public/lybiran-mam.JPG",
+      src: "/lybiran-mam.JPG",
       name: "lybiran",
       head: "Lab Incharge",
       address: "Lakshmipur",

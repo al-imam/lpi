@@ -6,9 +6,9 @@ export default {
     subpath: "Library",
     firstShift: {
       src: "/lybiran-mam.JPG",
-      name: "lybiran",
-      head: "Lab Incharge",
-      address: "Lakshmipur",
+      name: "Roksana Yeasmin",
+      head: "Lybiran",
+      address: "Lakshmipur sadar, Lakshmipur",
       facebook: "#",
       gmail: "#",
     },

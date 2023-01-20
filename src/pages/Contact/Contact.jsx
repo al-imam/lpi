@@ -9,10 +9,9 @@ function Contact() {
         <div className={classes.title}>
           <h4>Don't be shy</h4>
           <p>
-            You can also reach us with your query like which WordPress themes
-            are best suited for you business niches or which WordPress hosting
-            is best suited for your website. We feel free to assist you as long
-            as possible.
+            you can share any kind of information with us, like if you have any
+            complain about Lakshmipur Polytechnic Institute, or if you have any
+            question feel free to ask. You can also reach us with phone number.
           </p>
         </div>
 

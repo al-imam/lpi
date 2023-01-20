@@ -85,9 +85,6 @@ function Navbar({ open }) {
             <li>
               <NavLink to="/facilities/open-library">Open Library</NavLink>
             </li>
-            <li>
-              <NavLink to="/facilities/duet-admission">DUET Admission</NavLink>
-            </li>
           </ul>
         </li>
 

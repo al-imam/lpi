@@ -15,7 +15,7 @@ function Teacher({ info }) {
         />
         <div>
           <h4>{info.name}</h4>
-          <span>Department Head</span>
+          <span>{info.head ? info.head : "Department Head"}</span>
         </div>
       </div>
       <div className={classes.info}>

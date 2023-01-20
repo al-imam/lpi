@@ -7,7 +7,7 @@ function TP({ heading, teacher }) {
     <main className="main">
       <Location current="departments" subRoute={heading.subpath} />
       <DH data={heading} />
-      <Teachers teacher={teacher} />
+      {teacher.length !== 0 ? <Teachers teacher={teacher} /> : null}
     </main>
   );
 }

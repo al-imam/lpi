@@ -13,6 +13,7 @@ import Architectural from "./pages/Departments/Architectural/Architectural";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./util/ScrollToTop";
 import Syllabus from "./pages/Syllabus/Syllabus";
+import Open from "./pages/Facility/Open/Open";
 const About = lazy(() => import("./pages/About/About"));
 
 function App() {
@@ -66,6 +67,8 @@ function App() {
           path="/syllabus/electronics"
           element={<Syllabus department="electronics" />}
         />
+        <Route path="/facilities/modern-lab" element={<h1>modern-lab</h1>} />
+        <Route path="/facilities/open-library" element={<Open />} />
       </Routes>
       <Footer />
     </BrowserRouter>

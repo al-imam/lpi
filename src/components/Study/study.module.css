@@ -31,7 +31,7 @@
 
 .column .image {
   width: 100%;
-  object-position: bottom;
+  object-position: 50% 80%;
   aspect-ratio: 16 / 7;
 }
 

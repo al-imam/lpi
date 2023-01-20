@@ -27,16 +27,13 @@ function Footer() {
               <NavLink to="/about">About</NavLink>
             </li>
             <li className={classes.linkItem}>
-              <NavLink to="/complain">Complain</NavLink>
+              <NavLink to="/contact">Complain</NavLink>
             </li>
             <li className={classes.linkItem}>
-              <a href="#">Departments</a>
+              <a href="/departments">Departments</a>
             </li>
             <li className={classes.linkItem}>
-              <a href="#">Contact</a>
-            </li>
-            <li className={classes.linkItem}>
-              <a href="#">LPI Clubs</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>

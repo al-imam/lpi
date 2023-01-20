@@ -1,13 +1,15 @@
 .main {
   position: relative;
   padding-inline: var(--gap-inline);
+  --height: 44rem;
 }
 
 .backgroundImg {
   position: absolute;
   inset: 0;
   z-index: -1;
-  height: 700px;
+  height: var(--height);
+  object-position: bottom;
   width: 100%;
   filter: blur(3px);
   filter: brightness(0.4);

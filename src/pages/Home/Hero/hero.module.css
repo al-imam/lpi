@@ -1,6 +1,6 @@
 .heroContainer {
   width: var(--max-width);
-  height: 44rem;
+  height: var(--height);
   margin-inline: auto;
   display: flex;
   align-items: center;

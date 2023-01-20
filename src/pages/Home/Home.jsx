@@ -16,7 +16,7 @@ function Home() {
       <main className={classes.main + " main"}>
         <img
           className={classes.backgroundImg}
-          src="/assets/collage.jpg"
+          src="/assets/main.jpg"
           alt="collage"
         />
         <Hero />

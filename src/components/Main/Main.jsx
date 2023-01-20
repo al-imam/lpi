@@ -3,6 +3,19 @@ import MailLockIcon from "@mui/icons-material/MailLock";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
+const head = {
+  name: "Md Jahorul Islam",
+  pod: "CIA Deputy Director at BTEB",
+  pod2: "Principle Lakshmipur Polytechnic",
+  location: "Dhaka, Bangladesh",
+};
+
+const atik = {
+  name: "Atiqure Rahman",
+  pod: "Chief Instructor Non-Tech",
+  location: "Fenchugonj, Sylhet",
+};
+
 function Main() {
   return (
     <section className={classes.section}>
@@ -13,14 +26,17 @@ function Main() {
               <img src="/Non-tech/sir/principal-sir.jpg" />
               <div className={classes.info}>
                 <div className={classes.heading}>
-                  <h4>Mohammad Alauddin</h4>
-                  <span className={classes.title}>Principal</span>
+                  <h4>{head.name}</h4>
+                  <span className={classes.title}>{head.pod}</span>
+                  <span className={classes.title + " " + classes.a2}>
+                    {head.pod2}
+                  </span>
                 </div>
                 <div className={classes.social}>
                   <address className={classes.location}>
-                    <LocationOnIcon /> comilla sadar, comilla
+                    <LocationOnIcon /> {head.location}
                   </address>
-                  <a href="#">
+                  <a href="https://www.facebook.com/profile.php?id=100023528615846">
                     <FacebookIcon /> Facebook
                   </a>
                   <a href="mailto:">
@@ -35,14 +51,14 @@ function Main() {
               <img src="/Non-tech/sir/atik-sir.JPG" />
               <div className={classes.info}>
                 <div className={classes.heading}>
-                  <h4>Atiqure Rahman</h4>
-                  <span className={classes.title}>Principal</span>
+                  <h4>{atik.name}</h4>
+                  <span className={classes.title}>{atik.pod}</span>
                 </div>
                 <div className={classes.social}>
                   <address className={classes.location}>
-                    <LocationOnIcon /> Lakshmipur sadar, Lakshmipur
+                    <LocationOnIcon /> {atik.location}
                   </address>
-                  <a href="#">
+                  <a href="https://www.facebook.com/profile.php?id=100007141004066">
                     <FacebookIcon /> Facebook
                   </a>
                   <a href="mailto:">

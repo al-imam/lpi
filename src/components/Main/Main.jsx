@@ -4,10 +4,10 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const head = {
-  name: "Md Jahorul Islam",
-  pod: "CIA Deputy Director at BTEB",
+  name: "MD Jahirul Islam",
+  pod: "CIA Deputy Director At BTEB",
   pod2: "Principle Lakshmipur Polytechnic",
-  location: "Dhaka, Bangladesh",
+  location: "Comilla, Bangladesh",
 };
 
 const atik = {

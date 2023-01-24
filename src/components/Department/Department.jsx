@@ -14,7 +14,6 @@ function Department() {
               key={card.title + index}
               title={card.title}
               src={card.src}
-              subtitle={card.subtitle}
             />
           ))}
         </div>

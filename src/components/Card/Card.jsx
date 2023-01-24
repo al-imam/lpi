@@ -1,7 +1,7 @@
 import classes from "./card.module.css";
 import { NavLink } from "react-router-dom";
 
-function Card({ title, subtitle, src, path }) {
+function Card({ title, src, path }) {
   return (
     <div className={classes.card}>
       <NavLink to={path}>

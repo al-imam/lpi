@@ -88,24 +88,6 @@ function Navbar({ open }) {
           </ul>
         </li>
 
-        {/* <li className={classes.navItem}>
-          <button className={classes.dropdownToggler}>
-            LPI Clubs
-            <ExpandMoreIcon />
-          </button>
-          <ul className={classes.dropdownMenu}>
-            <li>
-              <NavLink to="clubs/robotic">Robotic Club</NavLink>
-            </li>
-            <li>
-              <NavLink to="clubs/programming">LPI Programming Club</NavLink>
-            </li>
-            <li>
-              <NavLink to="clubs/debating">LPDS Debating Club</NavLink>
-            </li>
-          </ul>
-        </li> */}
-
         <li className={classes.navItem}>
           <NavLink to="/contact">Contact Us</NavLink>
         </li>

@@ -8,9 +8,7 @@ function Card({ title, subtitle, src, path }) {
         <div className={classes.cardImgContainer}>
           <img className={classes.cardImg} src={src} alt="department picture" />
         </div>
-        <div className={classes.cardInfo}>
-          <h4 className={classes.cardTitle}>{title}</h4>
-        </div>
+        <h4 className={classes.cardTitle}>{title}</h4>
       </NavLink>
     </div>
   );

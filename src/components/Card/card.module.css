@@ -30,11 +30,8 @@
   transition: filter 200ms ease-out, transform 200ms ease-out;
 }
 
-.cardInfo {
-  padding: 1rem;
-}
-
 .cardTitle {
+  padding: 1rem;
   font-size: var(--h6);
   font-family: var(--ff-m);
   font-weight: var(--fw-700);

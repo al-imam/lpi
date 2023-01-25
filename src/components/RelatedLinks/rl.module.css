@@ -1,0 +1,6 @@
+.section {
+  padding-inline: var(--gap-inline);
+  font-family: var(--ff-m);
+  font-weight: var(--fw-500);
+  color: var(--gray-800);
+}

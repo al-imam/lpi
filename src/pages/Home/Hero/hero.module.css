@@ -44,6 +44,7 @@
 .action {
   text-decoration: none;
   font-family: var(--ff-m);
+  letter-spacing: 0.5px;
   font-weight: var(--fw-700);
   font-size: var(--h6);
   padding: 0.5rem 1.5rem;

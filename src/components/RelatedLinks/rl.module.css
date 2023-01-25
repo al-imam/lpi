@@ -10,3 +10,8 @@
   max-width: var(--max-width);
   margin-inline: auto;
 }
+
+.heading {
+  font-size: var(--h4);
+  margin-bottom: 1.5rem;
+}

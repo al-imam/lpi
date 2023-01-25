@@ -2,3 +2,9 @@
   padding-block: 2rem;
   background-color: white;
 }
+
+.text {
+  font-family: var(--ff-b);
+  font-size: var(--h5);
+  text-align: right;
+}

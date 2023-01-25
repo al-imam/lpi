@@ -34,9 +34,14 @@
 
 .items a {
   color: var(--gray-600);
+  transition: color 200ms ease-in;
 }
 
 .items li:hover {
   margin-left: 0.5rem;
   padding-left: 0.5rem;
+}
+
+.items li:hover a {
+  color: var(--gray-900);
 }

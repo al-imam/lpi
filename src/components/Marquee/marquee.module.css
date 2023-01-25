@@ -1,7 +1,24 @@
 .section {
   padding-block: 2rem;
   background-color: white;
+  position: relative;
+  isolation: isolate;
   --speed: 20s;
+}
+
+.section::after {
+  --first: 2px;
+  --color: white;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color) 0% var(--first),
+    transparent 10%,
+    transparent 90%,
+    var(--color) calc(100% - var(--first)) var(--first)
+  );
 }
 
 .text {

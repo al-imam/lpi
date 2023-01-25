@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Montserrat:wght@300;700&family=Open+Sans:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Montserrat:wght@300;700&family=Open+Sans:wght@300;400;700&display=swap");
 
 *,
 *::after,
@@ -29,8 +29,9 @@
   --gray-800: #262626;
   --gray-900: #171717;
 
-  --ff-m: "Montserrat";
-  --ff-os: "Open Sans";
+  --ff-m: "Montserrat", sans-serif;
+  --ff-os: "Open Sans", sans-serif;
+  --ff-b: "Hind Siliguri", sans-serif;
   --fw-700: 700;
   --fw-500: 500;
   --fw-400: 400;

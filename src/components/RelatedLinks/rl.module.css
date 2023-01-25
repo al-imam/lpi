@@ -15,3 +15,18 @@
   font-size: var(--h4);
   margin-bottom: 1.5rem;
 }
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.items ::marker {
+  content: "👉";
+}
+
+.items li {
+  padding-left: 1rem;
+}

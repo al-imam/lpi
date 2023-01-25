@@ -3,4 +3,10 @@
   font-family: var(--ff-m);
   font-weight: var(--fw-500);
   color: var(--gray-800);
+  margin-bottom: 6rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
 }

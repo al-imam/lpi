@@ -8,3 +8,13 @@
   font-size: var(--h5);
   text-align: right;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(110vw);
+  }
+
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}

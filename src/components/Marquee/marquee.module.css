@@ -7,6 +7,8 @@
   font-family: var(--ff-b);
   font-size: var(--h5);
   text-align: right;
+  width: max-content;
+  animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {

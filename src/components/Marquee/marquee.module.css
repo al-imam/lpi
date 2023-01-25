@@ -1,6 +1,7 @@
 .section {
   padding-block: 2rem;
   background-color: white;
+  --speed: 20s;
 }
 
 .text {
@@ -8,10 +9,10 @@
   font-size: var(--h5);
   text-align: right;
   width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: marquee var(--speed) linear infinite;
 }
 
-@keyframes scroll {
+@keyframes marquee {
   0% {
     transform: translateX(110vw);
   }

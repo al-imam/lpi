@@ -8,6 +8,7 @@ import data from "./data";
 import Loader from "../../components/Loader/Loader";
 import Main from "../../components/Main/Main";
 import Subscribe from "../../components/Subscribe/Subscribe";
+import Marquee from "../../components/Marquee/Marquee";
 
 const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
 
@@ -20,6 +21,7 @@ function Home() {
         alt="collage"
       />
       <Hero />
+      <Marquee />
       <Main />
       <Study subtitle={data.about} link={true} />
       <Department />

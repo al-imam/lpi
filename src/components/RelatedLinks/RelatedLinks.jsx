@@ -1,8 +1,10 @@
+import classes from "./rl.module.css";
+
 function RelatedLinks() {
   return (
-    <section>
-      <h2>Related Links</h2>
-      <ul>
+    <section className={classes.section}>
+      <h2 className={classes.heading}>Related Links</h2>
+      <ul className={classes.items}>
         <li>
           <a target="_blank" rel="noopener" href="http://www.techedu.gov.bd">
             Directorate Of Technical Education

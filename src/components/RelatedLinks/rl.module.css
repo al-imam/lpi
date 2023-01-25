@@ -51,3 +51,9 @@
     max-width: var(--max-width-sm);
   }
 }
+
+@media only screen and (max-width: 65rem) {
+  .container {
+    max-width: var(--max-width-xsm);
+  }
+}

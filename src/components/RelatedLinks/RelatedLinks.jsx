@@ -43,3 +43,5 @@ function RelatedLinks() {
     </div>
   );
 }
+
+export default RelatedLinks;

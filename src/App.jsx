@@ -17,6 +17,8 @@ import Open from "./pages/Facility/Open/Open";
 import Lab from "./pages/Facility/Lab/Lab";
 const About = lazy(() => import("./pages/About/About"));
 
+import RelatedLinks from "./components/RelatedLinks/RelatedLinks";
+
 function App() {
   return (
     <BrowserRouter>
@@ -71,6 +73,7 @@ function App() {
         <Route path="/facilities/modern-lab" element={<Lab />} />
         <Route path="/facilities/open-library" element={<Open />} />
       </Routes>
+      <RelatedLinks />
       <Footer />
     </BrowserRouter>
   );

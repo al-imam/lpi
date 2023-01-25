@@ -21,6 +21,7 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 1rem;
+  --speed: 100ms;
 }
 
 .items ::marker {
@@ -29,12 +30,12 @@
 
 .items li {
   padding-left: 1rem;
-  transition: margin 200ms ease-in, padding 200ms ease-in;
+  transition: margin var(--speed) ease-in, padding var(--speed) ease-in;
 }
 
 .items a {
   color: var(--gray-600);
-  transition: color 200ms ease-in;
+  transition: color var(--speed) ease-in;
 }
 
 .items li:hover {

@@ -21,7 +21,6 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 1rem;
-  transition: all 2000ms ease-in;
 }
 
 .items ::marker {
@@ -30,6 +29,7 @@
 
 .items li {
   padding-left: 1rem;
+  transition: margin 200ms ease-in, padding 200ms ease-in;
 }
 
 .items a {

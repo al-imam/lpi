@@ -4,11 +4,11 @@
   position: relative;
   isolation: isolate;
   --speed: 20s;
+  --first: 2px;
+  --color: white;
 }
 
 .section::after {
-  --first: 2px;
-  --color: white;
   content: "";
   position: absolute;
   inset: 0;

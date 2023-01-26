@@ -1,11 +1,13 @@
 .section {
+  --speed: 20s;
+  --first: 2px;
+  --color: white;
+
   padding-block: 2rem;
   background-color: white;
   position: relative;
   isolation: isolate;
-  --speed: 20s;
-  --first: 2px;
-  --color: white;
+  overflow: hidden;
 }
 
 .section::after {

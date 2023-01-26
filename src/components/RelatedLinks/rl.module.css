@@ -30,6 +30,7 @@
 
 .items li {
   padding-left: 1rem;
+  max-width: max-content;
   transition: margin var(--speed) ease-in, padding var(--speed) ease-in;
 }
 

@@ -1,8 +1,8 @@
 import classes from "./links.module.css";
 
-function Links({ data }) {
+function Links({ data, font = "bangla" }) {
   return (
-    <section className={classes.section}>
+    <section className={classes.section + " " + classes[font]}>
       <div className={classes.container}>
         <h2 className={classes.heading}>{data.heading}</h2>
         <ul className={classes.items}>

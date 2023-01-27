@@ -1,6 +1,6 @@
-import classes from "./rl.module.css";
+import classes from "./links.module.css";
 
-function RelatedLinks({ data }) {
+function Links({ data }) {
   return (
     <section className={classes.section}>
       <div className={classes.container}>
@@ -19,4 +19,4 @@ function RelatedLinks({ data }) {
   );
 }
 
-export default RelatedLinks;
+export default Links;

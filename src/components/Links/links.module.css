@@ -11,6 +11,7 @@
 
 .bangla {
   font-family: var(--ff-b);
+  font-weight: var(--ff-700);
 }
 
 .container {

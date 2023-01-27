@@ -74,7 +74,7 @@ function App() {
         <Route path="/facilities/modern-lab" element={<Lab />} />
         <Route path="/facilities/open-library" element={<Open />} />
       </Routes>
-      <Links data={data} />
+      <Links data={data} font="english" />
       <Footer />
     </BrowserRouter>
   );

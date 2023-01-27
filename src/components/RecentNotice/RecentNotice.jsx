@@ -66,3 +66,5 @@ function RecentNotice() {
     </div>
   );
 }
+
+export default RecentNotice;

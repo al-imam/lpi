@@ -1,3 +1,5 @@
+import classes from "./recentNotice.module.css";
+
 function RecentNotice() {
   return (
     <div>

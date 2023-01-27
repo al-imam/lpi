@@ -2,8 +2,8 @@ import classes from "./recentNotice.module.css";
 
 function RecentNotice() {
   return (
-    <div>
-      <h4>Recent Notice</h4>
+    <div className={classes.RecentNotice}>
+      <h4 className={classes.heading}>Recent Notice</h4>
       <ul>
         <li>
           <a>

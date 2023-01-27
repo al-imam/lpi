@@ -17,7 +17,7 @@ import Open from "./pages/Facility/Open/Open";
 import Lab from "./pages/Facility/Lab/Lab";
 const About = lazy(() => import("./pages/About/About"));
 
-import RelatedLinks from "./components/RelatedLinks/RelatedLinks";
+import Links from "./components/Links/Links";
 import data from "./data";
 
 function App() {
@@ -74,7 +74,7 @@ function App() {
         <Route path="/facilities/modern-lab" element={<Lab />} />
         <Route path="/facilities/open-library" element={<Open />} />
       </Routes>
-      <RelatedLinks data={data} />
+      <Links data={data} />
       <Footer />
     </BrowserRouter>
   );

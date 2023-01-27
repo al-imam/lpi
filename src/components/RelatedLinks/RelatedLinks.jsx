@@ -13,7 +13,7 @@ function RelatedLinks() {
           </li>
           <li>
             <a target="_blank" rel="noopener" href="http://www.bteb.gov.bd">
-              Bangladesh Technical Education Board (BTEB)
+              Bangladesh Technical Education Board
             </a>
           </li>
           <li>

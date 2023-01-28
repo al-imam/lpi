@@ -2,9 +2,9 @@ import style from "./section.module.css";
 
 function Section({ children }) {
   return (
-    <div className={style.container}>
-      <section className={style.section}>{children}</section>
-    </div>
+    <section className={style.section}>
+      <div className={style.container}>{children}</div>
+    </section>
   );
 }
 

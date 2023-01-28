@@ -29,9 +29,5 @@ export default {
       text: "মধ্যপর্ব পরীক্ষার সংশোধিত রুটিন",
       link: "#",
     },
-    {
-      text: "Presidency University আয়োজিত Inter-College English Language Contest 2022 এ অংশগ্রহণের আহবান",
-      link: "#",
-    },
   ],
 };

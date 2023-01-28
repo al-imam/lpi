@@ -48,15 +48,3 @@
 .items li:hover a {
   color: var(--gray-900);
 }
-
-@media only screen and (max-width: 75rem) {
-  .container {
-    max-width: var(--max-width-sm);
-  }
-}
-
-@media only screen and (max-width: 65rem) {
-  .container {
-    max-width: var(--max-width-xsm);
-  }
-}

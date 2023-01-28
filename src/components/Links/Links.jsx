@@ -14,7 +14,6 @@ function Links({ data, font = "bangla" }) {
         ))}
       </ul>
     </div>
-    </section>
   );
 }
 

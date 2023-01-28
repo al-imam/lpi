@@ -19,6 +19,7 @@ const About = lazy(() => import("./pages/About/About"));
 
 import Links from "./components/Links/Links";
 import data from "./data";
+import Section from "./components/Section/Section";
 
 function App() {
   return (
@@ -74,7 +75,9 @@ function App() {
         <Route path="/facilities/modern-lab" element={<Lab />} />
         <Route path="/facilities/open-library" element={<Open />} />
       </Routes>
-      <Links data={data} font="english" />
+      <Section>
+        <Links data={data} font="english" />
+      </Section>
       <Footer />
     </BrowserRouter>
   );

@@ -1,17 +1,21 @@
 .section {
-  max-width: var(--max-width);
-  margin-inline: auto;
   padding-bottom: 6rem;
+  padding-inline: var(--gap-inline);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: var(--max-width);
 }
 
 @media only screen and (max-width: 75rem) {
-  .section {
+  .container {
     max-width: var(--max-width-sm);
   }
 }
 
 @media only screen and (max-width: 65rem) {
-  .section {
+  .container {
     max-width: var(--max-width-xsm);
   }
 }

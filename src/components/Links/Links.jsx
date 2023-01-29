@@ -17,4 +17,16 @@ function Links({ data, font = "bangla" }) {
   );
 }
 
+function Link({ path, text }) {
+  if (path.includes("http")) {
+    return (
+      <a target="_blank" rel="noopener" href={path}>
+        {text}
+      </a>
+    );
+  }
+
+  return <NavLink to={path}>{text}</NavLink>;
+}
+
 export default Links;

@@ -24,3 +24,10 @@
     max-width: var(--max-width-xsm);
   }
 }
+
+@media only screen and (max-width: 50rem) {
+  .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

@@ -9,7 +9,7 @@ import Loader from "../../components/Loader/Loader";
 import Main from "../../components/Main/Main";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import Marquee from "../../components/Marquee/Marquee";
-import RecentNotice from "../../components/RecentNotice/RecentNotice";
+import NoticeAndNews from "../../components/NoticeAndNews/NoticeAndNews";
 
 const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
 
@@ -24,7 +24,7 @@ function Home() {
       <Hero />
       <Marquee />
       <Main />
-      <RecentNotice />
+      <NoticeAndNews />
       <Study subtitle={data.about} link={true} />
       <Department />
       <Subscribe />

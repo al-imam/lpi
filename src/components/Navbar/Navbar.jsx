@@ -87,6 +87,7 @@ function Navbar({ open }) {
             </li>
           </ul>
         </li>
+
         <li className={classes.navItem}>
           <NavLink to="/contact">Contact Us</NavLink>
         </li>

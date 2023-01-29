@@ -30,10 +30,10 @@ function Footer() {
               <NavLink to="/contact">Complain</NavLink>
             </li>
             <li className={classes.linkItem}>
-              <a href="/departments">Departments</a>
+              <NavLink to="/departments">Departments</NavLink>
             </li>
             <li className={classes.linkItem}>
-              <a href="/contact">Contact</a>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>

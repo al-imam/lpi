@@ -2,3 +2,13 @@
   padding-inline: var(--gap-inline);
   padding-block: 6rem;
 }
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+}
+
+.container > * {
+  flex-grow: 1;
+}

@@ -5,7 +5,7 @@ import classes from "./NoticeAndNews.module.css";
 function NoticeAndNews() {
   return (
     <section className={classes.section}>
-      <div className={classes.conatiner}>
+      <div className={classes.container}>
         <RecentNotice />
         <News />
       </div>

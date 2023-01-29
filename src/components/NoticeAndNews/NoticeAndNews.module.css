@@ -1,0 +1,4 @@
+.section {
+  padding-inline: var(--gap-inline);
+  padding-block: 6rem;
+}

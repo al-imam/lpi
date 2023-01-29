@@ -1,4 +1,5 @@
 import classes from "./links.module.css";
+import { NavLink } from "react-router-dom";
 
 function Links({ data, font = "bangla" }) {
   return (
@@ -6,10 +7,8 @@ function Links({ data, font = "bangla" }) {
       <h2 className={classes.heading}>{data.heading}</h2>
       <ul className={classes.items}>
         {data.links.map((item) => (
-          <li>
-            <a target="_blank" rel="noopener" href={item.link}>
-              {item.text}
-            </a>
+          <li key={JSON.stringify(item)}>
+            <Link path={item.link} text={item.text} />
           </li>
         ))}
       </ul>

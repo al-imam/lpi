@@ -38,7 +38,7 @@
   font-size: var(--h6);
   font-family: var(--ff-m);
   font-weight: var(--fw-700);
-  color: var(--gray-800);
+  color: var(--gray-600);
 }
 
 @media only screen and (max-width: 49rem) {

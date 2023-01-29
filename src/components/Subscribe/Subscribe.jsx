@@ -53,6 +53,7 @@ function Subscribe() {
               <span className={classes.success}>{success}</span>
             )}
             <input
+              placeholder="example@gmail.com"
               autoComplete="off"
               className={classes.input}
               type="email"

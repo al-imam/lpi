@@ -1,4 +1,4 @@
-import classes from "./dh.module.css";
+import classes from "./departmentLayout.module.css";
 import DepartmentHead from "../DepartmentHead/DepartmentHead";
 
 function DH({ data }) {

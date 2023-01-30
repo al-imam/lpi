@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 
 import DepartmentGroup from "../../components/DepartmentGroup/DepartmentGroup";
 import classes from "./home.module.css";
-import Study from "../../components/Study/Study";
+import AboutUs from "../../components/AboutUs/AboutUs";
 import Hero from "./Hero/Hero";
 import data from "./data";
 import Loader from "../../components/Loader/Loader";
@@ -25,7 +25,7 @@ function Home() {
       <Marquee />
       <Principal />
       <NoticeAndNews />
-      <Study subtitle={data.about} link={true} />
+      <AboutUs subtitle={data.about} link={true} />
       <DepartmentGroup />
       <Subscribe />
       <Suspense fallback={<Loader />}>

@@ -1,7 +1,7 @@
-import classes from "./study.module.css";
+import classes from "./aboutUs.module.css";
 import { NavLink } from "react-router-dom";
 
-function Study({ subtitle, link, direction = "row" }) {
+function AboutUs({ subtitle, link, direction = "row" }) {
   return (
     <section className={classes.q}>
       <div className={classes.section}>
@@ -22,4 +22,4 @@ function Study({ subtitle, link, direction = "row" }) {
   );
 }
 
-export default Study;
+export default AboutUs;

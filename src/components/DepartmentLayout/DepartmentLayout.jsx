@@ -1,7 +1,7 @@
 import classes from "./departmentLayout.module.css";
 import DepartmentHead from "../DepartmentHead/DepartmentHead";
 
-function DH({ data }) {
+function DepartmentLayout({ data }) {
   return (
     <section className={classes.section}>
       <div className={classes.heading}>
@@ -21,4 +21,4 @@ function DH({ data }) {
   );
 }
 
-export default DH;
+export default DepartmentLayout;

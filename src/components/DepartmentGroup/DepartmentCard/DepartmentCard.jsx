@@ -1,7 +1,7 @@
-import classes from "./card.module.css";
+import classes from "./departmentCard.module.css";
 import { NavLink } from "react-router-dom";
 
-function Card({ title, src, path }) {
+function DepartmentCard({ title, src, path }) {
   return (
     <div className={classes.card}>
       <NavLink to={path}>
@@ -14,4 +14,4 @@ function Card({ title, src, path }) {
   );
 }
 
-export default Card;
+export default DepartmentCard;

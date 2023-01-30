@@ -1,5 +1,5 @@
 import classes from "./departmentGroup.module.css";
-import Card from "../Card/Card";
+import DepartmentCard from "./DepartmentCard/DepartmentCard";
 import data from "./data";
 
 function DepartmentGroup() {
@@ -9,7 +9,7 @@ function DepartmentGroup() {
         <h2 className={classes.departmentTitle}>OUR DEPARTMENTS</h2>
         <div className={classes.cardsContainer}>
           {data.map((card, index) => (
-            <Card
+            <DepartmentCard
               path={card.path}
               key={card.title + index}
               title={card.title}

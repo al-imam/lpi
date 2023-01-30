@@ -1,5 +1,5 @@
 import classes from "./dh.module.css";
-import Teacher from "../Teacher/Teacher";
+import DepartmentHead from "../DepartmentHead/DepartmentHead";
 
 function DH({ data }) {
   return (
@@ -13,8 +13,8 @@ function DH({ data }) {
           </div>
         </div>
         <div className={classes.group}>
-          <Teacher info={data.firstShift} />
-          {data.secondShift && <Teacher info={data.secondShift} />}
+          <DepartmentHead info={data.firstShift} />
+          {data.secondShift && <DepartmentHead info={data.secondShift} />}
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import classes from "./teacher.module.css";
+import classes from "./DepartmentHead.module.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailLockIcon from "@mui/icons-material/MailLock";
 import FacebookIcon from "@mui/icons-material/Facebook";

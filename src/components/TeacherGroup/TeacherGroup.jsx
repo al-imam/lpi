@@ -1,15 +1,15 @@
-import classes from "./teacher.module.css";
+import classes from "./teacherGroup.module.css";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 
-function Teachers({ teacher }) {
+function TeacherGroup({ teacher }) {
   return (
     <section className={classes.section}>
       <div className={classes.container}>
         <h2>Teachers</h2>
         <div className={classes.teachers}>
           {teacher.map((t, i) => (
-            <Card
+            <TeacherCard
               name={t.name}
               key={i}
               address={t.title}
@@ -24,7 +24,7 @@ function Teachers({ teacher }) {
   );
 }
 
-function Card({
+function TeacherCard({
   facebook = "#",
   gmail = "#",
   name,
@@ -57,4 +57,4 @@ function Card({
   );
 }
 
-export default Teachers;
+export default TeacherGroup;

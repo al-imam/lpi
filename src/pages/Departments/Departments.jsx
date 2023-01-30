@@ -1,11 +1,11 @@
 import Location from "../../components/Location/Location";
-import Department from "../../components/Department/Department";
+import DepartmentGroup from "../../components/DepartmentGroup/DepartmentGroup";
 
 function Departments() {
   return (
     <div>
       <Location current="departments" />
-      <Department />
+      <DepartmentGroup />
     </div>
   );
 }

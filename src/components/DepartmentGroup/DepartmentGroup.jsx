@@ -1,14 +1,14 @@
-import classes from "./department.module.css";
+import classes from "./departmentGroup.module.css";
 import Card from "../Card/Card";
-import departments from "./data";
+import data from "./data";
 
-function Department() {
+function DepartmentGroup() {
   return (
     <section className={classes.q}>
       <div className={classes.section}>
         <h2 className={classes.departmentTitle}>OUR DEPARTMENTS</h2>
         <div className={classes.cardsContainer}>
-          {departments.map((card, index) => (
+          {data.map((card, index) => (
             <Card
               path={card.path}
               key={card.title + index}
@@ -22,4 +22,4 @@ function Department() {
   );
 }
 
-export default Department;
+export default DepartmentGroup;

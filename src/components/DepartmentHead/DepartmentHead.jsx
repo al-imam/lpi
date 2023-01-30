@@ -3,7 +3,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailLockIcon from "@mui/icons-material/MailLock";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-function Teacher({ info }) {
+function DepartmentHead({ info }) {
   return (
     <div className={classes.card}>
       <div className={classes.heading}>
@@ -33,4 +33,4 @@ function Teacher({ info }) {
   );
 }
 
-export default Teacher;
+export default DepartmentHead;

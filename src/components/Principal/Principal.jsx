@@ -1,4 +1,4 @@
-import classes from "./main.module.css";
+import classes from "./principal.module.css";
 import MailLockIcon from "@mui/icons-material/MailLock";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -16,7 +16,7 @@ const atik = {
   location: "Fenchugonj, Sylhet",
 };
 
-function Main() {
+function Principal() {
   return (
     <section className={classes.section}>
       <div className={classes.main}>
@@ -74,4 +74,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Principal;

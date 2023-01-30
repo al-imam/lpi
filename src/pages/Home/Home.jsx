@@ -6,7 +6,7 @@ import Study from "../../components/Study/Study";
 import Hero from "./Hero/Hero";
 import data from "./data";
 import Loader from "../../components/Loader/Loader";
-import Main from "../../components/Main/Main";
+import Principal from "../../components/Principal/Principal";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import Marquee from "../../components/Marquee/Marquee";
 import NoticeAndNews from "../../components/NoticeAndNews/NoticeAndNews";
@@ -23,7 +23,7 @@ function Home() {
       />
       <Hero />
       <Marquee />
-      <Main />
+      <Principal />
       <NoticeAndNews />
       <Study subtitle={data.about} link={true} />
       <DepartmentGroup />

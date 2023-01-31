@@ -2,7 +2,7 @@ import DepartmentLayout from "../DepartmentLayout/DepartmentLayout";
 import Location from "../Location/Location";
 import TeacherGroup from "../TeacherGroup/TeacherGroup";
 
-function TP({ heading, teacher }) {
+function DepartmentPage({ heading, teacher }) {
   return (
     <main className="main">
       <Location current="departments" subRoute={heading.subpath} />
@@ -12,4 +12,4 @@ function TP({ heading, teacher }) {
   );
 }
 
-export default TP;
+export default DepartmentPage;

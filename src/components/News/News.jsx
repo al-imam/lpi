@@ -1,4 +1,4 @@
-import Links from "../Links/Links";
+import Links from "@components/Links/Links";
 import data from "./data";
 
 function RecentNotice() {

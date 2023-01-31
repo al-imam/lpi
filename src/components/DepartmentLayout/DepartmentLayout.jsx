@@ -1,5 +1,5 @@
 import classes from "./departmentLayout.module.css";
-import DepartmentHead from "../DepartmentHead/DepartmentHead";
+import DepartmentHead from "@components/DepartmentHead/DepartmentHead";
 
 function DepartmentLayout({ data }) {
   return (

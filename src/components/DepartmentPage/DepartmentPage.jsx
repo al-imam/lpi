@@ -1,6 +1,6 @@
-import DepartmentLayout from "../DepartmentLayout/DepartmentLayout";
-import Location from "../Location/Location";
-import TeacherGroup from "../TeacherGroup/TeacherGroup";
+import DepartmentLayout from "@components/DepartmentLayout/DepartmentLayout";
+import Location from "@components/Location/Location";
+import TeacherGroup from "@components/TeacherGroup/TeacherGroup";
 
 function DepartmentPage({ heading, teacher }) {
   return (

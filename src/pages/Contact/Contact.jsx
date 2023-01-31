@@ -1,6 +1,6 @@
 import classes from "./contact.module.css";
-import Map from "../../components/Map/Map";
-import Subscribe from "../../components/Subscribe/Subscribe";
+import Map from "@components/Map/Map";
+import Subscribe from "@components/Subscribe/Subscribe";
 
 function Contact() {
   return (

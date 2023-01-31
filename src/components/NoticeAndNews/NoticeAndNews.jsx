@@ -1,5 +1,5 @@
-import RecentNotice from "../RecentNotice/RecentNotice";
-import News from "../News/News";
+import RecentNotice from "@components/RecentNotice/RecentNotice";
+import News from "@components/News/News";
 import classes from "./NoticeAndNews.module.css";
 
 function NoticeAndNews() {

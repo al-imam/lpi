@@ -1,5 +1,5 @@
-import Location from "../../components/Location/Location";
-import DepartmentGroup from "../../components/DepartmentGroup/DepartmentGroup";
+import Location from "@components/Location/Location";
+import DepartmentGroup from "@components/DepartmentGroup/DepartmentGroup";
 
 function Departments() {
   return (

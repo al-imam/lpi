@@ -1,17 +1,17 @@
 import { lazy, Suspense } from "react";
-
-import DepartmentGroup from "../../components/DepartmentGroup/DepartmentGroup";
 import classes from "./home.module.css";
-import AboutUs from "../../components/AboutUs/AboutUs";
-import Hero from "./Hero/Hero";
-import data from "./data";
-import Loader from "../../components/Loader/Loader";
-import Principal from "../../components/Principal/Principal";
-import Subscribe from "../../components/Subscribe/Subscribe";
-import Marquee from "../../components/Marquee/Marquee";
-import NoticeAndNews from "../../components/NoticeAndNews/NoticeAndNews";
 
-const Gallery = lazy(() => import("../../components/Gallery/Gallery"));
+import AboutUs from "@components/AboutUs/AboutUs";
+import DepartmentGroup from "@components/DepartmentGroup/DepartmentGroup";
+import Loader from "@components/Loader/Loader";
+import Marquee from "@components/Marquee/Marquee";
+import NoticeAndNews from "@components/NoticeAndNews/NoticeAndNews";
+import Principal from "@components/Principal/Principal";
+import Subscribe from "@components/Subscribe/Subscribe";
+import data from "./data";
+import Hero from "./Hero/Hero";
+
+const Gallery = lazy(() => import("@components/Gallery/Gallery"));
 
 function Home() {
   return (

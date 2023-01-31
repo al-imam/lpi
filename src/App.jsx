@@ -1,25 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Head from "@components/Head/Head";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Footer from "@components/Footer/Footer";
-import Home from "@pages/Home/Home";
-import Departments from "@department/Departments";
+import Head from "@components/Head/Head";
 import Loader from "@components/Loader/Loader";
-import Computer from "@department/Computer/Computer";
+import Architectural from "@department/Architectural/Architectural";
 import Civil from "@department/Civil/Civil";
+import Computer from "@department/Computer/Computer";
+import Departments from "@department/Departments";
 import Electrical from "@department/Electrical/Electrical";
 import Electronics from "@department/Electronics/Electronics";
-import Architectural from "@department/Architectural/Architectural";
 import Contact from "@pages/Contact/Contact";
-import ScrollToTop from "@util/ScrollToTop";
-import Syllabus from "@pages/Syllabus/Syllabus";
-import Open from "@pages/Facility/Open/Open";
 import Lab from "@pages/Facility/Lab/Lab";
-const About = lazy(() => import("@pages/About/About"));
-
-import Links from "@components/Links/Links";
+import Open from "@pages/Facility/Open/Open";
+import Home from "@pages/Home/Home";
+import Syllabus from "@pages/Syllabus/Syllabus";
+import ScrollToTop from "@util/ScrollToTop";
 import data from "@app/data";
+import Links from "@components/Links/Links";
 import Section from "@components/Section/Section";
+
+const About = lazy(() => import("@pages/About/About"));
 
 function App() {
   return (

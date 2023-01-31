@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import classes from "./gallery.module.css";
-import useOutsideClick from "../../hooks/useOutSideClick";
+import useOutsideClick from "@hooks/useOutSideClick";
 import FullscreenOutlinedIcon from "@mui/icons-material/FullscreenOutlined";
 
 function Gallery({ pictures, heading }) {

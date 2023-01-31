@@ -4,9 +4,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const head = {
-  name: "MD Jahirul Islam",
-  pod: "CIA Deputy Director At BTEB",
-  pod2: "Principle Lakshmipur Polytechnic",
+  name: "Jahirul Islam",
+  pod: "Principle Lakshmipur Polytechnic",
   location: "Comilla, Bangladesh",
 };
 
@@ -28,9 +27,6 @@ function Principal() {
                 <div className={classes.heading}>
                   <h4>{head.name}</h4>
                   <span className={classes.title}>{head.pod}</span>
-                  <span className={classes.title + " " + classes.a2}>
-                    {head.pod2}
-                  </span>
                 </div>
                 <div className={classes.social}>
                   <address className={classes.location}>

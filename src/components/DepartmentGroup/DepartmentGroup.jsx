@@ -6,7 +6,7 @@ function DepartmentGroup() {
   return (
     <section className={classes.q}>
       <div className={classes.section}>
-        <h2 className={classes.departmentTitle}>OUR DEPARTMENTS</h2>
+        <h2 className={classes.departmentTitle}>Our Deparments</h2>
         <div className={classes.cardsContainer}>
           {data.map((card, index) => (
             <DepartmentCard

@@ -26,6 +26,7 @@
 .text {
   font-family: var(--ff-b);
   font-size: var(--h5);
+  color: var(--gray-700);
   text-align: right;
   width: max-content;
   animation: marquee var(--speed) linear infinite;

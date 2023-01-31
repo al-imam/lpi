@@ -15,10 +15,9 @@
 }
 
 .container > h2 {
-  color: var(--gray-700);
+  color: var(--gray-800);
   font-family: var(--ff-m);
-  text-transform: uppercase;
-  font-weight: var(--fw-400);
+  font-weight: var(--fw-700);
   font-size: var(--h2);
   text-align: center;
   padding-bottom: 3rem;

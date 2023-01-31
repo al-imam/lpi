@@ -1,5 +1,4 @@
 import { lazy, Suspense } from "react";
-import classes from "./about.module.css";
 import Location from "../../components/Location/Location";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Status from "../../components/Status/Status";

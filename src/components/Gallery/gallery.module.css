@@ -12,11 +12,10 @@
 .heading {
   font-size: var(--h2);
   font-family: var(--ff-m);
-  font-weight: var(--fw-400);
+  font-weight: var(--fw-700);
   color: var(--gray-800);
   margin-bottom: 3rem;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .gallery {

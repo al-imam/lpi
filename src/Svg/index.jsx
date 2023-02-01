@@ -72,7 +72,7 @@ export function Menu(props) {
     >
       <path
         fill="currentColor"
-        d="M21 18H9v-2h12v2Zm0-5H3v-2h18v2Zm0-5H9V6h12v2Z"
+        d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"
       ></path>
     </svg>
   );

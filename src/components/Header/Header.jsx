@@ -1,4 +1,3 @@
-import MailLockIcon from "@mui/icons-material/MailLock";
 import PhonelinkLockIcon from "@mui/icons-material/PhonelinkLock";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import SortIcon from "@mui/icons-material/Sort";
@@ -6,6 +5,7 @@ import { grey } from "@mui/material/colors";
 import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
+import { Email } from "@svg";
 
 export default function Header({ setOpen, open }) {
   return (
@@ -18,7 +18,7 @@ export default function Header({ setOpen, open }) {
         <ul className={classes.items}>
           <li>
             <a href="mailto:alimam01828@gmail.com" className={classes.item}>
-              <MailLockIcon /> alimam01828@gmail.com
+              <Email /> alimam01828@gmail.com
             </a>
           </li>
           <li>

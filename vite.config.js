@@ -14,6 +14,7 @@ export default defineConfig({
       "@department": path.resolve(__dirname, "src/pages/Departments"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@assets": path.resolve(__dirname, "/public"),
+      "@svg": path.resolve(__dirname, "src/Svg"),
     },
   },
 });

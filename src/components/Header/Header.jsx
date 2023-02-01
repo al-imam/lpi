@@ -1,11 +1,10 @@
-import PhonelinkLockIcon from "@mui/icons-material/PhonelinkLock";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import SortIcon from "@mui/icons-material/Sort";
 import { grey } from "@mui/material/colors";
 import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
-import { Email } from "@svg";
+import { Email, Mobile } from "@svg";
 
 export default function Header({ setOpen, open }) {
   return (
@@ -23,7 +22,7 @@ export default function Header({ setOpen, open }) {
           </li>
           <li>
             <a href="tel:+8801881614926" className={classes.item}>
-              <PhonelinkLockIcon /> +88-01881-614926
+              <Mobile /> +88-01881-614926
             </a>
           </li>
           <li className={classes.b}>

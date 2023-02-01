@@ -60,3 +60,20 @@ export function Write(props) {
     </svg>
   );
 }
+
+export function Menu(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="M21 18H9v-2h12v2Zm0-5H3v-2h18v2Zm0-5H9V6h12v2Z"
+      ></path>
+    </svg>
+  );
+}

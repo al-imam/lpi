@@ -1,10 +1,9 @@
-import RateReviewIcon from "@mui/icons-material/RateReview";
 import SortIcon from "@mui/icons-material/Sort";
 import { grey } from "@mui/material/colors";
 import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
-import { Email, Mobile } from "@svg";
+import { Email, Mobile, Write } from "@svg";
 
 export default function Header({ setOpen, open }) {
   return (
@@ -27,7 +26,7 @@ export default function Header({ setOpen, open }) {
           </li>
           <li className={classes.b}>
             <NavLink to="/contact" className={classes.item}>
-              <RateReviewIcon /> Complain
+              <Write /> Complain
             </NavLink>
           </li>
           <button

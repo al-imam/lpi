@@ -1,9 +1,7 @@
-import SortIcon from "@mui/icons-material/Sort";
-import { grey } from "@mui/material/colors";
 import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
-import { Email, Mobile, Write } from "@svg";
+import { Email, Mobile, Write, Menu } from "@svg";
 
 export default function Header({ setOpen, open }) {
   return (
@@ -33,7 +31,7 @@ export default function Header({ setOpen, open }) {
             className={`${classes.toggler} ${open ? classes.open : ""}`}
             onClick={() => setOpen((p) => !p)}
           >
-            <SortIcon fontSize="medium" sx={{ color: grey[900] }} />
+            <Menu />
           </button>
         </ul>
       </div>

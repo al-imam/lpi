@@ -26,7 +26,7 @@ export default function Header({ setOpen, open }) {
           </li>
           <li className={classes.b}>
             <NavLink to="/contact" className={classes.item}>
-              <Write /> Complain
+              <Write width="30" height="30" /> Complain
             </NavLink>
           </li>
           <button

@@ -1,6 +1,6 @@
 import classes from "./navbar.module.css";
 import { NavLink } from "react-router-dom";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { ArrowDown } from "@svg";
 import { useNavigate } from "react-router-dom";
 
 function Navbar({ open }) {
@@ -18,7 +18,7 @@ function Navbar({ open }) {
             className={classes.dropdownToggler}
             onClick={() => navigate("/departments")}
           >
-            Department <ExpandMoreIcon />
+            Department <ArrowDown />
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
@@ -51,7 +51,7 @@ function Navbar({ open }) {
 
         <li className={classes.navItem}>
           <button className={classes.dropdownToggler}>
-            Syllabus <ExpandMoreIcon />
+            Syllabus <ArrowDown />
           </button>
           <ul className={classes.dropdownMenu}>
             <li>
@@ -76,7 +76,7 @@ function Navbar({ open }) {
 
         <li className={classes.navItem}>
           <button className={classes.dropdownToggler}>
-            Facilities <ExpandMoreIcon />
+            Facilities <ArrowDown />
           </button>
           <ul className={classes.dropdownMenu}>
             <li>

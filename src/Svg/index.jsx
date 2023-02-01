@@ -77,3 +77,23 @@ export function Menu(props) {
     </svg>
   );
 }
+
+export function ArrowDown(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 21 21"
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m14.5 8.5l-4 4l-4-4"
+      ></path>
+    </svg>
+  );
+}

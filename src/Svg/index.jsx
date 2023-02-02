@@ -97,3 +97,20 @@ export function ArrowDown(props) {
     </svg>
   );
 }
+
+export function ArrowRight(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="m12 20l-1.425-1.4l5.6-5.6H4v-2h12.175l-5.6-5.6L12 4l8 8Z"
+      ></path>
+    </svg>
+  );
+}

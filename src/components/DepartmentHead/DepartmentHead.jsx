@@ -1,7 +1,5 @@
 import classes from "./DepartmentHead.module.css";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import MailLockIcon from "@mui/icons-material/MailLock";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import { Email, FacebookOutlineIcon, Location } from "@svg";
 
 function DepartmentHead({ info }) {
   return (
@@ -20,13 +18,13 @@ function DepartmentHead({ info }) {
       </div>
       <div className={classes.info}>
         <a href="#" className={classes.address}>
-          <LocationOnIcon /> {info.address}
+          <Location /> {info.address}
         </a>
         <a href={info.facebook} className={classes.address}>
-          <FacebookIcon /> Facebook
+          <FacebookOutlineIcon /> Facebook
         </a>
         <a href={`mailto:${info.gmail}`} className={classes.address}>
-          <MailLockIcon /> Mail
+          <Email /> Mail
         </a>
       </div>
     </div>

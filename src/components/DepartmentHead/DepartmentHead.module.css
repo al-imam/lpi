@@ -76,6 +76,10 @@
   color: var(--gray-600);
 }
 
+.info :nth-child(2) svg {
+  padding: 0.27rem;
+}
+
 .address {
   display: flex;
   align-items: center;

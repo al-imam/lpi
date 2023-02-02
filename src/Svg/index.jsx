@@ -138,3 +138,23 @@ export function Location(props) {
     </svg>
   );
 }
+
+export function LinkHorizontal(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 21 21"
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8.5 14.5h-1a4 4 0 1 1 0-8h1m4 0h1a4 4 0 1 1 0 8h-1m1-4h-6"
+      ></path>
+    </svg>
+  );
+}

@@ -74,11 +74,21 @@
 .icons {
   display: flex;
   gap: 0.25rem;
+  color: var(--grey-50);
+}
+
+.icons a:hover {
+  transition: color 200ms ease-out, transform 200ms ease-out;
+  color: var(--primary);
+  transform: scale(1.1);
 }
 
 .icons svg {
   font-size: var(--h4);
-  border-radius: 20rem;
+}
+
+.icons :first-child svg {
+  padding: 0.37rem;
 }
 
 @media only screen and (max-width: 75rem) {

@@ -1,7 +1,5 @@
 import classes from "./principal.module.css";
-import MailLockIcon from "@mui/icons-material/MailLock";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Email, Location, FacebookOutlineIcon } from "@svg";
 
 const head = {
   name: "Jahirul Islam",
@@ -30,13 +28,13 @@ function Principal() {
                 </div>
                 <div className={classes.social}>
                   <address className={classes.location}>
-                    <LocationOnIcon /> {head.location}
+                    <Location /> {head.location}
                   </address>
                   <a href="https://www.facebook.com/profile.php?id=100023528615846">
-                    <FacebookIcon /> Facebook
+                    <FacebookOutlineIcon /> Facebook
                   </a>
                   <a href="mailto:">
-                    <MailLockIcon /> Mail
+                    <Email /> Mail
                   </a>
                 </div>
               </div>
@@ -52,13 +50,13 @@ function Principal() {
                 </div>
                 <div className={classes.social}>
                   <address className={classes.location}>
-                    <LocationOnIcon /> {atik.location}
+                    <Location /> {atik.location}
                   </address>
                   <a href="https://www.facebook.com/profile.php?id=100007141004066">
-                    <FacebookIcon /> Facebook
+                    <FacebookOutlineIcon /> Facebook
                   </a>
                   <a href="mailto:">
-                    <MailLockIcon /> Mail
+                    <Email /> Mail
                   </a>
                 </div>
               </div>

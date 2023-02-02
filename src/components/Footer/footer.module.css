@@ -88,13 +88,21 @@
 .socialItems {
   display: flex;
   flex-direction: row;
-  column-gap: 2rem;
+  column-gap: 1.5rem;
 }
 
 .socialItem {
   display: flex;
   align-items: center;
-  column-gap: 0.5rem;
+  column-gap: 0.25rem;
+}
+
+.socialItem svg {
+  height: 1.5rem;
+}
+
+.socialItems :nth-child(2) svg {
+  transform: scale(0.95);
 }
 
 @media only screen and (max-width: 58.5rem) {

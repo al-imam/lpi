@@ -1,6 +1,5 @@
 import classes from "./teacherGroup.module.css";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import EmailIcon from "@mui/icons-material/Email";
+import { Email, FacebookOutlineIcon } from "@svg";
 
 function TeacherGroup({ teacher }) {
   return (
@@ -46,10 +45,10 @@ function TeacherCard({
         </div>
         <p className={classes.icons}>
           <a href={facebook}>
-            <FacebookIcon />
+            <FacebookOutlineIcon />
           </a>
           <a href={`mailto:${gmail}`}>
-            <EmailIcon />
+            <Email />
           </a>
         </p>
       </div>

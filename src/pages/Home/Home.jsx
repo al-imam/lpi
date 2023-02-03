@@ -23,9 +23,8 @@ function Home() {
       />
       <Hero />
       <Marquee />
-      <Principal />
       <NoticeAndNews />
-      <AboutUs subtitle={data.about} link={true} />
+      <Principal />
       <DepartmentGroup />
       <Subscribe />
       <Suspense fallback={<Loader />}>

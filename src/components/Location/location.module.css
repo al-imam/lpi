@@ -1,17 +1,14 @@
 .container {
-  padding-block: 5rem;
   background-image: url("/assets/BestBooks.jpg");
   background-position: center center;
   background-size: 100%;
   background-repeat: no-repeat;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   isolation: isolate;
-}
-
-@media only screen and (max-width: 50rem) {
-  .container {
-    padding-block: 3rem;
-  }
 }
 
 .container svg {
@@ -32,11 +29,18 @@
   flex-direction: row;
   gap: 0.5rem;
   justify-content: center;
-  font-family: var(--ff-m);
-  font-weight: var(--fw-500);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
   font-size: var(--h6);
   color: var(--gray-50);
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 40rem) {
+  .flex {
+    gap: 0.1rem;
+  }
 }
 
 .flex > a:hover {

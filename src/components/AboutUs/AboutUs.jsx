@@ -8,7 +8,11 @@ function AboutUs({ subtitle }) {
         <img className={classes.image} src="/assets/main.jpg" alt="collage" />
         <div className={classes.info}>
           <h3 className={classes.title}>About LPI</h3>
-          <p className={classes.subtitle}>{subtitle}</p>
+          <p className={classes.subtitle}>
+            {subtitle.map((el) => (
+              <span>{el}</span>
+            ))}
+          </p>
         </div>
       </div>
     </section>

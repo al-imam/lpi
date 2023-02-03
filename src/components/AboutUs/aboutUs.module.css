@@ -43,4 +43,13 @@
   font-size: var(--h6);
   font-weight: var(--fw-regular);
   line-height: var(--line-height);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+@media only screen and (max-width: 50rem) {
+  .image {
+    aspect-ratio: 16 / 10;
+  }
 }

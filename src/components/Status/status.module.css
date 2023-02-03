@@ -6,17 +6,11 @@
 
 .container {
   display: flex;
-  max-width: var(--max-width);
+  max-width: var(--maximum-width);
   margin-inline: auto;
   padding-block: 6rem;
   align-items: center;
   justify-content: space-between;
-}
-
-@media only screen and (max-width: 75rem) {
-  .container {
-    max-width: var(--max-width-sm);
-  }
 }
 
 .group {
@@ -25,23 +19,13 @@
   align-items: center;
   justify-content: space-between;
   row-gap: 0.5rem;
-  font-family: var(--ff-m);
-  font-size: var(--h3);
-  font-weight: var(--fw-700);
+  font-family: var(--ff-primary);
+  font-size: var(--h4);
+  font-weight: var(--fw-bold);
   color: var(--gray-50);
 }
 
 @media only screen and (max-width: 65rem) {
-  .container {
-    max-width: var(--max-width-xsm);
-  }
-
-  .group {
-    font-size: var(--h4);
-  }
-}
-
-@media only screen and (max-width: 49rem) {
   .group {
     font-size: var(--h5);
   }

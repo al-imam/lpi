@@ -5,8 +5,8 @@ import { Fullscreen } from "@svg";
 
 function Gallery({ pictures, heading }) {
   return (
-    <section className={classes.container}>
-      <div className={classes.wrapper}>
+    <section className={classes.section}>
+      <div className={classes.container}>
         <h2 className={classes.heading}>{heading}</h2>
         <div className={classes.gallery}>
           {pictures.map(({ url }) => (

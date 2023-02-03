@@ -15,6 +15,7 @@
   --gap-inline: 2rem;
 
   --max-width: 70rem;
+  --maximum-width: 70rem;
   --max-width-sm: 59rem;
   --max-width-xsm: 44rem;
 
@@ -32,10 +33,18 @@
   --ff-m: "Montserrat", sans-serif;
   --ff-os: "Open Sans", sans-serif;
   --ff-b: "Hind Siliguri", sans-serif;
+
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Hind Siliguri", sans-serif;
+
   --fw-700: 700;
   --fw-500: 500;
   --fw-400: 400;
   --fw-300: 300;
+
+  --fw-bold: 700;
+  --fw-regular: 500;
+  --fw-light: 300;
 
   --h1: 4.209rem;
   --h2: 3.157rem;
@@ -45,6 +54,7 @@
   --h6: 1rem;
 
   --p-line: 1.7;
+  --line-height: 1.7;
 
   --break-large: 75rem;
   --break-medium: 65rem;
@@ -58,6 +68,18 @@
 
 body {
   background-color: var(--body-bg);
+}
+
+@media only screen and (max-width: 75rem) {
+  :root {
+    --maximum-width: var(--max-width-sm);
+  }
+}
+
+@media only screen and (max-width: 65rem) {
+  :root {
+    --maximum-width: var(--max-width-xsm);
+  }
 }
 
 @media only screen and (max-width: 49rem) {

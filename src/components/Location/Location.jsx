@@ -1,5 +1,5 @@
 import classes from "./location.module.css";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { ArrowDown } from "@svg";
 import { NavLink } from "react-router-dom";
 
 function Location({ current = "About", subRoute = null }) {
@@ -7,11 +7,11 @@ function Location({ current = "About", subRoute = null }) {
     <div className={classes.container}>
       <div className={classes.flex}>
         <NavLink to="/">Home</NavLink>
-        <NavigateNextIcon />
+        <ArrowDown />
         <span>{current}</span>
         {subRoute && (
           <>
-            <NavigateNextIcon />
+            <ArrowDown />
             <span>{subRoute}</span>
           </>
         )}

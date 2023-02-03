@@ -14,6 +14,10 @@
   }
 }
 
+.container svg {
+  transform: rotateZ(-90deg);
+}
+
 .container::before {
   content: "";
   position: absolute;

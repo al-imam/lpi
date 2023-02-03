@@ -41,7 +41,7 @@
 
 .arrow {
   position: absolute;
-  transform: rotateZ(90deg);
+  transform: rotateZ(0deg);
   color: var(--gray-900);
   right: 1rem;
   pointer-events: none;
@@ -49,8 +49,8 @@
   transition: transform 200ms ease-in;
 }
 
-.selectContainer:has(select:focus-within) .arrow {
-  transform: rotateZ(270deg);
+.selectContainer:has(select:focus-visible) .arrow {
+  transform: rotateZ(180deg);
   transition: transform 200ms ease-in;
 }
 

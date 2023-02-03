@@ -1,6 +1,6 @@
 import { useState } from "react";
 import classes from "./syllabus.module.css";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { ArrowDown } from "@svg";
 
 function Syllabus({ department }) {
   const [selected, setSelected] = useState("1");
@@ -19,7 +19,7 @@ function Syllabus({ department }) {
       <section className={classes.wrapper}>
         <div className={classes.selectContainer}>
           <p>Select Semester</p>
-          <ArrowForwardIosIcon className={classes["arrow"]} />
+          <ArrowDown className={classes["arrow"]} />
           <select value={selected} onChange={handleChange}>
             <option value="1">First</option>
             <option value="2">Second</option>

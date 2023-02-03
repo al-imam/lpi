@@ -11,7 +11,7 @@ function About() {
   return (
     <main>
       <Location current="About" />
-      <AboutUs subtitle={data.about} direction="column" />
+      <AboutUs subtitle={data.about} />
       <Status />
       <Suspense fallback={<Loader />}>
         <Gallery pictures={data.gallery} heading="Image Gallery" />

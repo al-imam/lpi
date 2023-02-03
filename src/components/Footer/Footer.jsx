@@ -1,9 +1,6 @@
 import ContactInfo from "./ContactInfo/ContactInfo";
 
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkIcon from "@mui/icons-material/Link";
+import { LinkIcon, FacebookIcon, LinkedinIcon, GithubIcon } from "@svg";
 
 import classes from "./footer.module.css";
 import logo from "/assets/logo_.svg";
@@ -55,7 +52,7 @@ function Footer() {
                 href="https://github.com/al-imam"
                 className={classes.socialItem}
               >
-                <GitHubIcon />
+                <GithubIcon />
                 Github
               </a>
             </li>
@@ -64,7 +61,7 @@ function Footer() {
                 href="https://www.linkedin.com/in/alimam"
                 className={classes.socialItem}
               >
-                <LinkedInIcon />
+                <LinkedinIcon />
                 Linkedin
               </a>
             </li>

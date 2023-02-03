@@ -144,8 +144,8 @@
   gap: 0.5rem;
 }
 
-.social :nth-child(2) svg {
-  padding: 0.26rem;
+.social :last-child svg {
+  transform: scale(0.7);
 }
 
 .social > * {
@@ -160,7 +160,13 @@
 @media only screen and (max-width: 45rem) {
   .cardContainer {
     flex-direction: column;
+    width: 20rem;
     gap: 1rem;
+    margin-inline: auto;
+  }
+
+  .info {
+    width: 100%;
   }
 
   .heading {

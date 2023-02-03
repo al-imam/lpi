@@ -30,11 +30,11 @@ function Principal() {
                   <address className={classes.location}>
                     <Location /> {head.location}
                   </address>
-                  <a href="https://www.facebook.com/profile.php?id=100023528615846">
-                    <FacebookOutlineIcon /> Facebook
-                  </a>
                   <a href="mailto:">
                     <Email /> Mail
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100023528615846">
+                    <FacebookOutlineIcon /> Facebook
                   </a>
                 </div>
               </div>
@@ -52,11 +52,11 @@ function Principal() {
                   <address className={classes.location}>
                     <Location /> {atik.location}
                   </address>
-                  <a href="https://www.facebook.com/profile.php?id=100007141004066">
-                    <FacebookOutlineIcon /> Facebook
-                  </a>
                   <a href="mailto:">
                     <Email /> Mail
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100007141004066">
+                    <FacebookOutlineIcon /> Facebook
                   </a>
                 </div>
               </div>

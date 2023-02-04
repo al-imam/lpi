@@ -114,9 +114,6 @@
   transform: scale(1.05);
 }
 
-@supports not selector(:has(p)) {
-}
-
 @media only screen and (max-width: 45rem) {
   .card::after,
   .card::before {

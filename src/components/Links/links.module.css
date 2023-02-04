@@ -37,7 +37,7 @@
 
 .items a {
   color: var(--gray-700);
-  transition: color var(--speed) ease-in;
+  transition: color var(--speed) ease-in, outline var(--speed) ease-in;
 }
 
 .items li:hover {
@@ -48,6 +48,12 @@
 .items li:has(> a:focus-visible) {
   margin-left: 0.5rem;
   padding-left: 0.5rem;
+}
+
+.items a:focus-visible {
+  outline: 2px rgba(0, 0, 0, 0.7) solid;
+  border-radius: 1px;
+  outline-offset: 2px;
 }
 
 .items li:hover a {

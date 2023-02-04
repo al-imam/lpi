@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-  max-width: var(--max-width);
+  max-width: var(--maximum-width);
   margin-inline: auto;
   padding-block: 2rem;
   --light: hsla(237, 100%, 69%, 0.2);
@@ -11,9 +11,9 @@
 }
 
 .p {
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
   font-size: var(--h6);
-  max-width: var(--max-width);
+  max-width: var(--maximum-width);
   margin-inline: auto;
   margin-top: 0.5rem;
 }
@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
   gap: 0.5rem;
   position: relative;
   margin-bottom: 2rem;
@@ -35,7 +35,7 @@
 
 .selectContainer p {
   font-size: var(--h5);
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-regular);
   width: max-content;
 }
 
@@ -102,19 +102,7 @@ select::-ms-expand {
   border: 5px solid var(--gray-200);
 }
 
-@media only screen and (max-width: 75rem) {
-  .wrapper,
-  .p {
-    max-width: var(--max-width-sm);
-  }
-}
-
 @media only screen and (max-width: 65rem) {
-  .wrapper,
-  .p {
-    max-width: var(--max-width-xsm);
-  }
-
   select {
     width: 10rem;
   }

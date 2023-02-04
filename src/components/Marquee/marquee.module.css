@@ -24,7 +24,7 @@
 }
 
 .text {
-  font-family: var(--ff-b);
+  font-family: var(--ff-secondary);
   font-size: var(--h5);
   color: var(--gray-700);
   text-align: right;

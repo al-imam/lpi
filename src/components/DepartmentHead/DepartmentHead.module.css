@@ -84,8 +84,16 @@
 .address {
   display: flex;
   align-items: center;
+  font-style: normal;
   font-weight: var(--fw-regular);
-  gap: 1rem;
+  transform-origin: left;
+  gap: 0.5rem;
+  transition: transform 200ms ease-in;
+}
+
+.address:is(:hover, :focus-visible) {
+  transform: scale(1.05);
+  color: var(--gray-900);
 }
 
 .social {

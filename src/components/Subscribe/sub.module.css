@@ -1,15 +1,14 @@
 .container {
-  max-width: var(--max-width);
+  max-width: var(--maximum-width);
   margin-inline: auto;
   padding-block: 3rem;
-  font-family: var(--ff-m);
 
   --light: hsla(237, 100%, 69%, 0.2);
   --dark: hsl(226, 100%, 75%);
 }
 
 .main {
-  max-width: calc(var(--max-width) / 2);
+  max-width: 35rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -21,16 +20,19 @@
 }
 
 .text h5 {
+  font-family: var(--ff-primary);
   text-align: center;
   font-size: var(--h3);
   color: var(--gray-800);
   margin-bottom: 3rem;
+  font-weight: var(--fw-bold);
 }
 
 .text span {
+  font-family: var(--ff-primary);
   font-size: var(--h6);
-  color: var(--gray-800);
-  font-weight: var(--fw-500);
+  color: var(--gray-700);
+  font-weight: var(--fw-regular);
 }
 
 .form {
@@ -45,10 +47,10 @@
 
 .input {
   width: 100%;
-  font-family: var(--ff-m);
   font-size: var(--h6);
-  color: var(--gray-900);
-  background-color: var(--white);
+  font-family: var(--ff-primary);
+  color: var(--gray-700);
+  background-color: var(--white, white);
   padding: 1rem;
   border: none;
   outline: 1px solid var(--gray-200);
@@ -61,12 +63,12 @@
 }
 
 .input::placeholder {
-  color: var(--gray-400);
+  color: var(--gray-300);
 }
 
 .button {
-  font-weight: var(--fw-700);
-  color: var(--gray-900);
+  font-weight: var(--fw-bold);
+  color: var(--gray-700);
   background-color: var(--primary);
   outline: none;
 }
@@ -79,10 +81,10 @@
 .error,
 .success {
   padding: 0.5rem 1rem;
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
   font-size: var(--h6);
-  font-weight: var(--fw-500);
-  color: var(--gray-900);
+  color: var(--gray-700);
   border-radius: 0.25rem;
 }
 

@@ -45,6 +45,11 @@
   padding-left: 0.5rem;
 }
 
+.items li:has(> a:focus-visible) {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
 .items li:hover a {
   color: var(--gray-900);
 }

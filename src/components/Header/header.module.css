@@ -17,30 +17,18 @@
 
 .header {
   height: var(--header-size);
-  max-width: var(--max-width);
+  max-width: var(--maximum-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-inline: auto;
 }
 
-@media only screen and (max-width: 75rem) {
-  .header {
-    max-width: var(--max-width-sm);
-  }
-}
-
-@media only screen and (max-width: 65rem) {
-  .header {
-    max-width: var(--max-width-xsm);
-  }
-}
-
 .header > a {
   font-size: 1.5rem;
   color: var(--gray-700);
-  font-family: var(--ff-m);
-  font-weight: var(--fw-700);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
 }
 
 .img {
@@ -66,8 +54,8 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--gray-700);
-  font-family: var(--ff-m);
-  font-weight: var(--fw-500);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
   transition: transform 200ms ease-out;
 }
 

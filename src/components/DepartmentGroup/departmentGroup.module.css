@@ -1,17 +1,17 @@
-.q {
+.section {
   padding-inline: var(--gap-inline);
 }
 
-.section {
-  max-width: var(--max-width);
+.container {
+  max-width: var(--maximum-width);
   margin-inline: auto;
-  padding-block: 5rem;
+  padding-block: 6rem;
 }
 
 .departmentTitle {
   font-size: var(--h2);
-  font-family: var(--ff-m);
-  font-weight: var(--fw-700);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
   color: var(--gray-800);
   margin-bottom: 3rem;
   text-align: center;
@@ -20,22 +20,11 @@
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  color: var(--gray-900);
   justify-content: space-between;
   gap: 2rem;
 }
 
-@media only screen and (max-width: 75rem) {
-  .section {
-    max-width: var(--max-width-sm);
-  }
-}
-
 @media only screen and (max-width: 65rem) {
-  .section {
-    max-width: var(--max-width-xsm);
-  }
-
   .cardsContainer {
     grid-template-columns: repeat(2, 1fr);
   }

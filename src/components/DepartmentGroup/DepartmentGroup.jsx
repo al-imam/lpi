@@ -4,8 +4,8 @@ import data from "./data";
 
 function DepartmentGroup() {
   return (
-    <section className={classes.q}>
-      <div className={classes.section}>
+    <section className={classes.section}>
+      <div className={classes.container}>
         <h2 className={classes.departmentTitle}>Our Deparments</h2>
         <div className={classes.cardsContainer}>
           {data.map((card, index) => (

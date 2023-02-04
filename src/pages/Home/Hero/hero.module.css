@@ -57,13 +57,15 @@
   transition: transform 200ms ease-out;
 }
 
-.action:hover {
+.action:hover,
+.action:focus-visible {
   background-color: var(--primary);
   color: var(--gray-900);
   outline: none;
 }
 
-.action:hover > svg {
+.action:hover > svg,
+.action:focus-visible > svg {
   transform: translateX(0.25rem);
 }
 

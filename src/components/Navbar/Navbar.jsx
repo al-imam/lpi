@@ -1,19 +1,22 @@
 import classes from "./navbar.module.css";
-import { NavLink } from "react-router-dom";
 import { ArrowDown } from "@svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
+
+import data from "./data";
 
 function Navbar({ open }) {
-  const navigate = useNavigate();
-
   return (
     <nav className={`${classes.navbar} ${open ? classes.open : ""}`}>
       <ul className={classes.navbarNav}>
-        <li className={classes.navItem + " " + classes.active}>
+        <li className={classes.navItem}>
           <NavLink to="/">Home</NavLink>
         </li>
 
-        <li className={classes.navItem}>
+        {data.dropdown.map((el) => (
+          <DropDownMenu root={el} key={el.text} />
+        ))}
+
+        {/* <li className={classes.navItem}>
           <button
             className={classes.dropdownToggler}
             onClick={() => navigate("/departments")}
@@ -47,7 +50,7 @@ function Navbar({ open }) {
               </NavLink>
             </li>
           </ul>
-        </li>
+        </li> 
 
         <li className={classes.navItem}>
           <button className={classes.dropdownToggler}>
@@ -72,7 +75,7 @@ function Navbar({ open }) {
               <NavLink to="/syllabus/electronics">Electronics Syllabus</NavLink>
             </li>
           </ul>
-        </li>
+        </li> 
 
         <li className={classes.navItem}>
           <button className={classes.dropdownToggler}>
@@ -86,7 +89,7 @@ function Navbar({ open }) {
               <NavLink to="/facilities/open-library">Open Library</NavLink>
             </li>
           </ul>
-        </li>
+        </li> */}
 
         <li className={classes.navItem}>
           <NavLink to="/contact">Contact Us</NavLink>
@@ -101,3 +104,37 @@ function Navbar({ open }) {
 }
 
 export default Navbar;
+
+function DropDownMenu({ root }) {
+  const navigate = useNavigate();
+
+  return (
+    <li className={classes.navItem}>
+      <button
+        className={classes.dropdownToggler}
+        onClick={() => navigate(root.path)}
+      >
+        {root.text} <ArrowDown />
+      </button>
+      <DropDown routes={root.routes} />
+    </li>
+  );
+}
+
+function DropDown({ routes }) {
+  return (
+    <ul className={classes.dropdownMenu}>
+      {routes.map((el) => (
+        <DeepLi path={el.path} text={el.text} key={el.text} />
+      ))}
+    </ul>
+  );
+}
+
+function DeepLi({ text, path }) {
+  return (
+    <li>
+      <NavLink to={path}>{text}</NavLink>
+    </li>
+  );
+}

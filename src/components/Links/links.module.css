@@ -1,15 +1,15 @@
 .container {
   color: var(--gray-800);
-  font-weight: var(--fw-500);
 }
 
 .english {
-  font-family: var(--ff-m);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-primary);
 }
 
 .bangla {
-  font-family: var(--ff-b);
-  font-weight: var(--ff-700);
+  font-family: var(--ff-secondary);
+  font-weight: var(--ff-bold);
 }
 
 .heading {
@@ -36,7 +36,7 @@
 }
 
 .items a {
-  color: var(--gray-600);
+  color: var(--gray-700);
   transition: color var(--speed) ease-in;
 }
 

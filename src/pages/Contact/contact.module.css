@@ -7,10 +7,10 @@
 }
 
 .wrapper {
-  max-width: var(--max-width);
+  max-width: var(--maximum-width);
   margin-inline: auto;
-  font-family: var(--ff-m);
-  font-weight: var(--fw-500);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
 
   padding-block: 6rem;
   display: flex;
@@ -18,18 +18,6 @@
 
   --light: hsla(237, 100%, 69%, 0.2);
   --dark: hsl(226, 100%, 75%);
-}
-
-@media only screen and (max-width: 75rem) {
-  .wrapper {
-    max-width: var(--max-width-sm);
-  }
-}
-
-@media only screen and (max-width: 65rem) {
-  .wrapper {
-    max-width: var(--max-width-xsm);
-  }
 }
 
 @media only screen and (max-width: 47rem) {
@@ -52,13 +40,13 @@
 .title h4 {
   font-size: var(--h4);
   color: var(--gray-800);
-  font-weight: var(--fw-400);
+  font-weight: var(--fw-regular);
 }
 
 .title p {
   color: var(--gray-700);
   font-size: var(--h6);
-  line-height: var(--p-line);
+  line-height: var(--line-height);
 }
 
 .form {
@@ -71,9 +59,9 @@
 
 .input {
   width: 100%;
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
   font-size: var(--h6);
-  color: var(--gray-900);
+  color: var(--gray-700);
   background-color: var(--white);
   padding: 1rem;
   border: none;
@@ -87,12 +75,12 @@
 }
 
 .input::placeholder {
-  color: var(--gray-400);
+  color: var(--gray-300);
 }
 
 .submit-button {
-  font-weight: var(--fw-700);
-  color: var(--gray-900);
+  font-weight: var(--fw-bold);
+  color: var(--gray-700);
   background-color: var(--primary);
   outline: none;
 }

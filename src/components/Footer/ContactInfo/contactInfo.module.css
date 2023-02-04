@@ -29,15 +29,17 @@
 
 .infoHeading {
   font-size: var(--h5);
-  font-family: var(--ff-m);
-  font-weight: var(--fw-500);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  margin-bottom: 0.15rem;
 }
 
 .infoDescription {
   font-size: var(--h6);
-  font-family: var(--ff-os);
-  font-weight: var(--fw-400);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
   font-style: normal;
+  cursor: pointer;
 }
 
 .infoDescription:not(address):hover,

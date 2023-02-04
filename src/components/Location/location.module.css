@@ -43,7 +43,7 @@
   }
 }
 
-.flex > a:hover {
+.flex > :is(a:hover, a:focus-visible) {
   color: var(--primary);
 }
 

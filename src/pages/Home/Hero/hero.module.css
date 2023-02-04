@@ -3,7 +3,7 @@
 }
 
 .heroContainer {
-  width: var(--max-width);
+  width: var(--maximum-width);
   height: var(--height);
   margin-inline: auto;
   display: flex;
@@ -17,14 +17,8 @@
   row-gap: 1rem;
 }
 
-@media only screen and (max-width: 75rem) {
-  .heroContainer {
-    width: var(--max-width-sm);
-  }
-}
-
 .heading {
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
   font-size: var(--h1);
   color: var(--gray-50);
   filter: drop-shadow(0 0 60px black);
@@ -32,20 +26,20 @@
 }
 
 .subtitle {
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
   font-size: var(--h6);
-  font-weight: var(--fw-400);
+  font-weight: var(--fw-regular);
   color: var(--gray-50);
-  line-height: var(--p-line);
+  line-height: var(--line-height);
   width: 70ch;
   filter: drop-shadow(0 0 25px black);
 }
 
 .action {
   text-decoration: none;
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
   letter-spacing: 0.5px;
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-bold);
   font-size: var(--h6);
   padding: 0.5rem 1.5rem;
   border: none;
@@ -74,10 +68,6 @@
 }
 
 @media only screen and (max-width: 65rem) {
-  .heroContainer {
-    width: var(--max-width-xsm);
-  }
-
   .subtitle {
     width: auto;
   }

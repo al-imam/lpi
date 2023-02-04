@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: var(--max-width);
+  max-width: var(--maximum-width);
   margin-inline: auto;
 }
 
@@ -16,8 +16,8 @@
 
 .container > h2 {
   color: var(--gray-800);
-  font-family: var(--ff-m);
-  font-weight: var(--fw-700);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
   font-size: var(--h2);
   text-align: center;
   padding-bottom: 3rem;
@@ -63,12 +63,17 @@
   justify-content: space-between;
   padding: 1rem;
   color: white;
-  font-family: var(--ff-m);
+  font-family: var(--ff-primary);
 }
 
 .info h4 {
+  font-size: var(--fw-bold);
   font-size: var(--h5);
   letter-spacing: 1px;
+}
+
+.info span {
+  font-weight: var(--fw-regular);
 }
 
 .icons {
@@ -91,17 +96,7 @@
   padding: 0.37rem;
 }
 
-@media only screen and (max-width: 75rem) {
-  .container {
-    max-width: var(--max-width-sm);
-  }
-}
-
 @media only screen and (max-width: 65rem) {
-  .container {
-    max-width: var(--max-width-xsm);
-  }
-
   .teachers {
     grid-template-columns: 1fr 1fr;
   }

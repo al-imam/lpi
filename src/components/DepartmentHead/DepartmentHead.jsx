@@ -17,9 +17,9 @@ function DepartmentHead({ info }) {
         </div>
       </div>
       <div className={classes.info}>
-        <a href="#" className={classes.address}>
+        <address href="#" className={classes.address}>
           <Location /> {info.address}
-        </a>
+        </address>
         <a href={info.facebook} className={classes.address}>
           <FacebookOutlineIcon /> Facebook
         </a>

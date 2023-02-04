@@ -6,6 +6,10 @@
   transition: box-shadow 200ms linear;
 }
 
+.card:hover {
+  box-shadow: 0 1rem 1.2rem -0.25rem rgba(0, 0, 0, 0.1);
+}
+
 :is(.card:hover, .card a:focus-visible) .cardImg {
   filter: brightness(0.9);
   transform: scale(1.02);
@@ -15,9 +19,9 @@
   box-shadow: 0 1rem 1.2rem -0.25rem rgba(0, 0, 0, 0.1);
 }
 
-@supports not selector(:has(p)) {
+@supports not selector(:has()) {
   .card a:focus-within {
-    outline: 2px dashed black;
+    outline: 2px dashed var(--gray-900);
   }
 }
 

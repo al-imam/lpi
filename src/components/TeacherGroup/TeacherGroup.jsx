@@ -44,10 +44,10 @@ function TeacherCard({
           <span>{address}</span>
         </div>
         <p className={classes.icons}>
-          <a href={facebook}>
+          <a href={facebook} title={facebook}>
             <FacebookOutlineIcon />
           </a>
-          <a href={`mailto:${gmail}`}>
+          <a href={`mailto:${gmail}`} title={gmail}>
             <Email />
           </a>
         </p>

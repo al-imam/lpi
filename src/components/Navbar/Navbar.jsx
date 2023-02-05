@@ -5,23 +5,23 @@ import { useNavigate, NavLink } from "react-router-dom";
 import data from "./data";
 import { useState } from "react";
 
-function Navbar({ open }) {
+function Navbar({ open, setOpen }) {
   return (
     <nav className={`${classes.navbar} ${open ? classes.open : ""}`}>
       <ul className={classes.navbarNav}>
-        <li className={classes.navItem}>
+        <li className={classes.navItem} onClick={() => setOpen(false)}>
           <NavLink to="/">Home</NavLink>
         </li>
 
         {data.dropdown.map((el) => (
-          <DropDownMenu root={el} key={el.text} />
+          <DropDownMenu root={el} key={el.text} setNavOpen={setOpen} />
         ))}
 
-        <li className={classes.navItem}>
+        <li className={classes.navItem} onClick={() => setOpen(false)}>
           <NavLink to="/contact">Contact Us</NavLink>
         </li>
 
-        <li className={classes.navItem}>
+        <li className={classes.navItem} onClick={() => setOpen(false)}>
           <NavLink to="/about">About Us</NavLink>
         </li>
       </ul>
@@ -36,7 +36,7 @@ const init = {
   focus: false,
 };
 
-function DropDownMenu({ root }) {
+function DropDownMenu({ root, setNavOpen }) {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(init);
 
@@ -54,12 +54,17 @@ function DropDownMenu({ root }) {
       >
         {root.text} <ArrowDown />
       </button>
-      <DropDown routes={root.routes} isOpen={isOpen} setIsOpen={setIsOpen} />
+      <DropDown
+        routes={root.routes}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        setNavOpen={setNavOpen}
+      />
     </li>
   );
 }
 
-function DropDown({ routes, isOpen, setIsOpen }) {
+function DropDown({ routes, isOpen, setIsOpen, setNavOpen }) {
   return (
     <ul
       className={`${classes.dropdownMenu} ${
@@ -72,15 +77,21 @@ function DropDown({ routes, isOpen, setIsOpen }) {
           text={el.text}
           key={el.text}
           setIsOpen={setIsOpen}
+          setNavOpen={setNavOpen}
         />
       ))}
     </ul>
   );
 }
 
-function DeepLi({ text, path, setIsOpen }) {
+function DeepLi({ text, path, setIsOpen, setNavOpen }) {
+  function handleClick() {
+    setIsOpen({ hover: false, focus: false });
+    setNavOpen(false);
+  }
+
   return (
-    <li onClick={() => setIsOpen({ hover: false, focus: false })}>
+    <li onClick={handleClick}>
       <NavLink to={path}>{text}</NavLink>
     </li>
   );

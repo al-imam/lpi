@@ -18,7 +18,7 @@ function Head() {
   return (
     <div ref={ref} style={{ position: "sticky", zIndex: 200, top: 0 }}>
       <Header setOpen={setOpen} open={open} />
-      <Navbar open={open} />
+      <Navbar open={open} setOpen={setOpen} />
     </div>
   );
 }

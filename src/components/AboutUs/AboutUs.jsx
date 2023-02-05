@@ -10,7 +10,7 @@ function AboutUs({ subtitle }) {
           <h3 className={classes.title}>About LPI</h3>
           <p className={classes.subtitle}>
             {subtitle.map((el) => (
-              <span>{el}</span>
+              <span key={el}>{el}</span>
             ))}
           </p>
         </div>

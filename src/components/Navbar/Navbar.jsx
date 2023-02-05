@@ -42,7 +42,7 @@ function DropDownMenu({ root }) {
 
   return (
     <li
-      className={classes.navItem}
+      className={classes.navItem + " " + classes.drop}
       onMouseEnter={() => setIsOpen({ ...isOpen, hover: true })}
       onMouseLeave={() => setIsOpen({ ...isOpen, hover: false })}
       onFocus={() => setIsOpen({ hover: false, focus: true })}

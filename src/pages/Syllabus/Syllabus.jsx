@@ -31,7 +31,8 @@ function Syllabus({ department }) {
           </select>
         </div>
         <iframe
-          src={`/PDFS/${department}/${department}-${selected}.pdf#toolbar=0`}
+          // src={`/PDFS/${department}/${department}-${selected}.pdf#toolbar=0`}
+          src={`https://${department}-${selected}.pdf/`}
           className={classes.iframe}
         ></iframe>
       </section>

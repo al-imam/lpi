@@ -82,7 +82,7 @@
   color: var(--grey-50);
 }
 
-.icons a:hover {
+.icons :is(a:hover, a:focus-visible) {
   transition: color 200ms ease-out, transform 200ms ease-out;
   color: var(--primary);
   transform: scale(1.1);

@@ -20,10 +20,18 @@ function DepartmentHead({ info }) {
         <address href="#" className={classes.address}>
           <Location /> {info.address}
         </address>
-        <a href={info.facebook} className={classes.address}>
+        <a
+          href={info.facebook}
+          title={info.facebook}
+          className={classes.address}
+        >
           <FacebookOutlineIcon /> Facebook
         </a>
-        <a href={`mailto:${info.gmail}`} className={classes.address}>
+        <a
+          href={`mailto:${info.gmail}`}
+          title={info.gmail}
+          className={classes.address}
+        >
           <Email /> Mail
         </a>
       </div>

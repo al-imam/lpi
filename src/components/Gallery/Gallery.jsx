@@ -23,22 +23,19 @@ export default Gallery;
 function Picture({ url }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const onClick = useCallback(() => {
-    if (isOpen) {
-      setIsOpen(false);
-    }
-    console.log("im called", isOpen);
-  }, [isOpen]);
-
-  const ref = useOutsideClick(onClick);
-
   return (
     <div
-      ref={ref}
       className={`${classes.imgContainer} ${isOpen ? classes.open : ""}`}
-      onClick={() => setIsOpen(true)}
+      onClick={() => setIsOpen(false)}
     >
-      <img className={classes.img} src={url} />
+      <img
+        onClick={(evt) => {
+          evt.stopPropagation();
+          setIsOpen(true);
+        }}
+        className={classes.img}
+        src={url}
+      />
       <div className={classes.svg}>
         <Fullscreen fontSize="inherit" />
       </div>

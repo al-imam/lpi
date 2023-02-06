@@ -1,6 +1,5 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import classes from "./gallery.module.css";
-import useOutsideClick from "@hooks/useOutSideClick";
 import { Fullscreen } from "@svg";
 
 function Gallery({ pictures, heading }) {
@@ -37,7 +36,7 @@ function Picture({ url }) {
         src={url}
       />
       <div className={classes.svg}>
-        <Fullscreen fontSize="inherit" />
+        <Fullscreen />
       </div>
     </div>
   );

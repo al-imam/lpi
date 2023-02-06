@@ -31,7 +31,6 @@
   align-items: center;
   overflow: hidden;
   isolation: isolate;
-  box-shadow: 0 0 0.2rem 0.05rem rgb(0 0 0 / 20%);
 }
 
 .img {
@@ -40,6 +39,7 @@
   width: 100%;
   min-height: 100%;
   cursor: pointer;
+  transition: transform 200ms ease-in;
 }
 
 .imgContainer :is(img, svg) {
@@ -65,6 +65,18 @@
   z-index: 10000;
 }
 
+.open .img:hover {
+  transform: scale(1.01);
+}
+
+.img:hover {
+  transform: scale(1.05);
+}
+
+.img:hover + .svg {
+  display: flex;
+}
+
 .svg {
   position: absolute;
   display: none;
@@ -73,6 +85,7 @@
   z-index: 1;
   filter: drop-shadow(0px 0px 20px white);
   color: var(--gray-900);
+  pointer-events: none;
 }
 
 .svg svg {

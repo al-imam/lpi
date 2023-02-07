@@ -2,7 +2,13 @@ import classes from "./links.module.css";
 import { NavLink } from "react-router-dom";
 import { ArrowRight } from "@svg";
 
-function Links({ data, font = "bangla", link = "#", linkText = "View all" }) {
+function Links({
+  data,
+  font = "bangla",
+  link = "#",
+  linkText = "View all",
+  page = false,
+}) {
   return (
     <div className={classes.container + " " + classes[font]}>
       <h2 className={classes.heading}>{data.heading}</h2>
@@ -13,9 +19,11 @@ function Links({ data, font = "bangla", link = "#", linkText = "View all" }) {
           </li>
         ))}
       </ul>
-      <NavLink to={link}>
-        {linkText} <ArrowRight />
-      </NavLink>
+      {page && (
+        <NavLink to={link}>
+          {linkText} <ArrowRight />
+        </NavLink>
+      )}
     </div>
   );
 }

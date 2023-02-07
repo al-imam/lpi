@@ -77,12 +77,17 @@
 
 .svg {
   transform: scale(0.8);
-  color: var(--gray-700);
+  color: var(--gray-600);
   transition: transform 200ms ease-out;
 }
 
-.action:hover {
+.action:hover,
+.action:focus-visible {
   filter: saturate(1.2);
+}
+
+.action:focus-visible {
+  outline: 2px solid rgba(0, 92, 0, 0.6);
 }
 
 :is(.action:hover, .action:focus-visible) .svg {

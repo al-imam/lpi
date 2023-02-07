@@ -1,8 +1,8 @@
 import Links from "@components/Links/Links";
 import data from "./data";
 
-function RecentNotice() {
+function News() {
   return <Links data={data} />;
 }
 
-export default RecentNotice;
+export default News;

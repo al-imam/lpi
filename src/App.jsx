@@ -75,6 +75,8 @@ function App() {
         />
         <Route path="/facilities/modern-lab" element={<Lab />} />
         <Route path="/facilities/open-library" element={<Open />} />
+        <Route path="/news" element={<h1>news</h1>} />
+        <Route path="/notice" element={<h1>notice</h1>} />
       </Routes>
       <Section>
         <Links data={data} font="english" />

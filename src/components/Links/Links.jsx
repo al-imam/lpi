@@ -20,8 +20,8 @@ function Links({
         ))}
       </ul>
       {page && (
-        <NavLink to={link}>
-          {linkText} <ArrowRight />
+        <NavLink to={link} className={classes.action}>
+          {linkText} <ArrowRight className={classes.svg} />
         </NavLink>
       )}
     </div>

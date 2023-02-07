@@ -78,4 +78,13 @@
 .svg {
   transform: scale(0.8);
   color: var(--gray-700);
+  transition: transform 200ms ease-out;
+}
+
+.action:hover {
+  filter: saturate(1.2);
+}
+
+:is(.action:hover, .action:focus-visible) .svg {
+  transform: translateX(0.2rem) scale(0.8);
 }

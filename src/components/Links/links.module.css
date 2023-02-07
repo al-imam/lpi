@@ -59,3 +59,9 @@
 .items li:hover a {
   color: var(--gray-900);
 }
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

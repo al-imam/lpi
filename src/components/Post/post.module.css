@@ -19,10 +19,13 @@
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   font-size: var(--h4);
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
-  color: var(--gray-800);
+  color: var(--gray-50);
   font-weight: var(--fw-bold);
   z-index: 1;
   padding: 0.5rem 2rem;
@@ -31,6 +34,11 @@
     rgb(0 0 0 / 0.5) 0%,
     rgb(0 0 0 / 0) 20%
   );
+}
+
+.title span {
+  font-size: var(--h6);
+  color: var(--gray-100);
 }
 
 .subtitle {

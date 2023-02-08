@@ -1,3 +1,5 @@
+import classes from "./post.module.css";
+
 function Post() {
   return (
     <div>

@@ -1,6 +1,9 @@
 .post {
   max-width: var(--maximum-width);
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .title {

@@ -2,3 +2,10 @@
   max-width: var(--maximum-width);
   margin-inline: auto;
 }
+
+.title {
+  font-size: var(--h5);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  color: var(--gray-800);
+}

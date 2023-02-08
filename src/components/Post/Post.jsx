@@ -8,7 +8,7 @@ function Post() {
           <p className={classes.title}>
             Lorem ipsum dolor sit amet. <span>{new Date().toDateString()}</span>
           </p>
-          <img src="/assets/main.jpg" alt="Post image" />
+          <img src="/public/assets/collage.jpg" alt="Post image" />
         </div>
         <p className={classes.subtitle}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis

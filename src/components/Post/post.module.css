@@ -1,8 +1,3 @@
-.post {
-  max-width: var(--maximum-width);
-  margin-inline: auto;
-}
-
 .postContainer {
   display: flex;
   flex-direction: column;
@@ -49,7 +44,8 @@
   line-height: var(--line-height);
 }
 
-.postGroup img {
-  max-width: 100%;
+.img img {
+  width: 100%;
   border-radius: 0.25rem;
+  object-fit: cover;
 }

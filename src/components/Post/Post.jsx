@@ -5,7 +5,9 @@ function Post() {
     <div className={classes.post}>
       <div className={classes.postContainer}>
         <div className={classes.image}>
-          <p className={classes.title}>Lorem ipsum dolor sit amet.</p>
+          <p className={classes.title}>
+            Lorem ipsum dolor sit amet. <span>{new Date().toDateString()}</span>
+          </p>
           <img src="/assets/main.jpg" alt="Post image" />
         </div>
         <p className={classes.subtitle}>

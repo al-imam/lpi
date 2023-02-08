@@ -3,22 +3,18 @@
   margin-inline: auto;
 }
 
-.title {
-  font-size: var(--h5);
-  font-family: var(--ff-primary);
-  font-weight: var(--fw-regular);
-  color: var(--gray-800);
-  font-weight: var(--fw-bold);
-}
-
 .postContainer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.postGroup .subtitle {
-  margin-top: 1rem;
+.title {
+  font-size: var(--h5);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  color: var(--gray-800);
+  font-weight: var(--fw-bold);
 }
 
 .subtitle {

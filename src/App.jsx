@@ -19,6 +19,7 @@ import ScrollToTop from "@util/ScrollToTop";
 import data from "@app/data";
 import Links from "@components/Links/Links";
 import Section from "@components/Section/Section";
+import Post from "@components/Post/Post";
 
 const About = lazy(() => import("@pages/About/About"));
 
@@ -75,8 +76,8 @@ function App() {
         />
         <Route path="/facilities/modern-lab" element={<Lab />} />
         <Route path="/facilities/open-library" element={<Open />} />
-        <Route path="/news" element={<h1>news</h1>} />
-        <Route path="/notice" element={<h1>notice</h1>} />
+        <Route path="/news" element={<Post />} />
+        <Route path="/notice" element={<Post />} />
       </Routes>
       <Section>
         <Links data={data} font="english" />

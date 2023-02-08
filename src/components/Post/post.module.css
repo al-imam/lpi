@@ -9,12 +9,28 @@
   gap: 1rem;
 }
 
+.image {
+  display: grid;
+  grid-template: "container";
+}
+
+.image > * {
+  grid-area: container;
+}
+
 .title {
-  font-size: var(--h5);
+  font-size: var(--h4);
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   color: var(--gray-800);
   font-weight: var(--fw-bold);
+  z-index: 1;
+  padding: 0.5rem 2rem;
+  background-image: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0.5) 0%,
+    rgb(0 0 0 / 0) 20%
+  );
 }
 
 .subtitle {

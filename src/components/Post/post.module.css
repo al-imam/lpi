@@ -31,6 +31,13 @@
   );
 }
 
+.image a {
+  align-self: end;
+  justify-self: end;
+  padding: 0 2rem 1rem 0;
+  z-index: 100;
+}
+
 .title span {
   font-size: var(--h6);
   color: var(--gray-100);

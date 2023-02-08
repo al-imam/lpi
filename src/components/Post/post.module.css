@@ -44,7 +44,7 @@
   line-height: var(--line-height);
 }
 
-.img img {
+.image img {
   width: 100%;
   border-radius: 0.25rem;
   object-fit: cover;

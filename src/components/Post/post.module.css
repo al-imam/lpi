@@ -1,9 +1,6 @@
 .post {
   max-width: var(--maximum-width);
   margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .title {
@@ -11,4 +8,15 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   color: var(--gray-800);
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.postGroup img {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
 }

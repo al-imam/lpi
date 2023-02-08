@@ -8,6 +8,7 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   color: var(--gray-800);
+  font-weight: var(--fw-bold);
 }
 
 .postContainer {
@@ -16,7 +17,19 @@
   gap: 1rem;
 }
 
+.postGroup .subtitle {
+  margin-top: 1rem;
+}
+
+.subtitle {
+  font-size: var(--h6);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  color: var(--gray-700);
+  line-height: var(--line-height);
+}
+
 .postGroup img {
   max-width: 100%;
-  aspect-ratio: 16 / 9;
+  border-radius: 0.25rem;
 }

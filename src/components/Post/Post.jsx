@@ -6,6 +6,7 @@ function Post() {
       <div className={classes.postContainer}>
         <p className={classes.title}>Lorem ipsum dolor sit amet.</p>
         <div className={classes.postGroup}>
+          <img src="/assets/main.jpg" alt="Post image" />
           <p className={classes.subtitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             voluptates praesentium enim. Velit veritatis quasi dicta, omnis
@@ -13,7 +14,6 @@ function Post() {
             adipisicing elit. Odit obcaecati accusantium recusandae aut
             asperiores magni dignissimos error consequatur expedita iusto?
           </p>
-          <img src="/assets/main.jpg" alt="Post image" />
         </div>
       </div>
     </div>

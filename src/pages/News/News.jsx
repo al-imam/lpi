@@ -5,7 +5,7 @@ import Location from "@components/Location/Location";
 function News() {
   return (
     <>
-      <Location />
+      <Location current="News And event" />
       <section className={classes.section}>
         <div className={classes.container}>
           <Post />

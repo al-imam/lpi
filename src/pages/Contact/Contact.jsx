@@ -1,8 +1,17 @@
 import classes from "./contact.module.css";
 import Map from "@components/Map/Map";
 import Subscribe from "@components/Subscribe/Subscribe";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Contact() {
+  const state = useLocation();
+  const [subject, setSubject] = useState("");
+
+  useEffect(() => {
+    setSubject(state.state ?? "");
+  }, [state.state]);
+
   return (
     <main className={classes.s}>
       <Map />
@@ -41,6 +50,8 @@ function Contact() {
               type="text"
               autoComplete="off"
               placeholder="Subject"
+              value={subject}
+              onChange={(evt) => setSubject(evt.target.value)}
               className={classes.input}
               name="subject"
               id="subject"

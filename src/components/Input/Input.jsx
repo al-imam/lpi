@@ -14,7 +14,7 @@ function Input({ type = "text", placeholder, setValue, value }) {
 
 export default Input;
 
-function PasswordInput({ placeholder, setValue, value }) {
+export function PasswordInput({ placeholder, setValue, value }) {
   const [open, setOpen] = useState(false);
 
   return (

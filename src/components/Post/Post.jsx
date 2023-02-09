@@ -9,7 +9,9 @@ function Post() {
             Lorem ipsum dolor sit amet. <span>{new Date().toDateString()}</span>
           </p>
           <img src="/public/assets/collage.jpg" alt="Post image" />
-          <a href="#">⬇️</a>
+          <a href="/public/assets/collage.jpg" download={true}>
+            ⬇️
+          </a>
         </div>
         <p className={classes.subtitle}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis

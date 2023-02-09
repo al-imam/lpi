@@ -4,13 +4,20 @@ import Subscribe from "@components/Subscribe/Subscribe";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+const init = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
 function Contact() {
-  const state = useLocation();
-  const [subject, setSubject] = useState("");
+  const location = useLocation();
+  const [store, setStore] = useState(init);
 
   useEffect(() => {
-    setSubject(state.state ?? "");
-  }, [state.state]);
+    setStore((p) => ({ ...p, subject: location.state ?? "" }));
+  }, [location.state]);
 
   return (
     <main className={classes.s}>
@@ -29,6 +36,10 @@ function Contact() {
 
           <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
             <input
+              value={store.name}
+              onChange={(evt) =>
+                setStore((p) => ({ ...p, name: evt.target.value }))
+              }
               type="text"
               autoComplete="off"
               placeholder="Your Name"
@@ -38,6 +49,10 @@ function Contact() {
               required
             />
             <input
+              value={store.email}
+              onChange={(evt) =>
+                setStore((p) => ({ ...p, email: evt.target.value }))
+              }
               type="email"
               placeholder="Your Email"
               autoComplete="off"
@@ -50,14 +65,20 @@ function Contact() {
               type="text"
               autoComplete="off"
               placeholder="Subject"
-              value={subject}
-              onChange={(evt) => setSubject(evt.target.value)}
+              value={store.subject}
+              onChange={(evt) =>
+                setStore((p) => ({ ...p, subject: evt.target.value }))
+              }
               className={classes.input}
               name="subject"
               id="subject"
               required
             />
             <textarea
+              value={store.message}
+              onChange={(evt) =>
+                setStore((p) => ({ ...p, message: evt.target.value }))
+              }
               rows="6"
               placeholder="Message"
               autoComplete="off"
@@ -65,7 +86,7 @@ function Contact() {
               name="message"
               id="message"
               required
-            ></textarea>
+            />
             <input
               type="submit"
               id="contact-submit"

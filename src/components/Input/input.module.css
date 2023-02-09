@@ -15,3 +15,8 @@
   color: var(--gray-300);
   user-select: none;
 }
+
+.text:focus {
+  box-shadow: 0 0 0 5px var(--light);
+  outline: 1px solid var(--dark);
+}

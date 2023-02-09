@@ -8,8 +8,11 @@ function Post() {
           <p className={classes.title}>
             Lorem ipsum dolor sit amet. <span>{new Date().toDateString()}</span>
           </p>
-          <img src="/public/assets/collage.jpg" alt="Post image" />
-          <a href="/public/assets/collage.jpg" download={true}>
+          <img
+            src="https://cbseguides.com/wp-content/uploads/2022/03/Notice-Writing.jpg"
+            alt="Post image"
+          />
+          <a href="/public/assets/lab.jpg" download={true}>
             ⬇️
           </a>
         </div>

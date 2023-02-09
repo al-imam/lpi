@@ -23,7 +23,7 @@ export default function Header({ setOpen, open }) {
             </a>
           </li>
           <li className={classes.b}>
-            <NavLink to="/contact" className={classes.item}>
+            <NavLink to="/contact" state="@Complain" className={classes.item}>
               <Write width="30" height="30" /> Complain
             </NavLink>
           </li>

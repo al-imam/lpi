@@ -10,3 +10,8 @@
   outline: 1px solid var(--gray-200);
   border-radius: 0.25rem;
 }
+
+.inputs::placeholder {
+  color: var(--gray-300);
+  user-select: none;
+}

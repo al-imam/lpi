@@ -3,6 +3,7 @@
   font-family: var(--ff-primary);
   font-size: var(--h6);
   color: var(--gray-700);
+  font-weight: var(--fw-regular);
   background-color: var(--white);
   padding: 1rem;
   border: none;

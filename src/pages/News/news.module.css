@@ -1,0 +1,19 @@
+.section {
+  padding-inline: var(--gap-inline);
+}
+
+.container {
+  max-width: var(--maximum-width);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-block: 4rem 6rem;
+}
+
+.container h1 {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  color: var(--gray-800);
+  font-size: var(--h3);
+}

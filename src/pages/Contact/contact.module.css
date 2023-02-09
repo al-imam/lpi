@@ -76,6 +76,7 @@
 
 .input::placeholder {
   color: var(--gray-300);
+  user-select: none;
 }
 
 .submit-button {

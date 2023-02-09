@@ -30,6 +30,14 @@
   transition: transform 200ms ease-out, filter 200ms ease-out;
 }
 
+@media only screen and (max-width: 50rem) {
+  .image a {
+    font-size: 2rem;
+    right: 0.5rem;
+    bottom: 0.75rem;
+  }
+}
+
 .image img {
   width: 100%;
   border-radius: 0.25rem;
@@ -49,7 +57,7 @@
   color: var(--gray-800);
 }
 
-.title:first-child {
+.title .text {
   font-size: var(--h4);
 }
 

@@ -1,3 +1,5 @@
+import classes from "./input.module.css";
+
 function Input({ type = "text", placeholder, setValue, value }) {
   return (
     <input

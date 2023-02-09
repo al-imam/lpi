@@ -80,5 +80,19 @@ export default {
         },
       ],
     },
+    {
+      text: "Info",
+      path: "#",
+      routes: [
+        {
+          path: "/news",
+          text: "News and event",
+        },
+        {
+          path: "/notice",
+          text: "Notice",
+        },
+      ],
+    },
   ],
 };

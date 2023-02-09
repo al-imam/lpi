@@ -1,17 +1,21 @@
-import Post from "../../components/Post/Post";
+import Post from "@components/Post/Post";
 import classes from "./news.module.css";
+import Location from "@components/Location/Location";
 
 function News() {
   return (
-    <section className={classes.section}>
-      <div className={classes.container}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-      </div>
-    </section>
+    <>
+      <Location />
+      <section className={classes.section}>
+        <div className={classes.container}>
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+        </div>
+      </section>
+    </>
   );
 }
 

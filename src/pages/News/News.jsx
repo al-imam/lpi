@@ -5,7 +5,6 @@ function News() {
   return (
     <section className={classes.section}>
       <div className={classes.container}>
-        <h1>News and event</h1>
         <Post />
         <Post />
         <Post />

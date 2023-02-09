@@ -1,0 +1,11 @@
+.inputs {
+  width: 100%;
+  font-family: var(--ff-primary);
+  font-size: var(--h6);
+  color: var(--gray-700);
+  background-color: var(--white);
+  padding: 1rem;
+  border: none;
+  outline: 1px solid var(--gray-200);
+  border-radius: 0.25rem;
+}

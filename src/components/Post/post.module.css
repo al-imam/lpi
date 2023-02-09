@@ -36,6 +36,16 @@
   justify-self: end;
   padding: 0 2rem 1rem 0;
   z-index: 100;
+  font-size: 3rem;
+  transition: transform 200ms ease-out, filter 200ms ease-out;
+}
+
+.image a:hover {
+  filter: brightness(1.2);
+}
+
+.image a:active {
+  transform: translateY(0.25rem);
 }
 
 .title span {

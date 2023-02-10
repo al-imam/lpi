@@ -27,6 +27,10 @@
   filter: saturate(0.5);
 }
 
+.inputs[data-type="textarea"] {
+  resize: vertical;
+}
+
 .inputs::placeholder {
   color: var(--gray-300);
   user-select: none;

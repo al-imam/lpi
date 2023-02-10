@@ -16,6 +16,11 @@
   color: var(--gray-700);
   background-color: var(--primary);
   outline: none;
+  cursor: pointer;
+}
+
+.inputs[type="submit"]:hover {
+  background-color: var(--hover);
 }
 
 .inputs::placeholder {

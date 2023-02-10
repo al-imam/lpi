@@ -23,12 +23,16 @@
   background-color: var(--hover);
 }
 
+.inputs[type="submit"]:active {
+  filter: saturate(0.5);
+}
+
 .inputs::placeholder {
   color: var(--gray-300);
   user-select: none;
 }
 
-.text:focus {
+.text:focus-visible {
   box-shadow: 0 0 0 5px var(--light);
   outline: 1px solid var(--dark);
 }

@@ -2,6 +2,7 @@ import classes from "./contact.module.css";
 import Map from "@components/Map/Map";
 import Subscribe from "@components/Subscribe/Subscribe";
 import { useLocation } from "react-router-dom";
+import Input, { Textarea } from "@components/Input/Input";
 import { useEffect, useState } from "react";
 
 const init = {
@@ -35,64 +36,28 @@ function Contact() {
           </div>
 
           <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
-            <input
+            <Input
               value={store.name}
-              onChange={(evt) =>
-                setStore((p) => ({ ...p, name: evt.target.value }))
-              }
-              type="text"
-              autoComplete="off"
+              setValue={(value) => setStore((p) => ({ ...p, name: value }))}
               placeholder="Your Name"
-              className={classes.input}
-              name="name"
-              id="name"
-              required
             />
-            <input
+            <Input
               value={store.email}
-              onChange={(evt) =>
-                setStore((p) => ({ ...p, email: evt.target.value }))
-              }
+              setValue={(value) => setStore((p) => ({ ...p, email: value }))}
               type="email"
               placeholder="Your Email"
-              autoComplete="off"
-              className={classes.input}
-              name="email"
-              id="email"
-              required
             />
-            <input
-              type="text"
-              autoComplete="off"
-              placeholder="Subject"
+            <Input
               value={store.subject}
-              onChange={(evt) =>
-                setStore((p) => ({ ...p, subject: evt.target.value }))
-              }
-              className={classes.input}
-              name="subject"
-              id="subject"
-              required
+              setValue={(value) => setStore((p) => ({ ...p, subject: value }))}
+              placeholder="Subject"
             />
-            <textarea
+            <Textarea
               value={store.message}
-              onChange={(evt) =>
-                setStore((p) => ({ ...p, message: evt.target.value }))
-              }
-              rows="6"
+              setValue={(value) => setStore((p) => ({ ...p, message: value }))}
               placeholder="Message"
-              autoComplete="off"
-              className={classes.input}
-              name="message"
-              id="message"
-              required
             />
-            <input
-              type="submit"
-              id="contact-submit"
-              className={classes["submit-button"] + " " + classes.input}
-              value="Send Mail"
-            />
+            <Input type="submit" value="Send Mail" />
           </form>
         </div>
       </section>

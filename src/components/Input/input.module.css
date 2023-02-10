@@ -36,6 +36,7 @@
   user-select: none;
 }
 
+.inputs[data-type="textarea"]:focus,
 .text:focus-visible {
   box-shadow: 0 0 0 5px var(--light);
   outline: 1px solid var(--dark);

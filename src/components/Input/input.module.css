@@ -11,6 +11,13 @@
   border-radius: 0.25rem;
 }
 
+.inputs[type="submit"] {
+  font-weight: var(--fw-bold);
+  color: var(--gray-700);
+  background-color: var(--primary);
+  outline: none;
+}
+
 .inputs::placeholder {
   color: var(--gray-300);
   user-select: none;

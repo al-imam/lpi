@@ -14,6 +14,26 @@ function Input({ type = "text", placeholder, setValue, value }) {
   );
 }
 
+export function Textarea({
+  placeholder = "Message",
+  setValue,
+  value,
+  rows = 6,
+}) {
+  return (
+    <textarea
+      value={value}
+      onChange={(evt) => setValue(evt.target.value)}
+      rows={rows}
+      placeholder={placeholder}
+      className={classes.inputs}
+      autoComplete="off"
+      data-type="textarea"
+      required
+    />
+  );
+}
+
 export default Input;
 
 export function PasswordInput({ placeholder, setValue, value }) {

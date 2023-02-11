@@ -9,6 +9,7 @@
   caret-color: currentColor;
   outline: 1px solid var(--gray-200);
   border-radius: 0.25rem;
+  transition: background-color 200ms ease-out;
 }
 
 .full {

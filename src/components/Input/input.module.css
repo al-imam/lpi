@@ -1,5 +1,4 @@
 .inputs {
-  width: 100%;
   font-family: var(--ff-primary);
   font-size: var(--h6);
   color: var(--gray-700);
@@ -7,8 +6,18 @@
   background-color: var(--white);
   padding: 1rem;
   border: none;
+  caret-color: currentColor;
   outline: 1px solid var(--gray-200);
   border-radius: 0.25rem;
+}
+
+.full {
+  width: 100%;
+}
+
+.max {
+  width: max-content;
+  padding-inline: 1.5rem;
 }
 
 .inputs[type="submit"] {

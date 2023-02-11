@@ -14,7 +14,7 @@ function Contact() {
     <main className={classes.s}>
       <section className={classes.wrapper}>
         <div className={classes.title}>
-          <h4>Don't be shy</h4>
+          <h4>Login as admin</h4>
           <p>
             you can share any kind of information with us, like if you have any
             complain about Lakshmipur Polytechnic Institute, or if you have any

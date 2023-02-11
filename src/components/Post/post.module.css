@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  --color: #ebabff;
+  --color-focus: hsla(286, 100%, 84%, 0.451);
 }
 
 .image {
@@ -22,20 +24,26 @@
 }
 
 .image a {
+  --gap: 1.5rem;
   position: absolute;
-  bottom: 1.2rem;
-  right: 1rem;
+  background-color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  bottom: calc(5px + var(--gap));
+  outline-offset: 0;
+  right: var(--gap);
+  border-radius: 100vw;
   z-index: 100;
   font-size: 3rem;
+  box-shadow: 0 1px 0.7rem -0.25rem var(--gray-300);
   transition: transform 200ms ease-out, filter 200ms ease-out;
 }
 
-@media only screen and (max-width: 50rem) {
-  .image a {
-    font-size: 2rem;
-    right: 0.5rem;
-    bottom: 0.75rem;
-  }
+.image svg {
+  color: var(--gray-800);
 }
 
 .image img {
@@ -44,12 +52,16 @@
   object-fit: cover;
 }
 
-.image a:hover {
+.image :is(a:hover, a:focus-visible) {
   filter: brightness(1.2);
 }
 
 .image a:active {
   transform: translateY(0.25rem);
+}
+
+.image a:focus-visible {
+  outline: 3px solid var(--color-focus);
 }
 
 .title .time {

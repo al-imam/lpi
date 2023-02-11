@@ -1,11 +1,17 @@
 import classes from "./input.module.css";
 
-function Input({ type = "text", placeholder, setValue, value }) {
+function Input({
+  type = "text",
+  placeholder,
+  setValue,
+  value,
+  width = "full",
+}) {
   return (
     <input
       value={value}
       onChange={(evt) => setValue(evt.target.value)}
-      className={classes.inputs + " " + classes.text}
+      className={`${classes.inputs} ${classes.text} ${classes[width]}`}
       type={type}
       placeholder={placeholder}
       autoComplete="off"

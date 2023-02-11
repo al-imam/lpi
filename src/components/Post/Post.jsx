@@ -1,4 +1,5 @@
 import classes from "./post.module.css";
+import { Download } from "@svg";
 
 function Post() {
   return (
@@ -13,7 +14,7 @@ function Post() {
           alt="Post image"
         />
         <a href="/assets/lab.jpg" download={true}>
-          ⬇️
+          <Download />
         </a>
       </div>
       <p className={classes.subtitle}>

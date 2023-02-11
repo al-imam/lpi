@@ -16,9 +16,9 @@ function Contact() {
         <div className={classes.title}>
           <h4>Login as admin</h4>
           <p>
-            you can share any kind of information with us, like if you have any
-            complain about Lakshmipur Polytechnic Institute, or if you have any
-            question feel free to ask. You can also reach us with phone number.
+            For security reasons, it's important to keep your login credentials
+            safe and secure. If you're new to the dashboard, please contact the
+            admin to obtain an account.
           </p>
         </div>
 

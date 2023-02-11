@@ -1,4 +1,5 @@
 import classes from "./input.module.css";
+import { useState } from "react";
 
 function Input({
   type = "text",
@@ -50,7 +51,7 @@ export function PasswordInput({ placeholder, setValue, value }) {
       <input
         className={classes.inputs + " " + classes.password}
         value={value}
-        onChange={(evt) => setValue(evt.currentTarget.value)}
+        onChange={(evt) => setValue(evt.target.value)}
         type={open ? "text" : "password"}
         placeholder={placeholder}
         autoComplete="off"
@@ -61,7 +62,7 @@ export function PasswordInput({ placeholder, setValue, value }) {
         type="button"
         onClick={() => setOpen((p) => !p)}
       >
-        <img className={classes.eye} alt="Eye" />
+        <img className={classes.eye} alt={open ? "Eye Open" : "Eye Close"} />
       </button>
     </div>
   );

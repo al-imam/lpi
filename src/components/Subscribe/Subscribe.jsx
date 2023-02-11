@@ -2,6 +2,8 @@ import { useState } from "react";
 import classes from "./sub.module.css";
 import Input from "@components/Input/Input";
 
+console.log(classes);
+
 const emailRegex = /^[a-zA-Z]([a-zA-Z0-9\.]){2,}@[a-z]{3,7}\.[a-z]{2,5}$/;
 
 function Subscribe() {

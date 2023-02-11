@@ -9,7 +9,7 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
 
-  padding-block: 6rem;
+  padding-block: 10rem;
   display: flex;
   gap: 2rem;
 
@@ -20,6 +20,7 @@
 @media only screen and (max-width: 47rem) {
   .wrapper {
     flex-direction: column;
+    padding-block: 6rem;
   }
 }
 

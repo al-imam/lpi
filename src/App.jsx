@@ -21,6 +21,7 @@ import Links from "@components/Links/Links";
 import Section from "@components/Section/Section";
 import Post from "@components/Post/Post";
 import News from "./pages/News/News";
+import Login from "./pages/Login/Login";
 
 const About = lazy(() => import("@pages/About/About"));
 
@@ -79,6 +80,7 @@ function App() {
         <Route path="/facilities/open-library" element={<Open />} />
         <Route path="/news" element={<News />} />
         <Route path="/notice" element={<Post />} />
+        <Route path="/admin/login" element={<Login />} />
       </Routes>
       <Section>
         <Links data={data} font="english" />

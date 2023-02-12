@@ -10,8 +10,6 @@
   outline: 1px solid var(--gray-200);
   border-radius: 0.25rem;
   transition: background-color 200ms ease-out;
-
-  --shadow-focus: hsl(341 100% 94% / 0.8);
 }
 
 .full {
@@ -93,7 +91,9 @@
 }
 
 .seen:focus-visible {
-  box-shadow: var(--shadow-focus) inset 0px 0px 0px 3px;
+  box-shadow: 0 0 0 3px var(--light), 0 0 0 2px inset var(--light);
+  outline: 1px solid var(--dark);
+  outline-offset: -2px;
 }
 
 .seen:focus-visible .eye {

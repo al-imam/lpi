@@ -10,6 +10,8 @@
   outline: 1px solid var(--gray-200);
   border-radius: 0.25rem;
   transition: background-color 200ms ease-out;
+
+  --shadow-focus: hsl(341 100% 94% / 0.8);
 }
 
 .full {
@@ -50,4 +52,60 @@
 .text:focus-visible {
   box-shadow: 0 0 0 5px var(--light);
   outline: 1px solid var(--dark);
+}
+
+.password {
+  width: 100%;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.group {
+  background-color: var(--white, white);
+  border-radius: 0.25rem;
+  outline: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+}
+
+.group:has(.password:focus) {
+  box-shadow: 0 0 0 5px var(--light);
+  outline: 1px solid var(--dark);
+}
+
+.seen {
+  border-radius: 50%;
+  height: 2rem;
+  min-width: 2rem;
+  background-color: hsl(0 0% 100% / 0);
+  position: relative;
+  margin-inline: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.seen:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.seen:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.seen:focus-visible {
+  box-shadow: var(--shadow-focus) inset 0px 0px 0px 3px;
+}
+
+.seen:focus-visible .eye {
+  filter: opacity(0.6);
+}
+
+.eye {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: opacity(0.3);
 }

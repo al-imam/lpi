@@ -72,6 +72,7 @@
 }
 
 .seen {
+  position: relative;
   border-radius: 50%;
   height: 2rem;
   min-width: 2rem;
@@ -97,7 +98,16 @@
 }
 
 .seen:focus-visible .eye {
-  filter: opacity(0.6);
+  filter: opacity(0.4);
+}
+
+.seen::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  inset: 0.5rem 0 0.5rem -0.5rem;
+  background-color: var(--gray-200);
+  filter: opacity(0.4);
 }
 
 .eye {

@@ -65,7 +65,7 @@ export function PasswordInput({ placeholder, setValue, value }) {
         type="button"
         onClick={() => setOpen((p) => !p)}
       >
-        <img className={classes.eye} alt={open ? "Eye Open" : "Eye Close"} />
+        <img className={classes.eye} alt={open ? "Open" : "Close"} />
       </button>
     </div>
   );

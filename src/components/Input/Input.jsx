@@ -45,10 +45,13 @@ export default Input;
 
 export function PasswordInput({ placeholder, setValue, value }) {
   const [open, setOpen] = useState(false);
+  const [isFocus, setIsFocus] = useState(false);
 
   return (
-    <div className={classes.group}>
+    <div className={`${classes.group} ${isFocus ? classes.focus : ""}`}>
       <input
+        onFocus={() => setIsFocus(true)}
+        onBlur={() => setIsFocus(false)}
         className={classes.inputs + " " + classes.password}
         value={value}
         onChange={(evt) => setValue(evt.target.value)}

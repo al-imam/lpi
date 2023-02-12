@@ -29,11 +29,11 @@
   cursor: pointer;
 }
 
-.inputs[type="submit"]:hover {
+.inputs[type="submit"]:hover:enabled {
   background-color: var(--hover);
 }
 
-.inputs[type="submit"]:active {
+.inputs[type="submit"]:active:enabled {
   filter: saturate(0.5);
 }
 
@@ -50,6 +50,11 @@
 .text:focus-visible {
   box-shadow: 0 0 0 5px var(--light);
   outline: 1px solid var(--dark);
+}
+
+.inputs:disabled {
+  opacity: 0.5;
+  cursor: wait;
 }
 
 .password {

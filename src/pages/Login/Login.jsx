@@ -25,9 +25,7 @@ function reducer(prevState, action) {
   }
 }
 
-function Contact() {
-  const [{ email, password }, dispatch] = useReducer(reducer, init);
-
+export default function Contact() {
   return (
     <main className={classes.s}>
       <section className={classes.wrapper}>
@@ -39,24 +37,29 @@ function Contact() {
             admin to obtain an account.
           </p>
         </div>
-
-        <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
-          <Input
-            value={email}
-            setValue={(value) => dispatch({ type: "email", payload: value })}
-            type="email"
-            placeholder="Email"
-          />
-          <PasswordInput
-            value={password}
-            setValue={(value) => dispatch({ type: "password", payload: value })}
-            placeholder="Password"
-          />
-          <Input type="submit" value="Login" />
-        </form>
+        <Form />
       </section>
     </main>
   );
 }
 
-export default Contact;
+function Form() {
+  const [{ email, password }, dispatch] = useReducer(reducer, init);
+
+  return (
+    <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
+      <Input
+        value={email}
+        setValue={(value) => dispatch({ type: "email", payload: value })}
+        type="email"
+        placeholder="Email"
+      />
+      <PasswordInput
+        value={password}
+        setValue={(value) => dispatch({ type: "password", payload: value })}
+        placeholder="Password"
+      />
+      <Input type="submit" value="Login" />
+    </form>
+  );
+}

@@ -34,7 +34,7 @@ function Contact() {
             setValue={(value) => setStore((p) => ({ ...p, password: value }))}
             placeholder="Password"
           />
-          <Input type="submit" value="Send Mail" />
+          <Input type="submit" value="Login" />
         </form>
       </section>
     </main>

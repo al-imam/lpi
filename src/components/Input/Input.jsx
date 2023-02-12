@@ -11,7 +11,7 @@ function Input({
 }) {
   return (
     <input
-      spellcheck="false"
+      spellCheck="false"
       value={value}
       onChange={(evt) => setValue(evt.target.value)}
       className={`${classes.inputs} ${classes.text} ${classes[width]}`}
@@ -31,7 +31,7 @@ export function Textarea({
 }) {
   return (
     <textarea
-      spellcheck="false"
+      spellCheck="false"
       value={value}
       onChange={(evt) => setValue(evt.target.value)}
       rows={rows}
@@ -55,7 +55,7 @@ export function PasswordInput({ placeholder, setValue, value }) {
       <input
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
-        spellcheck="false"
+        spellCheck="false"
         className={classes.inputs + " " + classes.password}
         value={value}
         onChange={(evt) => setValue(evt.target.value)}

@@ -1,4 +1,4 @@
-import Input from "@components/Input/Input";
+import Input, { PasswordInput } from "@components/Input/Input";
 import { useState } from "react";
 import classes from "./login.module.css";
 
@@ -29,7 +29,7 @@ function Contact() {
             type="email"
             placeholder="Email"
           />
-          <Input
+          <PasswordInput
             value={store.password}
             setValue={(value) => setStore((p) => ({ ...p, password: value }))}
             placeholder="Password"

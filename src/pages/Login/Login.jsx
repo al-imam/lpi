@@ -1,5 +1,5 @@
 import Input, { PasswordInput } from "@components/Input/Input";
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import classes from "./login.module.css";
 
 const init = {
@@ -7,8 +7,26 @@ const init = {
   password: "",
 };
 
+function reducer(prevState, action) {
+  const { type, payload } = action;
+  switch (type) {
+    case "email":
+      return {
+        ...prevState,
+        email: payload,
+      };
+    case "password":
+      return {
+        ...prevState,
+        password: payload,
+      };
+    default:
+      throw new Error(`No Action called ${type}`);
+  }
+}
+
 function Contact() {
-  const [store, setStore] = useState(init);
+  const [{ email, password }, dispatch] = useReducer(reducer, init);
 
   return (
     <main className={classes.s}>
@@ -24,14 +42,14 @@ function Contact() {
 
         <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
           <Input
-            value={store.email}
-            setValue={(value) => setStore((p) => ({ ...p, email: value }))}
+            value={email}
+            setValue={(value) => dispatch({ type: "email", payload: value })}
             type="email"
             placeholder="Email"
           />
           <PasswordInput
-            value={store.password}
-            setValue={(value) => setStore((p) => ({ ...p, password: value }))}
+            value={password}
+            setValue={(value) => dispatch({ type: "password", payload: value })}
             placeholder="Password"
           />
           <Input type="submit" value="Login" />

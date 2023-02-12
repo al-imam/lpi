@@ -1,5 +1,6 @@
 import classes from "./input.module.css";
 import { useState } from "react";
+import { EyeOff } from "@svg";
 
 function Input({
   type = "text",
@@ -65,7 +66,7 @@ export function PasswordInput({ placeholder, setValue, value }) {
         type="button"
         onClick={() => setOpen((p) => !p)}
       >
-        <img className={classes.eye} alt={open ? "Open" : "Close"} />
+        {open ? " " : <EyeOff className={classes.eye} />}
       </button>
     </div>
   );

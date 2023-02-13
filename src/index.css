@@ -11,6 +11,10 @@
 :root {
   --primary: #99ff99;
   --hover: hsl(120, 77%, 67%);
+
+  --light: hsla(237, 100%, 69%, 0.2);
+  --dark: hsl(226, 100%, 75%);
+
   --white: white;
   --gap-inline: 2rem;
 

@@ -1,4 +1,5 @@
 import Input, { Textarea } from "@components/Input/Input";
+import RadioInput from "@components/RadioInput/RadioInput";
 import { useReducer } from "react";
 import classes from "./admin.module.css";
 
@@ -49,6 +50,8 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
+      <RadioInput name="topic" text="News" />
+      <RadioInput name="topic" text="Notice" />
       <Input
         value={title}
         setValue={(value) => dispatch({ type: "title", payload: value })}

@@ -15,6 +15,7 @@
   font-family: var(--ff-primary);
   color: var(--gray-600);
   font-weight: var(--fw-regular);
+  transition: color var(--speed) ease-out;
 }
 
 .label::before {
@@ -42,7 +43,7 @@
   background: var(--color);
   border-radius: 50%;
   position: absolute;
-  left: 5px;
+  left: 0.3125rem;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
@@ -53,10 +54,10 @@
   opacity: 1;
 }
 
-.radio:not(:checked):hover + .label::after {
+.radio:not(:checked):is(:hover, :focus) + .label::after {
   opacity: 0.5;
 }
 
-.radio:not(:checked):focus + .label::after {
-  opacity: 0.5;
+.radio:not(:checked):is(:hover, :focus) + .label {
+  color: var(--gray-900);
 }

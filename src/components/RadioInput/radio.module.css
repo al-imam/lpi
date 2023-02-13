@@ -1,0 +1,58 @@
+.container {
+  /* --color: #686de0; */
+  --color: var(--light);
+}
+
+.radio {
+  appearance: none;
+}
+
+.label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  line-height: 20px;
+}
+
+.label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  aspect-ratio: 1;
+  border: 1px solid var(--color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.label::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  aspect-ratio: 1;
+  border: 1px solid var(--color);
+  background: var(--color);
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.radio:checked + .label::after {
+  opacity: 1;
+}
+
+.radio:not(:checked):hover + .label::after {
+  opacity: 0.5;
+}
+
+.radio:not(:checked):focus-visible + .label::after {
+  opacity: 0.5;
+}

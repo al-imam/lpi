@@ -7,11 +7,12 @@ export default function Contact() {
     <main className={classes.s}>
       <section className={classes.wrapper}>
         <div className={classes.title}>
-          <h4>Login as admin</h4>
+          <h4>Welcome, dear admin!</h4>
           <p>
-            For security reasons, it's important to keep your login credentials
-            safe and secure. If you're new to the dashboard, please contact the
-            admin to obtain an account.
+            The process of creating a post involves selecting "notice" or "news"
+            type, adding a title and content, and optionally uploading an image.
+            Once all fields are completed, the post can be submitted by clicking
+            the "Submit" button.
           </p>
         </div>
         <Form />

@@ -8,13 +8,9 @@
   margin-inline: auto;
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
-
   padding-block: 10rem;
   display: flex;
   gap: 2rem;
-
-  --light: hsla(237, 100%, 69%, 0.2);
-  --dark: hsl(226, 100%, 75%);
 }
 
 @media only screen and (max-width: 47rem) {

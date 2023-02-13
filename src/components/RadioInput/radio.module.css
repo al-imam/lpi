@@ -1,6 +1,6 @@
 .container {
-  /* --color: #686de0; */
-  --color: var(--light);
+  --color: var(--dark);
+  --speed: 200ms;
 }
 
 .radio {
@@ -17,22 +17,23 @@
 .label::before {
   content: "";
   display: inline-block;
-  width: 20px;
+  width: 1.25rem;
   aspect-ratio: 1;
-  border: 1px solid var(--color);
+  outline: 2px solid var(--color);
+  outline-offset: -2px;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  opacity: 1;
-  transition: all 0.3s;
+  opacity: 0.9;
+  transition: opacity var(--speed) ease-out;
 }
 
 .label::after {
   content: "";
   display: inline-block;
-  width: 10px;
+  width: 0.625rem;
   aspect-ratio: 1;
   border: 1px solid var(--color);
   background: var(--color);
@@ -42,7 +43,7 @@
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
-  transition: all 0.3s;
+  transition: opacity var(--speed) ease-out;
 }
 
 .radio:checked + .label::after {

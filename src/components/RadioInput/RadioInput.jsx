@@ -1,4 +1,5 @@
 import { useId } from "react";
+import classes from "./radio.module.css";
 
 function RadioInput({ text, name }) {
   const id = useId();

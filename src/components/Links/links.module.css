@@ -87,7 +87,8 @@
 }
 
 .action:focus-visible {
-  outline: 2px solid rgba(0, 92, 0, 0.6);
+  box-shadow: 0 0 0 5px var(--light);
+  outline: 1px solid var(--dark);
 }
 
 :is(.action:hover, .action:focus-visible) .svg {

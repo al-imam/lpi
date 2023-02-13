@@ -22,6 +22,7 @@ import Section from "@components/Section/Section";
 import Post from "@components/Post/Post";
 import News from "./pages/News/News";
 import Login from "./pages/Login/Login";
+import Admin from "./pages/Admin/Admin";
 
 const About = lazy(() => import("@pages/About/About"));
 
@@ -80,6 +81,7 @@ function App() {
         <Route path="/facilities/open-library" element={<Open />} />
         <Route path="/news" element={<News />} />
         <Route path="/notice" element={<Post />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/admin/login" element={<Login />} />
       </Routes>
       <Section>

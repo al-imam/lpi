@@ -4,9 +4,11 @@ import classes from "./radio.module.css";
 function RadioInput({ text, name }) {
   const id = useId();
   return (
-    <div>
-      <input type="radio" id={id} name={name} />
-      <label htmlFor={id}>{text}</label>
+    <div className={classes.container}>
+      <input type="radio" id={id} name={name} className={classes.radio} />
+      <label htmlFor={id} className={classes.label}>
+        {text}
+      </label>
     </div>
   );
 }

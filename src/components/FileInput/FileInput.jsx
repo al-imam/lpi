@@ -29,6 +29,9 @@ function FileInput() {
       {file && (
         <div className={classes.image}>
           <img src={URL.createObjectURL(file)} />
+          <div className={classes.imageInfo}>
+            <button>delete</button>
+          </div>
         </div>
       )}
     </div>

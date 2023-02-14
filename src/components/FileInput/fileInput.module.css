@@ -41,3 +41,16 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+.image {
+  border-radius: 0.25rem;
+  outline: 1px solid var(--gray-200);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.image img {
+  object-fit: cover;
+  min-height: 100%;
+  max-width: 100%;
+}

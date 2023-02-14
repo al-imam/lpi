@@ -27,16 +27,9 @@ function FileInput() {
         />
       </div>
       {file && (
-        <img
-          style={{
-            maxWidth: "100%",
-            aspectRatio: "16 / 9",
-            objectFit: "cover",
-            borderRadius: "0.25rem",
-            outline: "1px solid var(--gray-200)",
-          }}
-          src={URL.createObjectURL(file)}
-        />
+        <div className={classes.image}>
+          <img src={URL.createObjectURL(file)} />
+        </div>
       )}
     </div>
   );

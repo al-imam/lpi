@@ -8,6 +8,8 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   color: var(--gray-700);
+  width: 100%;
+  padding-right: 1.5rem;
 }
 
 .input::file-selector-button {
@@ -19,7 +21,9 @@
   color: var(--gray-700);
   padding: 1rem 1.5rem;
   margin-right: 1.5rem;
+  box-shadow: 0 -1px 0 1px var(--gray-200);
   border: none;
+  text-overflow: ellipsis;
 }
 
 .input::file-selector-button:hover {

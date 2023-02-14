@@ -2,12 +2,19 @@
   border: 1px solid #e5e5e5;
 }
 
+.input {
+  font-size: var(--h6);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  color: var(--gray-700);
+}
+
 .input::file-selector-button {
   background-color: #fff;
   color: #000;
   border: 0px;
   border-right: 1px solid #e5e5e5;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
   margin-right: 20px;
   transition: 0.5s;
 }

@@ -1,5 +1,11 @@
+import classes from "./fileInput.module.css";
+
 function FileInput() {
-  return <input type="file" size={60} />;
+  return (
+    <div class={classes.container}>
+      <input type="file" className={classes.input} />
+    </div>
+  );
 }
 
 export default FileInput;

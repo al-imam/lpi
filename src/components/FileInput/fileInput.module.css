@@ -26,6 +26,6 @@
   text-overflow: ellipsis;
 }
 
-.input::file-selector-button:hover {
-  background-color: #eee;
+.input:is(:hover, :focus)::file-selector-button {
+  background-color: var(--gray-50);
 }

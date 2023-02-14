@@ -1,5 +1,6 @@
 .container {
-  border: 1px solid #e5e5e5;
+  outline: 1px solid var(--gray-200);
+  border-radius: 0.25rem;
 }
 
 .input {
@@ -10,17 +11,17 @@
 }
 
 .input::file-selector-button {
-  background-color: #fff;
-  color: #000;
-  border: 0px;
-  border-right: 1px solid #e5e5e5;
+  font-size: var(--h6);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  color: var(--gray-700);
+  background-color: var(--white, white);
+  color: var(--gray-700);
   padding: 1rem 1.5rem;
-  margin-right: 20px;
-  transition: 0.5s;
+  margin-right: 1.5rem;
+  border: none;
 }
 
 .input::file-selector-button:hover {
   background-color: #eee;
-  border: 0px;
-  border-right: 1px solid #e5e5e5;
 }

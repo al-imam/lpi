@@ -12,26 +12,35 @@ function FileInput() {
   }
 
   function remove() {
-    ref.current.value = "";
+    setFile("");
+    ref.current.value = null;
   }
 
   return (
     <div className={classes.wrapper}>
-      <div className={classes.container}>
-        <input
-          ref={ref}
-          onChange={handleChange}
-          type="file"
-          name="file"
-          className={classes.input}
-        />
-      </div>
-      {file && (
+      {file ? (
         <div className={classes.image}>
           <img src={URL.createObjectURL(file)} />
-          <div className={classes.imageInfo}>
-            <button>delete</button>
+          <div className={classes.delete}>
+            <button type="button" onClick={remove}>
+              🚽
+            </button>
           </div>
+          <div className={classes.imageInfo}>
+            <span>{file.name}</span>
+            <span>{file.name}</span>
+            <span>{file.name}</span>
+          </div>
+        </div>
+      ) : (
+        <div className={classes.container}>
+          <input
+            ref={ref}
+            onChange={handleChange}
+            type="file"
+            name="file"
+            className={classes.input}
+          />
         </div>
       )}
     </div>

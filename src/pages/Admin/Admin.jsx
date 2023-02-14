@@ -48,10 +48,15 @@ function reducer(prevState, action) {
 function Form() {
   const [{ title, description }, dispatch] = useReducer(reducer, init);
 
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    const formData = new FormData(evt.target);
+    console.log(Object.fromEntries(formData.entries()));
+  }
+
   return (
-    <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
-      <RadioInput name="topic" text="News" />
-      <RadioInput name="topic" text="Notice" />
+    <form className={classes.form} onSubmit={handleSubmit}>
+      <RadioGroup />
       <Input
         value={title}
         setValue={(value) => dispatch({ type: "title", payload: value })}
@@ -65,5 +70,14 @@ function Form() {
       />
       <Input type="submit" value="Post" />
     </form>
+  );
+}
+
+function RadioGroup() {
+  return (
+    <div className={classes.radioGroup}>
+      <RadioInput name="topic" value="News" />
+      <RadioInput name="topic" value="Notice" />
+    </div>
   );
 }

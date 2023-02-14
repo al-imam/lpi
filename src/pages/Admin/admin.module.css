@@ -50,3 +50,12 @@
   gap: 1rem;
   flex: 1;
 }
+
+.radioGroup {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--white, white);
+  outline: 1px solid var(--gray-200);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}

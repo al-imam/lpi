@@ -1,6 +1,7 @@
 import Input, { Textarea } from "@components/Input/Input";
 import RadioInput from "@components/RadioInput/RadioInput";
 import { useReducer } from "react";
+import FileInput from "@components/FileInput/FileInput";
 import classes from "./admin.module.css";
 
 export default function Contact() {
@@ -68,6 +69,7 @@ function Form() {
         setValue={(value) => dispatch({ type: "description", payload: value })}
         placeholder="Say more about current News or Notice"
       />
+      <FileInput />
       <Input type="submit" value="Post" />
     </form>
   );

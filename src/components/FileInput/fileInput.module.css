@@ -52,13 +52,16 @@
 
 .image img {
   object-fit: cover;
+  object-position: center center;
   min-height: 100%;
   max-width: 100%;
-  transition: transform var(--speed) ease-out;
+  transform: scale(1.1);
+  transition: transform var(--speed) ease-out, filter var(--speed) ease-out;
 }
 
 .image img:hover {
-  transform: scale(1.03);
+  transform: scale(1.11);
+  filter: grayscale(0.5);
 }
 
 .delete {
@@ -71,23 +74,4 @@
   background-color: var(--white);
   cursor: pointer;
   z-index: 1000;
-}
-
-.imageInfo {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  gap: 0.5rem;
-  padding: 2rem;
-  color: var(--gray-50);
-  pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity var(--speed) ease-out;
-}
-
-.image img:hover ~ .imageInfo {
-  opacity: 1;
 }

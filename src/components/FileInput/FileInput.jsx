@@ -13,7 +13,7 @@ function FileInput() {
 
   function remove() {
     setFile("");
-    ref.current.value = null;
+    ref.current.value = "";
   }
 
   return (
@@ -25,11 +25,6 @@ function FileInput() {
             <button type="button" onClick={remove}>
               🚽
             </button>
-          </div>
-          <div className={classes.imageInfo}>
-            <span>{file.name}</span>
-            <span>{file.name}</span>
-            <span>{file.name}</span>
           </div>
         </div>
       ) : (

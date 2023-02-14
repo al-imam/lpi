@@ -1,6 +1,9 @@
 .container {
   outline: 1px solid var(--gray-200);
   border-radius: 0.25rem;
+  overflow: hidden;
+
+  --speed: 200ms;
 }
 
 .input {
@@ -24,8 +27,11 @@
   box-shadow: 0 -1px 0 1px var(--gray-200);
   border: none;
   text-overflow: ellipsis;
+  transition: color var(--speed) ease-out,
+    background-color var(--speed) ease-out;
 }
 
 .input:is(:hover, :focus)::file-selector-button {
-  background-color: var(--gray-50);
+  background-color: var(--gray-500);
+  color: var(--white);
 }

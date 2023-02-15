@@ -11,6 +11,8 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import generateId from "@util/generateId";
 
 const init = {
   title: "",
@@ -38,20 +40,42 @@ function reducer(prevState, action) {
 function Form() {
   const [{ title, description }, dispatch] = useReducer(reducer, init);
 
-  function handleSubmit(evt) {
+  async function handleSubmit(evt) {
     evt.preventDefault();
-    const formData = new FormData(evt.target);
-    const data = Object.fromEntries(formData.entries());
+    const { topic, file } = Object.fromEntries(
+      new FormData(evt.target).entries()
+    );
+
+    let url = null;
+
+    if (file.name !== "") {
+      const storage = getStorage(app);
+      const folderRef = ref(
+        storage,
+        `${topic.toLowerCase()}/${file.size}-${generateId()}`
+      );
+
+      try {
+        const uploadTask = await uploadBytes(folderRef, file);
+        url = await getDownloadURL(uploadTask.ref);
+      } catch (error) {
+        return console.warn(error);
+      }
+    }
 
     const db = getFirestore(app);
-    addDoc(collection(db, data.topic.toLowerCase()), {
-      title,
-      description,
-      date: serverTimestamp(),
-      url: data.file.name,
-    })
-      .then((ref) => console.log(ref))
-      .catch((error) => console.log(error));
+
+    try {
+      const { id } = await addDoc(collection(db, topic.toLowerCase()), {
+        title,
+        description,
+        date: serverTimestamp(),
+        url: url,
+      });
+      console.log("document uploaded id:", id);
+    } catch (error) {
+      console.warn(error);
+    }
   }
 
   return (

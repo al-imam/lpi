@@ -331,14 +331,14 @@ export function Trash(props) {
   );
 }
 
-export function LoadingLoop(props) {
+export function LoadingLoop({ speed = "300ms", ...rest }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
       viewBox="0 0 24 24"
-      {...props}
+      {...rest}
     >
       <g
         fill="none"
@@ -353,7 +353,7 @@ export function LoadingLoop(props) {
         >
           <animate
             attributeName="stroke-dashoffset"
-            dur="0.6s"
+            dur={speed}
             repeatCount="indefinite"
             values="6;0"
           ></animate>
@@ -367,7 +367,7 @@ export function LoadingLoop(props) {
             fill="freeze"
             attributeName="stroke-dashoffset"
             begin="0.1s"
-            dur="0.3s"
+            dur={speed}
             values="30;0"
           ></animate>
         </path>
@@ -376,7 +376,7 @@ export function LoadingLoop(props) {
             fill="freeze"
             attributeName="stroke-dashoffset"
             begin="0.5s"
-            dur="0.2s"
+            dur={speed}
             values="10;0"
           ></animate>
         </path>
@@ -389,7 +389,7 @@ export function LoadingLoop(props) {
             fill="freeze"
             attributeName="stroke-dashoffset"
             begin="0.7s"
-            dur="0.2s"
+            dur={speed}
             values="6;0"
           ></animate>
         </path>

@@ -79,7 +79,7 @@ function Form() {
   }
 
   return (
-    <form className={classes.form} onSubmit={handleSubmit}>
+    <form className={classes.form} onSubmit={(evt) => evt.preventDefault()}>
       <RadioGroup />
       <Input
         value={title}

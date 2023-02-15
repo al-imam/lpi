@@ -3,14 +3,22 @@ import { useState, useRef, useEffect } from "react";
 import { Trash } from "@svg";
 import { LoadingLoop } from "@svg";
 
-function FileInput({ loading = true }) {
+function FileInput({ loading = false, remove = false }) {
   const [file, setFile] = useState(null);
   const ref = useRef(null);
 
-  function remove() {
+  function handleRemove() {
     setFile(null);
     ref.current.value = "";
   }
+
+  useEffect(() => {
+    if (remove) {
+      handleRemove();
+      console.log("Inside useEffect");
+    }
+    console.log("Outside useEffect");
+  }, [remove]);
 
   return (
     <div className={classes.wrapper}>
@@ -24,7 +32,7 @@ function FileInput({ loading = true }) {
           ) : (
             <div className={classes.delete}>
               {
-                <button type="button" onClick={remove}>
+                <button type="button" onClick={handleRemove}>
                   <Trash />
                 </button>
               }

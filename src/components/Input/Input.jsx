@@ -8,6 +8,7 @@ function Input({
   setValue,
   value,
   width = "full",
+  name = type,
 }) {
   return (
     <input
@@ -19,6 +20,7 @@ function Input({
       placeholder={placeholder}
       autoComplete="off"
       required
+      name={name}
     />
   );
 }
@@ -28,6 +30,7 @@ export function Textarea({
   setValue,
   value,
   rows = 6,
+  name = "textarea",
 }) {
   return (
     <textarea
@@ -39,6 +42,7 @@ export function Textarea({
       className={classes.inputs}
       autoComplete="off"
       data-type="textarea"
+      name={name}
       required
     />
   );
@@ -46,7 +50,12 @@ export function Textarea({
 
 export default Input;
 
-export function PasswordInput({ placeholder, setValue, value }) {
+export function PasswordInput({
+  placeholder,
+  setValue,
+  value,
+  name = "password",
+}) {
   const [open, setOpen] = useState(false);
   const [isFocus, setIsFocus] = useState(false);
 
@@ -63,6 +72,7 @@ export function PasswordInput({ placeholder, setValue, value }) {
         placeholder={placeholder}
         autoComplete="off"
         required
+        name={name}
       />
       <button
         className={classes.seen}

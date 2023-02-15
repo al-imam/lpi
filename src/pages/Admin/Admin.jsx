@@ -78,7 +78,7 @@ function Form() {
 function RadioGroup() {
   return (
     <div className={classes.radioGroup}>
-      <RadioInput name="topic" value="News" />
+      <RadioInput name="topic" value="News" defaultChecked={true} />
       <RadioInput name="topic" value="Notice" />
     </div>
   );

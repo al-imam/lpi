@@ -1,5 +1,6 @@
 import classes from "./fileInput.module.css";
 import { useState, useRef } from "react";
+import { Trash } from "@svg";
 
 function FileInput() {
   const [file, setFile] = useState("");
@@ -23,7 +24,7 @@ function FileInput() {
           <img src={URL.createObjectURL(file)} />
           <div className={classes.delete}>
             <button type="button" onClick={remove}>
-              🚽
+              <Trash />
             </button>
           </div>
         </div>

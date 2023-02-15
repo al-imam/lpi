@@ -51,27 +51,42 @@
 }
 
 .image img {
+  object-position: center;
   object-fit: cover;
-  object-position: center center;
-  min-height: 100%;
-  max-width: 100%;
-  transform: scale(1.1);
+  height: 100%;
+  width: 100%;
+  transform: scale(1.02);
   transition: transform var(--speed) ease-out, filter var(--speed) ease-out;
 }
 
 .image img:hover {
-  transform: scale(1.11);
+  transform: scale(1.04);
   filter: grayscale(0.5);
 }
 
 .delete {
-  all: unset;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0 0 0 1rem;
   background-color: var(--white);
-  cursor: pointer;
   z-index: 1000;
+}
+
+.delete button {
+  all: unset;
+  color: var(--gray-700);
+  cursor: pointer;
+}
+
+.delete svg {
+  transform: scale(0.9);
+  aspect-ratio: 1 / 1;
+  transition: color var(--speed) ease-out, transform var(--speed) ease-out;
+}
+
+.delete button:is(:hover, :focus-visible) svg {
+  color: rgb(174, 54, 54);
+  transform: rotateZ(-20deg);
 }

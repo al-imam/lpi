@@ -9,6 +9,7 @@
 
 .label {
   cursor: pointer;
+  user-select: none;
   position: relative;
   padding-left: 1.875rem;
   font-size: var(--h6);

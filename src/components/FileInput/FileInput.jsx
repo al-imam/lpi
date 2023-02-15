@@ -1,5 +1,5 @@
 import classes from "./fileInput.module.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Trash } from "@svg";
 import { LoadingLoop } from "@svg";
 
@@ -17,14 +17,17 @@ function FileInput({ loading = true }) {
       {file && (
         <div className={classes.image}>
           <img src={URL.createObjectURL(file)} />
-          <div className={classes.delete}>
-            <button type="button" onClick={remove}>
-              <Trash />
-            </button>
-          </div>
-          {loading && (
+          {loading ? (
             <div className={classes.loading}>
               <LoadingLoop />
+            </div>
+          ) : (
+            <div className={classes.delete}>
+              {
+                <button type="button" onClick={remove}>
+                  <Trash />
+                </button>
+              }
             </div>
           )}
         </div>

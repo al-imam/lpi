@@ -5,6 +5,16 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+
+  optimizeDeps: {
+    exclude: [
+      "firebase",
+      "firebase/app",
+      "firebase/auth",
+      "firebase/firestore",
+    ],
+  },
+
   resolve: {
     alias: {
       "@app": path.resolve(__dirname, "src"),

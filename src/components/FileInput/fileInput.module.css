@@ -75,7 +75,7 @@
   padding: 0.5rem;
   border-radius: 0 0 0 1rem;
   background-color: var(--white);
-  z-index: 1000;
+  z-index: 1;
 }
 
 .delete button {
@@ -93,4 +93,15 @@
 .delete button:is(:hover, :focus-visible) svg {
   color: rgb(174, 54, 54);
   transform: rotateZ(-20deg);
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white, white);
 }

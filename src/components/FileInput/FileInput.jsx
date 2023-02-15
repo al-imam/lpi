@@ -1,8 +1,9 @@
 import classes from "./fileInput.module.css";
 import { useState, useRef } from "react";
 import { Trash } from "@svg";
+import { LoadingLoop } from "@svg";
 
-function FileInput() {
+function FileInput({ loading = true }) {
   const [file, setFile] = useState(null);
   const ref = useRef(null);
 
@@ -21,6 +22,11 @@ function FileInput() {
               <Trash />
             </button>
           </div>
+          {loading && (
+            <div className={classes.loading}>
+              <LoadingLoop />
+            </div>
+          )}
         </div>
       )}
       <div className={`${classes.container} ${file && classes.none}`}>

@@ -1,18 +1,18 @@
+import FileInput from "@components/FileInput/FileInput";
 import Input, { Textarea } from "@components/Input/Input";
 import RadioInput from "@components/RadioInput/RadioInput";
-import { useReducer } from "react";
-import FileInput from "@components/FileInput/FileInput";
+import generateId from "@util/generateId";
 import classes from "./admin.module.css";
-
 import { app } from "../../firebase";
+
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { useReducer } from "react";
 import {
-  getFirestore,
-  collection,
   addDoc,
+  collection,
+  getFirestore,
   serverTimestamp,
 } from "firebase/firestore";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import generateId from "@util/generateId";
 
 const init = {
   title: "",

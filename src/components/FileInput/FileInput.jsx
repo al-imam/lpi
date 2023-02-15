@@ -23,7 +23,7 @@ function FileInput() {
           </div>
         </div>
       )}
-      <div className={classes.container}>
+      <div className={`${classes.container} ${file && classes.none}`}>
         <input
           ref={ref}
           accept="image/*"

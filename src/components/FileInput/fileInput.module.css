@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.none {
+  display: none;
+}
+
 .input {
   font-size: var(--h6);
   font-family: var(--ff-primary);

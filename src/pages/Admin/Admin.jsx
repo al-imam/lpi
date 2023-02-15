@@ -3,6 +3,13 @@ import RadioInput from "@components/RadioInput/RadioInput";
 import { useReducer } from "react";
 import FileInput from "@components/FileInput/FileInput";
 import classes from "./admin.module.css";
+import { app } from "../../firebase";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
 
 export default function Contact() {
   return (
@@ -52,7 +59,16 @@ function Form() {
   function handleSubmit(evt) {
     evt.preventDefault();
     const formData = new FormData(evt.target);
-    console.log(Object.fromEntries(formData.entries()));
+    const data = Object.fromEntries(formData.entries());
+    const db = getFirestore(app);
+    addDoc(collection(db, data.topic.toLowerCase()), {
+      title,
+      description,
+      date: serverTimestamp(),
+      url: data.file.name,
+    })
+      .then((ref) => console.log(ref))
+      .catch((error) => console.log(error));
   }
 
   return (

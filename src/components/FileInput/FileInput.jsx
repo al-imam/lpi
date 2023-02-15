@@ -1,20 +1,12 @@
 import classes from "./fileInput.module.css";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Trash } from "@svg";
 
 function FileInput() {
   const [file, setFile] = useState("");
-  const ref = useRef(null);
-
-  function handleChange(evt) {
-    const file = evt.target.files[0];
-    setFile(file);
-    console.log(file);
-  }
 
   function remove() {
     setFile("");
-    ref.current.value = "";
   }
 
   return (
@@ -31,8 +23,7 @@ function FileInput() {
       ) : (
         <div className={classes.container}>
           <input
-            ref={ref}
-            onChange={handleChange}
+            onChange={(evt) => setFile(evt.target.files[0])}
             type="file"
             name="file"
             className={classes.input}

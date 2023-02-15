@@ -26,6 +26,7 @@ function FileInput() {
       <div className={classes.container}>
         <input
           ref={ref}
+          accept="image/*"
           onChange={(evt) => setFile(evt.target.files[0])}
           type="file"
           name="file"

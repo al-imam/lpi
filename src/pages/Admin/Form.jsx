@@ -76,6 +76,20 @@ function reducer(prevState, action) {
         success: payload,
       };
 
+    case "errorDataUpload":
+      return {
+        ...prevState,
+        loadingDataUpload: false,
+        error: payload,
+      };
+
+    case "successDataUpload":
+      return {
+        ...prevState,
+        loadingDataUpload: false,
+        success: payload,
+      };
+
     case "reset":
       return {
         title: "",
@@ -138,18 +152,32 @@ function Form() {
       }
     }
 
+    dispatch({ type: "loadingDataUpload", payload: true });
     const db = getFirestore(app);
 
     try {
-      const { id } = await addDoc(collection(db, topic.toLowerCase()), {
+      const payload = {
         title,
         description,
         date: serverTimestamp(),
         url: url,
+      };
+
+      const { id } = await addDoc(collection(db, topic.toLowerCase()), payload);
+
+      dispatch({
+        type: "successDataUpload",
+        payload: "Post successfully uploaded",
       });
-      console.log("document uploaded id:", id);
+
+      console.log({ ...payload, id });
     } catch (error) {
       console.warn(error);
+
+      return dispatch({
+        type: "errorDataUpload",
+        payload: "Post upload failed! Try later 😫",
+      });
     }
   }
 

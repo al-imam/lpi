@@ -50,6 +50,18 @@ function reducer(prevState, action) {
         success: payload,
       };
 
+    case "loadingDataUpload":
+      return {
+        ...prevState,
+        loadingDataUpload: payload,
+      };
+
+    case "loadingImageUpload":
+      return {
+        ...prevState,
+        loadingImageUpload: payload,
+      };
+
     case "reset":
       return {
         title: "",

@@ -17,6 +17,10 @@ import {
 const init = {
   title: "",
   description: "",
+  loadingImageUpload: false,
+  loadingDataUpload: false,
+  error: null,
+  success: null,
 };
 
 function reducer(prevState, action) {
@@ -32,16 +36,32 @@ function reducer(prevState, action) {
         ...prevState,
         description: payload,
       };
+    case "error":
+      return {
+        ...prevState,
+        error: payload,
+      };
     default:
       throw new Error(`No Action called ${type}`);
   }
 }
 
 function Form() {
-  const [{ title, description }, dispatch] = useReducer(reducer, init);
+  const [{ title, description, ...state }, dispatch] = useReducer(
+    reducer,
+    init
+  );
 
   async function handleSubmit(evt) {
     evt.preventDefault();
+
+    if (title === "" || description === "") {
+      return dispatch({
+        type: "error",
+        payload: "Title and description is required in post!",
+      });
+    }
+
     const { topic, file } = Object.fromEntries(
       new FormData(evt.target).entries()
     );
@@ -80,6 +100,7 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={(evt) => evt.preventDefault()}>
+      {JSON.stringify(state, null, 4)}
       <RadioGroup />
       <Input
         value={title}

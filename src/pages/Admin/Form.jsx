@@ -41,6 +41,15 @@ function reducer(prevState, action) {
         ...prevState,
         error: payload,
       };
+    case "reset":
+      return {
+        title: "",
+        description: "",
+        loadingImageUpload: false,
+        loadingDataUpload: false,
+        error: null,
+        success: null,
+      };
     default:
       throw new Error(`No Action called ${type}`);
   }

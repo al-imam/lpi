@@ -69,6 +69,13 @@ function reducer(prevState, action) {
         error: payload,
       };
 
+    case "successImageUpload":
+      return {
+        ...prevState,
+        loadingImageUpload: false,
+        success: payload,
+      };
+
     case "reset":
       return {
         title: "",
@@ -117,7 +124,10 @@ function Form() {
       try {
         const uploadTask = await uploadBytes(folderRef, file);
         url = await getDownloadURL(uploadTask.ref);
-        dispatch({ type: "loadingImageUpload", payload: false });
+        dispatch({
+          type: "successImageUpload",
+          payload: "Image successfully uploaded",
+        });
       } catch (error) {
         console.warn(error);
 

@@ -1,6 +1,7 @@
 import FileInput from "@components/FileInput/FileInput";
 import Input, { Textarea } from "@components/Input/Input";
 import RadioInput from "@components/RadioInput/RadioInput";
+import Alert from "@components/Alert/Alert";
 import generateId from "@util/generateId";
 import classes from "./admin.module.css";
 import { app } from "../../firebase";
@@ -198,6 +199,7 @@ function Form() {
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
       {JSON.stringify(state, null, 4)}
+      <Alert />
       <RadioGroup />
       <Input
         value={title}

@@ -31,16 +31,25 @@ function reducer(prevState, action) {
         ...prevState,
         title: payload,
       };
+
     case "description":
       return {
         ...prevState,
         description: payload,
       };
+
     case "error":
       return {
         ...prevState,
         error: payload,
       };
+
+    case "success":
+      return {
+        ...prevState,
+        success: payload,
+      };
+
     case "reset":
       return {
         title: "",

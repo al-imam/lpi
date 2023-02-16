@@ -21,6 +21,7 @@ const init = {
   loadingDataUpload: false,
   error: null,
   success: null,
+  removeImage: false,
 };
 
 function reducer(prevState, action) {
@@ -98,6 +99,15 @@ function reducer(prevState, action) {
         loadingDataUpload: false,
         error: null,
         success: null,
+        removeImage: true,
+      };
+
+    case "resetErrorAndSuccess":
+      return {
+        ...prevState,
+        error: null,
+        success: null,
+        removeImage: false,
       };
 
     default:
@@ -114,10 +124,12 @@ function Form() {
   async function handleSubmit(evt) {
     evt.preventDefault();
 
+    dispatch({ type: "resetErrorAndSuccess" });
+
     if (title === "" || description === "") {
       return dispatch({
         type: "error",
-        payload: "Title and description is required in post!",
+        payload: "Title and description is required in post! ☹️",
       });
     }
 
@@ -140,7 +152,7 @@ function Form() {
         url = await getDownloadURL(uploadTask.ref);
         dispatch({
           type: "successImageUpload",
-          payload: "Image successfully uploaded",
+          payload: "Image successfully uploaded 😊",
         });
       } catch (error) {
         console.warn(error);
@@ -150,6 +162,8 @@ function Form() {
           payload: "Image upload failed! Try later 😫",
         });
       }
+
+      dispatch({ type: "reset" });
     }
 
     dispatch({ type: "loadingDataUpload", payload: true });
@@ -167,7 +181,7 @@ function Form() {
 
       dispatch({
         type: "successDataUpload",
-        payload: "Post successfully uploaded",
+        payload: "Post successfully uploaded 😊",
       });
 
       console.log({ ...payload, id });
@@ -196,7 +210,10 @@ function Form() {
         setValue={(value) => dispatch({ type: "description", payload: value })}
         placeholder="Say more about current News or Notice"
       />
-      <FileInput loading={state.loadingImageUpload} />
+      <FileInput
+        remove={state.removeImage}
+        loading={state.loadingImageUpload}
+      />
       <Input
         type="submit"
         value="Post"

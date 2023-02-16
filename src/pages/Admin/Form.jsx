@@ -62,6 +62,13 @@ function reducer(prevState, action) {
         loadingImageUpload: payload,
       };
 
+    case "errorImageUpload":
+      return {
+        ...prevState,
+        loadingImageUpload: false,
+        error: payload,
+      };
+
     case "reset":
       return {
         title: "",
@@ -71,6 +78,7 @@ function reducer(prevState, action) {
         error: null,
         success: null,
       };
+
     default:
       throw new Error(`No Action called ${type}`);
   }
@@ -99,6 +107,7 @@ function Form() {
     let url = null;
 
     if (file.name !== "") {
+      dispatch({ type: "loadingImageUpload", payload: true });
       const storage = getStorage(app);
       const folderRef = ref(
         storage,
@@ -108,8 +117,14 @@ function Form() {
       try {
         const uploadTask = await uploadBytes(folderRef, file);
         url = await getDownloadURL(uploadTask.ref);
+        dispatch({ type: "loadingImageUpload", payload: false });
       } catch (error) {
-        return console.warn(error);
+        console.warn(error);
+
+        return dispatch({
+          type: "errorImageUpload",
+          payload: "Image upload failed! Try later 😫",
+        });
       }
     }
 
@@ -129,7 +144,7 @@ function Form() {
   }
 
   return (
-    <form className={classes.form} onSubmit={(evt) => evt.preventDefault()}>
+    <form className={classes.form} onSubmit={handleSubmit}>
       {JSON.stringify(state, null, 4)}
       <RadioGroup />
       <Input
@@ -143,8 +158,12 @@ function Form() {
         setValue={(value) => dispatch({ type: "description", payload: value })}
         placeholder="Say more about current News or Notice"
       />
-      <FileInput />
-      <Input type="submit" value="Post" />
+      <FileInput loading={state.loadingImageUpload} />
+      <Input
+        type="submit"
+        value="Post"
+        disabled={state.loadingImageUpload || state.loadingDataUpload}
+      />
     </form>
   );
 }

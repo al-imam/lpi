@@ -66,8 +66,7 @@
 }
 
 .button svg {
-  color: var(--gray-900);
-  opacity: 0.5;
+  color: var(--gray-600);
   background-color: transparent;
   transition: background-color 200ms ease-out;
 }

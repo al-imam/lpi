@@ -1,6 +1,6 @@
 .post {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   --color: #ebabff;
   --color-focus: hsla(286, 100%, 84%, 0.451);
 }
@@ -66,6 +66,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.03);
 }
 
 .image :is(a:hover, a:focus-visible) {

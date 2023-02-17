@@ -5,7 +5,14 @@ function Post() {
   return (
     <div className={classes.post}>
       <p className={classes.title}>
-        <span className={classes.text}>Lorem ipsum dolor sit amet.</span>
+        <p className={classes.text}>Lorem ipsum dolor sit amet.</p>
+        <p className={classes.subtitle}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          voluptates praesentium enim. Velit veritatis quasi dicta, omnis eaque
+          qui numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Odit obcaecati accusantium recusandae aut asperiores magni dignissimos
+          error consequatur expedita iusto?
+        </p>
         <time className={classes.time}>{new Date().toDateString()}</time>
       </p>
       <div className={classes.image}>
@@ -17,13 +24,6 @@ function Post() {
           <Download />
         </a>
       </div>
-      <p className={classes.subtitle}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-        voluptates praesentium enim. Velit veritatis quasi dicta, omnis eaque
-        qui numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Odit obcaecati accusantium recusandae aut asperiores magni dignissimos
-        error consequatur expedita iusto?
-      </p>
     </div>
   );
 }

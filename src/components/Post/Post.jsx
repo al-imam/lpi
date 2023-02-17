@@ -11,8 +11,8 @@ function Post({
   return (
     <div className={classes.post} id={id}>
       <p className={classes.title}>
-        <p className={classes.text}>{title}</p>
-        <p className={classes.subtitle}>{description}</p>
+        <span className={classes.text}>{title}</span>
+        <span className={classes.subtitle}>{description}</span>
         <time className={classes.time}>{date}</time>
       </p>
       {url !== null && (

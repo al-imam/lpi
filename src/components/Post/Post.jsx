@@ -18,7 +18,7 @@ function Post({
       {url !== null && (
         <div className={classes.image}>
           <img src={url} alt="Post image" />
-          <a href={url} download={true}>
+          <a href={url} download={true} target="_blank">
             <Download />
           </a>
         </div>

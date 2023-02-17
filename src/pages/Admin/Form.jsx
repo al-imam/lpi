@@ -44,12 +44,14 @@ function reducer(prevState, action) {
       return {
         ...prevState,
         error: payload,
+        success: null,
       };
 
     case "success":
       return {
         ...prevState,
         success: payload,
+        error: null,
       };
 
     case "loadingDataUpload":
@@ -62,6 +64,7 @@ function reducer(prevState, action) {
       return {
         ...prevState,
         loadingImageUpload: payload,
+        removeImage: false,
       };
 
     case "errorImageUpload":
@@ -76,6 +79,7 @@ function reducer(prevState, action) {
         ...prevState,
         loadingImageUpload: false,
         success: payload,
+        removeImage: true,
       };
 
     case "errorDataUpload":
@@ -94,13 +98,11 @@ function reducer(prevState, action) {
 
     case "reset":
       return {
+        ...prevState,
         title: "",
         description: "",
         loadingImageUpload: false,
         loadingDataUpload: false,
-        error: null,
-        success: null,
-        removeImage: true,
       };
 
     case "resetErrorAndSuccess":
@@ -108,7 +110,6 @@ function reducer(prevState, action) {
         ...prevState,
         error: null,
         success: null,
-        removeImage: false,
       };
 
     default:
@@ -163,8 +164,6 @@ function Form() {
           payload: "Image upload failed! Try later 😫",
         });
       }
-
-      dispatch({ type: "reset" });
     }
 
     dispatch({ type: "loadingDataUpload", payload: true });
@@ -194,12 +193,26 @@ function Form() {
         payload: "Post upload failed! Try later 😫",
       });
     }
+
+    dispatch({ type: "reset" });
   }
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      {JSON.stringify(state, null, 4)}
-      <Alert />
+      {state.success !== null && state.error === null && (
+        <Alert
+          error={false}
+          text={state.success}
+          close={() => dispatch({ type: "success", payload: null })}
+        />
+      )}
+      {state.error !== null && state.success === null && (
+        <Alert
+          error={true}
+          text={state.error}
+          close={() => dispatch({ type: "error", payload: null })}
+        />
+      )}
       <RadioGroup />
       <Input
         value={title}

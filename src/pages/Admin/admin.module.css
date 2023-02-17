@@ -49,6 +49,7 @@
   font-size: var(--h6);
   gap: 1rem;
   flex: 1;
+  position: relative;
 }
 
 .radioGroup {
@@ -58,4 +59,21 @@
   outline: 1px solid var(--gray-200);
   border-radius: 0.25rem;
   padding: 1rem;
+}
+
+.loading {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 347px;
+  bottom: calc(51px + 1rem);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading svg {
+  color: var(--white, white);
+  transform: scale(1.5);
 }

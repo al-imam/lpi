@@ -3,6 +3,7 @@ import Input, { Textarea } from "@components/Input/Input";
 import RadioInput from "@components/RadioInput/RadioInput";
 import Alert from "@components/Alert/Alert";
 import generateId from "@util/generateId";
+import { LoadingLoop } from "@svg";
 import classes from "./admin.module.css";
 import { app } from "../../firebase";
 
@@ -234,6 +235,11 @@ function Form() {
         value="Post"
         disabled={state.loadingImageUpload || state.loadingDataUpload}
       />
+      {state.loadingDataUpload && (
+        <div className={classes.loading}>
+          <LoadingLoop />
+        </div>
+      )}
     </form>
   );
 }

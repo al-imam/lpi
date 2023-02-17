@@ -10,7 +10,7 @@ function News() {
       <Location current="News And event" />
       <section className={classes.section}>
         <div className={classes.container}>
-          {loading
+          {loading && error === null
             ? "Loading..."
             : documents.map((e) => (
                 <Post
@@ -21,7 +21,6 @@ function News() {
                   description={e.description}
                 />
               ))}
-          {JSON.stringify(documents) + " " + JSON.stringify(error)}
         </div>
       </section>
     </>

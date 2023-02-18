@@ -3,6 +3,10 @@ import classes from "./news.module.css";
 import Location from "@components/Location/Location";
 import useGetData from "@hooks/useGetData";
 
+const date = Intl.DateTimeFormat("bn-bd", {
+  dateStyle: "full",
+});
+
 function News() {
   const { documents, error, loading } = useGetData("news");
   return (
@@ -14,9 +18,10 @@ function News() {
             ? "Loading..."
             : documents.map((e) => (
                 <Post
+                  key={e.id}
                   id={e.id}
                   url={e.url}
-                  date={e.date.toDateString()}
+                  date={date.format(e.date)}
                   title={e.title}
                   description={e.description}
                 />

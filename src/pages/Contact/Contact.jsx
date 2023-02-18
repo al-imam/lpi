@@ -4,7 +4,6 @@ import Subscribe from "@components/Subscribe/Subscribe";
 import { useLocation } from "react-router-dom";
 import Input, { Textarea } from "@components/Input/Input";
 import { useEffect, useState } from "react";
-import Email from "../../util/smtp";
 
 const init = {
   name: "",
@@ -19,7 +18,7 @@ function Contact() {
 
   useEffect(() => {
     setStore((p) => ({ ...p, subject: location.state ?? "" }));
-  }, [location.state]);
+  }, [location.key]);
 
   return (
     <main className={classes.s}>
@@ -36,7 +35,7 @@ function Contact() {
             </p>
           </div>
 
-          <form className={classes.form} onSubmit={handleSubmit}>
+          <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
             <Input
               value={store.name}
               setValue={(value) => setStore((p) => ({ ...p, name: value }))}

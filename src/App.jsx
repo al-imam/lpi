@@ -20,9 +20,9 @@ import data from "@app/data";
 import Links from "@components/Links/Links";
 import Section from "@components/Section/Section";
 import Post from "@components/Post/Post";
-import News from "./pages/News/News";
-import Login from "./pages/Login/Login";
-import Admin from "./pages/Admin/Admin";
+import NewsOrNotice from "@pages/NewsOrNotice/NewsOrNotice";
+import Login from "@pages/Login/Login";
+import Admin from "@pages/Admin/Admin";
 
 const About = lazy(() => import("@pages/About/About"));
 
@@ -79,7 +79,16 @@ function App() {
         />
         <Route path="/facilities/modern-lab" element={<Lab />} />
         <Route path="/facilities/open-library" element={<Open />} />
-        <Route path="/news" element={<News />} />
+        <Route
+          path="/news"
+          element={
+            <NewsOrNotice location="News And Event" collectionRef="news" />
+          }
+        />
+        <Route
+          path="/notice"
+          element={<NewsOrNotice location="Notice" collectionRef="notice" />}
+        />
         <Route path="/notice" element={<Post />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/login" element={<Login />} />

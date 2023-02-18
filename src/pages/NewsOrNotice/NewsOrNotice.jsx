@@ -1,5 +1,5 @@
 import Post from "@components/Post/Post";
-import classes from "./news.module.css";
+import classes from "./newsOrNotice.module.css";
 import Location from "@components/Location/Location";
 import useGetData from "@hooks/useGetData";
 
@@ -7,11 +7,11 @@ const date = Intl.DateTimeFormat("bn-bd", {
   dateStyle: "full",
 });
 
-function News() {
-  const { documents, error, loading } = useGetData("news");
+function NewsOrNotice({ location, collectionRef }) {
+  const { documents, error, loading } = useGetData(collectionRef);
   return (
     <>
-      <Location current="News And event" />
+      <Location current={location} />
       <section className={classes.section}>
         <div className={classes.container}>
           {loading && error === null
@@ -32,4 +32,4 @@ function News() {
   );
 }
 
-export default News;
+export default NewsOrNotice;

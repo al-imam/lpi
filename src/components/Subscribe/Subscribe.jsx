@@ -1,6 +1,7 @@
 import { useState } from "react";
 import classes from "./sub.module.css";
 import Input from "@components/Input/Input";
+import Alert from "@components/Alert/Alert";
 
 console.log(classes);
 
@@ -20,25 +21,21 @@ function Subscribe() {
     if (sub) {
       if (value === "reset") {
         setSub(false);
-        setValue("");
-        return;
+        return setValue("");
       }
-      setError("You're already a subscriber !");
-      return;
+      return setSuccess("You're already a subscriber! 😂");
     }
 
     if (value.trim() === "") {
-      setError("Email is required !");
-      return;
+      return setError("Email is required! 😤");
     }
 
     if (!value.match(emailRegex)) {
-      setError("Enter a valid mail address");
-      return;
+      return setError("Enter a valid mail address! 😤");
     }
 
     setValue("");
-    setSuccess("Successfully Subscribed !");
+    setSuccess("Successfully Subscribed! 😊");
     setSub(true);
   }
 
@@ -51,9 +48,15 @@ function Subscribe() {
             <span>Subscribe for future Notice's and updates!</span>
           </div>
           <form className={classes.form} onSubmit={handleSubmit} noValidate>
-            {error === null || <span className={classes.error}>{error}</span>}
+            {error === null || (
+              <Alert text={error} close={() => setError(null)} />
+            )}
             {success === null || (
-              <span className={classes.success}>{success}</span>
+              <Alert
+                text={success}
+                error={false}
+                close={() => setSuccess(null)}
+              />
             )}
             <Input
               placeholder="example@gmail.com"

@@ -88,6 +88,8 @@
   color: var(--gray-700);
   line-height: var(--line-height);
   max-width: 70ch;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 @media only screen and (max-width: 65rem) {

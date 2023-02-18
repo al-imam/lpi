@@ -18,7 +18,7 @@
 }
 
 :where(.heading, .date, .subtitle) {
-  font-family: var(--ff-primary);
+  font-family: var(--ff-secondary);
   font-weight: var(--fw-regular);
   font-size: var(--h6);
 }

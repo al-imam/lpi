@@ -1,5 +1,5 @@
 import classes from "./post.module.css";
-import { Download } from "@svg";
+import { Fullscreen } from "@svg";
 
 function Post({
   title = "Lorem ipsum dolor sit amet",
@@ -24,7 +24,7 @@ function Post({
             download={true}
             target="_blank"
           >
-            <Download />
+            <Fullscreen />
           </a>
         </div>
       )}

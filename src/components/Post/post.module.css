@@ -15,6 +15,10 @@
   outline: 1px solid var(--dark);
 }
 
+:is(.post:target, .post:hover) .image {
+  transform: scale(1.04);
+}
+
 .post.min {
   height: auto;
 }
@@ -87,6 +91,7 @@
   height: 100%;
   object-fit: cover;
   transform: scale(1.03);
+  transition: transform 500ms ease;
 }
 
 .download:is(:hover, :focus-visible) {

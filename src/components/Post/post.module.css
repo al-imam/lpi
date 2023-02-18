@@ -9,6 +9,10 @@
   --color-focus: hsla(286, 100%, 84%, 0.451);
 }
 
+.post.min {
+  height: auto;
+}
+
 .post > * {
   flex: 1;
 }
@@ -47,6 +51,7 @@
 .imageContainer {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .download {
@@ -106,14 +111,10 @@
     flex-direction: column;
     height: auto;
   }
-
-  .imageContainer {
-    aspect-ratio: 16 / 10;
-  }
 }
 
-@media only screen and (max-width: 31rem) {
-  .imageContainer {
-    aspect-ratio: auto;
+@media only screen and (max-width: 30rem) {
+  .text {
+    padding: 2rem 1.5rem;
   }
 }

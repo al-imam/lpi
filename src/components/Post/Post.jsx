@@ -9,7 +9,7 @@ function Post({
   id = null,
 }) {
   return (
-    <div className={classes.post} id={id}>
+    <div className={classes.post + ` ${url === null && classes.min}`} id={id}>
       <p className={classes.text}>
         <span className={classes.heading}>{title}</span>
         <span className={classes.subtitle}>{description}</span>

@@ -9,6 +9,12 @@
   --color-focus: hsla(286, 100%, 84%, 0.451);
 }
 
+.post:target,
+.post:hover {
+  box-shadow: 0 0 0 5px var(--light);
+  outline: 1px solid var(--dark);
+}
+
 .post.min {
   height: auto;
 }

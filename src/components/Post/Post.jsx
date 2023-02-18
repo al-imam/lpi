@@ -10,15 +10,20 @@ function Post({
 }) {
   return (
     <div className={classes.post} id={id}>
-      <p className={classes.title}>
-        <span className={classes.text}>{title}</span>
+      <p className={classes.text}>
+        <span className={classes.heading}>{title}</span>
         <span className={classes.subtitle}>{description}</span>
-        <time className={classes.time}>{date}</time>
+        <time className={classes.date}>{date}</time>
       </p>
       {url !== null && (
-        <div className={classes.image}>
-          <img src={url} alt="Post image" />
-          <a href={url} download={true} target="_blank">
+        <div className={classes.imageContainer}>
+          <img className={classes.image} src={url} alt="Post image" />
+          <a
+            className={classes.download}
+            href={url}
+            download={true}
+            target="_blank"
+          >
             <Download />
           </a>
         </div>

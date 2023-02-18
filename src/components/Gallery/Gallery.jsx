@@ -1,6 +1,5 @@
-import { useState } from "react";
 import classes from "./gallery.module.css";
-import { Fullscreen } from "@svg";
+import Picture from "@components/Picture/Picture";
 
 function Gallery({ pictures, heading }) {
   return (
@@ -18,26 +17,3 @@ function Gallery({ pictures, heading }) {
 }
 
 export default Gallery;
-
-function Picture({ url }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div
-      className={`${classes.imgContainer} ${isOpen ? classes.open : ""}`}
-      onClick={() => setIsOpen(false)}
-    >
-      <img
-        onClick={(evt) => {
-          evt.stopPropagation();
-          setIsOpen(true);
-        }}
-        className={classes.img}
-        src={url}
-      />
-      <div className={classes.svg}>
-        <Fullscreen />
-      </div>
-    </div>
-  );
-}

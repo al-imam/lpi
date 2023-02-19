@@ -94,7 +94,12 @@ function App() {
         <Route path="/admin/login" element={<Login />} />
       </Routes>
       <Section>
-        <Links data={data} font="english" />
+        <Links
+          array={data}
+          heading="Related links"
+          font="english"
+          fallback="No links available"
+        />
       </Section>
       <Footer />
     </BrowserRouter>

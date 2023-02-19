@@ -1,29 +1,26 @@
-export default {
-  heading: "Related Links",
-  links: [
-    {
-      text: "Directorate Of Technical Education",
-      link: "http://www.techedu.gov.bd",
-    },
-    {
-      text: "Bangladesh Technical Education Board",
-      link: "http://www.bteb.gov.bd",
-    },
-    {
-      text: "Ministry of Education",
-      link: "http://www.moedu.gov.bd",
-    },
-    {
-      text: "Skills and Training Enhancement Project",
-      link: "http://www.step-dte.gov.bd/",
-    },
-    {
-      text: "Bangladesh Public Service Commission",
-      link: "http://www.bpsc.gov.bd/",
-    },
-    {
-      text: "Bangladesh Computer Council",
-      link: "http://www.bcc.gov.bd/",
-    },
-  ],
-};
+export default [
+  {
+    title: "Directorate Of Technical Education",
+    id: "http://www.techedu.gov.bd",
+  },
+  {
+    title: "Bangladesh Technical Education Board",
+    id: "http://www.bteb.gov.bd",
+  },
+  {
+    title: "Ministry of Education",
+    id: "http://www.moedu.gov.bd",
+  },
+  {
+    title: "Skills and Training Enhancement Project",
+    id: "http://www.step-dte.gov.bd/",
+  },
+  {
+    title: "Bangladesh Public Service Commission",
+    id: "http://www.bpsc.gov.bd/",
+  },
+  {
+    title: "Bangladesh Computer Council",
+    id: "http://www.bcc.gov.bd/",
+  },
+];

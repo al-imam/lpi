@@ -2,6 +2,7 @@ import Post from "@components/Post/Post";
 import classes from "./newsOrNotice.module.css";
 import Location from "@components/Location/Location";
 import useGetData from "@hooks/useGetData";
+import { LoadingLoopCircle } from "@svg";
 
 const date = Intl.DateTimeFormat("bn-bd", {
   dateStyle: "full",
@@ -30,8 +31,12 @@ function NewsOrNotice({ location, collectionRef }) {
                     description={e.description}
                   />
                 ))}
-              {loading && error === null && "Loading......"}
-              {error && error}
+              {loading && error === null && (
+                <div style={{ textAlign: "center" }}>
+                  <LoadingLoopCircle style={{ transform: "scale(2)" }} />
+                </div>
+              )}
+              {error && <p className={classes.no}>{error}</p>}
             </>
           )}
         </div>

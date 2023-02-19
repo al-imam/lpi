@@ -7,7 +7,7 @@ function useGetData(ref) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const id = setTimeout(() => setLoading(false), 600);
+    const id = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(id);
 
     async function get() {

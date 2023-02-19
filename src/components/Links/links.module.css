@@ -94,8 +94,3 @@
 :is(.action:hover, .action:focus-visible) .svg {
   transform: translateX(0.2rem) scale(0.8);
 }
-
-.fallback {
-  font-size: var(--h5);
-  margin-bottom: 2rem;
-}

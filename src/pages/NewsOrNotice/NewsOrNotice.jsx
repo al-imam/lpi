@@ -2,22 +2,20 @@ import Post from "@components/Post/Post";
 import classes from "./newsOrNotice.module.css";
 import Location from "@components/Location/Location";
 import useGetData from "@hooks/useGetData";
-import Alter from "../../components/Alert/Alert";
 
 const date = Intl.DateTimeFormat("bn-bd", {
   dateStyle: "full",
 });
 
 function NewsOrNotice({ location, collectionRef }) {
-  const { documents: lol, error, loading } = useGetData(collectionRef);
-  let documents = [];
+  const { documents, error, loading } = useGetData(collectionRef);
   return (
     <>
       <Location current={location} />
       <section className={classes.section}>
         <div className={classes.container}>
           {documents.length === 0 && !loading ? (
-            <p>No {location} available</p>
+            <p className={classes.no}>No {location} available</p>
           ) : (
             <>
               {loading === false &&

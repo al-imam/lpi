@@ -17,6 +17,11 @@
   margin-bottom: 1.5rem;
 }
 
+.fallback {
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .items {
   display: flex;
   flex-direction: column;

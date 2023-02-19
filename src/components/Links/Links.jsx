@@ -14,7 +14,7 @@ function Links({
   const show = array.length > 0;
   return (
     <div className={classes.container + " " + classes[font]}>
-      <h2 className={`${classes.heading} ${show ? classes.mb2 : ""}`}>
+      <h2 className={`${classes.heading} ${show ? "" : classes.fallback}`}>
         {show ? data.heading : fallback}
       </h2>
       {array.length > 0 && (

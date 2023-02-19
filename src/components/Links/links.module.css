@@ -20,6 +20,7 @@
 .fallback {
   margin-bottom: 0;
   text-align: center;
+  color: var(--gray-400);
 }
 
 .items {

@@ -8,19 +8,18 @@ function Links({
   link = "#",
   text = "View all",
   page = false,
-  fallback = "No Notice Available",
+  fallback = "Not Available",
 }) {
-  const array = [];
-  const show = array.length > 0;
+  const show = data.links.length > 0;
   return (
     <div className={classes.container + " " + classes[font]}>
       <h2 className={`${classes.heading} ${show ? "" : classes.fallback}`}>
         {show ? data.heading : fallback}
       </h2>
-      {array.length > 0 && (
+      {show && (
         <>
           <ul className={classes.items}>
-            {array.map((item) => (
+            {data.links.map((item) => (
               <li key={JSON.stringify(item)}>
                 <Link path={item.link} text={item.text} />
               </li>

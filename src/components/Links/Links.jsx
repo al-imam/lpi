@@ -11,10 +11,13 @@ function Links({
   fallback = "No Notice Available",
 }) {
   const array = [];
+  const show = array.length > 0;
   return (
     <div className={classes.container + " " + classes[font]}>
-      <h2 className={classes.heading}>{data.heading}</h2>
-      {array.length > 0 ? (
+      <h2 className={`${classes.heading} ${show ? classes.mb2 : ""}`}>
+        {show ? data.heading : fallback}
+      </h2>
+      {array.length > 0 && (
         <>
           <ul className={classes.items}>
             {array.map((item) => (
@@ -27,10 +30,8 @@ function Links({
             <NavLink to={link} className={classes.action}>
               {text} <ArrowRight className={classes.svg} />
             </NavLink>
-          )}{" "}
+          )}
         </>
-      ) : (
-        <span>{fallback}</span>
       )}
     </div>
   );

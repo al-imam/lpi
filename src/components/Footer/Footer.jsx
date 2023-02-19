@@ -32,6 +32,12 @@ function Footer() {
             <li className={classes.linkItem}>
               <NavLink to="/contact">Contact</NavLink>
             </li>
+            <li className={classes.linkItem}>
+              <NavLink to="/admin">Admin</NavLink>
+            </li>
+            <li className={classes.linkItem}>
+              <NavLink to="/admin/login">Login</NavLink>
+            </li>
           </ul>
         </div>
         <div className={classes.footerLogo}>

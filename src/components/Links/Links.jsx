@@ -6,7 +6,7 @@ function Links({
   data,
   font = "bangla",
   link = "#",
-  linkText = "View all",
+  text = "View all",
   page = false,
 }) {
   return (
@@ -21,7 +21,7 @@ function Links({
       </ul>
       {page && (
         <NavLink to={link} className={classes.action}>
-          {linkText} <ArrowRight className={classes.svg} />
+          {text} <ArrowRight className={classes.svg} />
         </NavLink>
       )}
     </div>

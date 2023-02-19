@@ -1,5 +1,6 @@
 import Input, { PasswordInput } from "@components/Input/Input";
 import { useState, useReducer } from "react";
+import { useAuth } from "../../context/AuthContext";
 import classes from "./login.module.css";
 
 const init = {
@@ -21,7 +22,7 @@ function reducer(prevState, action) {
         password: payload,
       };
     default:
-      throw new Error(`No Action called ${type}`);
+      throw new Error(`No action called ${type}`);
   }
 }
 
@@ -45,6 +46,7 @@ export default function Contact() {
 
 function Form() {
   const [{ email, password }, dispatch] = useReducer(reducer, init);
+  const { currentUser } = useAuth();
 
   return (
     <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
@@ -60,6 +62,7 @@ function Form() {
         placeholder="Password"
       />
       <Input type="submit" value="Login" />
+      {JSON.stringify(currentUser)}
     </form>
   );
 }

@@ -9,26 +9,33 @@ const date = Intl.DateTimeFormat("bn-bd", {
 });
 
 function NewsOrNotice({ location, collectionRef }) {
-  const { documents, error, loading } = useGetData(collectionRef);
+  const { documents: lol, error, loading } = useGetData(collectionRef);
+  let documents = [];
   return (
     <>
       <Location current={location} />
       <section className={classes.section}>
         <div className={classes.container}>
-          {loading === false &&
-            error === null &&
-            documents.map((e) => (
-              <Post
-                key={e.id}
-                id={e.id}
-                url={e.url}
-                date={date.format(e.date)}
-                title={e.title}
-                description={e.description}
-              />
-            ))}
-          {loading && error === null && "Loading......"}
-          {error && error}
+          {documents.length === 0 && !loading ? (
+            <p>No {location} available</p>
+          ) : (
+            <>
+              {loading === false &&
+                error === null &&
+                documents.map((e) => (
+                  <Post
+                    key={e.id}
+                    id={e.id}
+                    url={e.url}
+                    date={date.format(e.date)}
+                    title={e.title}
+                    description={e.description}
+                  />
+                ))}
+              {loading && error === null && "Loading......"}
+              {error && error}
+            </>
+          )}
         </div>
       </section>
     </>

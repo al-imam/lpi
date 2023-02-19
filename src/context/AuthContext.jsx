@@ -1,4 +1,4 @@
-import app from "@app/firebase";
+import { app } from "@app/firebase";
 
 import {
   getAuth,
@@ -18,7 +18,7 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUSer] = (useState < User) | (null > null);
+  const [currentUser, setCurrentUSer] = useState(null);
   const [loading, setLoading] = useState(true);
 
   function login(email, password) {

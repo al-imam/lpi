@@ -3,23 +3,24 @@ import { NavLink } from "react-router-dom";
 import { ArrowRight } from "@svg";
 
 function Links({
-  data,
+  array = [],
   font = "bangla",
   link = "#",
   text = "View all",
   page = false,
   fallback = "Not Available",
+  heading,
 }) {
-  const show = data.links.length > 0;
+  const show = array.length > 0;
   return (
     <div className={classes.container + " " + classes[font]}>
       <h2 className={`${classes.heading} ${show ? "" : classes.fallback}`}>
-        {show ? data.heading : fallback}
+        {show ? heading : fallback}
       </h2>
       {show && (
         <>
           <ul className={classes.items}>
-            {data.links.map((item) => (
+            {array.map((item) => (
               <li key={JSON.stringify(item)}>
                 <Link path={item.link} text={item.text} />
               </li>

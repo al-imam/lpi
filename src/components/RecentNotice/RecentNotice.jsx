@@ -1,11 +1,12 @@
 import Links from "@components/Links/Links";
-import data from "./data";
+import array from "./data";
 
 function RecentNotice() {
   return (
     <Links
       text="More Notice"
-      data={data}
+      heading="Recent notice"
+      array={array}
       page={true}
       fallback="No notice available"
     />

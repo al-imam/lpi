@@ -1,11 +1,12 @@
 import Links from "@components/Links/Links";
-import data from "./data";
+import array from "./data";
 
 function News() {
   return (
     <Links
       text="More News"
-      data={data}
+      heading="News and event"
+      array={array}
       page={true}
       fallback="No news available"
     />

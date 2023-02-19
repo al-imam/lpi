@@ -3,10 +3,13 @@ import { getFirestore, getDocs, collection } from "firebase/firestore";
 
 function useGetData(ref) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const id = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(id);
+
     async function get() {
       setLoading(true);
       const db = getFirestore();
@@ -83,7 +86,7 @@ function useGetData(ref) {
         id: "zNleZzDSoHZRn2ZSDJeU",
       },
     ],
-    loading: false,
+    loading: loading,
     error: null,
   };
 }

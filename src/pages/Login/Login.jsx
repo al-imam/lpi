@@ -46,10 +46,22 @@ export default function Contact() {
 
 function Form() {
   const [{ email, password }, dispatch] = useReducer(reducer, init);
-  const { currentUser } = useAuth();
+  const { currentUser, login, logOut } = useAuth();
+
+  async function submit(event) {
+    event.preventDefault();
+
+    if (currentUser) {
+      return;
+    }
+
+    const formData = Object.fromEntries(new FormData(event.target));
+    await login(formData.email, formData.password);
+    console.log(currentUser);
+  }
 
   return (
-    <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
+    <form className={classes.form} onSubmit={submit}>
       <Input
         value={email}
         setValue={(value) => dispatch({ type: "email", payload: value })}
@@ -62,7 +74,6 @@ function Form() {
         placeholder="Password"
       />
       <Input type="submit" value="Login" />
-      {JSON.stringify(currentUser)}
     </form>
   );
 }

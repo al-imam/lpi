@@ -1,14 +1,15 @@
 import Links from "@components/Links/Links";
-import array from "./data";
+import useGetData from "@hooks/useGetData";
 
 function News() {
+  const { documents, loading } = useGetData("news");
   return (
     <Links
       text="More News"
       heading="News and event"
-      array={array}
+      array={documents}
       page={true}
-      fallback="No news available"
+      fallback={loading ? "Loading..." : "No news available"}
     />
   );
 }

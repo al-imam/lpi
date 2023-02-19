@@ -12,6 +12,7 @@ function Links({
   heading,
 }) {
   const show = array.length > 0;
+
   return (
     <div className={classes.container + " " + classes[font]}>
       <h2 className={`${classes.heading} ${show ? "" : classes.fallback}`}>
@@ -22,7 +23,7 @@ function Links({
           <ul className={classes.items}>
             {array.map((item) => (
               <li key={JSON.stringify(item)}>
-                <Link path={item.link} text={item.text} />
+                <Link path={item.id} text={item.title} />
               </li>
             ))}
           </ul>

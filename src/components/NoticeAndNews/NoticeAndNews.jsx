@@ -6,7 +6,7 @@ function NoticeAndNews() {
   return (
     <section className={classes.section}>
       <div className={classes.container}>
-        {/* <RecentNotice /> */}
+        <RecentNotice />
         <News />
       </div>
     </section>

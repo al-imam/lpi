@@ -1,14 +1,15 @@
 import Links from "@components/Links/Links";
-import array from "./data";
+import useGetData from "@hooks/useGetData";
 
 function RecentNotice() {
+  const { documents, loading } = useGetData("notice");
   return (
     <Links
       text="More Notice"
       heading="Recent notice"
-      array={array}
+      array={documents}
       page={true}
-      fallback="No notice available"
+      fallback={loading ? "Loading..." : "No notice available"}
     />
   );
 }

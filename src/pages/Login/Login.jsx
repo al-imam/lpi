@@ -98,9 +98,12 @@ function Form() {
           payload: "Network error, check your internet connection ☹️",
         });
       } else if (error.code === "auth/wrong-password") {
-        dispatch({ type: "error", payload: error.message });
+        dispatch({
+          type: "error",
+          payload: "Username and password incorrect 😫",
+        });
       } else {
-        dispatch({ type: "error", payload: "Something went wrong ☹️" });
+        dispatch({ type: "error", payload: "Something went wrong 😓" });
       }
       console.dir(error);
     } finally {

@@ -24,6 +24,7 @@ import NewsOrNotice from "@pages/NewsOrNotice/NewsOrNotice";
 import Login from "@pages/Login/Login";
 import Admin from "@pages/Admin/Admin";
 import { AuthProvider } from "@context/AuthContext";
+import Private from "@routes/Private";
 
 const About = lazy(() => import("@pages/About/About"));
 
@@ -95,7 +96,14 @@ function App() {
             element={<NewsOrNotice location="Notice" collectionRef="notice" />}
           />
           <Route path="/notice" element={<Post />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route
+            path="/admin"
+            element={
+              <Private path="/admin/login">
+                <Admin />
+              </Private>
+            }
+          />
           <Route path="/admin/login" element={<Login />} />
         </Routes>
         <Section>

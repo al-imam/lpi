@@ -10,29 +10,57 @@ function useGetData(ref) {
     // const id = setTimeout(() => setLoading(false), 2000);
     // return () => clearTimeout(id);
 
-    async function get() {
+    const local = localStorage.getItem(`firebase-data-${ref}`);
+    console.log(JSON.parse(local));
+
+    setLoading(true);
+
+    if (local) {
+      setData(JSON.parse(local).data);
+      setLoading(false);
+      return;
+    } else {
+      getAndSave();
+      return;
+    }
+
+    function getAndSave() {
+      get().then((data) => {
+        setLoading(false);
+        setData(data);
+        localStorage.setItem(
+          `firebase-data-${ref}`,
+          JSON.stringify({
+            date: Date.now(),
+            data: data,
+          })
+        );
+      });
+    }
+
+    function get() {
       setLoading(true);
       const db = getFirestore();
       const collectionReference = collection(db, ref);
-      try {
-        const querySnapshot = (await getDocs(collectionReference)).docs;
-        const post = querySnapshot.map((q) => {
-          const docs = q.data();
-          docs.date = new Date(docs.date.seconds * 1000);
-          docs.id = q.id;
-          return docs;
-        });
-        setData(post);
+      const documents = getDocs(collectionReference)
+        .then((r) => {
+          const posts = r.docs.map((q) => {
+            const docs = q.data();
+            docs.date = new Date(docs.date.seconds * 1000);
+            docs.id = q.id;
+            return docs;
+          });
 
-        setLoading(false);
-        console.log(post);
-      } catch (error) {
-        console.warn(error);
-        setLoading(false);
-        return setError("Something went wrong!");
-      }
+          return posts;
+        })
+        .catch((error) => {
+          setLoading(false);
+          setError("Something went wrong!");
+          console.warn(error);
+        })
+        .finally(() => setLoading(false));
+      return documents;
     }
-    get();
   }, [ref]);
 
   return { documents: data, loading, error };

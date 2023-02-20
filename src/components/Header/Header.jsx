@@ -6,7 +6,7 @@ import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export default function Header({ setOpen, open }) {
-  const { currentUser } = useAuth();
+  const { currentUser, logOut } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -24,7 +24,10 @@ export default function Header({ setOpen, open }) {
               Login <UserAdd />
             </button>
           ) : (
-            <button className={classes.log + " " + classes.out}>
+            <button
+              className={classes.log + " " + classes.out}
+              onClick={() => logOut()}
+            >
               Logout <UserRemove />
             </button>
           )}

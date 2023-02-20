@@ -16,7 +16,7 @@
 .overlay {
   position: absolute;
   inset: -0.25rem;
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(0.1rem);
   border-radius: 0.25rem;
   display: flex;
   justify-content: center;

@@ -1,22 +1,28 @@
 import { useState, useEffect } from "react";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 
-function useGetData(ref) {
+function useGetData(ref, validate = 60 * 1000) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // const id = setTimeout(() => setLoading(false), 2000);
-    // return () => clearTimeout(id);
-
-    const local = localStorage.getItem(`firebase-data-${ref}`);
-    console.log(JSON.parse(local));
+    const local = JSON.parse(localStorage.getItem(`firebase-data-${ref}`));
 
     setLoading(true);
 
     if (local) {
-      setData(JSON.parse(local).data);
+      if (local.date < Date.now()) {
+        getAndSave();
+        return;
+      }
+      console.log(
+        `Fetch will revalidate after ${(
+          (local.date - Date.now()) /
+          1000
+        ).toFixed(2)}s`
+      );
+      setData(local.data);
       setLoading(false);
       return;
     } else {
@@ -26,12 +32,13 @@ function useGetData(ref) {
 
     function getAndSave() {
       get().then((data) => {
+        console.log(`Fetching ${ref} - ${Date.now() + validate}ms`);
         setLoading(false);
         setData(data);
         localStorage.setItem(
           `firebase-data-${ref}`,
           JSON.stringify({
-            date: Date.now(),
+            date: Date.now() + validate,
             data: data,
           })
         );

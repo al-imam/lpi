@@ -25,6 +25,7 @@ import Login from "@pages/Login/Login";
 import Admin from "@pages/Admin/Admin";
 import { AuthProvider } from "@context/AuthContext";
 import Private from "@routes/Private";
+import Public from "@routes/Public";
 
 const About = lazy(() => import("@pages/About/About"));
 
@@ -104,7 +105,14 @@ function App() {
               </Private>
             }
           />
-          <Route path="/admin/login" element={<Login />} />
+          <Route
+            path="/admin/login"
+            element={
+              <Public path="/admin">
+                <Login />
+              </Public>
+            }
+          />
         </Routes>
         <Section>
           <Links

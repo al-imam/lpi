@@ -89,7 +89,7 @@ function Form() {
         setValue={(value) => dispatch({ type: "password", payload: value })}
         placeholder="Password"
       />
-      <Input type="submit" value="Login" />
+      <Input type="submit" disabled={loading} value="Login" />
     </form>
   );
 }

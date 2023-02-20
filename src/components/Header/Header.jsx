@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
-import { Email, Mobile, Write, Menu } from "@svg";
+import { Email, Mobile, Write, Menu, UserAdd, UserRemove } from "@svg";
 
 export default function Header({ setOpen, open }) {
   return (
@@ -11,7 +11,12 @@ export default function Header({ setOpen, open }) {
           <NavLink className={classes.item} to="/">
             <img className={classes.img} src={logo} alt="Logo" />
           </NavLink>
-          <button>LogIn</button>
+          <button>
+            Login <UserAdd />
+          </button>
+          <button>
+            Logout <UserRemove />
+          </button>
         </div>
         <ul className={classes.items}>
           <li>

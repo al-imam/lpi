@@ -129,7 +129,7 @@
 
 .group {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -144,4 +144,12 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   font-size: var(--h6);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.group button svg {
+  height: 1.25rem;
+  width: auto;
 }

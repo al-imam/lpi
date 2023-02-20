@@ -11,10 +11,10 @@ export default function Header({ setOpen, open }) {
           <NavLink className={classes.item} to="/">
             <img className={classes.img} src={logo} alt="Logo" />
           </NavLink>
-          <button>
+          <button className={classes.log + " " + classes.in}>
             Login <UserAdd />
           </button>
-          <button>
+          <button className={classes.log + " " + classes.out}>
             Logout <UserRemove />
           </button>
         </div>

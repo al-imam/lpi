@@ -129,12 +129,12 @@
 
 .group {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   justify-content: center;
   align-items: center;
 }
 
-.group button {
+.log {
   all: unset;
   height: min-content;
   padding: 0.5rem 1rem;
@@ -146,10 +146,30 @@
   font-size: var(--h6);
   display: flex;
   align-items: center;
+  cursor: pointer;
   gap: 0.5rem;
+  transition: background-color;
 }
 
-.group button svg {
+.log:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.in:is(:hover, :focus-visible) svg {
+  transform: scale(1.1);
+}
+
+.out:is(:hover, :focus-visible) svg {
+  transform: translateX(0.25rem);
+}
+
+.log:focus-visible {
+  box-shadow: 0 0 0 5px var(--light);
+  outline: 1px solid var(--dark);
+}
+
+.log svg {
   height: 1.25rem;
   width: auto;
+  transition: transform 200ms ease-out;
 }

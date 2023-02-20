@@ -3,6 +3,7 @@ import { useReducer } from "react";
 import { useAuth } from "../../context/AuthContext";
 import classes from "./login.module.css";
 import Alert from "@components/Alert/Alert";
+import { LoadingLoopCircle } from "@svg";
 
 const init = {
   email: "",
@@ -121,6 +122,11 @@ function Form() {
         placeholder="Password"
       />
       <Input type="submit" disabled={loading} value="Login" />
+      {loading && (
+        <div className={classes.overlay}>
+          <LoadingLoopCircle />
+        </div>
+      )}
     </form>
   );
 }

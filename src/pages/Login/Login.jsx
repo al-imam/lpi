@@ -64,10 +64,15 @@ function Form() {
 
     const formData = Object.fromEntries(new FormData(event.target));
 
-    dispatch({ type: "loading", payload: true });
-    await login(formData.email, formData.password);
+    try {
+      dispatch({ type: "loading", payload: true });
+      await login(formData.email, formData.password);
+    } catch (error) {
+      console.worn(error);
+    } finally {
+      dispatch({ type: "loading", payload: false });
+    }
 
-    dispatch({ type: "loading", payload: false });
     console.log(currentUser);
   }
 

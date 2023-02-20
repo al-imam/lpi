@@ -93,7 +93,7 @@ function Form() {
       dispatch({ type: "success", payload: "Login successful 😊" });
     } catch (error) {
       dispatch({ type: "error", payload: error.message });
-      console.warn(error);
+      console.dir(error);
     } finally {
       dispatch({ type: "stopLoading" });
     }
@@ -109,6 +109,9 @@ function Form() {
           text={success}
           close={() => dispatch({ type: "reset" })}
         />
+      )}
+      {error === null || (
+        <Alert text={error} close={() => dispatch({ type: "reset" })} />
       )}
       <Input
         value={email}

@@ -9,6 +9,7 @@ const init = {
   password: "",
   loading: false,
   error: null,
+  success: null,
 };
 
 function reducer(prevState, action) {
@@ -34,11 +35,17 @@ function reducer(prevState, action) {
         ...prevState,
         error: payload,
       };
+    case "success":
+      return {
+        ...prevState,
+        success: payload,
+      };
     case "reset":
       return {
         ...prevState,
         loading: true,
         error: null,
+        success: null,
       };
     default:
       throw new Error(`No action called ${type}`);
@@ -64,7 +71,7 @@ export default function Contact() {
 }
 
 function Form() {
-  const [{ email, password, loading, error }, dispatch] = useReducer(
+  const [{ email, password, loading, error, success }, dispatch] = useReducer(
     reducer,
     init
   );
@@ -82,6 +89,7 @@ function Form() {
     try {
       dispatch({ type: "reset" });
       await login(formData.email, formData.password);
+      dispatch({ type: "success", payload: "Login successful 😊" });
     } catch (error) {
       dispatch({ type: "error", payload: error.message });
       console.warn(error);
@@ -94,7 +102,13 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={submit}>
-      {JSON.stringify({ uid: currentUser?.uid, loading, error })}
+      {success === null || (
+        <Alert
+          error={false}
+          text={success}
+          close={() => dispatch({ type: "reset" })}
+        />
+      )}
       <Input
         value={email}
         setValue={(value) => dispatch({ type: "email", payload: value })}

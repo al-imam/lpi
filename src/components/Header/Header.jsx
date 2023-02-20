@@ -3,9 +3,12 @@ import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
 import { Email, Mobile, Write, Menu, UserAdd, UserRemove } from "@svg";
 import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Header({ setOpen, open }) {
   const { currentUser } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <header className={classes.main}>
       <div className={classes.header}>
@@ -16,7 +19,7 @@ export default function Header({ setOpen, open }) {
           {currentUser === null ? (
             <button
               className={classes.log + " " + classes.in}
-              onClick={() => {}}
+              onClick={() => navigate("/admin/login")}
             >
               Login <UserAdd />
             </button>

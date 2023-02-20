@@ -48,6 +48,13 @@ function reducer(prevState, action) {
         error: null,
         success: null,
       };
+    case "clear":
+      return {
+        ...prevState,
+        loading: false,
+        error: null,
+        success: null,
+      };
     case "clearInput":
       return {
         ...prevState,
@@ -126,11 +133,11 @@ function Form() {
         <Alert
           error={false}
           text={success}
-          close={() => dispatch({ type: "reset" })}
+          close={() => dispatch({ type: "clear" })}
         />
       )}
       {error === null || (
-        <Alert text={error} close={() => dispatch({ type: "reset" })} />
+        <Alert text={error} close={() => dispatch({ type: "clear" })} />
       )}
       <Input
         value={email}

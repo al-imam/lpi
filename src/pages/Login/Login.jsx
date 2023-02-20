@@ -1,11 +1,13 @@
 import Input, { PasswordInput } from "@components/Input/Input";
-import { useState, useReducer } from "react";
+import { useReducer } from "react";
 import { useAuth } from "../../context/AuthContext";
 import classes from "./login.module.css";
+import Alert from "@components/Alert/Alert";
 
 const init = {
   email: "",
   password: "",
+  loading: false,
 };
 
 function reducer(prevState, action) {
@@ -20,6 +22,11 @@ function reducer(prevState, action) {
       return {
         ...prevState,
         password: payload,
+      };
+    case "loading":
+      return {
+        ...prevState,
+        loading: payload,
       };
     default:
       throw new Error(`No action called ${type}`);
@@ -45,8 +52,8 @@ export default function Contact() {
 }
 
 function Form() {
-  const [{ email, password }, dispatch] = useReducer(reducer, init);
-  const { currentUser, login, logOut } = useAuth();
+  const [{ email, password, loading }, dispatch] = useReducer(reducer, init);
+  const { currentUser, login } = useAuth();
 
   async function submit(event) {
     event.preventDefault();
@@ -56,7 +63,11 @@ function Form() {
     }
 
     const formData = Object.fromEntries(new FormData(event.target));
+
+    dispatch({ type: "loading", payload: true });
     await login(formData.email, formData.password);
+
+    dispatch({ type: "loading", payload: false });
     console.log(currentUser);
   }
 

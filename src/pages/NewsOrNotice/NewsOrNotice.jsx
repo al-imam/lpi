@@ -26,7 +26,7 @@ function NewsOrNotice({ location, collectionRef }) {
                     key={e.id}
                     id={e.id}
                     url={e.url}
-                    date={date.format(e.date)}
+                    date={date.format(new Date(e.date))}
                     title={e.title}
                     description={e.description}
                   />

@@ -53,7 +53,7 @@ function useGetData(ref, validate = 60 * 1000) {
         .then((r) => {
           const posts = r.docs.map((q) => {
             const docs = q.data();
-            docs.date = new Date(docs.date.seconds * 1000);
+            docs.date = docs.date.seconds * 1000;
             docs.id = q.id;
             return docs;
           });

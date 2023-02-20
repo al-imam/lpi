@@ -2,8 +2,10 @@ import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
 import { Email, Mobile, Write, Menu, UserAdd, UserRemove } from "@svg";
+import { useAuth } from "../../context/AuthContext";
 
 export default function Header({ setOpen, open }) {
+  const { currentUser } = useAuth();
   return (
     <header className={classes.main}>
       <div className={classes.header}>
@@ -11,12 +13,18 @@ export default function Header({ setOpen, open }) {
           <NavLink className={classes.item} to="/">
             <img className={classes.img} src={logo} alt="Logo" />
           </NavLink>
-          <button className={classes.log + " " + classes.in}>
-            Login <UserAdd />
-          </button>
-          <button className={classes.log + " " + classes.out}>
-            Logout <UserRemove />
-          </button>
+          {currentUser === null ? (
+            <button
+              className={classes.log + " " + classes.in}
+              onClick={() => {}}
+            >
+              Login <UserAdd />
+            </button>
+          ) : (
+            <button className={classes.log + " " + classes.out}>
+              Logout <UserRemove />
+            </button>
+          )}
         </div>
         <ul className={classes.items}>
           <li>

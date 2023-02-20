@@ -9,6 +9,7 @@ function RecentNotice() {
       heading="Recent notice"
       array={documents}
       page={true}
+      link="/notice"
       fallback={loading ? "Loading..." : "No notice available"}
     />
   );

@@ -9,6 +9,7 @@ function News() {
       heading="News and event"
       array={documents}
       page={true}
+      link="/news"
       fallback={loading ? "Loading..." : "No news available"}
     />
   );

@@ -8,6 +8,7 @@ const init = {
   email: "",
   password: "",
   loading: false,
+  error: null,
 };
 
 function reducer(prevState, action) {
@@ -23,10 +24,21 @@ function reducer(prevState, action) {
         ...prevState,
         password: payload,
       };
-    case "loading":
+    case "stopLoading":
       return {
         ...prevState,
-        loading: payload,
+        loading: false,
+      };
+    case "error":
+      return {
+        ...prevState,
+        error: payload,
+      };
+    case "reset":
+      return {
+        ...prevState,
+        loading: true,
+        error: null,
       };
     default:
       throw new Error(`No action called ${type}`);
@@ -52,7 +64,10 @@ export default function Contact() {
 }
 
 function Form() {
-  const [{ email, password, loading }, dispatch] = useReducer(reducer, init);
+  const [{ email, password, loading, error }, dispatch] = useReducer(
+    reducer,
+    init
+  );
   const { currentUser, login } = useAuth();
 
   async function submit(event) {
@@ -65,12 +80,13 @@ function Form() {
     const formData = Object.fromEntries(new FormData(event.target));
 
     try {
-      dispatch({ type: "loading", payload: true });
+      dispatch({ type: "reset" });
       await login(formData.email, formData.password);
     } catch (error) {
-      console.worn(error);
+      dispatch({ type: "error", payload: error.message });
+      console.warn(error);
     } finally {
-      dispatch({ type: "loading", payload: false });
+      dispatch({ type: "stopLoading" });
     }
 
     console.log(currentUser);
@@ -78,6 +94,7 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={submit}>
+      {JSON.stringify({ uid: currentUser?.uid, loading, error })}
       <Input
         value={email}
         setValue={(value) => dispatch({ type: "email", payload: value })}

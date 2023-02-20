@@ -24,7 +24,6 @@
 }
 
 .overlay svg {
-  transform: scale(2);
   color: var(--gray-800);
 }
 

@@ -111,7 +111,10 @@ function Form() {
           type: "error",
           payload: "Network error, check your internet connection ☹️",
         });
-      } else if (error.code === "auth/wrong-password") {
+      } else if (
+        error.code === "auth/wrong-password" ||
+        error.code === "auth/user-not-found"
+      ) {
         dispatch({
           type: "error",
           payload: "Username and password incorrect 😫",

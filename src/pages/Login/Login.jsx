@@ -92,7 +92,16 @@ function Form() {
       await login(formData.email, formData.password);
       dispatch({ type: "success", payload: "Login successful 😊" });
     } catch (error) {
-      dispatch({ type: "error", payload: error.message });
+      if (error.code == "auth/network-request-failed") {
+        dispatch({
+          type: "error",
+          payload: "Network error, check your internet connection ☹️",
+        });
+      } else if (error.code === "auth/wrong-password") {
+        dispatch({ type: "error", payload: error.message });
+      } else {
+        dispatch({ type: "error", payload: "Something went wrong ☹️" });
+      }
       console.dir(error);
     } finally {
       dispatch({ type: "stopLoading" });

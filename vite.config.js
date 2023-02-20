@@ -25,6 +25,8 @@ export default defineConfig({
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@assets": path.resolve(__dirname, "/public"),
       "@svg": path.resolve(__dirname, "src/Svg"),
+      "@context": path.resolve(__dirname, "src/context/"),
+      "@routes": path.resolve(__dirname, "src/routes/"),
     },
   },
 });

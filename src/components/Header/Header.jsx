@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
 import { Email, Mobile, Write, Menu, UserAdd, UserRemove } from "@svg";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "@context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export default function Header({ setOpen, open }) {

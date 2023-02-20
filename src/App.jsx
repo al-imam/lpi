@@ -23,7 +23,7 @@ import Post from "@components/Post/Post";
 import NewsOrNotice from "@pages/NewsOrNotice/NewsOrNotice";
 import Login from "@pages/Login/Login";
 import Admin from "@pages/Admin/Admin";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from "@context/AuthContext";
 
 const About = lazy(() => import("@pages/About/About"));
 

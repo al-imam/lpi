@@ -1,6 +1,6 @@
 import Input, { PasswordInput } from "@components/Input/Input";
 import { useReducer } from "react";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "@context/AuthContext";
 import classes from "./login.module.css";
 import Alert from "@components/Alert/Alert";
 import { LoadingLoopCircle } from "@svg";

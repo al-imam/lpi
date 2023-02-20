@@ -48,6 +48,12 @@ function reducer(prevState, action) {
         error: null,
         success: null,
       };
+    case "clearInput":
+      return {
+        ...prevState,
+        email: "",
+        password: "",
+      };
     default:
       throw new Error(`No action called ${type}`);
   }
@@ -91,6 +97,7 @@ function Form() {
       dispatch({ type: "reset" });
       await login(formData.email, formData.password);
       dispatch({ type: "success", payload: "Login successful 😊" });
+      dispatch({ type: "clearInput" });
     } catch (error) {
       if (error.code == "auth/network-request-failed") {
         dispatch({

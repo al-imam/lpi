@@ -4,8 +4,9 @@ import RadioInput from "@components/RadioInput/RadioInput";
 import Alert from "@components/Alert/Alert";
 import generateId from "@util/generateId";
 import { LoadingLoop } from "@svg";
+import { app } from "@app/firebase";
+import { useAuth } from "@context/AuthContext";
 import classes from "./admin.module.css";
-import { app } from "../../firebase";
 
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { useReducer } from "react";
@@ -124,21 +125,40 @@ function Form() {
     init
   );
 
+  const { currentUser } = useAuth();
+
   async function handleSubmit(evt) {
     evt.preventDefault();
 
     dispatch({ type: "resetErrorAndSuccess" });
 
-    if (title === "" || description === "") {
+    if (title.trim() === "" || description.trim() === "") {
       return dispatch({
         type: "error",
-        payload: "Title and description is required in post! ☹️",
+        payload: "Title and description is required 🥲",
       });
     }
 
     const { topic, file } = Object.fromEntries(
       new FormData(evt.target).entries()
     );
+
+    if (currentUser === null) {
+      if (file.name !== "") {
+        dispatch({ type: "loadingImageUpload", payload: true });
+        await new Promise((r, j) => setTimeout(r, 1000));
+        return dispatch({
+          type: "errorImageUpload",
+          payload: "You're not login, please login first! 😫",
+        });
+      }
+      dispatch({ type: "loadingDataUpload", payload: true });
+      await new Promise((r, j) => setTimeout(r, 1000));
+      return dispatch({
+        type: "errorDataUpload",
+        payload: "You're not login, please login first! 😫",
+      });
+    }
 
     let url = null;
 

@@ -1,6 +1,6 @@
 .alert {
   --success: #3ebd61;
-  --error: rgb(255, 137, 137);
+  --error: rgb(255, 179, 179);
 
   display: flex;
   align-items: center;
@@ -19,11 +19,11 @@
 }
 
 .error .svg svg {
-  color: rgb(224, 0, 0);
+  color: rgb(255, 126, 126);
 }
 
 .error {
-  background-color: rgba(255, 184, 184, 0.5);
+  background-color: rgb(255 216 216 / 51%);
   outline: 1px solid var(--error);
 }
 

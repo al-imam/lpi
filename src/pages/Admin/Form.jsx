@@ -146,14 +146,14 @@ function Form() {
     if (currentUser === null) {
       if (file.name !== "") {
         dispatch({ type: "loadingImageUpload", payload: true });
-        await new Promise((r, j) => setTimeout(r, 1000));
+        await new Promise((r, j) => setTimeout(r, 1500));
         return dispatch({
           type: "errorImageUpload",
           payload: "You're not login, please login first! 😫",
         });
       }
       dispatch({ type: "loadingDataUpload", payload: true });
-      await new Promise((r, j) => setTimeout(r, 1000));
+      await new Promise((r, j) => setTimeout(r, 1500));
       return dispatch({
         type: "errorDataUpload",
         payload: "You're not login, please login first! 😫",

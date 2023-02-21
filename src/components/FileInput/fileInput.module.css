@@ -99,13 +99,14 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white, white);
+  backdrop-filter: blur(0.25rem);
 }
 
 .loading svg {
+  color: var(--gray-900);
   transform: scale(1.5);
 }

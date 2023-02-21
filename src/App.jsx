@@ -96,15 +96,7 @@ function App() {
             path="/notice"
             element={<NewsOrNotice location="Notice" collectionRef="notice" />}
           />
-          <Route path="/notice" element={<Post />} />
-          <Route
-            path="/admin"
-            element={
-              <Private path="/admin/login">
-                <Admin />
-              </Private>
-            }
-          />
+          <Route path="/admin" element={<Admin />} />
           <Route
             path="/admin/login"
             element={

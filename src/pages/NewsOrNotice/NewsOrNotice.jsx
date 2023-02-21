@@ -3,6 +3,7 @@ import classes from "./newsOrNotice.module.css";
 import Location from "@components/Location/Location";
 import useGetData from "@hooks/useGetData";
 import { LoadingLoopCircle } from "@svg";
+import { useSearchParams } from "react-router-dom";
 
 const date = Intl.DateTimeFormat("bn-bd", {
   dateStyle: "full",
@@ -10,6 +11,8 @@ const date = Intl.DateTimeFormat("bn-bd", {
 
 function NewsOrNotice({ location, collectionRef }) {
   const { documents, error, loading } = useGetData(collectionRef);
+  const [params] = useSearchParams();
+
   return (
     <>
       <Location current={location} />

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 
-function useGetData(ref, validate = 60 * 1000) {
+function useGetData(ref, validate = 60 * 10 * 1000) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -19,8 +19,8 @@ function useGetData(ref, validate = 60 * 1000) {
       console.log(
         `Fetch will revalidate after ${(
           (local.date - Date.now()) /
-          1000
-        ).toFixed(2)}s`
+          (1000 * 60)
+        ).toFixed(2)}min`
       );
       setData(local.data);
       setLoading(false);

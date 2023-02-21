@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
-import { Email, Mobile, Write, Menu, UserAdd, UserRemove } from "@svg";
+import { Email, Mobile, Write, Menu, UserAdd, UserRemove, Admin } from "@svg";
 import { useAuth } from "@context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -31,6 +31,12 @@ export default function Header({ setOpen, open }) {
               Logout <UserRemove />
             </button>
           )}
+          <button
+            className={classes.log + " " + classes.in}
+            onClick={() => navigate("/admin")}
+          >
+            Admin <Admin />
+          </button>
         </div>
         <ul className={classes.items}>
           <li>

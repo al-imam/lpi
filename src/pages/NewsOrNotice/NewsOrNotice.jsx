@@ -4,6 +4,7 @@ import Location from "@components/Location/Location";
 import useGetData from "@hooks/useGetData";
 import { LoadingLoopCircle } from "@svg";
 import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const date = Intl.DateTimeFormat("bn-bd", {
   dateStyle: "full",
@@ -12,6 +13,22 @@ const date = Intl.DateTimeFormat("bn-bd", {
 function NewsOrNotice({ location, collectionRef }) {
   const { documents, error, loading } = useGetData(collectionRef);
   const [params] = useSearchParams();
+
+  useEffect(() => {
+    const id = params.get("item");
+    const time = setTimeout(() => {
+      if (id) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      }
+    }, 1000);
+    return () => clearTimeout(time);
+  }, []);
 
   return (
     <>

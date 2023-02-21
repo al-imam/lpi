@@ -79,3 +79,17 @@
   color: var(--gray-900);
   transform: scale(1.5);
 }
+
+.login {
+  text-align: center;
+  color: var(--gray-700);
+  font-family: var(--ff-primary);
+  font-size: var(--h6);
+  opacity: 0.8;
+}
+
+.login a {
+  color: rgb(60, 0, 255);
+  letter-spacing: 0.5px;
+  text-decoration: 0.09rem underline currentColor;
+}

@@ -10,6 +10,7 @@ import classes from "./admin.module.css";
 
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { useReducer } from "react";
+import { NavLink } from "react-router-dom";
 import {
   addDoc,
   collection,
@@ -255,6 +256,9 @@ function Form() {
         value="Post"
         disabled={state.loadingImageUpload || state.loadingDataUpload}
       />
+      <p className={classes.login}>
+        <span>Not login?</span> <NavLink to="/admin/login">Login</NavLink>
+      </p>
       {state.loadingDataUpload && (
         <div className={classes.loading}>
           <LoadingLoop />

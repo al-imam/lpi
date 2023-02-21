@@ -23,7 +23,7 @@ function Links({
           <ul className={classes.items}>
             {array.map((item) => (
               <li key={JSON.stringify(item)}>
-                <Link path={item.id} text={item.title} />
+                <Link path={`${link}/?item=${item.id}`} text={item.title} />
               </li>
             ))}
           </ul>

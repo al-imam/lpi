@@ -85,9 +85,13 @@
     align-items: center;
     border-radius: 0.25rem;
     cursor: pointer;
+    outline: 1px solid var(--gray-300);
+    overflow: hidden;
   }
 
   .toggler > svg {
+    height: 100%;
+    width: 100%;
     color: var(--gray-700);
     pointer-events: none;
   }

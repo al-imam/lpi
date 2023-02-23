@@ -102,21 +102,6 @@
   }
 }
 
-@media only screen and (max-width: 37rem) {
-  .items .b {
-    display: none;
-  }
-
-  .header > a {
-    font-size: 1.125rem;
-  }
-
-  .img {
-    height: calc(var(--header-size) * 0.6);
-    transition: transform 200ms ease-out;
-  }
-}
-
 .group {
   display: flex;
   gap: 1.25rem;
@@ -138,6 +123,7 @@
   align-items: center;
   cursor: pointer;
   gap: 0.5rem;
+  user-select: none;
   transition: background-color;
 }
 
@@ -162,4 +148,19 @@
   height: 1.25rem;
   width: auto;
   transition: transform 200ms ease-out;
+}
+
+@media only screen and (max-width: 37rem) {
+  .items .b {
+    display: none;
+  }
+
+  .header > a {
+    font-size: 1.125rem;
+  }
+
+  .img {
+    height: calc(var(--header-size) * 0.6);
+    transition: transform 200ms ease-out;
+  }
 }

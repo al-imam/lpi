@@ -13,7 +13,6 @@ import {
 } from "@svg";
 import { useAuth } from "@context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { InitialMenu } from "../../Svg";
 
 export default function Header({ setOpen, open }) {
   const { currentUser, logOut } = useAuth();

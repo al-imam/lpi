@@ -575,14 +575,14 @@ export function Admin(props) {
   );
 }
 
-export function CloseMenu(props) {
+export function CloseMenu({ duration = 200, ...rest }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
       viewBox="0 0 24 24"
-      {...props}
+      {...rest}
     >
       <g
         fill="none"
@@ -594,8 +594,8 @@ export function CloseMenu(props) {
           <animate
             fill="freeze"
             attributeName="d"
-            begin="0.2s"
-            dur="0.4s"
+            begin={`${duration / 2000}s`}
+            dur={`${duration / 1000}s`}
             values="M5 5L19 5;M5 5L19 19"
           ></animate>
         </path>
@@ -603,17 +603,21 @@ export function CloseMenu(props) {
           <animate
             fill="freeze"
             attributeName="d"
-            dur="0.4s"
+            dur={`${duration / 1000}s`}
             values="M5 12H19;M12 12H12"
           ></animate>
-          <set attributeName="opacity" begin="0.4s" to="0"></set>
+          <set
+            attributeName="opacity"
+            begin={`${duration / 1000}s`}
+            to="0"
+          ></set>
         </path>
         <path d="M5 19L19 19">
           <animate
             fill="freeze"
             attributeName="d"
-            begin="0.2s"
-            dur="0.4s"
+            begin={`${duration / 2000}s`}
+            dur={`${duration / 1000}s`}
             values="M5 19L19 19;M5 19L19 5"
           ></animate>
         </path>
@@ -622,14 +626,14 @@ export function CloseMenu(props) {
   );
 }
 
-export function OpenMenu(props) {
+export function OpenMenu({ duration = 200, ...rest }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
       viewBox="0 0 24 24"
-      {...props}
+      {...rest}
     >
       <g
         fill="none"
@@ -641,7 +645,7 @@ export function OpenMenu(props) {
           <animate
             fill="freeze"
             attributeName="d"
-            dur="0.4s"
+            dur={`${duration / 1000}s`}
             values="M5 5L19 19;M5 5L19 5"
           ></animate>
         </path>
@@ -649,17 +653,21 @@ export function OpenMenu(props) {
           <animate
             fill="freeze"
             attributeName="d"
-            begin="0.2s"
-            dur="0.4s"
+            begin={`${duration / 2000}s`}
+            dur={`${duration / 1000}s`}
             values="M12 12H12;M5 12H19"
           ></animate>
-          <set attributeName="opacity" begin="0.2s" to="1"></set>
+          <set
+            attributeName="opacity"
+            begin={`${duration / 2000}s`}
+            to="1"
+          ></set>
         </path>
         <path d="M5 19L19 5">
           <animate
             fill="freeze"
             attributeName="d"
-            dur="0.4s"
+            dur={`${duration / 1000}s`}
             values="M5 19L19 5;M5 19L19 19"
           ></animate>
         </path>

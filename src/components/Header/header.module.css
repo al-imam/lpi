@@ -93,22 +93,13 @@
   }
 
   .toggler > svg {
-    transform: rotateY(180deg);
-    transition: transform 200ms ease;
+    pointer-events: none;
   }
 
   .toggler:focus-visible {
     outline: 2px solid var(--gray-900);
     outline-offset: 1px;
     filter: brightness(1.2);
-  }
-
-  .toggler:hover {
-    filter: brightness(1.2);
-  }
-
-  .open svg {
-    transform: rotateY(0);
   }
 }
 

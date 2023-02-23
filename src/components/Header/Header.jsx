@@ -1,9 +1,19 @@
 import { NavLink } from "react-router-dom";
 import classes from "./header.module.css";
 import logo from "/assets/logo.svg";
-import { Email, Mobile, Write, Menu, UserAdd, UserRemove, Admin } from "@svg";
+import {
+  Email,
+  Mobile,
+  Write,
+  CloseMenu,
+  OpenMenu,
+  UserAdd,
+  UserRemove,
+  Admin,
+} from "@svg";
 import { useAuth } from "@context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { InitialMenu } from "../../Svg";
 
 export default function Header({ setOpen, open }) {
   const { currentUser, logOut } = useAuth();
@@ -58,7 +68,7 @@ export default function Header({ setOpen, open }) {
             className={`${classes.toggler} ${open ? classes.open : ""}`}
             onClick={() => setOpen((p) => !p)}
           >
-            <Menu />
+            {open ? <CloseMenu /> : <OpenMenu />}
           </button>
         </ul>
       </div>

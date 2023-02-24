@@ -48,6 +48,8 @@ function Subscribe() {
         });
     }
 
+    await setDoc(doc(db, "email", value), {});
+
     updateState({ success: "Successfully Subscribed! 😊" });
   }
 

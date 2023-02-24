@@ -6,12 +6,13 @@ function letter({ lowerCase = true, upperCase = true }) {
   return `[${lowerCase ? "a-z" : ""}${upperCase ? "A-Z" : ""}]`;
 }
 
-function word({ underscore = false }) {
+function word({ underscore = false, haveDot = false }) {
+  if (haveDot) return wordWithHaveDots(underscore);
   return `[a-zA-Z9-0${underscore ? "_" : ""}]`;
 }
 
-function wordWithHaveDots() {
-  return `(\\.[a-zA-Z0-9]+)*`;
+function wordWithHaveDots({ underscore = false }) {
+  return `(\\.[a-zA-Z0-9${underscore ? "_" : ""}]+)*`;
 }
 
 const email = new RegExp();

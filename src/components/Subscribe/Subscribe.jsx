@@ -11,7 +11,6 @@ function Subscribe() {
   const [value, setValue] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const [sub, setSub] = useState(false);
 
   const [state, updateState] = useReducer(
     (prev, next) => ({ ...prev, ...next }),
@@ -22,14 +21,6 @@ function Subscribe() {
     evt.preventDefault();
     setError(null);
     setSuccess(null);
-
-    if (sub) {
-      if (value === "reset") {
-        setSub(false);
-        return setValue("");
-      }
-      return setError("You're already a subscriber! 😂");
-    }
 
     if (value.trim() === "") {
       return setError("Email is required! 😤");

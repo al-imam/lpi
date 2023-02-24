@@ -33,7 +33,7 @@ const email = new RegExp(
     mustHave("@") +
     letter({ lowerCase: true, upperCase: false, range: range(3, 5) }) +
     mustHave(`\\.`) +
-    letter({ lowerCase: true, upperCase: false, range: range(2, 5) })
+    endWith(letter({ lowerCase: true, upperCase: false, range: range(2, 5) }))
 );
 
 export default email;

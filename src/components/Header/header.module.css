@@ -158,9 +158,4 @@
   .header > a {
     font-size: 1.125rem;
   }
-
-  .img {
-    height: calc(var(--header-size) * 0.6);
-    transition: transform 200ms ease-out;
-  }
 }

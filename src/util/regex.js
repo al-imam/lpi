@@ -2,7 +2,7 @@ function startWith(ex) {
   return `^${ex}`;
 }
 
-function letter({ lowerCase = true, upperCase = true, range = "" }) {
+function letter({ lowerCase = true, upperCase = true, range = "{1,}" } = {}) {
   return `[${lowerCase ? "a-z" : ""}${upperCase ? "A-Z" : ""}]${range}`;
 }
 

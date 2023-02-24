@@ -15,6 +15,10 @@ function wordWithHaveDots({ underscore = false }) {
   return `(\\.[a-zA-Z0-9${underscore ? "_" : ""}]+)*`;
 }
 
+function mustHave(ex) {
+  return ex;
+}
+
 const email = new RegExp();
 
 export default email;

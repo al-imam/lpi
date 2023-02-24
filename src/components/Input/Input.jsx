@@ -95,10 +95,11 @@ export function PasswordInput({
   );
 }
 
-export function Button({ children, width = "full", ...rest }) {
+export function Button({ children, type = "submit", width = "full", ...rest }) {
   return (
     <button
       className={`${classes.inputs} ${classes.text} ${classes[width]}`}
+      type={type}
       {...rest}
     >
       {children}

@@ -23,8 +23,6 @@ export default function Header({ setOpen, open }) {
     "(max-width: 75rem) and (min-width: 67.5rem)"
   );
 
-  console.log(hideTextLg);
-
   return (
     <header className={classes.main}>
       <div className={classes.header}>

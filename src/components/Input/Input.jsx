@@ -94,3 +94,14 @@ export function PasswordInput({
     </div>
   );
 }
+
+export function Button({ children, width = "full", ...rest }) {
+  return (
+    <button
+      className={`${classes.inputs} ${classes.text} ${classes[width]}`}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+}

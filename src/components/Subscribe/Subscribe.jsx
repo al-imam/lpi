@@ -8,31 +8,20 @@ const emailRegex = /^[a-zA-Z]([a-zA-Z0-9\.]){2,}@[a-z]{3,7}\.[a-z]{2,5}$/;
 const init = { value: "", error: null, success: null };
 
 function Subscribe() {
-  const [value, setValue] = useState("");
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
-
-  const [state, updateState] = useReducer(
+  const [{ success, error, value }, updateState] = useReducer(
     (prev, next) => ({ ...prev, ...next }),
     init
   );
 
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    setError(null);
-    setSuccess(null);
-
-    if (value.trim() === "") {
-      return setError("Email is required! 😤");
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+    updateState({ error: null, success: null });
 
     if (!value.match(emailRegex)) {
-      return setError("Enter a valid mail address! 😤");
+      return updateState({ error: "Enter a valid mail address! 😤" });
     }
 
-    setValue("");
-    setSuccess("Successfully Subscribed! 😊");
-    setSub(true);
+    updateState({ success: "Successfully Subscribed! 😊" });
   }
 
   return (
@@ -45,20 +34,20 @@ function Subscribe() {
           </div>
           <form className={classes.form} onSubmit={handleSubmit} noValidate>
             {error === null || (
-              <Alert text={error} close={() => setError(null)} />
+              <Alert text={error} close={() => updateState({ error: null })} />
             )}
             {success === null || (
               <Alert
                 text={success}
                 error={false}
-                close={() => setSuccess(null)}
+                close={() => updateState({ success: null })}
               />
             )}
             <Input
               placeholder="example@gmail.com"
               type="email"
               value={value}
-              setValue={(value) => setValue(value)}
+              setValue={(value) => updateState({ value })}
             />
             <Input type="submit" value="Subscribe" />
           </form>

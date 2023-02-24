@@ -4,17 +4,17 @@ import Input from "@components/Input/Input";
 import Alert from "@components/Alert/Alert";
 import email from "@util/regex";
 
-const init = { value: "", error: null, success: null };
+const init = { value: "", error: null, success: null, loading: false };
 
 function Subscribe() {
-  const [{ success, error, value }, updateState] = useReducer(
+  const [{ success, error, value, loading }, updateState] = useReducer(
     (prev, next) => ({ ...prev, ...next }),
     init
   );
 
   function handleSubmit(e) {
     e.preventDefault();
-    updateState({ error: null, success: null });
+    updateState({ error: null, success: null, loading: true });
 
     if (!value.match(email)) {
       return updateState({ error: "Enter a valid mail address! 😤" });

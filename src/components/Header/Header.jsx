@@ -19,8 +19,11 @@ export default function Header({ setOpen, open }) {
   const { currentUser, logOut } = useAuth();
   const navigate = useNavigate();
   const hideText = useMediaQuery("(max-width: 41rem)");
+  const hideTextLg = useMediaQuery(
+    "(max-width: 75rem) and (min-width: 67.5rem)"
+  );
 
-  console.log(hideText);
+  console.log(hideTextLg);
 
   return (
     <header className={classes.main}>
@@ -34,7 +37,7 @@ export default function Header({ setOpen, open }) {
               className={classes.log + " " + classes.in}
               onClick={() => navigate("/admin/login")}
             >
-              {hideText || "Login "}
+              {hideText || hideTextLg || "Login "}
               <UserAdd />
             </button>
           ) : (
@@ -42,7 +45,7 @@ export default function Header({ setOpen, open }) {
               className={classes.log + " " + classes.out}
               onClick={() => logOut()}
             >
-              {hideText || "Logout "}
+              {hideText || hideTextLg || "Logout "}
               <UserRemove />
             </button>
           )}
@@ -50,7 +53,7 @@ export default function Header({ setOpen, open }) {
             className={classes.log + " " + classes.in}
             onClick={() => navigate("/admin")}
           >
-            {hideText || "Admin "}
+            {hideText || hideTextLg || "Admin "}
             <Admin />
           </button>
         </div>

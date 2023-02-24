@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import classes from "./sub.module.css";
 import Input from "@components/Input/Input";
 import Alert from "@components/Alert/Alert";
@@ -10,6 +10,11 @@ function Subscribe() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const [sub, setSub] = useState(false);
+
+  const [state, updateState] = useReducer(
+    (prev, next) => ({ ...prev, ...next }),
+    { value: "", error: null, success: null }
+  );
 
   function handleSubmit(evt) {
     evt.preventDefault();

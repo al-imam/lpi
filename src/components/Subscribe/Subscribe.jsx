@@ -40,15 +40,23 @@ function Subscribe() {
           value: "",
         });
       }
-    } catch {
-      (e) =>
-        updateState({
-          loading: false,
-          error: "Something is wrong! 😭",
-        });
+    } catch (e) {
+      console.dir(e);
+      return updateState({
+        loading: false,
+        error: "Something is wrong! 😖",
+      });
     }
 
-    await setDoc(doc(db, "email", value), {});
+    try {
+      await setDoc(doc(db, "email", value), {});
+    } catch (e) {
+      console.dir(e);
+      return updateState({
+        loading: false,
+        error: "Something went wrong! 😖",
+      });
+    }
 
     updateState({ success: "Successfully Subscribed! 😊" });
   }

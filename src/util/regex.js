@@ -16,7 +16,7 @@ function word({ underscore = false, haveDot = false } = {}) {
 }
 
 function wordWithHaveDots({ underscore = false } = {}) {
-  return `(\\.[a-zA-Z0-9${underscore ? "_" : ""}]+)*`;
+  return `(${escape(".")}[a-zA-Z0-9${underscore ? "_" : ""}]+)*`;
 }
 
 function mustHave(ex) {
@@ -27,12 +27,16 @@ function range({ min = 2, max = 5 } = {}) {
   return `{${min},${max}}`;
 }
 
+function escape(ex) {
+  return `\\${ex}`;
+}
+
 const email = new RegExp(
   startWith(letter()) +
     word({ haveDot: true }) +
     mustHave("@") +
     letter({ lowerCase: true, upperCase: false, range: range(3, 5) }) +
-    mustHave(`\\.`) +
+    mustHave(escape(".")) +
     endWith(letter({ lowerCase: true, upperCase: false, range: range(2, 5) }))
 );
 

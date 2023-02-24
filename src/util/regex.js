@@ -23,6 +23,15 @@ function range({ min = 2, max = 5 }) {
   return `{${min}, ${max}}`;
 }
 
-const email = new RegExp();
+const email = new RegExp(
+  startWith(letter()) +
+    word({ haveDot: true }) +
+    mustHave("@") +
+    letter({ lowerCase: true, upperCase: false, range: range(3, 5) }) +
+    mustHave(`\\.`) +
+    letter({ lowerCase: true, upperCase: false, range: range(2, 5) })
+);
+
+console.log(email);
 
 export default email;

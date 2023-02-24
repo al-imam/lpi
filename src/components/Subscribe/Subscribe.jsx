@@ -4,7 +4,13 @@ import Input from "@components/Input/Input";
 import Alert from "@components/Alert/Alert";
 import { Button } from "@components/Input/Input";
 import email from "@util/regex";
-import { setDoc, collection, getFirestore, doc } from "firebase/firestore";
+import {
+  setDoc,
+  collection,
+  getFirestore,
+  doc,
+  getDoc,
+} from "firebase/firestore";
 
 const init = { value: "", error: null, success: null, loading: false };
 
@@ -16,7 +22,7 @@ function Subscribe() {
     init
   );
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     updateState({ error: null, success: null, loading: true });
 
@@ -24,10 +30,19 @@ function Subscribe() {
       return updateState({ error: "Enter a valid mail address! 😤" });
     }
 
-    const ref = collection(db, "email");
-    setDoc(doc(ref, value), {})
-      .then((e) => console.log(e))
-      .catch((e) => console.log(e));
+    const idRef = doc(db, "email", value);
+    try {
+      const s = await getDoc(idRef);
+      if (s.exists()) {
+        return updateState({
+          loading: false,
+          success: "You're already a subscriber! 💖",
+          value: "",
+        });
+      }
+    } catch {
+      (e) => console.log(e);
+    }
 
     updateState({ success: "Successfully Subscribed! 😊" });
   }

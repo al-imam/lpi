@@ -50,6 +50,11 @@ function Subscribe() {
 
     try {
       await setDoc(doc(db, "email", value), {});
+      return updateState({
+        loading: false,
+        success: "Successfully Subscribed! 😊",
+        value: "",
+      });
     } catch (e) {
       console.dir(e);
       return updateState({
@@ -57,8 +62,6 @@ function Subscribe() {
         error: "Something went wrong! 😖",
       });
     }
-
-    updateState({ success: "Successfully Subscribed! 😊" });
   }
 
   return (

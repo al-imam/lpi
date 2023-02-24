@@ -4,8 +4,11 @@ import Input from "@components/Input/Input";
 import Alert from "@components/Alert/Alert";
 import { Button } from "@components/Input/Input";
 import email from "@util/regex";
+import { setDoc, collection, getFirestore, doc } from "firebase/firestore";
 
 const init = { value: "", error: null, success: null, loading: false };
+
+const db = getFirestore();
 
 function Subscribe() {
   const [{ success, error, value, loading }, updateState] = useReducer(
@@ -20,6 +23,11 @@ function Subscribe() {
     if (!value.match(email)) {
       return updateState({ error: "Enter a valid mail address! 😤" });
     }
+
+    const ref = collection(db, "email");
+    setDoc(doc(ref, value), {})
+      .then((e) => console.log(e))
+      .catch((e) => console.log(e));
 
     updateState({ success: "Successfully Subscribed! 😊" });
   }

@@ -5,6 +5,8 @@ import Alert from "@components/Alert/Alert";
 
 const emailRegex = /^[a-zA-Z]([a-zA-Z0-9\.]){2,}@[a-z]{3,7}\.[a-z]{2,5}$/;
 
+const init = { value: "", error: null, success: null };
+
 function Subscribe() {
   const [value, setValue] = useState("");
   const [error, setError] = useState(null);
@@ -13,7 +15,7 @@ function Subscribe() {
 
   const [state, updateState] = useReducer(
     (prev, next) => ({ ...prev, ...next }),
-    { value: "", error: null, success: null }
+    init
   );
 
   function handleSubmit(evt) {

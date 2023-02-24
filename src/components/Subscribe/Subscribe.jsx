@@ -41,7 +41,11 @@ function Subscribe() {
         });
       }
     } catch {
-      (e) => console.log(e);
+      (e) =>
+        updateState({
+          loading: false,
+          error: "Something is wrong! 😭",
+        });
     }
 
     updateState({ success: "Successfully Subscribed! 😊" });

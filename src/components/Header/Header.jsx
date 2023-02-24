@@ -12,11 +12,15 @@ import {
   Admin,
 } from "@svg";
 import { useAuth } from "@context/AuthContext";
+import useMediaQuery from "@hooks/useMediaQuery";
 import { useNavigate } from "react-router-dom";
 
 export default function Header({ setOpen, open }) {
   const { currentUser, logOut } = useAuth();
   const navigate = useNavigate();
+  const hideText = useMediaQuery("(max-width: 41rem)");
+
+  console.log(hideText);
 
   return (
     <header className={classes.main}>
@@ -30,21 +34,24 @@ export default function Header({ setOpen, open }) {
               className={classes.log + " " + classes.in}
               onClick={() => navigate("/admin/login")}
             >
-              Login <UserAdd />
+              {hideText || "Login "}
+              <UserAdd />
             </button>
           ) : (
             <button
               className={classes.log + " " + classes.out}
               onClick={() => logOut()}
             >
-              Logout <UserRemove />
+              {hideText || "Logout "}
+              <UserRemove />
             </button>
           )}
           <button
             className={classes.log + " " + classes.in}
             onClick={() => navigate("/admin")}
           >
-            Admin <Admin />
+            {hideText || "Admin "}
+            <Admin />
           </button>
         </div>
         <ul className={classes.items}>

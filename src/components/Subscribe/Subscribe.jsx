@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import classes from "./sub.module.css";
 import Input from "@components/Input/Input";
 import Alert from "@components/Alert/Alert";
+import { Button } from "@components/Input/Input";
 import email from "@util/regex";
 
 const init = { value: "", error: null, success: null, loading: false };
@@ -48,7 +49,7 @@ function Subscribe() {
               value={value}
               setValue={(value) => updateState({ value })}
             />
-            <Input type="submit" value="Subscribe" />
+            <Button>Subscribe</Button>
           </form>
         </div>
       </div>

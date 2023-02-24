@@ -1,13 +1,7 @@
 import classes from "./post.module.css";
 import { Fullscreen } from "@svg";
 
-function Post({
-  title = "Lorem ipsum dolor sit amet",
-  description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptates praesentium enim. Velit veritatis quasi dicta, omnis eaque qui numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit obcaecati accusantium recusandae aut asperiores magni dignissimos error consequatur expedita iusto?",
-  date = new Date().toDateString(),
-  url = "https://cbseguides.com/wp-content/uploads/2022/03/Notice-Writing.jpg",
-  id = null,
-}) {
+function Post({ title, description, date, url, id }) {
   return (
     <div className={classes.post + ` ${url === null && classes.min}`} id={id}>
       <p className={classes.text}>

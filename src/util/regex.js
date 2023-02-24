@@ -10,6 +10,10 @@ function word({ underscore = false }) {
   return `[a-zA-Z9-0${underscore ? "_" : ""}]`;
 }
 
+function haveDots() {
+  return `(\\.[a-zA-Z]+)*`;
+}
+
 const email = new RegExp();
 
 export default email;

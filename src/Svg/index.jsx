@@ -398,20 +398,20 @@ export function LoadingLoop({ speed = "300ms", ...rest }) {
   );
 }
 
-export function LoadingLoopCircle(props) {
+export function LoadingLoopCircle({ strokeWidth = 2, ...rest }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
       viewBox="0 0 24 24"
-      {...props}
+      {...rest}
     >
       <g
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       >
         <path
           strokeDasharray="60"

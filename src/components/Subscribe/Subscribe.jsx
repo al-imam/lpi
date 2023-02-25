@@ -4,6 +4,7 @@ import Input from "@components/Input/Input";
 import Alert from "@components/Alert/Alert";
 import { Button } from "@components/Input/Input";
 import email from "@util/regex";
+import { LoadingLoopCircle } from "@svg";
 import {
   setDoc,
   collection,
@@ -25,6 +26,10 @@ function Subscribe() {
   async function handleSubmit(e) {
     e.preventDefault();
     updateState({ error: null, success: null, loading: true });
+
+    await new Promise((r, j) => setTimeout(r, 2000));
+
+    return updateState({ loading: false, success: "success" });
 
     if (!value.match(email)) {
       return updateState({ error: "Enter a valid mail address! 🤐" });
@@ -89,7 +94,9 @@ function Subscribe() {
               value={value}
               setValue={(value) => updateState({ value })}
             />
-            <Button>{loading ? <LoadingLoopCircle /> : "Subscribe"}</Button>
+            <Button disabled={loading}>
+              {loading ? <LoadingLoopCircle /> : "Subscribe"}
+            </Button>
           </form>
         </div>
       </div>

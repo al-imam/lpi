@@ -26,13 +26,9 @@ function Subscribe() {
     e.preventDefault();
     updateState({ error: null, success: null, loading: true });
 
-    console.log(email);
-
     if (!value.match(email)) {
-      return updateState({ error: "Enter a valid mail address! 😤" });
+      return updateState({ error: "Enter a valid mail address! 🤐" });
     }
-
-    return updateState({ success: "Email match" });
 
     const idRef = doc(db, "email", value);
     try {

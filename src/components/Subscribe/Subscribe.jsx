@@ -89,7 +89,7 @@ function Subscribe() {
               value={value}
               setValue={(value) => updateState({ value })}
             />
-            <Button>Subscribe</Button>
+            <Button>{loading ? <LoadingLoopCircle /> : "Subscribe"}</Button>
           </form>
         </div>
       </div>

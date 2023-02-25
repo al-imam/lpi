@@ -11,12 +11,19 @@ function letter({ lowerCase = true, upperCase = true, range = "{1,}" } = {}) {
 }
 
 function word({ underscore = false, haveDot = false } = {}) {
-  if (haveDot) return wordWithHaveDots(underscore);
+  if (haveDot)
+    return wordWithHaveDots({ underscore, acceptEndWithNumber: true });
   return `[a-zA-Z9-0${underscore ? "_" : ""}]`;
 }
 
-function wordWithHaveDots({ underscore = false } = {}) {
-  return `(${escape(".")}[a-zA-Z0-9${underscore ? "_" : ""}]+)*`;
+function wordWithHaveDots({
+  underscore = false,
+  acceptEndWithNumber = false,
+  range = "{0,}",
+} = {}) {
+  return `(${escape(".")}[a-zA-Z0-9${underscore ? "_" : ""}]+)*${
+    acceptEndWithNumber ? `[a-zA-Z0-9]${range}` : ""
+  }`;
 }
 
 function mustHave(ex) {

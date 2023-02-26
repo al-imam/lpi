@@ -98,7 +98,7 @@ function Form() {
         setValue={(value) => updateState({ password: value })}
         placeholder="Password"
       />
-      <Button>
+      <Button disabled={loading}>
         {loading ? (
           <LoadingLoopCircle
             strokeWidth={3}

@@ -38,12 +38,15 @@ const init = {
   message: "",
   error: null,
   loading: false,
+  success: null,
 };
 
 function Form() {
   const location = useLocation();
-  const [{ name, email, subject, message, error, loading }, updateState] =
-    useReducer((prev, next) => ({ ...prev, ...next }), init);
+  const [
+    { name, email, subject, message, error, success, loading },
+    updateState,
+  ] = useReducer((prev, next) => ({ ...prev, ...next }), init);
 
   useEffect(() => {
     updateState({ subject: location.state ?? subject });

@@ -116,7 +116,18 @@ function Subscribe() {
               setValue={(value) => updateState({ value })}
             />
             <Button disabled={loading}>
-              {loading ? <LoadingLoopCircle strokeWidth={3} /> : "Subscribe"}
+              {loading ? (
+                <LoadingLoopCircle
+                  strokeWidth={3}
+                  style={{
+                    color: "var(--gray-800)",
+                    height: "0.9rem",
+                    transform: "scale(2) translateY(1px)",
+                  }}
+                />
+              ) : (
+                "Subscribe"
+              )}
             </Button>
           </form>
         </div>

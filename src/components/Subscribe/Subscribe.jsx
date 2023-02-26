@@ -27,10 +27,6 @@ function Subscribe() {
     e.preventDefault();
     updateState({ error: null, success: null, loading: true });
 
-    await new Promise((r, j) => setTimeout(r, 2000));
-
-    return updateState({ loading: false, success: "success" });
-
     if (!value.match(email)) {
       return updateState({ error: "Enter a valid mail address! 🤐" });
     }
@@ -95,7 +91,7 @@ function Subscribe() {
               setValue={(value) => updateState({ value })}
             />
             <Button disabled={loading}>
-              {loading ? <LoadingLoopCircle /> : "Subscribe"}
+              {loading ? <LoadingLoopCircle strokeWidth={3} /> : "Subscribe"}
             </Button>
           </form>
         </div>

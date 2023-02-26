@@ -42,7 +42,7 @@
 }
 
 .form button svg {
-  color: var(--gray-900);
+  color: var(--gray-800);
   height: 0.9rem;
   transform: scale(2) translateY(1px);
 }

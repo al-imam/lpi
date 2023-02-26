@@ -3,7 +3,7 @@ import Map from "@components/Map/Map";
 import Subscribe from "@components/Subscribe/Subscribe";
 import { useLocation } from "react-router-dom";
 import Input, { Textarea } from "@components/Input/Input";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useReducer } from "react";
 
 const init = {
   name: "",
@@ -14,10 +14,13 @@ const init = {
 
 function Contact() {
   const location = useLocation();
-  const [store, setStore] = useState(init);
+  const [{ name, email, subject, message }, updateState] = useReducer(
+    (prev, next) => ({ ...prev, ...next }),
+    init
+  );
 
   useEffect(() => {
-    setStore((p) => ({ ...p, subject: location.state ?? "" }));
+    updateState({ subject: location.state ?? "" });
   }, [location.key]);
 
   return (
@@ -41,27 +44,27 @@ function Contact() {
             noValidate={true}
           >
             <Input
-              value={store.name}
-              setValue={(value) => setStore((p) => ({ ...p, name: value }))}
+              value={name}
+              setValue={(value) => updateState({ name: value })}
               placeholder="Your Name"
               name="name"
             />
             <Input
-              value={store.email}
-              setValue={(value) => setStore((p) => ({ ...p, email: value }))}
+              value={email}
+              setValue={(value) => updateState({ email: value })}
               type="email"
               placeholder="Your Email"
               name="email"
             />
             <Input
-              value={store.subject}
-              setValue={(value) => setStore((p) => ({ ...p, subject: value }))}
+              value={subject}
+              setValue={(value) => updateState({ subject: value })}
               placeholder="Subject"
               name="subject"
             />
             <Textarea
-              value={store.message}
-              setValue={(value) => setStore((p) => ({ ...p, message: value }))}
+              value={message}
+              setValue={(value) => updateState({ message: value })}
               placeholder="Message"
               name="body"
             />

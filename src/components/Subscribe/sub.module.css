@@ -41,12 +41,6 @@
   gap: 1rem;
 }
 
-.form button svg {
-  color: var(--gray-800);
-  height: 0.9rem;
-  transform: scale(2) translateY(1px);
-}
-
 .error,
 .success {
   padding: 1rem;

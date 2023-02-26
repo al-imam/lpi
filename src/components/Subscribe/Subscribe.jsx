@@ -9,7 +9,6 @@ import { setDoc, getFirestore, doc, getDoc } from "firebase/firestore";
 
 function saveLocal(key, value) {
   const prev = localStorage.getItem(key);
-  console.log("saveLocal");
   if (prev) {
     const array = [...JSON.parse(prev), value];
     localStorage.setItem(key, JSON.stringify(array));
@@ -19,7 +18,6 @@ function saveLocal(key, value) {
 }
 
 function haveLocal(key, value) {
-  console.log("haveLocal");
   const local = localStorage.getItem(key);
   if (local) {
     return local.includes(value);
@@ -49,7 +47,7 @@ function Subscribe() {
       });
     }
 
-    if (localStorage.getItem(value)) {
+    if (haveLocal(email, value)) {
       return updateState({
         loading: false,
         success: "You're already a subscriber! 💖",
@@ -77,7 +75,7 @@ function Subscribe() {
 
     try {
       await setDoc(doc(db, "email", value), {});
-      localStorage.setItem(value, { email });
+      saveLocal(email, value);
       return updateState({
         loading: false,
         success: "Successfully Subscribed! 😊",

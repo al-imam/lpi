@@ -112,11 +112,6 @@ function Form() {
           "Login"
         )}
       </Button>
-      {loading && (
-        <div className={classes.overlay}>
-          <LoadingLoopCircle />
-        </div>
-      )}
     </form>
   );
 }

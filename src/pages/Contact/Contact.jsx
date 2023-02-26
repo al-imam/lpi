@@ -46,12 +46,13 @@ function Form() {
   );
 
   useEffect(() => {
-    updateState({ subject: location.state ?? "" });
-  }, [location.state]);
+    updateState({ subject: location.state ?? subject });
+  }, [location]);
 
   function sendMail(e) {
     e.preventDefault();
     const elements = [...e.target.elements].slice(0, -1);
+    updateState({ error: null });
     let haveError = false;
     for (const node of elements) {
       if (node.name === "email") {

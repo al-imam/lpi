@@ -58,7 +58,7 @@ function Form() {
       if (node.name === "email") {
         if (!node.value.match(emailRegExp)) {
           node.focus();
-          updateState({ error: "Enter a valid email address! 🥲" });
+          updateState({ error: "Enter a valid email address! 🥹" });
           haveError = true;
           break;
         }

@@ -98,7 +98,11 @@ function Subscribe() {
             <h5>Subscribe</h5>
             <span>Subscribe for future Notice's and updates!</span>
           </div>
-          <form className={classes.form} onSubmit={handleSubmit} noValidate>
+          <form
+            className={classes.form}
+            onSubmit={handleSubmit}
+            noValidate={true}
+          >
             {error === null || (
               <Alert text={error} close={() => updateState({ error: null })} />
             )}

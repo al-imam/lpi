@@ -110,7 +110,7 @@ function Form() {
         placeholder="Message"
         name="message"
       />
-      <Button>Send Mail</Button>
+      <Button disabled={loading}>Send mail</Button>
     </form>
   );
 }

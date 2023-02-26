@@ -23,6 +23,15 @@ function saveLocal(key, value) {
   localStorage.setItem(key, [value]);
 }
 
+function localHaveThis(key, value) {
+  const local = localStorage.getItem(key);
+  if (local) {
+    return local.includes(value);
+  }
+
+  return false;
+}
+
 const init = { value: "", error: null, success: null, loading: false };
 
 const db = getFirestore();

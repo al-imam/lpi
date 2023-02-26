@@ -55,6 +55,15 @@ function Form() {
       if (node.value.trim() === "") {
         node.focus();
         break;
+        }
+      }
+
+      if (["subject", "name", "message"].includes(node.name)) {
+        if (node.value === "") {
+          node.focus();
+          updateState({ error: `${node.name} is required! 🫤` });
+          break;
+        }
       }
     }
   }

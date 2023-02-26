@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import Input, { Textarea, Button } from "@components/Input/Input";
 import { useEffect, useReducer } from "react";
 import emailRegExp from "@util/regex";
+import Alert from "@components/Alert/Alert";
 
 function Contact() {
   return (
@@ -79,6 +80,7 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={sendMail} noValidate={true}>
+      {error !== null && <Alert text={error} />}
       <Input
         value={name}
         setValue={(value) => updateState({ name: value })}

@@ -118,6 +118,7 @@ function Subscribe() {
               type="email"
               value={value}
               setValue={(value) => updateState({ value })}
+              name="email"
             />
             <Button disabled={loading}>
               {loading ? (

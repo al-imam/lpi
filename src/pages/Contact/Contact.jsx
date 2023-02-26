@@ -88,12 +88,16 @@ function Form() {
 
     updateState({ error: null, success: null, loading: true });
 
-    await addDoc(collection(db, "notification"), {
-      email,
-      name,
-      message,
-      subject,
-    });
+    try {
+      await addDoc(collection(db, "notification"), {
+        email,
+        name,
+        message,
+        subject,
+      });
+    } catch (error) {
+      console.table(error);
+    }
 
     updateState({ loading: false });
   }

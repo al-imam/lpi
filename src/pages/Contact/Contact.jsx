@@ -52,9 +52,12 @@ function Form() {
     e.preventDefault();
     const elements = [...e.target.elements].slice(0, -1);
     for (const node of elements) {
-      if (node.value.trim() === "") {
-        node.focus();
-        break;
+      if (node.name === "email") {
+        console.log(emailRegExp);
+        if (!node.value.match(emailRegExp)) {
+          node.focus();
+          updateState({ error: "Enter a valid email address! 🥲" });
+          break;
         }
       }
 

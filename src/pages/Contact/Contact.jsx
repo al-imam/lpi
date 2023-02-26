@@ -33,11 +33,12 @@ const init = {
   email: "",
   subject: "",
   message: "",
+  error: "",
 };
 
 function Form() {
   const location = useLocation();
-  const [{ name, email, subject, message }, updateState] = useReducer(
+  const [{ name, email, subject, message, error }, updateState] = useReducer(
     (prev, next) => ({ ...prev, ...next }),
     init
   );
@@ -46,12 +47,19 @@ function Form() {
     updateState({ subject: location.state ?? "" });
   }, [location.key]);
 
+  function sendMail(e) {
+    e.preventDefault();
+    const elements = [...e.target.elements].slice(0, -1);
+    for (const node of elements) {
+      if (node.value.trim() === "") {
+        node.focus();
+        break;
+      }
+    }
+  }
+
   return (
-    <form
-      className={classes.form}
-      onSubmit={(e) => e.preventDefault()}
-      noValidate={true}
-    >
+    <form className={classes.form} onSubmit={sendMail} noValidate={true}>
       <Input
         value={name}
         setValue={(value) => updateState({ name: value })}
@@ -75,7 +83,7 @@ function Form() {
         value={message}
         setValue={(value) => updateState({ message: value })}
         placeholder="Message"
-        name="body"
+        name="message"
       />
       <Button>Send Mail</Button>
     </form>

@@ -113,6 +113,7 @@ function Form() {
       <Button disabled={loading}>
         {loading ? (
           <LoadingLoopCircle
+            strokeWidth={3}
             style={{
               color: "var(--gray-800)",
               height: "0.9rem",

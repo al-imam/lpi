@@ -45,7 +45,7 @@ function Form() {
 
   useEffect(() => {
     updateState({ subject: location.state ?? "" });
-  }, [location.key]);
+  }, [location]);
 
   function sendMail(e) {
     e.preventDefault();

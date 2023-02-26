@@ -5,25 +5,21 @@ import Alert from "@components/Alert/Alert";
 import { Button } from "@components/Input/Input";
 import email from "@util/regex";
 import { LoadingLoopCircle } from "@svg";
-import {
-  setDoc,
-  collection,
-  getFirestore,
-  doc,
-  getDoc,
-} from "firebase/firestore";
+import { setDoc, getFirestore, doc, getDoc } from "firebase/firestore";
 
 function saveLocal(key, value) {
   const prev = localStorage.getItem(key);
+  console.log("saveLocal");
   if (prev) {
     const array = [...JSON.parse(prev), value];
-    localStorage.setItem(key, array);
+    localStorage.setItem(key, JSON.stringify(array));
     return;
   }
-  localStorage.setItem(key, [value]);
+  localStorage.setItem(key, JSON.stringify([value]));
 }
 
-function localHaveThis(key, value) {
+function haveLocal(key, value) {
+  console.log("haveLocal");
   const local = localStorage.getItem(key);
   if (local) {
     return local.includes(value);

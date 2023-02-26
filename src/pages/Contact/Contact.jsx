@@ -2,8 +2,8 @@ import classes from "./contact.module.css";
 import Map from "@components/Map/Map";
 import Subscribe from "@components/Subscribe/Subscribe";
 import { useLocation } from "react-router-dom";
-import Input, { Textarea } from "@components/Input/Input";
-import { useEffect, useState, useReducer } from "react";
+import Input, { Textarea, Button } from "@components/Input/Input";
+import { useEffect, useReducer } from "react";
 
 const init = {
   name: "",
@@ -68,7 +68,7 @@ function Contact() {
               placeholder="Message"
               name="body"
             />
-            <Input type="submit" value="Send Mail" />
+            <Button>Send Mail</Button>
           </form>
         </div>
       </section>

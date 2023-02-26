@@ -113,7 +113,13 @@ function Form() {
       {error !== null && (
         <Alert text={error} close={() => updateState({ error: null })} />
       )}
-      {success !== null && <Alert text={success} error={false} />}
+      {success !== null && (
+        <Alert
+          text={success}
+          error={false}
+          close={() => updateState({ success: null })}
+        />
+      )}
       <Input
         value={name}
         setValue={(value) => updateState({ name: value })}

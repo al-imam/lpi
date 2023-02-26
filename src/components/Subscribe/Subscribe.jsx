@@ -42,7 +42,7 @@ function Subscribe() {
 
     if (!value.match(email)) {
       return updateState({
-        error: "Enter a valid mail address! 🤐",
+        error: "Enter a valid mail address! 🥹",
         loading: false,
       });
     }

@@ -1,4 +1,4 @@
-import Input, { PasswordInput } from "@components/Input/Input";
+import Input, { PasswordInput, Button } from "@components/Input/Input";
 import { useReducer } from "react";
 import { useAuth } from "@context/AuthContext";
 import classes from "./login.module.css";
@@ -98,7 +98,7 @@ function Form() {
         setValue={(value) => updateState({ password: value })}
         placeholder="Password"
       />
-      <Input type="submit" disabled={loading} value="Login" />
+      <Button>Login</Button>
       {loading && (
         <div className={classes.overlay}>
           <LoadingLoopCircle />

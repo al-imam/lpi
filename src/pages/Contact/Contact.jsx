@@ -46,7 +46,7 @@ function Form() {
 
   useEffect(() => {
     updateState({ subject: location.state ?? "" });
-  }, [location]);
+  }, [location.state]);
 
   function sendMail(e) {
     e.preventDefault();
@@ -54,7 +54,6 @@ function Form() {
     let haveError = false;
     for (const node of elements) {
       if (node.name === "email") {
-        console.log(emailRegExp);
         if (!node.value.match(emailRegExp)) {
           node.focus();
           updateState({ error: "Enter a valid email address! 🥲" });
@@ -76,8 +75,6 @@ function Form() {
     if (haveError) {
       return;
     }
-
-    console.log("im error free");
   }
 
   return (

@@ -35,7 +35,11 @@ function Contact() {
             </p>
           </div>
 
-          <form className={classes.form} onSubmit={(e) => e.preventDefault()}>
+          <form
+            className={classes.form}
+            onSubmit={(e) => e.preventDefault()}
+            noValidate={true}
+          >
             <Input
               value={store.name}
               setValue={(value) => setStore((p) => ({ ...p, name: value }))}

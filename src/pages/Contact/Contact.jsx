@@ -96,8 +96,8 @@ function Form() {
         subject,
       });
       return updateState({
+        ...init,
         success: "Mail send successfully. 😚",
-        loading: false,
       });
     } catch (error) {
       console.dir(error);

@@ -81,7 +81,9 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={sendMail} noValidate={true}>
-      {error !== null && <Alert text={error} />}
+      {error !== null && (
+        <Alert text={error} close={() => updateState({ error: null })} />
+      )}
       <Input
         value={name}
         setValue={(value) => updateState({ name: value })}

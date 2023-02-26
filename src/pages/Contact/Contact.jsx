@@ -7,6 +7,9 @@ import { useEffect, useReducer } from "react";
 import emailRegExp from "@util/regex";
 import Alert from "@components/Alert/Alert";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
+import { LoadingLoopCircle } from "@svg";
+
+const db = getFirestore();
 
 function Contact() {
   return (
@@ -84,6 +87,15 @@ function Form() {
     }
 
     updateState({ error: null, success: null, loading: true });
+
+    await addDoc(collection(db, "notification"), {
+      email,
+      name,
+      message,
+      subject,
+    });
+
+    updateState({ loading: false });
   }
 
   return (

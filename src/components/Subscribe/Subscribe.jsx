@@ -13,6 +13,16 @@ import {
   getDoc,
 } from "firebase/firestore";
 
+function saveLocal(key, value) {
+  const prev = localStorage.getItem(key);
+  if (prev) {
+    const array = [...JSON.parse(prev), value];
+    localStorage.setItem(key, array);
+    return;
+  }
+  localStorage.setItem(key, [value]);
+}
+
 const init = { value: "", error: null, success: null, loading: false };
 
 const db = getFirestore();

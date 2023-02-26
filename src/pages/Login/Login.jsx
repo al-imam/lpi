@@ -49,26 +49,26 @@ function Form() {
 
     try {
       await login(formData.email, formData.password);
-      updateState({ ...init, success: "Login successful. 😊" });
+      return updateState({ ...init, success: "Login successful. 😊" });
     } catch (error) {
+      console.dir(error);
       if (error.code == "auth/network-request-failed") {
-        updateState({
+        return updateState({
+          loading: false,
           error: "Network error, check your internet connection ☹️",
         });
-      } else if (
+      }
+      if (
         error.code === "auth/wrong-password" ||
         error.code === "auth/user-not-found"
       ) {
-        updateState({ error: "Username and password incorrect 😫" });
-      } else {
-        updateState({ error: "Something went wrong 😓" });
+        return updateState({
+          loading: false,
+          error: "Username and password incorrect 😫",
+        });
       }
-      console.dir(error);
-    } finally {
-      updateState({ loading: false });
+      return updateState({ loading: false, error: "Something went wrong 😓" });
     }
-
-    console.log(currentUser);
   }
 
   return (

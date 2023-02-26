@@ -100,10 +100,12 @@ function Form() {
         loading: false,
       });
     } catch (error) {
-      console.table(error);
+      console.dir(error);
+      return updateState({
+        success: "Something went wrong, Try again. 🥹",
+        loading: false,
+      });
     }
-
-    updateState({ loading: false });
   }
 
   return (

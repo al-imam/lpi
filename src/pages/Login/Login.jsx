@@ -98,7 +98,20 @@ function Form() {
         setValue={(value) => updateState({ password: value })}
         placeholder="Password"
       />
-      <Button>{loading ? <LoadingLoopCircle /> : "Login"}</Button>
+      <Button>
+        {loading ? (
+          <LoadingLoopCircle
+            strokeWidth={3}
+            style={{
+              color: "var(--gray-800)",
+              height: "0.9rem",
+              transform: "scale(2) translateY(1px)",
+            }}
+          />
+        ) : (
+          "Login"
+        )}
+      </Button>
       {loading && (
         <div className={classes.overlay}>
           <LoadingLoopCircle />

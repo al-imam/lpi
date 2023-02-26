@@ -110,7 +110,9 @@ function Form() {
         placeholder="Message"
         name="message"
       />
-      <Button disabled={loading}>Send mail</Button>
+      <Button disabled={loading}>
+        {loading ? <LoadingLoopCircle /> : "Send mail"}
+      </Button>
     </form>
   );
 }

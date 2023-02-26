@@ -13,59 +13,6 @@ const init = {
   success: null,
 };
 
-function reducer(prevState, action) {
-  const { type, payload } = action;
-  switch (type) {
-    case "email":
-      return {
-        ...prevState,
-        email: payload,
-      };
-    case "password":
-      return {
-        ...prevState,
-        password: payload,
-      };
-    case "stopLoading":
-      return {
-        ...prevState,
-        loading: false,
-      };
-    case "error":
-      return {
-        ...prevState,
-        error: payload,
-      };
-    case "success":
-      return {
-        ...prevState,
-        success: payload,
-      };
-    case "reset":
-      return {
-        ...prevState,
-        loading: true,
-        error: null,
-        success: null,
-      };
-    case "clear":
-      return {
-        ...prevState,
-        loading: false,
-        error: null,
-        success: null,
-      };
-    case "clearInput":
-      return {
-        ...prevState,
-        email: "",
-        password: "",
-      };
-    default:
-      throw new Error(`No action called ${type}`);
-  }
-}
-
 export default function Contact() {
   return (
     <main className={classes.s}>

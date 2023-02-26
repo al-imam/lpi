@@ -41,6 +41,7 @@ function Subscribe() {
     updateState({ error: null, success: null, loading: true });
 
     if (!value.match(email)) {
+      e.target.elements.email.focus();
       return updateState({
         error: "Enter a valid mail address! 🥹",
         loading: false,

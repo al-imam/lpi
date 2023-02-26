@@ -111,7 +111,17 @@ function Form() {
         name="message"
       />
       <Button disabled={loading}>
-        {loading ? <LoadingLoopCircle /> : "Send mail"}
+        {loading ? (
+          <LoadingLoopCircle
+            style={{
+              color: "var(--gray-800)",
+              height: "0.9rem",
+              transform: "scale(2) translateY(1px)",
+            }}
+          />
+        ) : (
+          "Send mail"
+        )}
       </Button>
     </form>
   );

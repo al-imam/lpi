@@ -6,6 +6,7 @@ import Input, { Textarea, Button } from "@components/Input/Input";
 import { useEffect, useReducer } from "react";
 import emailRegExp from "@util/regex";
 import Alert from "@components/Alert/Alert";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 
 function Contact() {
   return (
@@ -48,7 +49,7 @@ function Form() {
     updateState({ subject: location.state ?? subject });
   }, [location]);
 
-  function sendMail(e) {
+  async function sendMail(e) {
     e.preventDefault();
     const elements = [...e.target.elements].slice(0, -1);
     updateState({ error: null });

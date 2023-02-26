@@ -13,20 +13,6 @@
   gap: 2rem;
 }
 
-.overlay {
-  position: absolute;
-  inset: -0.25rem;
-  backdrop-filter: blur(0.1rem);
-  border-radius: 0.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay svg {
-  color: var(--gray-800);
-}
-
 @media only screen and (max-width: 47rem) {
   .wrapper {
     flex-direction: column;

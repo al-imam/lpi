@@ -92,11 +92,13 @@ function Form() {
         setValue={(value) => updateState({ email: value })}
         type="email"
         placeholder="Email"
+        disabled={loading}
       />
       <PasswordInput
         value={password}
         setValue={(value) => updateState({ password: value })}
         placeholder="Password"
+        disabled={loading}
       />
       <Button disabled={loading}>
         {loading ? (

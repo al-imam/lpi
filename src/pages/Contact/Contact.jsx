@@ -82,6 +82,8 @@ function Form() {
     if (haveError) {
       return;
     }
+
+    updateState({ error: null, success: null, loading: true });
   }
 
   return (

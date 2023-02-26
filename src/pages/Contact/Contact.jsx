@@ -4,6 +4,7 @@ import Subscribe from "@components/Subscribe/Subscribe";
 import { useLocation } from "react-router-dom";
 import Input, { Textarea, Button } from "@components/Input/Input";
 import { useEffect, useReducer } from "react";
+import emailRegExp from "@util/regex";
 
 function Contact() {
   return (

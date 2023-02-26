@@ -85,10 +85,8 @@ export default function Contact() {
 }
 
 function Form() {
-  const [{ email, password, loading, error, success }, dispatch] = useReducer(
-    reducer,
-    init
-  );
+  const [{ email, password, loading, error, success }, updateState] =
+    useReducer((prev, next) => ({ ...prev, ...next }), init);
   const { currentUser, login } = useAuth();
 
   async function submit(event) {
@@ -100,31 +98,27 @@ function Form() {
 
     const formData = Object.fromEntries(new FormData(event.target));
 
+    updateState({ error: null, success: null, loading: true });
+
     try {
-      dispatch({ type: "reset" });
       await login(formData.email, formData.password);
-      dispatch({ type: "success", payload: "Login successful 😊" });
-      dispatch({ type: "clearInput" });
+      updateState({ ...init, success: "Login successful. 😊" });
     } catch (error) {
       if (error.code == "auth/network-request-failed") {
-        dispatch({
-          type: "error",
-          payload: "Network error, check your internet connection ☹️",
+        updateState({
+          error: "Network error, check your internet connection ☹️",
         });
       } else if (
         error.code === "auth/wrong-password" ||
         error.code === "auth/user-not-found"
       ) {
-        dispatch({
-          type: "error",
-          payload: "Username and password incorrect 😫",
-        });
+        updateState({ error: "Username and password incorrect 😫" });
       } else {
-        dispatch({ type: "error", payload: "Something went wrong 😓" });
+        updateState({ error: "Something went wrong 😓" });
       }
       console.dir(error);
     } finally {
-      dispatch({ type: "stopLoading" });
+      updateState({ loading: false });
     }
 
     console.log(currentUser);
@@ -132,25 +126,29 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={submit}>
-      {success === null || (
+      {success !== null && (
         <Alert
           error={false}
           text={success}
-          close={() => dispatch({ type: "clear" })}
+          close={() => update({ success: null })}
         />
       )}
-      {error === null || (
-        <Alert text={error} close={() => dispatch({ type: "clear" })} />
+      {error !== null && (
+        <Alert
+          error={true}
+          text={error}
+          close={() => updateState({ error: null })}
+        />
       )}
       <Input
         value={email}
-        setValue={(value) => dispatch({ type: "email", payload: value })}
+        setValue={(value) => updateState({ email: value })}
         type="email"
         placeholder="Email"
       />
       <PasswordInput
         value={password}
-        setValue={(value) => dispatch({ type: "password", payload: value })}
+        setValue={(value) => updateState({ password: value })}
         placeholder="Password"
       />
       <Input type="submit" disabled={loading} value="Login" />

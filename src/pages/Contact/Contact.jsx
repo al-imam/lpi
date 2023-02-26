@@ -5,24 +5,7 @@ import { useLocation } from "react-router-dom";
 import Input, { Textarea, Button } from "@components/Input/Input";
 import { useEffect, useReducer } from "react";
 
-const init = {
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-};
-
 function Contact() {
-  const location = useLocation();
-  const [{ name, email, subject, message }, updateState] = useReducer(
-    (prev, next) => ({ ...prev, ...next }),
-    init
-  );
-
-  useEffect(() => {
-    updateState({ subject: location.state ?? "" });
-  }, [location.key]);
-
   return (
     <main className={classes.s}>
       <Map />
@@ -37,43 +20,65 @@ function Contact() {
               phone number.
             </p>
           </div>
-
-          <form
-            className={classes.form}
-            onSubmit={(e) => e.preventDefault()}
-            noValidate={true}
-          >
-            <Input
-              value={name}
-              setValue={(value) => updateState({ name: value })}
-              placeholder="Your Name"
-              name="name"
-            />
-            <Input
-              value={email}
-              setValue={(value) => updateState({ email: value })}
-              type="email"
-              placeholder="Your Email"
-              name="email"
-            />
-            <Input
-              value={subject}
-              setValue={(value) => updateState({ subject: value })}
-              placeholder="Subject"
-              name="subject"
-            />
-            <Textarea
-              value={message}
-              setValue={(value) => updateState({ message: value })}
-              placeholder="Message"
-              name="body"
-            />
-            <Button>Send Mail</Button>
-          </form>
+          <Form />
         </div>
       </section>
       <Subscribe />
     </main>
+  );
+}
+
+const init = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
+function Form() {
+  const location = useLocation();
+  const [{ name, email, subject, message }, updateState] = useReducer(
+    (prev, next) => ({ ...prev, ...next }),
+    init
+  );
+
+  useEffect(() => {
+    updateState({ subject: location.state ?? "" });
+  }, [location.key]);
+
+  return (
+    <form
+      className={classes.form}
+      onSubmit={(e) => e.preventDefault()}
+      noValidate={true}
+    >
+      <Input
+        value={name}
+        setValue={(value) => updateState({ name: value })}
+        placeholder="Your Name"
+        name="name"
+      />
+      <Input
+        value={email}
+        setValue={(value) => updateState({ email: value })}
+        type="email"
+        placeholder="Your Email"
+        name="email"
+      />
+      <Input
+        value={subject}
+        setValue={(value) => updateState({ subject: value })}
+        placeholder="Subject"
+        name="subject"
+      />
+      <Textarea
+        value={message}
+        setValue={(value) => updateState({ message: value })}
+        placeholder="Message"
+        name="body"
+      />
+      <Button>Send Mail</Button>
+    </form>
   );
 }
 

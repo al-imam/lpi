@@ -34,7 +34,7 @@ const init = {
   email: "",
   subject: "",
   message: "",
-  error: "",
+  error: null,
 };
 
 function Form() {
@@ -51,12 +51,14 @@ function Form() {
   function sendMail(e) {
     e.preventDefault();
     const elements = [...e.target.elements].slice(0, -1);
+    let haveError = false;
     for (const node of elements) {
       if (node.name === "email") {
         console.log(emailRegExp);
         if (!node.value.match(emailRegExp)) {
           node.focus();
           updateState({ error: "Enter a valid email address! 🥲" });
+          haveError = true;
           break;
         }
       }
@@ -65,10 +67,17 @@ function Form() {
         if (node.value === "") {
           node.focus();
           updateState({ error: `${node.name} is required! 🫤` });
+          haveError = true;
           break;
         }
       }
     }
+
+    if (haveError) {
+      return;
+    }
+
+    console.log("im error free");
   }
 
   return (

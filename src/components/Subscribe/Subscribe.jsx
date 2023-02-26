@@ -28,7 +28,18 @@ function Subscribe() {
     updateState({ error: null, success: null, loading: true });
 
     if (!value.match(email)) {
-      return updateState({ error: "Enter a valid mail address! 🤐" });
+      return updateState({
+        error: "Enter a valid mail address! 🤐",
+        loading: false,
+      });
+    }
+
+    if (localStorage.getItem(value)) {
+      return updateState({
+        loading: false,
+        success: "You're already a subscriber! 💖",
+        value: "",
+      });
     }
 
     const idRef = doc(db, "email", value);
@@ -51,6 +62,7 @@ function Subscribe() {
 
     try {
       await setDoc(doc(db, "email", value), {});
+      localStorage.setItem(value, { email });
       return updateState({
         loading: false,
         success: "Successfully Subscribed! 😊",

@@ -64,7 +64,7 @@ function Form() {
       await new Promise((r, j) => setTimeout(r, 1500));
 
       return updateState({
-        loadingDataUpload: true,
+        loadingDataUpload: false,
         error: "You're not login, please login first 😫",
       });
     }

@@ -159,7 +159,8 @@ function Form() {
       />
       {currentUser === null && (
         <p className={classes.login}>
-          <span>Not login?</span> <NavLink to="/admin/login">Login</NavLink>
+          <span>You're not login!</span>{" "}
+          <NavLink to="/admin/login">Login</NavLink>
         </p>
       )}
     </form>

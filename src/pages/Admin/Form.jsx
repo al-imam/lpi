@@ -3,7 +3,7 @@ import Input, { Textarea, Button } from "@components/Input/Input";
 import RadioInput from "@components/RadioInput/RadioInput";
 import Alert from "@components/Alert/Alert";
 import generateId from "@util/generateId";
-import { LoadingLoop } from "@svg";
+import { LoadingLoopCircle } from "@svg";
 import { app } from "@app/firebase";
 import { useAuth } from "@context/AuthContext";
 import classes from "./admin.module.css";
@@ -153,7 +153,11 @@ function Form() {
         loading={state.loadingImageUpload}
       />
       <Button disabled={state.loadingImageUpload || state.loadingDataUpload}>
-        Post
+        {state.loadingImageUpload || state.loadingDataUpload ? (
+          <LoadingLoopCircle />
+        ) : (
+          "Post"
+        )}
       </Button>
       {currentUser === null && (
         <p className={classes.login}>

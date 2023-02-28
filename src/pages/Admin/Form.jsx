@@ -154,7 +154,14 @@ function Form() {
       />
       <Button disabled={state.loadingImageUpload || state.loadingDataUpload}>
         {state.loadingImageUpload || state.loadingDataUpload ? (
-          <LoadingLoopCircle />
+          <LoadingLoopCircle
+            strokeWidth={3}
+            style={{
+              color: "var(--gray-800)",
+              height: "0.9rem",
+              transform: "scale(2) translateY(1px)",
+            }}
+          />
         ) : (
           "Post"
         )}

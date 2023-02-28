@@ -160,11 +160,6 @@ function Form() {
       <p className={classes.login}>
         <span>Not login?</span> <NavLink to="/admin/login">Login</NavLink>
       </p>
-      {state.loadingDataUpload && (
-        <div className={classes.loading}>
-          <LoadingLoop />
-        </div>
-      )}
     </form>
   );
 }

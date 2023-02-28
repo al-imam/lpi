@@ -34,6 +34,10 @@ function Form() {
     init
   );
 
+  function isLoading() {
+    return state.loadingImageUpload || state.loadingDataUpload;
+  }
+
   const { currentUser } = useAuth();
 
   async function handleSubmit(evt) {
@@ -155,7 +159,7 @@ function Form() {
         loading={state.loadingImageUpload}
       />
       <Button disabled={state.loadingImageUpload || state.loadingDataUpload}>
-        {state.loadingImageUpload || state.loadingDataUpload ? (
+        {isLoading() ? (
           <LoadingLoopCircle
             strokeWidth={3}
             style={{

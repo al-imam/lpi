@@ -28,101 +28,9 @@ const init = {
   removeImage: false,
 };
 
-function reducer(prevState, action) {
-  const { type, payload } = action;
-  switch (type) {
-    case "title":
-      return {
-        ...prevState,
-        title: payload,
-      };
-
-    case "description":
-      return {
-        ...prevState,
-        description: payload,
-      };
-
-    case "error":
-      return {
-        ...prevState,
-        error: payload,
-        success: null,
-      };
-
-    case "success":
-      return {
-        ...prevState,
-        success: payload,
-        error: null,
-      };
-
-    case "loadingDataUpload":
-      return {
-        ...prevState,
-        loadingDataUpload: payload,
-      };
-
-    case "loadingImageUpload":
-      return {
-        ...prevState,
-        loadingImageUpload: payload,
-        removeImage: false,
-      };
-
-    case "errorImageUpload":
-      return {
-        ...prevState,
-        loadingImageUpload: false,
-        error: payload,
-      };
-
-    case "successImageUpload":
-      return {
-        ...prevState,
-        loadingImageUpload: false,
-        success: payload,
-        removeImage: true,
-      };
-
-    case "errorDataUpload":
-      return {
-        ...prevState,
-        loadingDataUpload: false,
-        error: payload,
-      };
-
-    case "successDataUpload":
-      return {
-        ...prevState,
-        loadingDataUpload: false,
-        success: payload,
-      };
-
-    case "reset":
-      return {
-        ...prevState,
-        title: "",
-        description: "",
-        loadingImageUpload: false,
-        loadingDataUpload: false,
-      };
-
-    case "resetErrorAndSuccess":
-      return {
-        ...prevState,
-        error: null,
-        success: null,
-      };
-
-    default:
-      throw new Error(`No Action called ${type}`);
-  }
-}
-
 function Form() {
-  const [{ title, description, ...state }, dispatch] = useReducer(
-    reducer,
+  const [{ title, description, ...state }, updateState] = useReducer(
+    (prev, next) => ({ ...prev, ...next }),
     init
   );
 
@@ -131,13 +39,10 @@ function Form() {
   async function handleSubmit(evt) {
     evt.preventDefault();
 
-    dispatch({ type: "resetErrorAndSuccess" });
+    updateState({ error: null, success: null });
 
     if (title.trim() === "" || description.trim() === "") {
-      return dispatch({
-        type: "error",
-        payload: "Title and description is required 🥲",
-      });
+      return updateState({ error: "Title and description is required 🥲" });
     }
 
     const { topic, file } = Object.fromEntries(
@@ -146,25 +51,28 @@ function Form() {
 
     if (currentUser === null) {
       if (file.name !== "") {
-        dispatch({ type: "loadingImageUpload", payload: true });
+        updateState({ loadingImageUpload: true, removeImage: false });
         await new Promise((r, j) => setTimeout(r, 1500));
-        return dispatch({
-          type: "errorImageUpload",
-          payload: "You're not login, please login first! 😫",
+        return updateState({
+          loadingImageUpload: false,
+          error: "You're not login, please login first 😫",
         });
       }
-      dispatch({ type: "loadingDataUpload", payload: true });
+
+      updateState({ loadingDataUpload: true });
+
       await new Promise((r, j) => setTimeout(r, 1500));
-      return dispatch({
-        type: "errorDataUpload",
-        payload: "You're not login, please login first! 😫",
+
+      return updateState({
+        loadingDataUpload: true,
+        error: "You're not login, please login first 😫",
       });
     }
 
     let url = null;
 
     if (file.name !== "") {
-      dispatch({ type: "loadingImageUpload", payload: true });
+      updateState({ loadingImageUpload: true, removeImage: false });
       const storage = getStorage(app);
       const folderRef = ref(
         storage,
@@ -174,21 +82,22 @@ function Form() {
       try {
         const uploadTask = await uploadBytes(folderRef, file);
         url = await getDownloadURL(uploadTask.ref);
-        dispatch({
-          type: "successImageUpload",
-          payload: "Image successfully uploaded 😊",
+        updateState({
+          loadingImageUpload: false,
+          removeImage: true,
+          success: "Image successfully uploaded 😊",
         });
       } catch (error) {
-        console.warn(error);
+        console.dir(error);
 
-        return dispatch({
-          type: "errorImageUpload",
-          payload: "Image upload failed! Try later 😫",
+        return updateState({
+          loadingImageUpload: false,
+          error: "Image upload failed! Try later 😫",
         });
       }
     }
 
-    dispatch({ type: "loadingDataUpload", payload: true });
+    updateState({ loadingDataUpload: true });
     const db = getFirestore(app);
 
     try {
@@ -199,52 +108,40 @@ function Form() {
         url: url,
       };
 
-      const { id } = await addDoc(collection(db, topic.toLowerCase()), payload);
+      await addDoc(collection(db, topic.toLowerCase()), payload);
 
-      dispatch({
-        type: "successDataUpload",
-        payload: "Post successfully uploaded 😊",
+      return updateState({
+        ...init,
+        success: "Post successfully uploaded 😊",
       });
-
-      console.log({ ...payload, id });
     } catch (error) {
-      console.warn(error);
+      console.dir(error);
 
-      return dispatch({
-        type: "errorDataUpload",
-        payload: "Post upload failed! Try later 😫",
+      return updateState({
+        loadingDataUpload: false,
+        error: "Post upload failed! Try later 😫",
       });
     }
-
-    dispatch({ type: "reset" });
   }
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
       {state.success !== null && state.error === null && (
-        <Alert
-          error={false}
-          text={state.success}
-          close={() => dispatch({ type: "success", payload: null })}
-        />
+        <Alert error={false} text={state.success} close={() => {}} />
       )}
       {state.error !== null && state.success === null && (
-        <Alert
-          error={true}
-          text={state.error}
-          close={() => dispatch({ type: "error", payload: null })}
-        />
+        <Alert error={true} text={state.error} close={() => {}} />
       )}
       <RadioGroup />
       <Input
         value={title}
-        setValue={(value) => dispatch({ type: "title", payload: value })}
+        setValue={(value) => updateState({ title: value })}
         type="text"
         placeholder="Title"
       />
       <Textarea
         value={description}
-        setValue={(value) => dispatch({ type: "description", payload: value })}
+        setValue={(value) => updateState({ description: value })}
         placeholder="Say more about current News or Notice"
       />
       <FileInput

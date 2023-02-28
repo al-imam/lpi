@@ -1,5 +1,5 @@
 import FileInput from "@components/FileInput/FileInput";
-import Input, { Textarea } from "@components/Input/Input";
+import Input, { Textarea, Button } from "@components/Input/Input";
 import RadioInput from "@components/RadioInput/RadioInput";
 import Alert from "@components/Alert/Alert";
 import generateId from "@util/generateId";
@@ -152,7 +152,9 @@ function Form() {
         remove={state.removeImage}
         loading={state.loadingImageUpload}
       />
-      <Button>Post</Button>
+      <Button disabled={state.loadingImageUpload || state.loadingDataUpload}>
+        Post
+      </Button>
       {currentUser === null && (
         <p className={classes.login}>
           <span>You're not login!</span>{" "}

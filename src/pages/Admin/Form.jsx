@@ -130,7 +130,11 @@ function Form() {
         <Alert error={false} text={state.success} close={() => {}} />
       )}
       {state.error !== null && state.success === null && (
-        <Alert error={true} text={state.error} close={() => {}} />
+        <Alert
+          error={true}
+          text={state.error}
+          close={() => updateState({ error: null })}
+        />
       )}
       <RadioGroup />
       <Input

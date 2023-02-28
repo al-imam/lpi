@@ -52,7 +52,7 @@
   outline: 1px solid var(--dark);
 }
 
-.inputs:disabled {
+.inputs[type="submit"]:disabled {
   background-color: rgb(198, 250, 199);
   color: rgba(0, 0, 0, 0.4);
   cursor: wait;

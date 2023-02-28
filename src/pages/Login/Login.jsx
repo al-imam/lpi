@@ -53,7 +53,7 @@ function Form() {
     }
 
     if (currentUser) {
-      return;
+      return updateState({ success: "You're already login 💖" });
     }
 
     const formData = Object.fromEntries(new FormData(event.target));
@@ -62,7 +62,7 @@ function Form() {
 
     try {
       await login(formData.email, formData.password);
-      return updateState({ ...init, success: "Login successful. 😊" });
+      return updateState({ ...init, success: "Login successful 😊" });
     } catch (error) {
       console.dir(error);
       if (error.code == "auth/network-request-failed") {

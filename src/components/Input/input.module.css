@@ -58,6 +58,11 @@
   cursor: wait;
 }
 
+.inputs:is([data-type="textarea"]):disabled {
+  outline: none;
+  opacity: 0.8;
+}
+
 .password {
   width: 100%;
   border-radius: 0.25rem;

@@ -79,7 +79,7 @@ function Subscribe() {
       saveLocal(email, value);
       return updateState({
         loading: false,
-        success: "Successfully Subscribed! 😊",
+        success: "Successfully subscribed! 😊",
         value: "",
       });
     } catch (e) {
@@ -120,6 +120,7 @@ function Subscribe() {
               value={value}
               setValue={(value) => updateState({ value })}
               name="email"
+              disabled={loading}
             />
             <Button disabled={loading}>
               {loading ? (

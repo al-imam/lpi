@@ -47,6 +47,11 @@ function Form() {
       return updateState({ error: "Enter a valid mail address! 🥹" });
     }
 
+    if (password === "") {
+      node.password.focus();
+      return updateState({ error: "Enter password 🥲" });
+    }
+
     if (currentUser) {
       return;
     }

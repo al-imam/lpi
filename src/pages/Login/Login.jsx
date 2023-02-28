@@ -4,6 +4,7 @@ import { useAuth } from "@context/AuthContext";
 import classes from "./login.module.css";
 import Alert from "@components/Alert/Alert";
 import { LoadingLoopCircle } from "@svg";
+import emailRegExp from "@util/regex";
 
 const init = {
   email: "",
@@ -39,6 +40,8 @@ function Form() {
   async function submit(event) {
     event.preventDefault();
 
+    const node = e.target.elements;
+
     if (currentUser) {
       return;
     }
@@ -72,7 +75,7 @@ function Form() {
   }
 
   return (
-    <form className={classes.form} onSubmit={submit}>
+    <form className={classes.form} onSubmit={submit} noValidate={true}>
       {success !== null && (
         <Alert
           error={false}

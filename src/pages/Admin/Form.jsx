@@ -148,11 +148,13 @@ function Form() {
         setValue={(value) => updateState({ title: value })}
         type="text"
         placeholder="Title"
+        disabled={isLoading()}
       />
       <Textarea
         value={description}
         setValue={(value) => updateState({ description: value })}
         placeholder="Say more about current News or Notice"
+        disabled={isLoading()}
       />
       <FileInput
         remove={state.removeImage}

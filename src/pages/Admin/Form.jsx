@@ -39,11 +39,7 @@ function Form() {
   async function handleSubmit(evt) {
     evt.preventDefault();
 
-    updateState({ error: null, success: null });
-
-    if (title.trim() === "" || description.trim() === "") {
-      return updateState({ error: "Title and description is required 🥲" });
-    }
+    const node = evt.target.elements;
 
     const { topic, file } = Object.fromEntries(
       new FormData(evt.target).entries()
@@ -125,7 +121,7 @@ function Form() {
   }
 
   return (
-    <form className={classes.form} onSubmit={handleSubmit}>
+    <form className={classes.form} onSubmit={handleSubmit} noValidate={true}>
       {state.success !== null && state.error === null && (
         <Alert
           error={false}

@@ -58,8 +58,14 @@
   cursor: wait;
 }
 
-.inputs:is([data-type="textarea"]):disabled {
+.inputs[data-type="textarea"]:disabled {
   outline: none;
+  opacity: 0.8;
+}
+
+.group:has(.password:disabled) {
+  outline: none;
+  pointer-events: none;
   opacity: 0.8;
 }
 

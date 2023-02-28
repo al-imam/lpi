@@ -40,7 +40,12 @@ function Form() {
   async function submit(event) {
     event.preventDefault();
 
-    const node = e.target.elements;
+    const node = event.target.elements;
+
+    if (!email.match(emailRegExp)) {
+      node.email.focus();
+      return updateState({ error: "Enter a valid mail address! 🥹" });
+    }
 
     if (currentUser) {
       return;

@@ -157,9 +157,11 @@ function Form() {
         value="Post"
         disabled={state.loadingImageUpload || state.loadingDataUpload}
       />
-      <p className={classes.login}>
-        <span>Not login?</span> <NavLink to="/admin/login">Login</NavLink>
-      </p>
+      {currentUser === null && (
+        <p className={classes.login}>
+          <span>Not login?</span> <NavLink to="/admin/login">Login</NavLink>
+        </p>
+      )}
     </form>
   );
 }

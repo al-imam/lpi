@@ -39,6 +39,8 @@ function Form() {
   async function handleSubmit(evt) {
     evt.preventDefault();
 
+    updateState({ error: null, success: null });
+
     const node = evt.target.elements;
 
     const { topic, file } = Object.fromEntries(

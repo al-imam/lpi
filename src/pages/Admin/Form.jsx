@@ -152,11 +152,7 @@ function Form() {
         remove={state.removeImage}
         loading={state.loadingImageUpload}
       />
-      <Input
-        type="submit"
-        value="Post"
-        disabled={state.loadingImageUpload || state.loadingDataUpload}
-      />
+      <Button>Post</Button>
       {currentUser === null && (
         <p className={classes.login}>
           <span>You're not login!</span>{" "}

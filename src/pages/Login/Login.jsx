@@ -56,12 +56,10 @@ function Form() {
       return updateState({ success: "You're already login 💖" });
     }
 
-    const formData = Object.fromEntries(new FormData(event.target));
-
     updateState({ error: null, success: null, loading: true });
 
     try {
-      await login(formData.email, formData.password);
+      await login(email, password);
       return updateState({ ...init, success: "Login successful 😊" });
     } catch (error) {
       console.dir(error);

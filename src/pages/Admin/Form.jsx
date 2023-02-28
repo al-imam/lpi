@@ -127,7 +127,11 @@ function Form() {
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
       {state.success !== null && state.error === null && (
-        <Alert error={false} text={state.success} close={() => {}} />
+        <Alert
+          error={false}
+          text={state.success}
+          close={() => updateState({ success: null })}
+        />
       )}
       {state.error !== null && state.success === null && (
         <Alert

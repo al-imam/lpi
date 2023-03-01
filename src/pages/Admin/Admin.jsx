@@ -11,10 +11,12 @@ export default function Contact() {
         <div className={classes.title}>
           <h4>Hey, dear</h4>
           <p>
-            The process of creating a post involves selecting "notice" or "news"
-            type, adding a title and content, and optionally uploading an image.
-            Once all fields are completed, the post can be submitted by clicking
-            the "Submit" button.
+            {currentUser
+              ? `The process of creating a post involves selecting notice or news
+            type, add a title and description, and optionally uploading an image.
+            Once all fields are completed then post can be submitted by clicking
+            the submit button.`
+              : ``}
           </p>
         </div>
         <Form />

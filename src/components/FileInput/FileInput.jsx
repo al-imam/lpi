@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { Trash } from "@svg";
 import { LoadingLoop } from "@svg";
 
-function FileInput({ loading = false, remove = false }) {
+function FileInput({ loading = false, remove = false, disabled = false }) {
   const [file, setFile] = useState(null);
   const ref = useRef(null);
 
@@ -48,6 +48,7 @@ function FileInput({ loading = false, remove = false }) {
           type="file"
           name="file"
           className={classes.input}
+          disabled={disabled}
         />
       </div>
     </div>

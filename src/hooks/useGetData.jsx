@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 
-function getHours(m) {
-  return 1000 * m * 60 * 60;
+function getMin(m) {
+  return 1000 * 60 * m;
 }
 
 function secondsToHms(seconds) {
@@ -16,7 +16,10 @@ function secondsToHms(seconds) {
   return hDisplay + mDisplay + sDisplay;
 }
 
-function useGetData(ref, validate = getHours(5)) {
+function useGetData(
+  ref,
+  validate = getMin(parseInt(import.meta.env.VITE_VALIDATE || 60))
+) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

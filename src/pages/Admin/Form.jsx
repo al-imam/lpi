@@ -68,9 +68,10 @@ function Form() {
     }
 
     if (currentUser === null) {
+      const wait = 500;
       if (file.name !== "") {
         updateState({ loadingImageUpload: true, removeImage: false });
-        await new Promise((r, j) => setTimeout(r, 1500));
+        await new Promise((r, j) => setTimeout(r, wait));
         return updateState({
           loadingImageUpload: false,
           error: "You're not login, please login first 😫",
@@ -79,7 +80,7 @@ function Form() {
 
       updateState({ loadingDataUpload: true });
 
-      await new Promise((r, j) => setTimeout(r, 5000));
+      await new Promise((r, j) => setTimeout(r, wait));
 
       return updateState({
         loadingDataUpload: false,

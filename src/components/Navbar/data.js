@@ -67,21 +67,7 @@ export default {
       ],
     },
     {
-      text: "Facilities",
-      path: "#",
-      routes: [
-        {
-          path: "/facilities/modern-lab",
-          text: "Modern Lab",
-        },
-        {
-          path: "/facilities/open-library",
-          text: "Open Library",
-        },
-      ],
-    },
-    {
-      text: "Info",
+      text: "Information",
       path: "#",
       routes: [
         {

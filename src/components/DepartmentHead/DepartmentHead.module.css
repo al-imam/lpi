@@ -1,14 +1,19 @@
 .card {
   width: 20rem;
   padding: 4rem 2rem 2rem;
-  box-shadow: 0 0 2rem -0.25rem rgba(0, 0, 0, 0.15);
+  background-color: hsl(179, 95%, 96%);
+  background-image: linear-gradient(
+    315deg,
+    hsl(179, 95%, 96%) 0%,
+    hsl(179, 95%, 99%) 74%
+  );
+  box-shadow: 0 0 0 5px var(--light);
   display: flex;
   flex-direction: column;
   font-family: var(--ff-primary);
   color: var(--gray-800);
   height: max-content;
   row-gap: 2rem;
-  background-color: white;
   border-radius: 0.25rem;
 }
 

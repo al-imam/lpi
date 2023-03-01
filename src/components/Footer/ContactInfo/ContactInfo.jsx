@@ -9,7 +9,7 @@ function ContactInfo() {
         <div className={classes.contactInfo}>
           <h4 className={classes.infoHeading}>Find us</h4>
           <address className={classes.infoDescription}>
-            132554 Laharkandi, Lakshmipur, Chittagong
+            Lakshmipur laharkandi
           </address>
         </div>
       </div>

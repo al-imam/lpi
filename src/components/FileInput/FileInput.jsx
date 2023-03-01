@@ -15,9 +15,7 @@ function FileInput({ loading = false, remove = false, disabled = false }) {
   useEffect(() => {
     if (remove) {
       handleRemove();
-      console.log("Inside useEffect");
     }
-    console.log("Outside useEffect");
   }, [remove]);
 
   return (

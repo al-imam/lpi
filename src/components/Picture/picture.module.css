@@ -14,7 +14,7 @@
   width: 100%;
   min-height: 100%;
   cursor: pointer;
-  transition: transform 300ms ease-in;
+  transition: transform 500ms ease-in;
 }
 
 .imgContainer :is(img, svg) {
@@ -46,7 +46,7 @@
 }
 
 .img:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .img:hover + .svg {

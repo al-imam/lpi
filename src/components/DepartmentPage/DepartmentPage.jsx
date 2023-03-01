@@ -7,7 +7,7 @@ function DepartmentPage({ heading, teacher }) {
     <main className="main">
       <Location current="departments" subRoute={heading.subpath} />
       <DepartmentLayout data={heading} />
-      {teacher.length !== 0 ? <TeacherGroup teacher={teacher} /> : null}
+      <TeacherGroup teacher={teacher} />
     </main>
   );
 }

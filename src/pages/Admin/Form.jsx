@@ -193,11 +193,6 @@ function Form() {
           "Post"
         )}
       </Button>
-      {currentUser === null && (
-        <p className={classes.login}>
-          <span>You're not</span> <NavLink to="/admin/login">login</NavLink>
-        </p>
-      )}
     </form>
   );
 }

@@ -126,6 +126,8 @@ function Form() {
 
       await addDoc(collection(db, topic), payload);
 
+      localStorage.removeItem(`firebase-data-${topic}`);
+
       return updateState({
         ...init,
         success: "Post successfully uploaded 😊",

@@ -55,10 +55,14 @@
   opacity: 1;
 }
 
-.radio:not(:checked):is(:hover, :focus) + .label::after {
+.radio:enabled:not(:checked):is(:hover, :focus) + .label::after {
   opacity: 0.5;
 }
 
-.radio:not(:checked):is(:hover, :focus) + .label {
+.radio:enabled:not(:checked):is(:hover, :focus) + .label {
   color: var(--gray-900);
+}
+
+.radio:disabled + .label {
+  cursor: default;
 }

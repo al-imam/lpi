@@ -11,8 +11,6 @@ import Departments from "@department/Departments";
 import Electrical from "@department/Electrical/Electrical";
 import Electronics from "@department/Electronics/Electronics";
 import Contact from "@pages/Contact/Contact";
-import Lab from "@pages/Facility/Lab/Lab";
-import Open from "@pages/Facility/Open/Open";
 import Home from "@pages/Home/Home";
 import Syllabus from "@pages/Syllabus/Syllabus";
 import ScrollToTop from "@util/ScrollToTop";
@@ -84,8 +82,6 @@ function App() {
             path="/syllabus/electronics"
             element={<Syllabus department="electronics" />}
           />
-          <Route path="/facilities/modern-lab" element={<Lab />} />
-          <Route path="/facilities/open-library" element={<Open />} />
           <Route
             path="/news"
             element={

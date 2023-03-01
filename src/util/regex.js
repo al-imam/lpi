@@ -42,9 +42,19 @@ const email = new RegExp(
   startWith(letter()) +
     word({ haveDot: true }) +
     mustHave("@") +
-    letter({ lowerCase: true, upperCase: false, range: range(3, 5) }) +
+    letter({
+      lowerCase: true,
+      upperCase: false,
+      range: range({ min: 2, max: 10 }),
+    }) +
     mustHave(escape(".")) +
-    endWith(letter({ lowerCase: true, upperCase: false, range: range(2, 5) }))
+    endWith(
+      letter({
+        lowerCase: true,
+        upperCase: false,
+        range: range({ min: 2, max: 7 }),
+      })
+    )
 );
 
 export default email;

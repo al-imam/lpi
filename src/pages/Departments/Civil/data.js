@@ -11,14 +11,14 @@ export default {
     firstShift: {
       src: "/Civil/sir/sazzadul-sir.JPG",
       name: "Sazzadul Hasan",
-      address: "Lakshmipur, Raipur",
+      address: "Lakshmipur",
       facebook: "https://www.facebook.com/profile.php?id=100009483072562",
       gmail: "#",
     },
     secondShift: {
       src: "/Civil/sir/nasir-sir.JPG",
       name: "Nasir Uddin",
-      address: "Feni Sadar, Feni",
+      address: "Feni",
       facebook: "https://www.facebook.com/profile.php?id=100002424941884",
       gmail: "#",
     },

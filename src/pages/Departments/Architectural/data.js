@@ -10,14 +10,14 @@ export default {
     firstShift: {
       src: "/sir/pavel.jpg",
       name: "Alomgir Hossain",
-      address: "Lakshmipur sadar, Lakshmipur",
+      address: "Lakshmipur",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
       gmail: "#",
     },
     secondShift: {
       src: "/sir/nasir-sir.JPG",
       name: "Taposh Candra Pul",
-      address: "Chandraganj, Lakshmipur",
+      address: "Lakshmipur",
       facebook: "https://www.facebook.com/kakan.das2",
       gmail: "#",
     },

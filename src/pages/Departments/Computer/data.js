@@ -9,14 +9,14 @@ export default {
     firstShift: {
       src: "/Computer/sir/khaled-sir.JPG",
       name: "Khaled Hossain",
-      address: "Chandraganj, Lakshmipur",
+      address: "Lakshmipur",
       facebook: "https://www.facebook.com/khaled.sudon",
       gmail: "khaledhossain7896@gmail.com",
     },
     secondShift: {
       src: "/Computer/sir/maruf-sir.JPG",
       name: "Maruf Hossain",
-      address: "Chandraganj, Lakshmipur",
+      address: "Lakshmipur",
       facebook: "",
       gmail: "nipu.maruf@gamil.com",
     },

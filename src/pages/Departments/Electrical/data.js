@@ -9,14 +9,14 @@ export default {
     firstShift: {
       src: "/Electrical/sir/pabel-sir.jpg",
       name: "Reaz Haider Pavel",
-      address: "Comilla ",
+      address: "Comilla",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
       gmail: "#",
     },
     secondShift: {
       src: "/sir/nasir-sir.JPG",
       name: "Kakon Chandra Das",
-      address: "Noakhali, Maijdee",
+      address: "Noakhali",
       facebook: "https://www.facebook.com/kakan.das2",
       gmail: "#",
     },

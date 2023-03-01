@@ -91,7 +91,7 @@
   transition: transform 200ms ease-in;
 }
 
-.address:is(:hover, :focus-visible) {
+.address:is(:hover, :focus-visible):not(address) {
   transform: scale(1.05);
   color: var(--gray-900);
 }

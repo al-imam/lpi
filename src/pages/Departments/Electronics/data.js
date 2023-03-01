@@ -9,14 +9,14 @@ export default {
     firstShift: {
       src: "/Electronics/sir/sobhan-sir.jpg",
       name: "Md Sobhan",
-      address: "Gopalganj,Tongipara ",
+      address: "Tongipara ",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
       gmail: "#",
     },
     secondShift: {
       src: "/Electronics/sir/kakon-sir.JPG",
       name: "Kakon Chandra Das",
-      address: "Maijdee,Noakhali",
+      address: "Noakhali",
       facebook: "https://www.facebook.com/kakan.das2",
       gmail: "kakundeet81@gmail.com",
     },

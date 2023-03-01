@@ -51,6 +51,14 @@ function Form() {
       new FormData(evt.target).entries()
     );
 
+    if (title.trim() === "") {
+      node.title.focus();
+      return updateState({
+        title: "",
+        error: `Title is required in ${topic} 🥲`,
+      });
+    }
+
     if (currentUser === null) {
       if (file.name !== "") {
         updateState({ loadingImageUpload: true, removeImage: false });
@@ -76,10 +84,7 @@ function Form() {
     if (file.name !== "") {
       updateState({ loadingImageUpload: true, removeImage: false });
       const storage = getStorage(app);
-      const folderRef = ref(
-        storage,
-        `${topic.toLowerCase()}/${file.size}-${generateId()}`
-      );
+      const folderRef = ref(storage, `${topic}/${file.size}-${generateId()}`);
 
       try {
         const uploadTask = await uploadBytes(folderRef, file);
@@ -110,7 +115,7 @@ function Form() {
         url: url,
       };
 
-      await addDoc(collection(db, topic.toLowerCase()), payload);
+      await addDoc(collection(db, topic), payload);
 
       return updateState({
         ...init,
@@ -148,12 +153,14 @@ function Form() {
         setValue={(value) => updateState({ title: value })}
         type="text"
         placeholder="Title"
+        name="title"
         disabled={isLoading()}
       />
       <Textarea
         value={description}
         setValue={(value) => updateState({ description: value })}
         placeholder="Say more about current News or Notice"
+        name="description"
         disabled={isLoading()}
       />
       <FileInput

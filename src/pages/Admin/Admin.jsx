@@ -6,7 +6,7 @@ export default function Contact() {
     <main className={classes.s}>
       <section className={classes.wrapper}>
         <div className={classes.title}>
-          <h4>Welcome, dear admin!</h4>
+          <h4>Hey, dear admin!</h4>
           <p>
             The process of creating a post involves selecting "notice" or "news"
             type, adding a title and content, and optionally uploading an image.

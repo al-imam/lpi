@@ -1,11 +1,22 @@
 import { useState, useEffect } from "react";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 
-function getMin(m) {
-  return 60 * 1000 * m;
+function getHours(m) {
+  return 1000 * m * 60 * 60;
 }
 
-function useGetData(ref, validate = getMin(5 * 60)) {
+function secondsToHms(seconds) {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor((seconds % 3600) % 60);
+
+  const hDisplay = h > 0 ? h + (h == 1 ? "hour-" : "hours-") : "";
+  const mDisplay = m > 0 ? m + (m == 1 ? " minute-" : "minutes-") : "";
+  const sDisplay = s > 0 ? s + (s == 1 ? " second" : "seconds") : "";
+  return hDisplay + mDisplay + sDisplay;
+}
+
+function useGetData(ref, validate = getHours(5)) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -21,10 +32,9 @@ function useGetData(ref, validate = getMin(5 * 60)) {
         return;
       }
       console.log(
-        `Fetch will revalidate after ${(
-          (local.date - Date.now()) /
-          getMin(60)
-        ).toFixed(2)}h`
+        `Fetch will revalidate after ${secondsToHms(
+          Math.floor((local.date - Date.now()) / 1000)
+        )}`
       );
       setData(local.data);
       setLoading(false);

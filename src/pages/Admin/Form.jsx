@@ -63,7 +63,7 @@ function Form() {
 
       updateState({ loadingDataUpload: true });
 
-      await new Promise((r, j) => setTimeout(r, 1500));
+      await new Promise((r, j) => setTimeout(r, 5000));
 
       return updateState({
         loadingDataUpload: false,
@@ -142,7 +142,7 @@ function Form() {
           close={() => updateState({ error: null })}
         />
       )}
-      <RadioGroup />
+      <RadioGroup loading={isLoading()} />
       <Input
         value={title}
         setValue={(value) => updateState({ title: value })}
@@ -159,6 +159,7 @@ function Form() {
       <FileInput
         remove={state.removeImage}
         loading={state.loadingImageUpload}
+        disabled={isLoading()}
       />
       <Button disabled={state.loadingImageUpload || state.loadingDataUpload}>
         {isLoading() ? (
@@ -184,11 +185,16 @@ function Form() {
   );
 }
 
-function RadioGroup() {
+function RadioGroup({ loading = false }) {
   return (
     <div className={classes.radioGroup}>
-      <RadioInput name="topic" value="News" defaultChecked={true} />
-      <RadioInput name="topic" value="Notice" />
+      <RadioInput
+        name="topic"
+        value="news"
+        defaultChecked={true}
+        disabled={loading}
+      />
+      <RadioInput name="topic" value="notice" disabled={loading} />
     </div>
   );
 }

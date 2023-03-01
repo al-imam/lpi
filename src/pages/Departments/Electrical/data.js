@@ -8,14 +8,14 @@ export default {
     subpath: "Electrical",
     firstShift: {
       src: "/Electrical/sir/pabel-sir.jpg",
-      name: "Reaz Haider Pavel",
+      name: "Pavel",
       address: "Comilla",
       facebook: "https://www.facebook.com/ReazHaiderPavel",
       gmail: "#",
     },
     secondShift: {
       src: "/sir/nasir-sir.JPG",
-      name: "Kakon Chandra Das",
+      name: "Kakon Das",
       address: "Noakhali",
       facebook: "https://www.facebook.com/kakan.das2",
       gmail: "#",

@@ -16,7 +16,7 @@ export default {
     },
     secondShift: {
       src: "/sir/nasir-sir.JPG",
-      name: "Taposh Candra Pul",
+      name: "Taposh Candro",
       address: "Lakshmipur",
       facebook: "https://www.facebook.com/kakan.das2",
       gmail: "#",

@@ -59,6 +59,14 @@ function Form() {
       });
     }
 
+    if (description.trim() === "") {
+      node.description.focus();
+      return updateState({
+        description: "",
+        error: `Description is required in ${topic} 🥲`,
+      });
+    }
+
     if (currentUser === null) {
       if (file.name !== "") {
         updateState({ loadingImageUpload: true, removeImage: false });

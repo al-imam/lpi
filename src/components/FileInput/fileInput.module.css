@@ -41,9 +41,21 @@
     background-color var(--speed) ease-out;
 }
 
-.input:is(:hover, :focus)::file-selector-button {
+.input:enabled:is(:hover, :focus)::file-selector-button {
   background-color: var(--gray-500);
   color: var(--white);
+}
+
+.input:disabled {
+  opacity: 0.8;
+}
+
+.input:disabled::file-selector-button {
+  box-shadow: none;
+}
+
+.container:has(.input:disabled) {
+  outline: none;
 }
 
 .image {

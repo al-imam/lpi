@@ -187,7 +187,7 @@ function Form() {
 
 function RadioGroup({ loading = false }) {
   return (
-    <div className={classes.radioGroup}>
+    <div className={`${classes.radioGroup} ${loading && classes.radioDisable}`}>
       <RadioInput
         name="topic"
         value="news"

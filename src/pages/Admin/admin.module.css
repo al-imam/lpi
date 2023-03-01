@@ -61,6 +61,11 @@
   padding: 1rem;
 }
 
+.radioDisable {
+  opacity: 0.8;
+  outline: none;
+}
+
 .loading {
   position: absolute;
   inset: 0 0 calc(19px + 1rem) 0;

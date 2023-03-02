@@ -4,13 +4,13 @@ import { Email, Location, FacebookOutlineIcon } from "@svg";
 const head = {
   name: "Jahirul Islam",
   pod: "Principle Lakshmipur Polytechnic",
-  location: "Comilla, Bangladesh",
+  location: "Comilla",
 };
 
 const atik = {
   name: "Atiqure Rahman",
   pod: "Chief Instructor Non-Tech",
-  location: "Fenchugonj, Sylhet",
+  location: "Sylhet",
 };
 
 function Principal() {

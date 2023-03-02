@@ -11,7 +11,7 @@ function DepartmentHead({ info }) {
           className={classes.image}
           onError={(evt) => (evt.target.src = "/sir/fallback.jpg")}
         />
-        <div>
+        <div className={classes.position}>
           <h4>{info.name}</h4>
           <span>HEAD</span>
         </div>

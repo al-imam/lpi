@@ -108,10 +108,18 @@
   transition: transform 200ms ease-in;
 }
 
-.social a:hover,
-.social a:focus-visible {
+.social svg {
+  --move: 0.25rem;
+  transition: transform 200ms ease-out, color 200ms ease-in;
+}
+
+.social :is(a:hover, a:focus-visible) svg {
   color: var(--gray-900);
-  transform: scale(1.05);
+  transform: translateX(var(--move));
+}
+
+.social :is(:last-child:hover, :last-child:focus-visible) svg {
+  transform: translateX(var(--move)) scale(0.7);
 }
 
 @media only screen and (max-width: 45rem) {

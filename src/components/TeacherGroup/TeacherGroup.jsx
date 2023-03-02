@@ -28,7 +28,7 @@ function TeacherCard({
   gmail = "#",
   name,
   address,
-  src = "/sir/maruf-sir.JPG",
+  src = "#",
 }) {
   return (
     <div className={classes.card}>

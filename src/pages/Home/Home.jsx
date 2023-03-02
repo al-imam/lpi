@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 import classes from "./home.module.css";
 
-import AboutUs from "@components/AboutUs/AboutUs";
 import DepartmentGroup from "@components/DepartmentGroup/DepartmentGroup";
 import Loader from "@components/Loader/Loader";
 import Marquee from "@components/Marquee/Marquee";
@@ -28,7 +27,7 @@ function Home() {
       <DepartmentGroup />
       <Subscribe />
       <Suspense fallback={<Loader />}>
-        <Gallery pictures={data.gallery} heading="Image Gallery" />
+        <Gallery pictures={data.gallery} heading="Image gallery" />
       </Suspense>
     </main>
   );

@@ -6,9 +6,7 @@ function DepartmentGroup({ haveTitle = true }) {
   return (
     <section className={classes.section}>
       <div className={classes.container}>
-        {haveTitle && (
-          <h2 className={classes.departmentTitle}>our department's</h2>
-        )}
+        {haveTitle && <h2 className={classes.departmentTitle}>Department's</h2>}
         <div className={classes.cardsContainer}>
           {data.map((card, index) => (
             <DepartmentCard

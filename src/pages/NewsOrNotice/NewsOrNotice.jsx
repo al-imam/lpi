@@ -36,7 +36,7 @@ function NewsOrNotice({ location, collectionRef }) {
       <section className={classes.section}>
         <div className={classes.container}>
           {documents.length === 0 && !loading ? (
-            <p className={classes.no}>No {location} available</p>
+            <p className={classes.no}>No {location.toLowerCase()} available</p>
           ) : (
             <>
               {loading === false &&

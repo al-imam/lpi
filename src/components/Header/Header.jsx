@@ -27,7 +27,7 @@ export default function Header({ setOpen, open }) {
     <header className={classes.main}>
       <div className={classes.header}>
         <div className={classes.group}>
-          <NavLink className={classes.item} to="/">
+          <NavLink className={classes.item + " " + classes.image} to="/">
             <img className={classes.img} src={logo} alt="Logo" />
           </NavLink>
           {currentUser === null ? (

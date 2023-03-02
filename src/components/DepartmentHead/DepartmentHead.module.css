@@ -76,7 +76,9 @@
 
 .position span {
   font-size: var(--h6);
-  color: var(--gray-400);
+  color: rgba(16, 17, 16, 0.2);
+  backdrop-filter: blur(2rem);
+  font-weight: var(--fw-bold);
 }
 
 .info {

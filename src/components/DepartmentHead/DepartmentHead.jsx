@@ -13,7 +13,7 @@ function DepartmentHead({ info }) {
         />
         <div className={classes.position}>
           <h4>{info.name}</h4>
-          <span>HEAD</span>
+          <span>Head</span>
         </div>
       </div>
       <div className={classes.info}>

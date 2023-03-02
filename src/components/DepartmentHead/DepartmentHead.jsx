@@ -13,7 +13,7 @@ function DepartmentHead({ info }) {
         />
         <div>
           <h4>{info.name}</h4>
-          <span>{info.head ? info.head : "Department Head"}</span>
+          <span>HEAD</span>
         </div>
       </div>
       <div className={classes.info}>

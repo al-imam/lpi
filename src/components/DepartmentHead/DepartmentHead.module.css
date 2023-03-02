@@ -35,7 +35,7 @@
   width: 70%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  outline: 0.25rem solid var(--gray-100);
+  box-shadow: 0 0 0 5px var(--light);
   border-radius: 100vmax;
 }
 

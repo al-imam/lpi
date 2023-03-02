@@ -5,7 +5,7 @@ function Departments() {
   return (
     <div>
       <Location current="departments" />
-      <DepartmentGroup />
+      <DepartmentGroup haveTitle={false} />
     </div>
   );
 }

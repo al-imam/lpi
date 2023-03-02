@@ -16,11 +16,11 @@
   row-gap: 2rem;
   border-radius: 0.25rem;
   outline-color: transparent;
-  transition: outline 1000ms ease;
+  transition: box-shadow 1000ms ease;
 }
 
 .card:hover {
-  outline: 1px solid var(--dark);
+  box-shadow: 0 0 0 5px var(--dark);
 }
 
 .heading {

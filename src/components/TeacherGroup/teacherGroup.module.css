@@ -41,7 +41,7 @@
 }
 
 .card:hover img {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .card::after {
@@ -83,18 +83,21 @@
   color: var(--grey-50);
 }
 
-.icons :is(a:hover, a:focus-visible) {
+.icons :first-child svg {
+  transform: scale(0.65);
+}
+
+.icons a {
   transition: color 200ms ease-out, transform 200ms ease-out;
+}
+
+.icons :is(a:hover, a:focus-visible) {
   color: var(--primary);
   transform: scale(1.1);
 }
 
 .icons svg {
   font-size: var(--h4);
-}
-
-.icons :first-child svg {
-  padding: 0.37rem;
 }
 
 @media only screen and (max-width: 65rem) {

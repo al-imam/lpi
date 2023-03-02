@@ -67,13 +67,14 @@
   }
 }
 
-.heading h4 {
+.position h4 {
   font-size: var(--h5);
   font-weight: var(--fw-regular);
+  font-family: var(--ff-primary);
   text-transform: capitalize;
 }
 
-.heading span {
+.position span {
   font-size: var(--h6);
   color: var(--gray-400);
 }

@@ -148,9 +148,11 @@ function App() {
           <Route
             path="/admin/login"
             element={
-              <Suspense fallback={<Loader />}>
-                <Login />
-              </Suspense>
+              <Public path="/admin">
+                <Suspense fallback={<Loader />}>
+                  <Login />
+                </Suspense>
+              </Public>
             }
           />
         </Routes>

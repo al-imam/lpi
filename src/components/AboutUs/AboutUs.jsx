@@ -1,5 +1,4 @@
 import classes from "./aboutUs.module.css";
-import { NavLink } from "react-router-dom";
 
 function AboutUs({ subtitle }) {
   return (

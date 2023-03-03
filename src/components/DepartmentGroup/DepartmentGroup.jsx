@@ -1,5 +1,6 @@
+import { lazy } from "react";
 import classes from "./departmentGroup.module.css";
-import DepartmentCard from "./DepartmentCard/DepartmentCard";
+const DepartmentCard = lazy(() => import("./DepartmentCard/DepartmentCard"));
 import data from "./data";
 
 function DepartmentGroup({ haveTitle = true }) {

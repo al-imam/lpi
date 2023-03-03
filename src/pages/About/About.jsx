@@ -1,7 +1,5 @@
-import { useState, useEffect, lazy, Suspense } from "react";
-import Loader from "@components/Loader/Loader";
-import Location from "@components/Location/Location";
-
+import { useState, useEffect, lazy } from "react";
+const Location = lazy(() => import("@components/Location/Location"));
 const Gallery = lazy(() => import("@components/Gallery/Gallery"));
 const Status = lazy(() => import("@components/Status/Status"));
 const AboutUs = lazy(() => import("@components/AboutUs/AboutUs"));
@@ -16,11 +14,9 @@ function About() {
   return (
     <main>
       <Location current="About" />
-      <Suspense fallback={<Loader />}>
-        <AboutUs subtitle={data.about || []} />
-        <Status />
-        <Gallery pictures={data.gallery || []} heading="Image Gallery" />
-      </Suspense>
+      <AboutUs subtitle={data.about || []} />
+      <Status />
+      <Gallery pictures={data.gallery || []} heading="Image Gallery" />
     </main>
   );
 }

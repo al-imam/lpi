@@ -1,5 +1,8 @@
-import Location from "@components/Location/Location";
-import DepartmentGroup from "@components/DepartmentGroup/DepartmentGroup";
+import { lazy } from "react";
+const Location = lazy(() => import("@components/Location/Location"));
+const DepartmentGroup = lazy(() =>
+  import("@components/DepartmentGroup/DepartmentGroup")
+);
 
 function Departments() {
   return (

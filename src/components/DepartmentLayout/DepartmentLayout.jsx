@@ -1,5 +1,8 @@
+import { lazy } from "react";
 import classes from "./departmentLayout.module.css";
-import DepartmentHead from "@components/DepartmentHead/DepartmentHead";
+const DepartmentHead = lazy(() =>
+  import("@components/DepartmentHead/DepartmentHead")
+);
 
 function DepartmentLayout({ data }) {
   return (

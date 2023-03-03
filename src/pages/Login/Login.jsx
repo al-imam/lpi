@@ -1,8 +1,8 @@
 import Input, { PasswordInput, Button } from "@components/Input/Input";
-import { useReducer } from "react";
+import { useReducer, lazy } from "react";
 import { useAuth } from "@context/AuthContext";
 import classes from "./login.module.css";
-import Alert from "@components/Alert/Alert";
+const Alert = lazy(() => import("@components/Alert/Alert"));
 import { LoadingLoopCircle } from "@svg";
 import emailRegExp from "@util/regex";
 

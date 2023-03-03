@@ -1,13 +1,13 @@
-import classes from "./contact.module.css";
-import Map from "@components/Map/Map";
-import Subscribe from "@components/Subscribe/Subscribe";
-import { useLocation } from "react-router-dom";
-import Input, { Textarea, Button } from "@components/Input/Input";
-import { useEffect, useReducer } from "react";
-import emailRegExp from "@util/regex";
-import Alert from "@components/Alert/Alert";
-import { getFirestore, addDoc, collection } from "firebase/firestore";
+import Input, { Button, Textarea } from "@components/Input/Input";
 import { LoadingLoopCircle } from "@svg";
+import emailRegExp from "@util/regex";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { lazy, useEffect, useReducer } from "react";
+import { useLocation } from "react-router-dom";
+import classes from "./contact.module.css";
+const Map = lazy(() => import("@components/Map/Map"));
+const Subscribe = lazy(() => import("@components/Subscribe/Subscribe"));
+const Alert = lazy(() => import("@components/Alert/Alert"));
 
 const db = getFirestore();
 

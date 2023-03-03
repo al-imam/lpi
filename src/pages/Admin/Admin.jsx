@@ -1,5 +1,6 @@
+import { lazy } from "react";
 import classes from "./admin.module.css";
-import Form from "./Form";
+const Form = lazy(() => import("./Form"));
 import { useAuth } from "@context/AuthContext";
 import { NavLink } from "react-router-dom";
 

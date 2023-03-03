@@ -1,8 +1,8 @@
 import { lazy, Suspense } from "react";
 import classes from "./home.module.css";
-import Loader from "@components/Loader/Loader";
-import Marquee from "@components/Marquee/Marquee";
-import Hero from "./Hero/Hero";
+const Loader = lazy(() => import("@components/Loader/Loader"));
+const Marquee = lazy(() => import("@components/Marquee/Marquee"));
+const Hero = lazy(() => import("./Hero/Hero"));
 import data from "./data";
 
 const DepartmentGroup = lazy(() =>

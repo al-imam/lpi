@@ -1,10 +1,10 @@
-import Post from "@components/Post/Post";
+import { useEffect, lazy } from "react";
+const Post = lazy(() => import("@components/Post/Post"));
 import classes from "./newsOrNotice.module.css";
-import Location from "@components/Location/Location";
+const Location = lazy(() => import("@components/Location/Location"));
 import useGetData from "@hooks/useGetData";
 import { LoadingLoopCircle } from "@svg";
 import { useSearchParams } from "react-router-dom";
-import { useEffect } from "react";
 
 const date = Intl.DateTimeFormat("bn-bd", {
   dateStyle: "full",

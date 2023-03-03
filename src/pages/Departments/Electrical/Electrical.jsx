@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import Loader from "@components/Loader/Loader";
 
 const DepartmentPage = lazy(() =>
@@ -17,9 +17,7 @@ function Electrical() {
       {data === null ? (
         <Loader />
       ) : (
-        <Suspense fallback={<Loader />}>
-          <DepartmentPage heading={data.heading} teacher={data.teacher} />
-        </Suspense>
+        <DepartmentPage heading={data.heading} teacher={data.teacher} />
       )}
     </>
   );

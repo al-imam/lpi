@@ -155,6 +155,30 @@ function App() {
               </Public>
             }
           />
+          <Route
+            path="*"
+            element={
+              <div
+                style={{
+                  maxWidth: "var(--maximum-width)",
+                  marginInline: "auto",
+                  paddingBlock: "5rem",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "var(--ff-primary)",
+                    fontSize: "var(--h1)",
+                    color: "var(--gray-400)",
+                    textAlign: "center",
+                  }}
+                >
+                  <span style={{ color: "var(--gray-600)" }}>404</span> <br />
+                  Look like you're lost <br /> page out found!
+                </p>
+              </div>
+            }
+          />
         </Routes>
         <Section>
           <Suspense fallback={<Loader />}>

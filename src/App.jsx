@@ -5,12 +5,14 @@ import Public from "@routes/Public";
 import data from "@app/data";
 import ScrollToTop from "@util/ScrollToTop";
 
-import Architectural from "@department/Architectural/Architectural";
-import Civil from "@department/Civil/Civil";
-import Computer from "@department/Computer/Computer";
-import Departments from "@department/Departments";
-import Electrical from "@department/Electrical/Electrical";
-import Electronics from "@department/Electronics/Electronics";
+const Architectural = lazy(() =>
+  import("@department/Architectural/Architectural")
+);
+const Civil = lazy(() => import("@department/Civil/Civil"));
+const Computer = lazy(() => import("@department/Computer/Computer"));
+const Departments = lazy(() => import("@department/Departments"));
+const Electrical = lazy(() => import("@department/Electrical/Electrical"));
+const Electronics = lazy(() => import("@department/Electronics/Electronics"));
 
 const Loader = lazy(() => import("@components/Loader/Loader"));
 const Footer = lazy(() => import("@components/Footer/Footer"));
@@ -58,20 +60,43 @@ function App() {
           />
           <Route
             path="/departments/computer-technology"
-            element={<Computer />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Computer />
+              </Suspense>
+            }
           />
-          <Route path="/departments/civil-technology" element={<Civil />} />
+          <Route
+            path="/departments/civil-technology"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Civil />
+              </Suspense>
+            }
+          />
           <Route
             path="/departments/electrical-technology"
-            element={<Electrical />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Electrical />
+              </Suspense>
+            }
           />
           <Route
             path="/departments/architecture-technology"
-            element={<Architectural />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Architectural />
+              </Suspense>
+            }
           />
           <Route
             path="/departments/electronics-technology"
-            element={<Electronics />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Electronics />
+              </Suspense>
+            }
           />
           <Route
             path="/contact"

@@ -68,7 +68,7 @@ function Form() {
     }
 
     if (currentUser === null) {
-      const wait = 500;
+      const wait = 1500;
       if (file.name !== "") {
         updateState({ loadingImageUpload: true, removeImage: false });
         await new Promise((r, j) => setTimeout(r, wait));

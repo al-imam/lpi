@@ -20,5 +20,6 @@
 
 .no {
   font-size: var(--h5);
+  font-family: var(--ff-primary);
   color: var(--gray-400);
 }

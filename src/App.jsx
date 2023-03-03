@@ -1,27 +1,28 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-import Footer from "@components/Footer/Footer";
-import Head from "@components/Head/Head";
-import Loader from "@components/Loader/Loader";
-import Architectural from "@department/Architectural/Architectural";
-import Civil from "@department/Civil/Civil";
-import Computer from "@department/Computer/Computer";
-import Departments from "@department/Departments";
-import Electrical from "@department/Electrical/Electrical";
-import Electronics from "@department/Electronics/Electronics";
-import Contact from "@pages/Contact/Contact";
-import Syllabus from "@pages/Syllabus/Syllabus";
-import ScrollToTop from "@util/ScrollToTop";
-import data from "@app/data";
-import Links from "@components/Links/Links";
-import Section from "@components/Section/Section";
-import NewsOrNotice from "@pages/NewsOrNotice/NewsOrNotice";
-import Login from "@pages/Login/Login";
-import Admin from "@pages/Admin/Admin";
 import { AuthProvider } from "@context/AuthContext";
 import Public from "@routes/Public";
+import data from "@app/data";
+import ScrollToTop from "@util/ScrollToTop";
 
+const Architectural = lazy(() =>
+  import("@department/Architectural/Architectural")
+);
+const Civil = lazy(() => import("@department/Civil/Civil"));
+const Computer = lazy(() => import("@department/Computer/Computer"));
+const Departments = lazy(() => import("@department/Departments"));
+const Electrical = lazy(() => import("@department/Electrical/Electrical"));
+const Electronics = lazy(() => import("@department/Electronics/Electronics"));
+const Loader = lazy(() => import("@components/Loader/Loader"));
+const Footer = lazy(() => import("@components/Footer/Footer"));
+const Head = lazy(() => import("@components/Head/Head"));
+const Contact = lazy(() => import("@pages/Contact/Contact"));
+const Syllabus = lazy(() => import("@pages/Syllabus/Syllabus"));
+const Links = lazy(() => import("@components/Links/Links"));
+const Section = lazy(() => import("@components/Section/Section"));
+const NewsOrNotice = lazy(() => import("@pages/NewsOrNotice/NewsOrNotice"));
+const Login = lazy(() => import("@pages/Login/Login"));
+const Admin = lazy(() => import("@pages/Admin/Admin"));
 const About = lazy(() => import("@pages/About/About"));
 const Home = lazy(() => import("@pages/Home/Home"));
 
@@ -48,23 +49,53 @@ function App() {
               </Suspense>
             }
           />
-          <Route path="/departments" element={<Departments />} />
+          <Route
+            path="/departments"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Departments />
+              </Suspense>
+            }
+          />
           <Route
             path="/departments/computer-technology"
-            element={<Computer />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Computer />
+              </Suspense>
+            }
           />
-          <Route path="/departments/civil-technology" element={<Civil />} />
+          <Route
+            path="/departments/civil-technology"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Civil />
+              </Suspense>
+            }
+          />
           <Route
             path="/departments/electrical-technology"
-            element={<Electrical />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Electrical />
+              </Suspense>
+            }
           />
           <Route
             path="/departments/architecture-technology"
-            element={<Architectural />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Architectural />
+              </Suspense>
+            }
           />
           <Route
             path="/departments/electronics-technology"
-            element={<Electronics />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Electronics />
+              </Suspense>
+            }
           />
           <Route path="/contact" element={<Contact />} />
           <Route

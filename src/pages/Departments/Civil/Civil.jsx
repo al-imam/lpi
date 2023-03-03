@@ -15,9 +15,9 @@ function Civil() {
   return (
     <>
       {data === null ? (
-        <Loader height="80vh" />
+        <Loader />
       ) : (
-        <Suspense fallback={<Loader height="80vh" />}>
+        <Suspense fallback={<Loader />}>
           <DepartmentPage heading={data.heading} teacher={data.teacher} />
         </Suspense>
       )}

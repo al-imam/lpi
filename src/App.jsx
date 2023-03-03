@@ -17,12 +17,10 @@ import ScrollToTop from "@util/ScrollToTop";
 import data from "@app/data";
 import Links from "@components/Links/Links";
 import Section from "@components/Section/Section";
-import Post from "@components/Post/Post";
 import NewsOrNotice from "@pages/NewsOrNotice/NewsOrNotice";
 import Login from "@pages/Login/Login";
 import Admin from "@pages/Admin/Admin";
 import { AuthProvider } from "@context/AuthContext";
-import Private from "@routes/Private";
 import Public from "@routes/Public";
 
 const About = lazy(() => import("@pages/About/About"));

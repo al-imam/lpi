@@ -148,12 +148,18 @@ function App() {
           <Route
             path="/news"
             element={
-              <NewsOrNotice location="News And Event" collectionRef="news" />
+              <Suspense fallback={<Loader />}>
+                <NewsOrNotice location="News And Event" collectionRef="news" />
+              </Suspense>
             }
           />
           <Route
             path="/notice"
-            element={<NewsOrNotice location="Notice" collectionRef="notice" />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <NewsOrNotice location="Notice" collectionRef="notice" />
+              </Suspense>
+            }
           />
           <Route path="/admin" element={<Admin />} />
           <Route

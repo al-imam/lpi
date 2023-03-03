@@ -74,7 +74,7 @@ function Form() {
         if (node.value === "") {
           node.focus();
           updateState({
-            error: `Enter ${node.name} it's required for mail. 🥹`,
+            error: `${node.name} is required for mail 🥹`,
           });
           haveError = true;
           break;

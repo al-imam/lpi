@@ -97,26 +97,53 @@ function App() {
               </Suspense>
             }
           />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/contact"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Contact />
+              </Suspense>
+            }
+          />
           <Route
             path="/syllabus/computer"
-            element={<Syllabus department="computer" />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Syllabus department="computer" />
+              </Suspense>
+            }
           />
           <Route
             path="/syllabus/civil"
-            element={<Syllabus department="civil" />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Syllabus department="civil" />
+              </Suspense>
+            }
           />
           <Route
             path="/syllabus/electrical"
-            element={<Syllabus department="electrical" />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Syllabus department="electrical" />
+              </Suspense>
+            }
           />
           <Route
             path="/syllabus/architecture"
-            element={<Syllabus department="architecture" />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Syllabus department="architecture" />
+              </Suspense>
+            }
           />
           <Route
             path="/syllabus/electronics"
-            element={<Syllabus department="electronics" />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <Syllabus department="electronics" />
+              </Suspense>
+            }
           />
           <Route
             path="/news"

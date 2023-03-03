@@ -43,7 +43,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<Loader height="80vh" />}>
                 <Home />
               </Suspense>
             }

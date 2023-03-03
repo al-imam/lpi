@@ -1,16 +1,25 @@
-import Location from "@components/Location/Location";
-import AboutUs from "@components/AboutUs/AboutUs";
-import Status from "@components/Status/Status";
+import { lazy, Suspense } from "react";
 import data from "./data";
-import Gallery from "@components/Gallery/Gallery";
+import Loader from "@components/Loader/Loader";
+import Location from "@components/Location/Location";
+
+const Gallery = lazy(() => import("@components/Gallery/Gallery"));
+const Status = lazy(() => import("@components/Status/Status"));
+const AboutUs = lazy(() => import("@components/AboutUs/AboutUs"));
 
 function About() {
   return (
     <main>
       <Location current="About" />
-      <AboutUs subtitle={data.about} />
-      <Status />
-      <Gallery pictures={data.gallery} heading="Image Gallery" />
+      <Suspense fallback={<Loader />}>
+        <AboutUs subtitle={data.about} />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Status />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Gallery pictures={data.gallery} heading="Image Gallery" />
+      </Suspense>
     </main>
   );
 }

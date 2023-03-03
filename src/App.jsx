@@ -161,23 +161,32 @@ function App() {
               </Suspense>
             }
           />
-          <Route path="/admin" element={<Admin />} />
+          <Route
+            path="/admin"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Admin />
+              </Suspense>
+            }
+          />
           <Route
             path="/admin/login"
             element={
-              <Public path="/admin">
+              <Suspense fallback={<Loader />}>
                 <Login />
-              </Public>
+              </Suspense>
             }
           />
         </Routes>
         <Section>
-          <Links
-            array={data}
-            heading="Related links"
-            font="english"
-            fallback="No links available"
-          />
+          <Suspense fallback={<Loader />}>
+            <Links
+              array={data}
+              heading="Related links"
+              font="english"
+              fallback="No links available"
+            />
+          </Suspense>
         </Section>
         <Footer />
       </AuthProvider>

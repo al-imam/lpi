@@ -190,7 +190,9 @@ function App() {
             />
           </Suspense>
         </Section>
-        <Footer />
+        <Suspense fallback={<Loader />}>
+          <Footer />
+        </Suspense>
       </AuthProvider>
     </BrowserRouter>
   );

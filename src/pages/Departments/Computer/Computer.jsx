@@ -1,14 +1,17 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import Loader from "@components/Loader/Loader";
+
 const DepartmentPage = lazy(() =>
   import("@components/DepartmentPage/DepartmentPage")
 );
 
 function Computer() {
   const [data, setData] = useState(null);
+
   useEffect(() => {
     import("./data").then((v) => setData(v.default));
   }, []);
+
   return (
     <>
       {data === null ? (

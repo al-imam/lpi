@@ -1,16 +1,27 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Loader from "@components/Loader/Loader";
-import data from "./data";
 
 const DepartmentPage = lazy(() =>
   import("@components/DepartmentPage/DepartmentPage")
 );
 
 function Civil() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    import("./data").then((v) => setData(v.default));
+  }, []);
+
   return (
-    <Suspense fallback={<Loader />}>
-      <DepartmentPage heading={data.heading} teacher={data.teacher} />
-    </Suspense>
+    <>
+      {data === null ? (
+        <Loader height="80vh" />
+      ) : (
+        <Suspense fallback={<Loader height="80vh" />}>
+          <DepartmentPage heading={data.heading} teacher={data.teacher} />
+        </Suspense>
+      )}
+    </>
   );
 }
 

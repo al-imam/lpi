@@ -11,7 +11,6 @@ import Departments from "@department/Departments";
 import Electrical from "@department/Electrical/Electrical";
 import Electronics from "@department/Electronics/Electronics";
 import Contact from "@pages/Contact/Contact";
-import Home from "@pages/Home/Home";
 import Syllabus from "@pages/Syllabus/Syllabus";
 import ScrollToTop from "@util/ScrollToTop";
 import data from "@app/data";
@@ -24,6 +23,7 @@ import { AuthProvider } from "@context/AuthContext";
 import Public from "@routes/Public";
 
 const About = lazy(() => import("@pages/About/About"));
+const Home = lazy(() => import("@pages/Home/Home"));
 
 function App() {
   return (
@@ -32,12 +32,19 @@ function App() {
         <Head />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route
             path="/about"
             element={
               <Suspense fallback={<Loader />}>
                 <About />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Home />
               </Suspense>
             }
           />
